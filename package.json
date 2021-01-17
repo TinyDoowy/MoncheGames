@@ -1,0 +1,16 @@
+{
+  "name": "Come At Me Bro",
+  "version": "1.0.0",
+  "description": "J'ai créé ce bot pour une animation de distribution Pokémon pour les fêtes de Noël 2020",
+  "main": "index.js",
+  "author": "Doowy",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^12.3.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.9",
+    "node-cron": "^2.0.3",
+    "requirejs": "^2.3.6",
+    "winston": "^3.3.3"
+  }
+}
