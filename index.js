@@ -24,6 +24,9 @@ bot.on('ready', async function () {
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
 
+const idCathal = "219742701489225728";
+const idBescherelle = "<@&794691502822653953>";
+
 const prefixStart = "roll";
 const prefixSoluce = "soluce";
 var nomPokemon = "";
@@ -1052,7 +1055,7 @@ if(!message.member.roles.cache.has(auth.server.role.mute)){
             console.log("lettre1 : "+lettre1);
             lettre2 = nomPokemon.charAt(Rand(nomPokemon.length-1)).toUpperCase();
 
-            while(lettre2==" "||lettre2=="'"||lettre2=="-"||lettre2=="."||lettre2==":"||lettre2=="0"||lettre2=="1"||lettre2=="2"||lettre2=="3"||lettre2=="4"||lettre2=="5"||lettre2=="6"||lettre2=="7"||lettre2=="8"||lettre2=="9"){
+            while(lettre2==" "||lettre2=="\'"||lettre2=="-"||lettre2=="."||lettre2==":"||lettre2=="0"||lettre2=="1"||lettre2=="2"||lettre2=="3"||lettre2=="4"||lettre2=="5"||lettre2=="6"||lettre2=="7"||lettre2=="8"||lettre2=="9"){
                 console.log("boucle sans fin"); 
                 lettre2 = nomPokemon.charAt(Rand(nomPokemon.length-1)).toUpperCase();  
             }
@@ -1244,10 +1247,13 @@ if(!message.member.roles.cache.has(auth.server.role.mute)){
             message.reply(" ce Pokémon n'existe pas (ou est mal orthographié) ! :anger:");
             return;
         }
-
-        message.reply(" y'a même pas les bonnes lettres ! Essaye au moins :rofl:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
-        return;
-
+        if(message.author.id==idCathal){
+            message.channel.send(idBescherelle+" y'a même pas les bonnes lettres ! Essaye au moins :rofl:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+            return;
+        }else{
+            message.reply(" y'a même pas les bonnes lettres ! Essaye au moins :rofl:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+            return;
+        }
     }
 
 });
