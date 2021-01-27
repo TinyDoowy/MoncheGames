@@ -211,7 +211,7 @@ bot.on('message', async function (message, user) {
                 message.channel.send("Monche ou Médicamonche : **"+display+"** ?")
                 .then( function (msg) {
                     //drapeau France
-                    msg.react('🇫🇷');
+                    //msg.react('🇫🇷');
                     //drapeau Royaume-Uni
                     msg.react('🇬🇧');
                     //drapeau Allemagne
@@ -264,7 +264,7 @@ bot.on('message', async function (message, user) {
                         return reaction.emoji.name === drapeau && user.id !== msg.author.id;
                     };
         
-                    msg.awaitReactions(filter, { time: 12000 })
+                    msg.awaitReactions(filter, { time: 11000 })
                     .then(async collected => {
                         //console.log(collected);
 
