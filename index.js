@@ -279,12 +279,12 @@ bot.on('message', async function (message, user) {
                         if (reaction === undefined) {
                             message.channel.send(`Personne n'avait la bonne réponse !`);
                             message.channel.send(`:salt:\r`+auth.server.emote.sangoku);
-                            medicOn = true;
+                            medicOn = false;
                         } else { 
                             if (reaction.emoji === undefined) {
                                 message.channel.send(`Personne n'avait la bonne réponse !`);
                                 message.channel.send(`:salt:\r`+auth.server.emote.sangoku);
-                                medicOn = true;
+                                medicOn = false;
                             } else {
 
                                 console.log("drapeau : "+drapeau);
@@ -297,7 +297,7 @@ bot.on('message', async function (message, user) {
                                 if(users.length<=1){
                                     message.channel.send(`Personne n'avait la bonne réponse !`);
                                     message.channel.send(`:salt:\r`+auth.server.emote.sangoku); 
-                                    medicOn = true;
+                                    medicOn = false;
                                 }
 
                                 for (let i = 1; i < users.length; i++) {
@@ -308,7 +308,7 @@ bot.on('message', async function (message, user) {
                                         compteurScore.send(`**<@${user.id}>** a gagné 1 point sur un roll Médicamonche !`);
                                     }
                                 };
-                                medicOn = true;
+                                medicOn = false;
 
                             };
                         };    
