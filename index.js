@@ -44,6 +44,7 @@ var allTypes;
 var randroll;
 var gameOn = false;
 var rollOn = false;
+var medicOn = false;
 var reponse = true;
 var display;
 var LangueMessage;
@@ -150,9 +151,9 @@ bot.on('message', async function (message, user) {
     if(!message.member.roles.cache.has(auth.server.role.mute)&&(message.member.roles.cache.has(auth.server.role.staff)||message.member.roles.cache.has(auth.server.role.animateur))){
 
         //commande "roll" dans médicamonche
-        if(petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.medicamonche){
+        if(petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.medicamonche&&medicOn==false){
             message.delete();
-
+            medicOn = true;
 
                 if(Rand(4)>1){
                     var display = "xxx";
@@ -278,10 +279,12 @@ bot.on('message', async function (message, user) {
                         if (reaction === undefined) {
                             message.channel.send(`Personne n'avait la bonne réponse !`);
                             message.channel.send(`:salt:\r`+auth.server.emote.sangoku);
+                            medicOn = true;
                         } else { 
                             if (reaction.emoji === undefined) {
                                 message.channel.send(`Personne n'avait la bonne réponse !`);
                                 message.channel.send(`:salt:\r`+auth.server.emote.sangoku);
+                                medicOn = true;
                             } else {
 
                                 console.log("drapeau : "+drapeau);
@@ -294,6 +297,7 @@ bot.on('message', async function (message, user) {
                                 if(users.length<=1){
                                     message.channel.send(`Personne n'avait la bonne réponse !`);
                                     message.channel.send(`:salt:\r`+auth.server.emote.sangoku); 
+                                    medicOn = true;
                                 }
 
                                 for (let i = 1; i < users.length; i++) {
@@ -304,6 +308,7 @@ bot.on('message', async function (message, user) {
                                         compteurScore.send(`**<@${user.id}>** a gagné 1 point sur un roll Médicamonche !`);
                                     }
                                 };
+                                medicOn = true;
 
                             };
                         };    
