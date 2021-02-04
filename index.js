@@ -457,7 +457,7 @@ bot.on('message', async function (message, user) {
     if(message.member.roles.cache.has(auth.server.role.everyone)&&message.channel.id==auth.server.salon.monche&&gameOn==true)
     {
         //console.log(lettre1+""+lettre2);
-        if(petitMessage.startsWith(lettre1.toLowerCase())&&petitMessage.includes(lettre2.toLowerCase()))
+        if(petitMessage.startsWith(lettre1.toLowerCase())&&petitMessage.includes(lettre2.toLowerCase())&&rollOn==false)
         {
             for(k=0;k<taillePokedex;k++){
                 if(petitMessage == tabPokemon[k][0].toLowerCase())
