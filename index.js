@@ -148,9 +148,24 @@ bot.on('message', async function (message, user) {
     if (message.channel.parent.id!=auth.server.categorie.monche) return;
 
 //test de lecture de fichier audio (monche-cri)
-/*
-    if(petitMessage==="test"){
 
+    if(petitMessage.includes("test")){
+        
+        var nbrTest = petitMessage.split(' ');
+        
+        if(!nbrTest[1]){return;}else{
+            nomSnap = tabPokeSnap[Number(nbrTest[1])][1];
+            dexSnap = tabPokeSnap[Number(nbrTest[1])][2];
+            genSnap = tabPokeSnap[Number(nbrTest[1])][3];
+            stadeSnap = tabPokeSnap[Number(nbrTest[1])][4];
+            typeSnap = tabPokeSnap[Number(nbrTest[1])][5];
+            console.log(nomSnap+"/"+dexSnap+"/"+genSnap+"/"+stadeSnap+"/"+typeSnap);
+            
+            var attachment = new Discord.MessageAttachment(tabPokeSnap[Number(nbrTest[1])][0][0]);
+            await message.channel.send({files:[attachment]});
+        }
+        
+        /*
         var voiceChannel = auth.server.salon.soundeffect;
         voiceChannel.join().then(connection => {
 
@@ -158,10 +173,10 @@ bot.on('message', async function (message, user) {
             dispatcher.on("end", end => {voiceChannel.leave();});
 
         }).catch(err => console.log(err));
-
+        */
 
     }
-*/
+
     //commande Staff pour tournoi (salon staff monche)
     if(message.member.roles.cache.has(auth.server.role.staff)&&message.channel.id==auth.server.salon.staffmonche){
         if(petitMessage.startsWith(prefixTournoiOn)){
