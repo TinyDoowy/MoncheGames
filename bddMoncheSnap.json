@@ -1270,7 +1270,7 @@
     [["./pokeimage/male/Sprite_020_HOME.png","./pokeimage/femelle/Sprite_020_HOME.png",0.5],"Rattatac",20,1,2,"Normal"],
     [["./pokeimage/male/Sprite_025_HOME.png","./pokeimage/femelle/Sprite_025_HOME.png",0.5],"Pikachu",25,1,2,"Électrique"],
     [["./pokeimage/male/Sprite_026_HOME.png","./pokeimage/femelle/Sprite_026_HOME.png",0.5],"Raichu",26,1,3,"Électrique"],
-    [["./pokeimage/male/Sprite_029_HOME.png","./pokeimage/femelle/Sprite_029_HOME.png",1],"Nidoran♀",29,1,1,"Poison"],
+    [["./pokeimage/male/Sprite_032_HOME.png","./pokeimage/femelle/Sprite_029_HOME.png",1],"Nidoran",29,1,1,"Poison"],
     [["./pokeimage/male/Sprite_041_HOME.png","./pokeimage/femelle/Sprite_041_HOME.png",0.5],"Nosferapti",41,1,1,"Poison Vol"],
     [["./pokeimage/male/Sprite_042_HOME.png","./pokeimage/femelle/Sprite_042_HOME.png",0.5],"Nosferalto",42,1,2,"Poison Vol"],
     [["./pokeimage/male/Sprite_044_HOME.png","./pokeimage/femelle/Sprite_044_HOME.png",0.5],"Ortide",44,1,2,"Plante Poison"],
