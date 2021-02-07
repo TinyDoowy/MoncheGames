@@ -25,14 +25,20 @@ bot.on('ready', async function () {
 });
 
 
+//variable tournoi staff
+var tournoiOn = false;
+
 const idCathal = "219742701489225728";
 const idBescherelle = "<@&794691502822653953>";
 
+//prefix utuliser pour les roll
 const prefixStart = "roll";
 const prefixSoluce = "soluce";
 const prefixTournoiOn = "start";
 const prefixTournoiOff = "stop";
 const prefixJeJoue = "je joue";
+
+//variable roll original
 var nomPokemon = "";
 var paramJeu = "";
 var lettre1;
@@ -42,37 +48,65 @@ var stade;
 var typePicked;
 var allTypes;
 var randroll;
+
+
+//variable ru roll médicamonche
+var display;
+var LangueMessage;
+var idToCheck;
+
+
+//Variable des roll snap
+var typePickedSnap;
+var genSnap;
+var stadeSnap;
+var randrollSnap;
+var genderSnap;
+var paramTypeSnap;
+
+
+//Variable de suivi des roll anti-cheat anti double roll etc...
 var gameOn = false;
 var rollOn = false;
 var medicOn = false;
 var reponse = true;
-var display;
-var LangueMessage;
-var idToCheck;
-var tournoiOn = false;
+var gameOnSnap = false;
+var rollOnSnap = false;
+var reponseSnap = true;
 
 
 // Connection à la BDD Monche Officiel 
 const bddMoncheOfficiel = require('./bddMoncheOfficiel.json');
 const tabPokemon = bddMoncheOfficiel.pokemonAll;
+const taillePokedex = tabPokemon.length;
+const nombreGen = 8;
+
 // Connection à la BDD Médicamonche
 const bddMedicamonche = require('./bddMedicamonche.json');
 const tabPokeLangue = bddMedicamonche.pokemonsAllLang;
 const tabMedicamonche = bddMedicamonche.medicaments;
+    //Mandarin, Cantonais, Japonais, Allemand, Russe, Thaï, Coréen, Anglais, Français
+var nbrLangue = 8;
+var NbrGen = 8;
+const taillePokedexLangue = tabPokeLangue.length;
+const tailleMedicamonche = tabMedicamonche.length;
+
+
+
+// Connection à la BDD MoncheSnap
+const bddMoncheSnap = require('./bddMoncheSnap.json');
+const tabPokeSnap = bddMoncheSnap.pokemonSnap;
+const tailleSnap = tabPokeSnap.length;
+
+const tabPokeGender = bddMoncheSnap.pokemonGender;
+const tailleGender = tabPokeGender.length;
 
 
 const tabType = ["Acier","Combat","Dragon","Eau","Électrique",
 "Fée","Feu","Glace","Insecte","Normal","Plante","Poison",
 "Psy","Roche","Sol","Spectre","Ténèbres","Vol"];
 
-const taillePokedex = tabPokemon.length;
-const nombreGen = 8;
 
-//Mandarin, Cantonais, Japonais, Allemand, Russe, Thaï, Coréen, Anglais, Français
-var nbrLangue = 8;
-
-const taillePokedexLangue = tabPokeLangue.length;
-const tailleMedicamonche = tabMedicamonche.length;
 
 
 
@@ -83,17 +117,17 @@ var test = '18 21 13 1 *';
 ///////////////////////
 
 //cron.schedule(test, async () => {
-cron.schedule('0 18 15 1 *', async () => {
+cron.schedule('0 16 8 2 *', async () => {
     const guild = bot.guilds.cache.get(auth.server.guild);
     const channel = bot.channels.cache.get(auth.server.salon.affichage);
 
-                      await channel.send("<@&"+auth.server.role.ping+">, le Monche Universe ouvre ses portes !\rVous l'attendiez (*ou pas*), le voici :rofl:\rRendez-vous dans la Catégorie Monche Universe\rce **__Dimanche 17 Janvier à 15h__** pour fêtez l'anniversaire de <@204016690604933120> :partying_face:\r__Si vous ne souhaitez pas être spammé de notification, pensez à rendre la catégorie muette.__");
-                      await channel.send("https://tenor.com/view/kaamelott-perceval-anniversaire-cest-lanniversaire-dans-tous-les-recoins-gif-17182618");
+                      await channel.send("<@&"+auth.server.role.ping+">, le Monche Universe grandi toujours plus !\rL'annonce de \"New Pokemon Snap\" vous titille !\rRendez-vous dans la Catégorie Monche Universe\rce **__Lundi 8 Février à 21h__** pour fêtez l'arrivée de ***\"New-Monche-Snap\"*** :partying_face: !!\r*c'est exactement ce à quoi vous pensez*\r__Si vous ne souhaitez pas être spammé de notification, pensez à rendre la catégorie muette.__");
+                      await channel.send("https://tenor.com/view/oh-snap-parks-and-rec-parks-and-recreation-chris-pratt-gif-5468594");
 });
 
 
 //cron.schedule(test, async () => {
-cron.schedule('55 14 17 1 *', async () => {
+cron.schedule('0 21 8 1 *', async () => {
     const guild = bot.guilds.cache.get(auth.server.guild);
     const channel = bot.channels.cache.get(auth.server.salon.monche);
 
@@ -113,7 +147,21 @@ bot.on('message', async function (message, user) {
     //limité à la catégorie de la forêt
     if (message.channel.parent.id!=auth.server.categorie.monche) return;
 
+//test de lecture de fichier audio (monche-cri)
+/*
+    if(petitMessage==="test"){
 
+        var voiceChannel = auth.server.salon.soundeffect;
+        voiceChannel.join().then(connection => {
+
+            const dispatcher = connection.play('./Cri-1G/001 - Bulbasaur.wav');
+            dispatcher.on("end", end => {voiceChannel.leave();});
+
+        }).catch(err => console.log(err));
+
+
+    }
+*/
     //commande Staff pour tournoi (salon staff monche)
     if(message.member.roles.cache.has(auth.server.role.staff)&&message.channel.id==auth.server.salon.staffmonche){
         if(petitMessage.startsWith(prefixTournoiOn)){
@@ -150,6 +198,226 @@ bot.on('message', async function (message, user) {
     //commande animateur ou staff (sauf role mute monche)
     if(!message.member.roles.cache.has(auth.server.role.mute)&&(message.member.roles.cache.has(auth.server.role.staff)||message.member.roles.cache.has(auth.server.role.animateur))){
 
+        //commande "roll" dans monche? (l'original)
+        if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monchesnap&&rollOnSnap==false&&reponseSnap==true){
+
+            /*
+            // Connection à la BDD MoncheSnap
+            const bddMoncheSnap = require('./bddMoncheSnap.json');
+            const tabPokeSnap = bddMoncheSnap.pokemonSnap;
+            const tailleSnap = tabPokeSnap.length;
+            */
+
+            //La réponse n'a pas été trouvée et le roll est toujours actifs :)
+            reponseSnap = false;
+            rollOnSnap = true;
+
+            paramJeuSnap = petitMessage.split(' ');
+            message.delete();
+
+            //variable pour le type du Snap, la Gen du Snap, le stade du Snap, Et le random roll du Snap
+            typePickedSnap = "";
+            genSnap = 0;
+            stadeSnap = 0;
+            randrollSnap = 10;
+            //variable pour le genre du snap
+            genderSnap = "";
+
+            //différent roll : nom, type, gen, stade, genre
+
+            if(paramJeuSnap[1]==="random"){randrollSnap = Rand(5);}
+
+            console.log("paramètre : "+paramJeuSnap[1]);
+            if(!paramJeuSnap[1]||randrollSnap==1){
+            //tirage de nom pur, donc boucle pour éviter de contenir forme
+                var quelEstCeSnap = Rand(tailleSnap)-1;
+                nomSnap = tabPokeSnap[quelEstCeSnap][1];
+
+                while(nomSnap.toLowerCase().includes("forme")||nomSnap.toLowerCase().includes("méga")||nomSnap.toLowerCase().includes("primo")||nomSnap.toLowerCase().includes("ultra")||nomSnap.toLowerCase().includes("taille")||nomSnap.toLowerCase().includes("coupe")||nomSnap.toLowerCase().includes("fleur")||nomSnap.toLowerCase().includes("motif")){
+                    console.log("Boucle forme : "+nomSnap);
+                    quelEstCeSnap = Rand(tailleSnap)-1;
+                    nomSnap = tabPokeSnap[quelEstCeSnap][1];
+                }
+
+                typeSnap = tabPokeSnap[quelEstCeSnap][5];
+                genSnap = tabPokeSnap[quelEstCeSnap][3];
+                console.log("Nom : "+nomSnap);
+                console.log("Type : "+typeSnap);
+                console.log("Gen : "+genSnap);
+                if(tabPokeSnap[quelEstCeSnap][0][1]==="xxx"){
+                    var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][0]);
+                }else{
+                    if(Math.random()>tabPokeSnap[quelEstCeSnap][0][2]){
+                        var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][0]);
+                    }else{
+                        var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][1]);
+                    }
+                }
+                //await message.channel.send({files:[attachment]})
+            }else if(paramJeuSnap[1]==="type"||randrollSnap==2){
+            //récupération des Lettres (dénominateur commun)
+                var quelEstCeSnap = Rand(tailleSnap)-1;
+                nomSnap = tabPokeSnap[quelEstCeSnap][1];
+                typeSnap = tabPokeSnap[quelEstCeSnap][5];
+                genSnap = tabPokeSnap[quelEstCeSnap][3];
+                console.log("Nom : "+nomSnap);
+                console.log("Type : "+typeSnap);
+                console.log("Gen : "+genSnap);
+                if(tabPokeSnap[quelEstCeSnap][0][1]==="xxx"){
+                    var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][0]);
+                }else{
+                    if(Math.random()>tabPokeSnap[quelEstCeSnap][0][2]){
+                        var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][0]);
+                    }else{
+                        var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][1]);
+                    }
+                }
+                //await message.channel.send({files:[attachment]})
+            }else  if(paramJeuSnap[1]==="gen"||randrollSnap==3){
+            //récupération des Lettres (dénominateur commun)
+                var genMaking = Rand(NbrGen);
+                console.log("gen : "+genMaking);
+                var quelEstCeSnap = Rand(tailleSnap)-1;
+                while(tabPokeSnap[quelEstCeSnap][3]!=genMaking){
+                    console.log("boucle gen");
+                    quelEstCeSnap = Rand(tailleSnap)-1;
+                }
+
+                nomSnap = tabPokeSnap[quelEstCeSnap][1];
+                typeSnap = tabPokeSnap[quelEstCeSnap][5];
+                genSnap = tabPokeSnap[quelEstCeSnap][3];
+                console.log("Nom : "+nomSnap);
+                console.log("Type : "+typeSnap);
+                console.log("Gen : "+genSnap);
+                if(tabPokeSnap[quelEstCeSnap][0][1]==="xxx"){
+                    var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][0]);
+                }else{
+                    if(Math.random()>tabPokeSnap[quelEstCeSnap][0][2]){
+                        var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][0]);
+                    }else{
+                        var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][1]);
+                    }
+                }
+                //await message.channel.send({files:[attachment]})
+            }else if(paramJeuSnap[1]==="stade"||randrollSnap==4){
+            //récupération des Lettres (dénominateur commun)
+                var stadeMaking = Rand(3);
+                console.log("stade : "+stadeMaking);
+                var quelEstCeSnap = Rand(tailleSnap)-1;
+                while(tabPokeSnap[quelEstCeSnap][4]!=stadeMaking){
+                    console.log("boucle stade");
+                    quelEstCeSnap = Rand(tailleSnap)-1;
+                }
+
+
+                nomSnap = tabPokeSnap[quelEstCeSnap][1];
+                typeSnap = tabPokeSnap[quelEstCeSnap][5];
+                genSnap = tabPokeSnap[quelEstCeSnap][3];
+                console.log("Nom : "+nomSnap);
+                console.log("Type : "+typeSnap);
+                console.log("Gen : "+genSnap);
+                if(tabPokeSnap[quelEstCeSnap][0][1]==="xxx"){
+                    var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][0]);
+                }else{
+                    if(Math.random()>tabPokeSnap[quelEstCeSnap][0][2]){
+                        var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][0]);
+                    }else{
+                        var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeSnap][0][1]);
+                    }
+                }
+                //await message.channel.send({files:[attachment]})
+            }else{
+
+                var quelEstCeGender = Rand(tailleGender)-1;
+                nomGender = tabPokeGender[quelEstCeGender][1];
+                console.log("Nom : "+nomGender);
+
+                if(Rand(2)>1){
+                    gender = "mâle";
+                    genderSnap=tabPokeGender[quelEstCeGender][0][0];
+                    var attachment = new Discord.MessageAttachment(tabPokeGender[quelEstCeGender][0][0]);
+                }else{
+                    gender = "femelle";
+                    genderSnap=tabPokeGender[quelEstCeGender][0][1];
+                    var attachment = new Discord.MessageAttachment(tabPokeGender[quelEstCeGender][0][1]);
+                }
+
+            }
+
+        
+            if(!paramJeuSnap[1]||randrollSnap==1){
+                await message.channel.send("Prêt·e·s ? (Nom pur)");
+                await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
+                
+                typePickedSnap = "";
+                genSnap = 0;
+                stadeSnap = 0;
+                genderSnap = "";
+
+                setTimeout(async function(){await message.channel.send({files:[attachment]});rollOnSnap = false;},4500);
+                
+                gameOnSnap = true;
+                return;
+
+            }else if(paramJeuSnap[1] ==="type"||randrollSnap==2){
+                await message.channel.send("Prêt·e·s ? (Tous les types)");
+                await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
+                
+                typePickedSnap = tabPokeSnap[quelEstCeSnap][5].toLowerCase();
+                genSnap = 0;
+                stadeSnap = 0;
+                genderSnap = "";
+
+                setTimeout(async function(){await message.channel.send({files:[attachment]});rollOnSnap = false;},4500);
+                
+                gameOnSnap = true;
+                return;
+            }else if(paramJeuSnap[1] ==="gen"||randrollSnap==3){
+                await message.channel.send("Prêt·e·s ? (La Génération)");
+                await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
+                
+                typePickedSnap = "";
+                genSnap = tabPokeSnap[quelEstCeSnap][3];
+                stadeSnap = 0;
+                genderSnap = "";
+
+                setTimeout(async function(){await message.channel.send({files:[attachment]});rollOnSnap = false;},4500);
+                
+                gameOnSnap = true;
+                return;
+            }else if(paramJeuSnap[1] ==="stade"||randrollSnap==4){
+                await message.channel.send("Prêt·e·s ? (Le stade d'évolution)");
+                await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
+                
+                typePickedSnap = "";
+                genSnap = 0;
+                stadeSnap = tabPokeSnap[quelEstCeSnap][4];
+                genderSnap = "";
+
+                setTimeout(async function(){await message.channel.send({files:[attachment]});rollOnSnap = false;},4500);
+                
+                gameOnSnap = true;
+                return;
+            }else if(paramJeuSnap[1] ==="gender"||randrollSnap==5){
+                await message.channel.send("Prêt·e·s ? (Le Genre)");
+                await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
+                
+                typePickedSnap = "";
+                genSnap = 0;
+                stadeSnap = 0;
+                var k=0;
+
+                setTimeout(async function(){await message.channel.send({files:[attachment]});rollOnSnap = false;},4500);
+                
+                gameOnSnap = true;
+                return;
+            }else{
+                message.reply(" ... si même le staff ne sait plus taper les commandes, on va ouvrir les recrutements auprès des gens qui savent copier/coller :stuck_out_tongue_closed_eyes:");
+                reponseSnap = true;
+                rollOnSnap = false;
+                return;
+            }
+        }
         //commande "roll" dans médicamonche
         if(petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.medicamonche&&medicOn==false){
             message.delete();
@@ -386,7 +654,7 @@ bot.on('message', async function (message, user) {
 
                 console.log("/"+paramJeu[1]+"/ : "+typePicked);
 
-                setTimeout(async function(){message.channel.send("Les lettres : "+EmoteLettre(lettre1)+" "+EmoteLettre(lettre2)+", et avec au moins un type : **__"+typePicked+"__** "+EmoteType(typePicked));rollOn = false;},4500);
+                setTimeout(async function(){message.channel.send("Les lettres : "+EmoteLettre(lettre1)+" "+EmoteLettre(lettre2)+", et avec au moins un type : **__"+typePicked+"__** "+EmoteType(typePicked.toLowerCase()));rollOn = false;},4500);
                 gameOn = true;
                 return;
 
@@ -444,6 +712,49 @@ bot.on('message', async function (message, user) {
             }else{return;}
         }
 
+        //commande "soluce" dans salon Monche-Snap
+        if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.monchesnap){
+            if(reponseSnap==false){
+                if(rollOnSnap==false){
+                    if(gameOnSnap==true){
+                        gameOnSnap = false;
+                        rollOnSnap = false;
+                        reponseSnap = true;
+                        if(paramJeuSnap[1]==="gender"||randrollSnap==5){
+                            if(gender=="mâle"){
+                                var symboleGender = '♂️';
+                            }else{
+                                var symboleGender = '♀️';
+                            }
+                            message.channel.send("La solution était : ||__**"+nomGender+"**__|| est évidemment "+gender+" "+symboleGender+".\r*Better Luck Next Time !* :fingers_crossed:");return;
+                        }else if(paramJeuSnap[1]==="stade"||randrollSnap==4){
+                            if(stadeSnap==1){
+                                var phraseStade = "un pokémon de base 🥇 !";
+                            }else if (stadeSnap==2){
+                                var phraseStade = "une première évolution 🥈 !";
+                            }else{
+                                var phraseStade = "une seconde évolution 🥉 !";
+                            }
+                            message.channel.send("La solution était : ||__**"+nomSnap+"**__|| est "+phraseStade+"\r*Better Luck Next Time !* :fingers_crossed:");return;
+                        }else if(paramJeuSnap[1]==="gen"||randrollSnap==3){
+                            message.channel.send("La solution était : ||__**"+nomSnap+"**__|| issu de la "+EmoteGen(genSnap)+" .\r*Better Luck Next Time !* :fingers_crossed:");return;
+                        }else if(paramJeuSnap[1]==="type"||randrollSnap==2){
+                            var splitType = typePickedSnap.split(' ');
+                            if(!splitType[1]){
+                                message.channel.send("La solution était : ||__**"+nomSnap+"**__|| de type "+EmoteType(typePickedSnap.toLowerCase())+" pur.\r*Better Luck Next Time !* :fingers_crossed:");return;
+                            }else{
+                                message.channel.send("La solution était : ||__**"+nomSnap+"**__|| de type "+EmoteType(splitType[0].toLowerCase())+" et "+EmoteType(splitType[1].toLowerCase())+".\r*Better Luck Next Time !* :fingers_crossed:");return;
+                            }
+                        }else{
+                            message.channel.send("La solution était : __**"+nomSnap+"**__.\r*Better Luck Next Time !* :fingers_crossed:");return;
+                        }
+                    }else{
+                        message.channel.send("Le dernier Pokémon a déjà été trouvé/dévoilé.");return;
+                    }
+                }else{message.channel.send("Cher <@"+message.author.id+">, veuillez laisser au moins 10 secondes aux joueurs avant de dévoiler la solution. Cordialement, Bisouxx :kissing_heart:");return;}
+            }else{return;}
+        }
+
     }
 
     //commande "soluce" sans les rôles nécessaires :)
@@ -453,98 +764,268 @@ bot.on('message', async function (message, user) {
             return;
     }
 
-    //récupération des réponses dans Monche?
-    if(message.member.roles.cache.has(auth.server.role.everyone)&&message.channel.id==auth.server.salon.monche&&gameOn==true)
-    {
-        //console.log(lettre1+""+lettre2);
-        if(petitMessage.startsWith(lettre1.toLowerCase())&&petitMessage.includes(lettre2.toLowerCase())&&rollOn==false)
+    //commande pour everyone
+    if(message.member.roles.cache.has(auth.server.role.everyone)){
+
+        //récupération des réponses dans Monche?
+        if(message.channel.id==auth.server.salon.monchesnap&&gameOnSnap==true)
         {
-            for(k=0;k<taillePokedex;k++){
-                if(petitMessage == tabPokemon[k][0].toLowerCase())
-                    {
-                        if (typePicked==""&&gen==0&&stade==0){
-                            message.reply(" tu as gagné 1 point ! :partying_face:");
+            //tant que le roll n'est pas fini
+            if(rollOnSnap==false){
+
+                if(!paramJeuSnap[1]||randrollSnap==1){
+                    if(petitMessage == nomSnap.toLowerCase()){
+                        message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| s'appelle bien "+nomSnap+" !");
+                        if(tournoiOn==true){
+                            const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                            compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap pur !`);
+                        }
+                        reponseSnap = true;
+                        gameOnSnap = false;
+                        rollOnSnap = false;
+                        return;
+                    }else{
+
+                        for (k=0;k<tailleSnap;k++){
+                            var Existing = tabPokeSnap[k][1];
+                            var FirstExist = Existing.split(' ');
+                            if(Existing.toLowerCase()==petitMessage||FirstExist[0].toLowerCase()==petitMessage){
+                                message.reply(" ce Pokémon existe bien mais ne ressemble en rien à cette image ! :rofl:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                                return;
+                            }
+                        }
+
+                        if(message.author.id==idCathal){
+                            message.channel.send(idBescherelle+" ce Pokémon n'existe pas (ou est mal orthographié) ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            return;
+                        }else{
+                            message.reply(" ce Pokémon n'existe pas (ou est mal orthographié) ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            return;
+                        }
+                    }
+                }else if(paramJeuSnap[1]==="type"||randrollSnap==2){
+                    //découpe du message joueur avec l'espace
+                    paramTypeSnap = petitMessage.split(' ');
+                    //console.log("/"+paramTypeSnap[0]+"/"+paramTypeSnap[1]+"/");
+                    //si pas de second paramètre alors on check que le premier
+                    if(!paramTypeSnap[1]&&!paramTypeSnap[2]&&!paramTypeSnap[3]&&!paramTypeSnap[4]&&!paramTypeSnap[5]){
+                        if(typePickedSnap===paramTypeSnap[0]){
+                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est tout à fait de type "+EmoteType(paramTypeSnap[0].toLowerCase())+" pur !");
                             if(tournoiOn==true){
                                 const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
-                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres pures !`);
+                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Type Unique !`);
                             }
-                            rollOn = false;
-                            gameOn = false;
-                            reponse = true;
+                            reponseSnap = true;
+                            gameOnSnap = false;
+                            rollOnSnap = false;
                             return;
-                        }else if (gen==0&&stade==0){
-                            if(tabPokemon[k][4].includes(typePicked)){
-                                message.reply(" tu as gagné 1 point ! :partying_face:");
-                                if(tournoiOn==true){
-                                    const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
-                                    compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +type !`);
-                                }
-                                rollOn = false;
-                                gameOn = false;
-                                reponse = true;
-                                return;
-                            }else{
-                                message.reply(" bonnes lettres mais mauvais type !\rOn demande le type : "+typePicked+" "+EmoteType(typePicked));
-                                return;
+                        }else{
+                            message.reply(" ce Pokémon n'a pas ce type ! \rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            return;
+                        }
+                    //si un second alors on vérifie que les deux sont dans le type du pokémon
+                    }else{
+                        //console.log("1 : "+paramTypeSnap[0]+"/ 2 : "+paramTypeSnap[1]+"/ 3 : "+paramTypeSnap[2]+"/ 4 : "+paramTypeSnap[3]+"/ 5 : "+paramTypeSnap[4]+"/ 6 : "+paramTypeSnap[5])
+                        var filtreEspace = "";
+                        for (j=0;j<6;j++){
+                            //console.log("/"+paramTypeSnap[j]+"/");
+                            if(paramTypeSnap[j]!=""){
+
+                                filtreEspace = filtreEspace+" "+paramTypeSnap[j];
+                                //console.log("/"+filtreEspace+"/");
+
                             }
-                        }else if (stade==0){
-                            if(gen == tabPokemon[k][2]){
+                        }
+                        var newParamTypeSnap = filtreEspace.split(' ');
+                        if(typePickedSnap.includes(newParamTypeSnap[0])&&typePickedSnap.includes(newParamTypeSnap[1])){
+                            var typesoluce = typePickedSnap.split(' ');
+                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| cumule en effet les types "+EmoteType(typesoluce[0].toLowerCase())+" et "+EmoteType(typesoluce[1].toLowerCase())+" !");
+                            if(tournoiOn==true){
+                                const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Double Type !`);
+                            }
+                            reponseSnap = true;
+                            gameOnSnap = false;
+                            rollOnSnap = false;
+                            return;
+                        }else if(typePickedSnap.includes(newParamTypeSnap[0])||typePickedSnap.includes(newParamTypeSnap[1])){
+                            message.reply(" ce Pokémon n'a pas cette combinaison de types ! \rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            return;
+                        }else {
+                            message.reply(" ce Pokémon n'a aucun de ces types ! \rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            return;
+                        }
+                    }
+                }else if((paramJeuSnap[1]==="gen"||randrollSnap==3)){
+
+                        if(genSnap===Number(petitMessage)){
+                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| appartient à la "+EmoteGen(genSnap)+" naturellement !");
+                            if(tournoiOn==true){
+                                const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Gen !`);
+                            }
+                            reponseSnap = true;
+                            gameOnSnap = false;
+                            rollOnSnap = false;
+                            return;
+                        }else{
+                            message.reply(" ce Pokémon n'est pas de cette Génération ! \rLa Génération est la première apparition dans les jeux principaux de ce Pokémon ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            return;
+                        }
+
+                }else if((paramJeuSnap[1]==="stade"||randrollSnap==4)){
+
+                        if(stadeSnap===Number(petitMessage)){
+
+                            if(stadeSnap==1){
+                                message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est un pokémon de base 🥇 !");
+                            }else if (stade==2){
+                                message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est une première évolution 🥈 !");
+                            }else{
+                                message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est une seconde évolution 🥉 !");
+                            }
+
+                            if(tournoiOn==true){
+                                const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Stade !`);
+                            }
+                            reponseSnap = true;
+                            gameOnSnap = false;
+                            rollOnSnap = false;
+                            return;
+                        }else{
+                            message.reply(" ce Pokémon n'est pas de ce stade d'évolution ! \rLe Stade peut etre soit : **1** (pokémon de base), **2** pokémon ayant évolué une fois, ou **3** pokémon ayant évolué deux fois ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            return;
+                        }
+                }else if((paramJeuSnap[1]==="gender"||randrollSnap==5)){
+                    if(gender==="mâle"){
+                        if(petitMessage=="mâle"||petitMessage=="male"){
+                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomGender+"|| est effectivement mâle ♂️ !");
+                            if(tournoiOn==true){
+                                const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Gender (Mâle) !`);
+                            }
+                            reponseSnap = true;
+                            gameOnSnap = false;
+                            rollOnSnap = false;
+                            return;
+                        }else{
+                            message.reply(" c'est **FAUX** ! *Did you just assume his Gender ?* :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            return;
+                        }
+                    }else if(gender==="femelle"){
+                        if(petitMessage=="femelle"){
+                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomGender+"|| est effectivement femelle ♀️ !");
+                            if(tournoiOn==true){
+                                const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Gender (Femelle) !`);
+                            }
+                            reponseSnap = true;
+                            gameOnSnap = false;
+                            rollOnSnap = false;
+                            return;
+                        }else{
+                            message.reply(" c'est **FAUX** ! *Did you just assume her Gender ?* :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            return;
+                        } 
+                    }
+                }
+            }
+        }
+        //récupération des réponses dans Monche?
+        if(message.channel.id==auth.server.salon.monche&&gameOn==true)
+        {
+            if(rollOn==false){
+                //console.log(lettre1+""+lettre2);
+                if(petitMessage.startsWith(lettre1.toLowerCase())&&petitMessage.includes(lettre2.toLowerCase()))
+                {
+                    for(k=0;k<taillePokedex;k++){
+                        if(petitMessage == tabPokemon[k][0].toLowerCase())
+                            {
+                                if (typePicked==""&&gen==0&&stade==0){
                                     message.reply(" tu as gagné 1 point ! :partying_face:");
                                     if(tournoiOn==true){
                                         const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
-                                        compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +gen !`);
+                                        compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres pures !`);
                                     }
                                     rollOn = false;
                                     gameOn = false;
                                     reponse = true;
                                     return;
-                            }else {
-                                message.reply(" bonnes lettres mais mauvaise génération !\rOn demande la génération : "+EmoteGen(gen));
-                                return;
+                                }else if (gen==0&&stade==0){
+                                    if(tabPokemon[k][4].includes(typePicked)){
+                                        message.reply(" tu as gagné 1 point ! :partying_face:");
+                                        if(tournoiOn==true){
+                                            const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                            compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +type !`);
+                                        }
+                                        rollOn = false;
+                                        gameOn = false;
+                                        reponse = true;
+                                        return;
+                                    }else{
+                                        message.reply(" bonnes lettres mais mauvais type !\rOn demande le type : "+typePicked+" "+EmoteType(typePicked.toLowerCase()));
+                                        return;
+                                    }
+                                }else if (stade==0){
+                                    if(gen == tabPokemon[k][2]){
+                                            message.reply(" tu as gagné 1 point ! :partying_face:");
+                                            if(tournoiOn==true){
+                                                const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +gen !`);
+                                            }
+                                            rollOn = false;
+                                            gameOn = false;
+                                            reponse = true;
+                                            return;
+                                    }else {
+                                        message.reply(" bonnes lettres mais mauvaise génération !\rOn demande la génération : "+EmoteGen(gen));
+                                        return;
+                                    }
+                                }else if (stade== tabPokemon[k][3]){
+                                    message.reply(" tu as gagné 1 point ! :partying_face:");
+                                    if(tournoiOn==true){
+                                        const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                        compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +stade !`);
+                                    }
+                                    rollOn = false;
+                                    gameOn = false;
+                                    reponse = true;
+                                    return;
+                                }else{
+                                    if(stade==1){
+                                        message.reply(" bonnes lettres mais mauvais niveau d'évolution !\rOn demande un __***Pokémon de Base***__ 🥇");
+                                        return;
+                                    }else if (stade==2){
+                                        message.reply(" bonnes lettres mais mauvais niveau d'évolution !\rOn demande une __***première évolution***__ 🥈");
+                                        return;
+                                    }else{
+                                        message.reply(" bonnes lettres mais mauvais niveau d'évolution !\rOn demande une __***deuxième évolution***__ 🥉");
+                                        return;
+                                    } 
+                                }
                             }
-                        }else if (stade== tabPokemon[k][3]){
-                            message.reply(" tu as gagné 1 point ! :partying_face:");
-                            if(tournoiOn==true){
-                                const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
-                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +stade !`);
-                            }
-                            rollOn = false;
-                            gameOn = false;
-                            reponse = true;
-                            return;
-                        }else{
-                            if(stade==1){
-                                message.reply(" bonnes lettres mais mauvais niveau d'évolution !\rOn demande un __***Pokémon de Base***__ 🥇");
-                                return;
-                            }else if (stade==2){
-                                message.reply(" bonnes lettres mais mauvais niveau d'évolution !\rOn demande une __***première évolution***__ 🥈");
-                                return;
-                            }else{
-                                message.reply(" bonnes lettres mais mauvais niveau d'évolution !\rOn demande une __***deuxième évolution***__ 🥉");
-                                return;
-                            } 
-                        }
                     }
+
+                    if(message.author.id==idCathal){
+                        message.channel.send(idBescherelle+" ce Pokémon n'existe pas (ou est mal orthographié) ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                        return;
+                    }else{
+                        message.reply(" ce Pokémon n'existe pas (ou est mal orthographié) ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                        return;
+                    }
+
+                }
+
+                if(message.author.id==idCathal){
+                    message.channel.send(idBescherelle+" y'a même pas les bonnes lettres ! Essaye au moins :rofl:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                    return;
+                }else{
+                    message.reply(" y'a même pas les bonnes lettres ! Essaye au moins :rofl:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                    return;
+                }
             }
-
-            if(message.author.id==idCathal){
-                message.channel.send(idBescherelle+" ce Pokémon n'existe pas (ou est mal orthographié) ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
-                return;
-            }else{
-                message.reply(" ce Pokémon n'existe pas (ou est mal orthographié) ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
-                return;
-            }
-
         }
-
-        if(message.author.id==idCathal){
-            message.channel.send(idBescherelle+" y'a même pas les bonnes lettres ! Essaye au moins :rofl:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
-            return;
-        }else{
-            message.reply(" y'a même pas les bonnes lettres ! Essaye au moins :rofl:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
-            return;
-        }
-
     }
 
 });
@@ -560,26 +1041,26 @@ function EmoteStade(stade){
 }
 
 function EmoteType(type){
-    switch (type){
-        case "Acier" : return '⚙️'; break;
-        case "Combat" : return '🥊'; break;
-        case "Dragon" : return '🐲'; break;
-        case "Eau" : return '💦'; break;
-        case "Électrique" : return '⚡'; break;
-        case "Fée" : return '🧚'; break;
-        case "Feu" : return '🔥'; break;
-        case "Glace" : return '🧊'; break;
-        case "Insecte" : return '🪲'; break;
-        case "Normal" : return '⚪'; break;
-        case "Plante" : return '🌿'; break;
-        case "Poison" : return '☠️'; break;
-        case "Psy" : return '🧠'; break;
-        case "Roche" : return '🪨'; break;
-        case "Sol" : return '🌍'; break;
-        case "Spectre" : return '👻'; break;
-        case "Ténèbres" : return '🌚'; break;
-        case "Vol" : return '🪶'; break;
-        case "Statut" : return '⁉️';break;
+    switch (type.toLowerCase()){
+        case "acier" : return '⚙️'; break;
+        case "combat" : return '🥊'; break;
+        case "dragon" : return '🐲'; break;
+        case "eau" : return '💦'; break;
+        case "électrique" : return '⚡'; break;
+        case "fée" : return '🧚'; break;
+        case "feu" : return '🔥'; break;
+        case "glace" : return '🧊'; break;
+        case "insecte" : return '🪲'; break;
+        case "normal" : return '⚪'; break;
+        case "plante" : return '🌿'; break;
+        case "poison" : return '☠️'; break;
+        case "psy" : return '🧠'; break;
+        case "roche" : return '🪨'; break;
+        case "sol" : return '🌍'; break;
+        case "spectre" : return '👻'; break;
+        case "ténèbres" : return '🌚'; break;
+        case "vol" : return '🪶'; break;
+        case "statut" : return '⁉️';break;
         default : return '⛔';break;
     };
 }
