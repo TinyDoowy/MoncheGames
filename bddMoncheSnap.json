@@ -1,6 +1,6 @@
 {
 "pokemonSnap" : [
-    [["./pokeimage/Sprite_001_HOMEHOME.png","xxx",0.125],"Bulbizarre",1,1,1,"Plante Poison"],
+    [["./pokeimage/Sprite_001_HOME.png","xxx",0.125],"Bulbizarre",1,1,1,"Plante Poison"],
     [["./pokeimage/Sprite_002_HOME.png","xxx",0.125],"Herbizarre",2,1,2,"Plante Poison"],
     [["./pokeimage/male/Sprite_003_HOME.png","./pokeimage/femelle/Sprite_003_HOME.png",0.125],"Florizarre",3,1,3,"Plante Poison"],
     [["./pokeimage/mega/Sprite_003_HOME.png","xxx",0.125],"Méga-Florizarre",3,6,3,"Plante Poison"],
