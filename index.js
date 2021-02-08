@@ -73,6 +73,9 @@ var reponse = true;
 var gameOnSnap = false;
 var rollOnSnap = false;
 var reponseSnap = true;
+var gameOnDex = false;
+var rollOnDex = false;
+var reponseDex = true;
 
 
 // Connection à la BDD Monche Officiel 
@@ -148,24 +151,9 @@ bot.on('message', async function (message, user) {
     if (message.channel.parent.id!=auth.server.categorie.monche) return;
 
 //test de lecture de fichier audio (monche-cri)
+/*
+    if(petitMessage==="test"){
 
-    if(petitMessage.includes("test")){
-        
-        var nbrTest = petitMessage.split(' ');
-        
-        if(!nbrTest[1]){return;}else{
-            nomSnap = tabPokeSnap[Number(nbrTest[1])][1];
-            dexSnap = tabPokeSnap[Number(nbrTest[1])][2];
-            genSnap = tabPokeSnap[Number(nbrTest[1])][3];
-            stadeSnap = tabPokeSnap[Number(nbrTest[1])][4];
-            typeSnap = tabPokeSnap[Number(nbrTest[1])][5];
-            console.log(nomSnap+"/"+dexSnap+"/"+genSnap+"/"+stadeSnap+"/"+typeSnap);
-            
-            var attachment = new Discord.MessageAttachment(tabPokeSnap[Number(nbrTest[1])][0][0]);
-            await message.channel.send({files:[attachment]});
-        }
-        
-        /*
         var voiceChannel = auth.server.salon.soundeffect;
         voiceChannel.join().then(connection => {
 
@@ -173,10 +161,10 @@ bot.on('message', async function (message, user) {
             dispatcher.on("end", end => {voiceChannel.leave();});
 
         }).catch(err => console.log(err));
-        */
+
 
     }
-
+*/
     //commande Staff pour tournoi (salon staff monche)
     if(message.member.roles.cache.has(auth.server.role.staff)&&message.channel.id==auth.server.salon.staffmonche){
         if(petitMessage.startsWith(prefixTournoiOn)){
@@ -212,6 +200,48 @@ bot.on('message', async function (message, user) {
 
     //commande animateur ou staff (sauf role mute monche)
     if(!message.member.roles.cache.has(auth.server.role.mute)&&(message.member.roles.cache.has(auth.server.role.staff)||message.member.roles.cache.has(auth.server.role.animateur))){
+
+        //commande "roll" dans monche? (l'original)
+        if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monchedex&&rollOnDex==false&&reponseDex==true){
+
+            var quelEstCeDex = Rand(tailleSnap)-1;
+            nomDex = tabPokeSnap[quelEstCeDex][1];
+            numDex = tabPokeSnap[quelEstCeDex][2];
+
+            //récupération d'une image
+            if(tabPokeSnap[quelEstCeDex][0][1]==="xxx"){
+                var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeDex][0][0]);
+                var lienImage = "Sprite"+tabPokeSnap[quelEstCeDex][0][0].split('Sprite')[1];
+                console.log(lienImage);
+            }else{
+                if(Math.random()>tabPokeSnap[quelEstCeDex][0][2]){
+                    var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeDex][0][0]);
+                    var lienImage = "Sprite"+tabPokeSnap[quelEstCeDex][0][0].split('Sprite')[1];
+                    console.log(lienImage);
+                }else{
+                    var attachment = new Discord.MessageAttachment(tabPokeSnap[quelEstCeDex][0][1]);
+                    var lienImage = "Sprite"+tabPokeSnap[quelEstCeDex][0][1].split('Sprite')[1];
+                    console.log(lienImage);
+                }
+            }
+                        const messagePokemonDex = new Discord.MessageEmbed()
+                                .setColor('#BD1513')
+                                .setTitle("__**"+nomDex+"**__")
+                                .setDescription("Vous devez donc retrouvez le numéro de pokédex de : ***"+nomDex+"***")
+                                .attachFiles(attachment)
+                                .setImage('attachment://'+lienImage)
+                                .setThumbnail(bot.user.displayAvatarURL())
+                                .setFooter("Plus ou Moinche : Dex Édition");
+
+            await message.channel.send("Prêt·e·s ?");
+                await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
+                
+                setTimeout(async function(){await message.channel.send({embed : messagePokemonDex});rollOnDex = false;},4500);
+                
+                gameOnDex = true;
+                
+        }
+
 
         //commande "roll" dans monche? (l'original)
         if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monchesnap&&rollOnSnap==false&&reponseSnap==true){
@@ -820,6 +850,7 @@ bot.on('message', async function (message, user) {
                     }
                 }else if(paramJeuSnap[1]==="type"||randrollSnap==2){
                     //découpe du message joueur avec l'espace
+                    var paramTypeToCheck = typePickedSnap.split(' ');
                     paramTypeSnap = petitMessage.split(' ');
                     //console.log("/"+paramTypeSnap[0]+"/"+paramTypeSnap[1]+"/");
                     //si pas de second paramètre alors on check que le premier
@@ -842,7 +873,10 @@ bot.on('message', async function (message, user) {
                     }else{
                         //console.log("1 : "+paramTypeSnap[0]+"/ 2 : "+paramTypeSnap[1]+"/ 3 : "+paramTypeSnap[2]+"/ 4 : "+paramTypeSnap[3]+"/ 5 : "+paramTypeSnap[4]+"/ 6 : "+paramTypeSnap[5])
                         var filtreEspace = "";
-                        for (j=0;j<6;j++){
+                        var j = 0;
+                        while (paramTypeSnap[j]!=undefined){
+                            console.log("paramTypeSnap["+j+"] : "+paramTypeSnap[j])
+//                        for (j=0;j<6;j++){
                             //console.log("/"+paramTypeSnap[j]+"/");
                             if(paramTypeSnap[j]!=""){
 
@@ -850,9 +884,19 @@ bot.on('message', async function (message, user) {
                                 //console.log("/"+filtreEspace+"/");
 
                             }
+                            j++;
                         }
                         var newParamTypeSnap = filtreEspace.split(' ');
-                        if(typePickedSnap.includes(newParamTypeSnap[0])&&typePickedSnap.includes(newParamTypeSnap[1])){
+                        var paramTypeToCheck = typePickedSnap.split(' ');
+                        if((filtreEspace.includes(paramTypeToCheck[0])&&filtreEspace.includes(paramTypeToCheck[1])&&!paramTypeToCheck[2])&&(typePickedSnap.includes(newParamTypeSnap[1])&&typePickedSnap.includes(newParamTypeSnap[2])&&!newParamTypeSnap[3])){
+                            console.log(petitMessage);
+                            console.log("newParamTypeSnap[1] : "+newParamTypeSnap[1]);
+                            console.log("newParamTypeSnap[2] : "+newParamTypeSnap[2]);
+                            console.log("newParamTypeSnap[3] : "+newParamTypeSnap[3]);
+                            console.log("paramTypeToCheck[0] : "+paramTypeToCheck[0]);
+                            console.log("paramTypeToCheck[1] : "+paramTypeToCheck[1]);
+                            console.log("paramTypeToCheck[2] : "+paramTypeToCheck[2]);
+
                             var typesoluce = typePickedSnap.split(' ');
                             message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| cumule en effet les types "+EmoteType(typesoluce[0].toLowerCase())+" et "+EmoteType(typesoluce[1].toLowerCase())+" !");
                             if(tournoiOn==true){
@@ -863,10 +907,35 @@ bot.on('message', async function (message, user) {
                             gameOnSnap = false;
                             rollOnSnap = false;
                             return;
-                        }else if(typePickedSnap.includes(newParamTypeSnap[0])||typePickedSnap.includes(newParamTypeSnap[1])){
+                        }else if(newParamTypeSnap[3]!=""){
+                            console.log(filtreEspace);
+                            console.log("newParamTypeSnap[1] : "+newParamTypeSnap[1]);
+                            console.log("newParamTypeSnap[2] : "+newParamTypeSnap[2]);
+                            console.log("newParamTypeSnap[3] : "+newParamTypeSnap[3]);
+                            console.log("paramTypeToCheck[0] : "+paramTypeToCheck[0]);
+                            console.log("paramTypeToCheck[1] : "+paramTypeToCheck[1]);
+                            console.log("paramTypeToCheck[2] : "+paramTypeToCheck[2]);
+
+                            message.reply(" ce Pokémon a peut-être cette combinaison de types !\rMais ta réponse contient un mot ou caractère parasite.\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            return;
+                        }else if((filtreEspace.includes(paramTypeToCheck[0])||filtreEspace.includes(paramTypeToCheck[1]))&&(typePickedSnap.includes(newParamTypeSnap[1])||typePickedSnap.includes(newParamTypeSnap[2]))){
+                            console.log(filtreEspace);
+                            console.log("newParamTypeSnap[1] : "+newParamTypeSnap[1]);
+                            console.log("newParamTypeSnap[2] : "+newParamTypeSnap[2]);
+                            console.log("newParamTypeSnap[3] : "+newParamTypeSnap[3]);
+                            console.log("paramTypeToCheck[0] : "+paramTypeToCheck[0]);
+                            console.log("paramTypeToCheck[1] : "+paramTypeToCheck[1]);
+                            console.log("paramTypeToCheck[2] : "+paramTypeToCheck[2]);
                             message.reply(" ce Pokémon n'a pas cette combinaison de types ! \rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
                             return;
                         }else {
+                            console.log(filtreEspace);
+                            console.log("newParamTypeSnap[1] : "+newParamTypeSnap[1]);
+                            console.log("newParamTypeSnap[2] : "+newParamTypeSnap[2]);
+                            console.log("newParamTypeSnap[3] : "+newParamTypeSnap[3]);
+                            console.log("paramTypeToCheck[0] : "+paramTypeToCheck[0]);
+                            console.log("paramTypeToCheck[1] : "+paramTypeToCheck[1]);
+                            console.log("paramTypeToCheck[2] : "+paramTypeToCheck[2]);
                             message.reply(" ce Pokémon n'a aucun de ces types ! \rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
                             return;
                         }
