@@ -57,7 +57,9 @@ var idToCheck;
 
 
 //Variable des roll snap
-var typePickedSnap;
+var tabTypePickedSnap;
+var tabPetitMessage;
+//var typePickedSnap;
 var genSnap;
 var stadeSnap;
 var randrollSnap;
@@ -148,7 +150,7 @@ bot.on('message', async function (message, user) {
     if (message.author.bot) return;
     
     //limité à la catégorie de la forêt
-    if (message.channel.parent.id!=auth.server.categorie.monche) return;
+    if (message.channel.parent!=auth.server.categorie.monche) {console.log("hors catégorie"); return;}
 
 //test de lecture de fichier audio (monche-cri)
 /*
@@ -849,95 +851,163 @@ bot.on('message', async function (message, user) {
                         }
                     }
                 }else if(paramJeuSnap[1]==="type"||randrollSnap==2){
-                    //découpe du message joueur avec l'espace
-                    var paramTypeToCheck = typePickedSnap.split(' ');
-                    paramTypeSnap = petitMessage.split(' ');
-                    //console.log("/"+paramTypeSnap[0]+"/"+paramTypeSnap[1]+"/");
-                    //si pas de second paramètre alors on check que le premier
-                    if(!paramTypeSnap[1]&&!paramTypeSnap[2]&&!paramTypeSnap[3]&&!paramTypeSnap[4]&&!paramTypeSnap[5]){
-                        if(typePickedSnap===paramTypeSnap[0]){
-                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est tout à fait de type "+EmoteType(paramTypeSnap[0].toLowerCase())+" pur !");
-                            if(tournoiOn==true){
-                                const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
-                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Type Unique !`);
-                            }
-                            reponseSnap = true;
-                            gameOnSnap = false;
-                            rollOnSnap = false;
-                            return;
-                        }else{
-                            message.reply(" ce Pokémon n'a pas ce type ! \rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
-                            return;
-                        }
-                    //si un second alors on vérifie que les deux sont dans le type du pokémon
-                    }else{
-                        //console.log("1 : "+paramTypeSnap[0]+"/ 2 : "+paramTypeSnap[1]+"/ 3 : "+paramTypeSnap[2]+"/ 4 : "+paramTypeSnap[3]+"/ 5 : "+paramTypeSnap[4]+"/ 6 : "+paramTypeSnap[5])
-                        var filtreEspace = "";
+                    //création de variables de types en tableau
+                    // tableau des types de la bdd
+                    var tabTypePickedSnap = typePickedSnap.split(' ');
+                    // tableau des types du message joueur
+                    var tabPetitMessage = petitMessage.split(' ');
+                        // gestion des espaces dans le message du joueur
+                        var tabPetitMessageFiltreEspace = "";
                         var j = 0;
-                        while (paramTypeSnap[j]!=undefined){
-                            console.log("paramTypeSnap["+j+"] : "+paramTypeSnap[j])
-//                        for (j=0;j<6;j++){
-                            //console.log("/"+paramTypeSnap[j]+"/");
-                            if(paramTypeSnap[j]!=""){
-
-                                filtreEspace = filtreEspace+" "+paramTypeSnap[j];
-                                //console.log("/"+filtreEspace+"/");
-
+                        while (tabPetitMessage[j]!=undefined){
+                            //console.log("paramTypeSnap["+j+"] : "+tabPetitMessage[j])
+                            if(tabPetitMessage[j]!=""){
+                                if(j==0){
+                                    tabPetitMessageFiltreEspace = tabPetitMessage[j];
+                                }else{
+                                    tabPetitMessageFiltreEspace = tabPetitMessageFiltreEspace+" "+tabPetitMessage[j];
+                                }
                             }
                             j++;
                         }
-                        var newParamTypeSnap = filtreEspace.split(' ');
-                        var paramTypeToCheck = typePickedSnap.split(' ');
-                        if((filtreEspace.includes(paramTypeToCheck[0])&&filtreEspace.includes(paramTypeToCheck[1])&&!paramTypeToCheck[2])&&(typePickedSnap.includes(newParamTypeSnap[1])&&typePickedSnap.includes(newParamTypeSnap[2])&&!newParamTypeSnap[3])){
-                            console.log(petitMessage);
-                            console.log("newParamTypeSnap[1] : "+newParamTypeSnap[1]);
-                            console.log("newParamTypeSnap[2] : "+newParamTypeSnap[2]);
-                            console.log("newParamTypeSnap[3] : "+newParamTypeSnap[3]);
-                            console.log("paramTypeToCheck[0] : "+paramTypeToCheck[0]);
-                            console.log("paramTypeToCheck[1] : "+paramTypeToCheck[1]);
-                            console.log("paramTypeToCheck[2] : "+paramTypeToCheck[2]);
+                        //redécoupe des types des réponses du joueurs
+                        var newTabPetitMessage = tabPetitMessageFiltreEspace.split(' ');
 
-                            var typesoluce = typePickedSnap.split(' ');
-                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| cumule en effet les types "+EmoteType(typesoluce[0].toLowerCase())+" et "+EmoteType(typesoluce[1].toLowerCase())+" !");
-                            if(tournoiOn==true){
-                                const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
-                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Double Type !`);
+                    if(newTabPetitMessage[2]!=undefined){
+                        //j'ai répondu avec plus que deux mots, donc je compte le nombre de bons types.
+                        var r = 0;
+                        var typeCorrect = 0;
+                        var typeCorrectCorrect = 0;
+                        while(newTabPetitMessage[r]!=undefined){
+                            for (m=0;m<tabType.length;m++){
+                                if(tabType[m].toLowerCase()===newTabPetitMessage[r].toLowerCase()){
+                                    typeCorrect++;
+                                    //je compte le nombre de mots qui sont des types
+                                }
                             }
-                            reponseSnap = true;
-                            gameOnSnap = false;
-                            rollOnSnap = false;
+                            for (n=0;n<tabTypePickedSnap.length;n++){
+                                if(tabTypePickedSnap[n].toLowerCase()===newTabPetitMessage[r].toLowerCase()){
+                                    typeCorrectCorrect++;
+                                }
+                            }
+                            r++;
+                        }
+                        if(r==typeCorrect){
+                            message.reply(" tu as clairement mis trop de types dans ta réponse !\rLa réponse doit contenir __uniquement__ **TOUS** les types de la forme présentée ! :anger:")
                             return;
-                        }else if(newParamTypeSnap[3]!=""){
-                            console.log(filtreEspace);
-                            console.log("newParamTypeSnap[1] : "+newParamTypeSnap[1]);
-                            console.log("newParamTypeSnap[2] : "+newParamTypeSnap[2]);
-                            console.log("newParamTypeSnap[3] : "+newParamTypeSnap[3]);
-                            console.log("paramTypeToCheck[0] : "+paramTypeToCheck[0]);
-                            console.log("paramTypeToCheck[1] : "+paramTypeToCheck[1]);
-                            console.log("paramTypeToCheck[2] : "+paramTypeToCheck[2]);
+                        }else{
+                            message.reply(" tu as clairement mis trop d'infos dans ta réponse !\rTa réponse contient "+typeCorrectCorrect+" type·s correct·s.\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");
+                            return;
+                        }
+                    }else if(newTabPetitMessage[1]!=undefined){
+                        // j'ai répondu avec exactement 2 mots
+                        //console.log("j'ai répondu avec exactement 2 mots");
+                        var s = 0;
+                        var typeCorrect = 0;
+                        var typeCorrectCorrect = 0;
+                        while(newTabPetitMessage[s]!=undefined){
+                            for (m=0;m<tabType.length;m++){
+                                if(tabType[m].toLowerCase()===newTabPetitMessage[s].toLowerCase()){
+                                    typeCorrect++;
+                                    //je compte le nombre de mots qui sont des types
+                                }
+                            }
+                            //console.log("typeCorrect : "+typeCorrect);
+                            for (n=0;n<tabTypePickedSnap.length;n++){
+                                //console.log("n : "+n);
+                                if(tabTypePickedSnap[n].toLowerCase()===newTabPetitMessage[s].toLowerCase()){
+                                    typeCorrectCorrect++;
+                                }
+                                //console.log(tabTypePickedSnap[n]+"/"+newTabPetitMessage[s]+"/"+typeCorrectCorrect);
 
-                            message.reply(" ce Pokémon a peut-être cette combinaison de types !\rMais ta réponse contient un mot ou caractère parasite.\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                            }
+
+                            s++;
+                        }
+
+                        if(!tabTypePickedSnap[1]){
+                            //je n'ai qu'un type à trouver
+                            if(s==typeCorrect){
+                                message.reply(" ce Pokémon n'a pas de double type !\rTa réponse contient "+typeCorrectCorrect+" type correct.\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");
+                                return;
+                            }else{
+                                message.reply(" tu as clairement mis trop d'infos dans ta réponse !\rTa réponse contient "+typeCorrectCorrect+" type correct.\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");
+                                return;
+                            }
+                        }else{
+                            //j'ai deux type à trouver
+                            if(typeCorrect==2){
+                                //j'ai tapé deux mots qui sont des types
+                                if(typeCorrectCorrect==0){
+                                    //je n'ai aucun bon type
+                                    message.reply(" mais pas du tout !\rAucun de ces types n'est correct.\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");
+                                    return;
+                                }else if(typeCorrectCorrect==1){
+                                    //j'ai un seul bon type
+                                    message.reply(" presque presque !\r Un seul de ces types est correct.\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");
+                                    return;
+                                }else if(typeCorrectCorrect==2){
+                                    //j'ai les deux bons types
+                                    if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                        message.reply(" tu as gagné 1/2 point ! :zany_face:\r||"+nomSnap+"|| cumule en effet les types "+EmoteType(tabTypePickedSnap[0].toLowerCase())+" et "+EmoteType(tabTypePickedSnap[1].toLowerCase())+" !");
+                                    }else{
+                                        message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| cumule en effet les types "+EmoteType(tabTypePickedSnap[0].toLowerCase())+" et "+EmoteType(tabTypePickedSnap[1].toLowerCase())+" !");
+                                    }
+                                    if(tournoiOn==true){
+                                        const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                        compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Double Type !`);
+                                    }
+                                    reponseSnap = true;
+                                    gameOnSnap = false;
+                                    rollOnSnap = false;
+                                    return;
+                                }
+                            }else if(typeCorrect==1){
+                                //sur mes deux mots un seul est un vrai type
+                                if(typeCorrectCorrect==0){
+                                    //je n'ai aucun bon type
+                                    message.reply(" mais pas du tout !\rAucun de ces types n'est correct, sans parler de la faute d'orthographe (**au mieux**).\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");
+                                    return;
+                                }else if(typeCorrectCorrect==1){
+                                    //j'ai un seul bon type
+                                    message.reply(" presque presque !\r Un seul de ces types est correct, l'autre est une faute d'orthographe (**au mieux**).\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");
+                                    return;
+                                }
+                            }else{
+                                message.reply(" bon bon bon (*enfin je veux pas dire que c'est la bonne réponse*) !\rJe vais partir du principe que tu cherchais pas à répondre, vu que rien ne ressemble à un type.\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");
+                                return; 
+                            }
+                        }
+                    } else if(!newTabPetitMessage[1]){
+                        //je n'ai répondu qu'avec un seul mot
+                        for (l=0;l<tabType.length;l++){
+                            if(tabType[l].toLowerCase()===newTabPetitMessage[0].toLowerCase()){
+                                typeCorrect++;
+                                //je compte le nombre de mots qui sont des types
+                            }
+                        }
+                        if(typeCorrect==0){
+                            message.reply(" faut se concentrer, ce mot n'est pas un type du tout !\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");
                             return;
-                        }else if((filtreEspace.includes(paramTypeToCheck[0])||filtreEspace.includes(paramTypeToCheck[1]))&&(typePickedSnap.includes(newParamTypeSnap[1])||typePickedSnap.includes(newParamTypeSnap[2]))){
-                            console.log(filtreEspace);
-                            console.log("newParamTypeSnap[1] : "+newParamTypeSnap[1]);
-                            console.log("newParamTypeSnap[2] : "+newParamTypeSnap[2]);
-                            console.log("newParamTypeSnap[3] : "+newParamTypeSnap[3]);
-                            console.log("paramTypeToCheck[0] : "+paramTypeToCheck[0]);
-                            console.log("paramTypeToCheck[1] : "+paramTypeToCheck[1]);
-                            console.log("paramTypeToCheck[2] : "+paramTypeToCheck[2]);
-                            message.reply(" ce Pokémon n'a pas cette combinaison de types ! \rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
-                            return;
-                        }else {
-                            console.log(filtreEspace);
-                            console.log("newParamTypeSnap[1] : "+newParamTypeSnap[1]);
-                            console.log("newParamTypeSnap[2] : "+newParamTypeSnap[2]);
-                            console.log("newParamTypeSnap[3] : "+newParamTypeSnap[3]);
-                            console.log("paramTypeToCheck[0] : "+paramTypeToCheck[0]);
-                            console.log("paramTypeToCheck[1] : "+paramTypeToCheck[1]);
-                            console.log("paramTypeToCheck[2] : "+paramTypeToCheck[2]);
-                            message.reply(" ce Pokémon n'a aucun de ces types ! \rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
-                            return;
+                        }else{
+                            if(typePickedSnap===newTabPetitMessage[0]){
+                                if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                    message.reply(" tu as gagné 1/2 point ! :zany_face:\r||"+nomSnap+"|| est tout à fait de type "+EmoteType(typePickedSnap.toLowerCase())+" pur !");
+                                }else{
+                                    message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est tout à fait de type "+EmoteType(typePickedSnap.toLowerCase())+" pur !");
+                                }
+                                if(tournoiOn==true){
+                                    const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                    compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Type Unique !`);
+                                }
+                                reponseSnap = true;
+                                gameOnSnap = false;
+                                rollOnSnap = false;
+                                return;
+                            }else{
+                                message.reply(" mais pas du tout !\rCe type n'est absolument pas correct.\rLa réponse doit contenir **TOUS** les types de la forme présentée ! :anger:");
+                                return;
+                            }
                         }
                     }
                 }else if((paramJeuSnap[1]==="gen"||randrollSnap==3)){
