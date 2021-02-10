@@ -617,7 +617,12 @@ bot.on('message', async function (message, user) {
 
                                 for (let i = 1; i < users.length; i++) {
                                     const user = users[i];
-                                    message.channel.send(`${user} gagne 1 point !`);
+
+                                    if(user==auth.server.malus.nolimite||user==auth.server.malus.eloan||user==auth.server.malus.urei){
+                                        message.reply(`${user} gagne 1/2 point !`);
+                                    }else{
+                                        message.reply(`${user} gagne 1 point !`);
+                                    }
                                     if(tournoiOn==true){
                                         const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                                         compteurScore.send(`**<@${user.id}>** a gagné 1 point sur un roll Médicamonche !`);
@@ -822,7 +827,11 @@ bot.on('message', async function (message, user) {
 
                 if(!paramJeuSnap[1]||randrollSnap==1){
                     if(petitMessage == nomSnap.toLowerCase()){
-                        message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| s'appelle bien "+nomSnap+" !");
+                        if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                            message.reply(" tu as gagné 1/2 point ! :partying_face:\r||"+nomSnap+"|| s'appelle bien "+nomSnap+" !");
+                        }else{
+                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| s'appelle bien "+nomSnap+" !");
+                        }
                         if(tournoiOn==true){
                             const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                             compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap pur !`);
@@ -1013,7 +1022,13 @@ bot.on('message', async function (message, user) {
                 }else if((paramJeuSnap[1]==="gen"||randrollSnap==3)){
 
                         if(genSnap===Number(petitMessage)){
-                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| appartient à la "+EmoteGen(genSnap)+" naturellement !");
+
+                            if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                message.reply(" tu as gagné 1/2 point ! :partying_face:\r||"+nomSnap+"|| appartient à la "+EmoteGen(genSnap)+" naturellement !");
+                            }else{
+                                message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| appartient à la "+EmoteGen(genSnap)+" naturellement !");
+                            }
+
                             if(tournoiOn==true){
                                 const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                                 compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Gen !`);
@@ -1032,11 +1047,23 @@ bot.on('message', async function (message, user) {
                         if(stadeSnap===Number(petitMessage)){
 
                             if(stadeSnap==1){
-                                message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est un pokémon de base 🥇 !");
+                                if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                    message.reply(" tu as gagné 1/2 point ! :partying_face:\r||"+nomSnap+"|| est un pokémon de base 🥇 !");
+                                }else{
+                                    message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est un pokémon de base 🥇 !");
+                                }
                             }else if (stade==2){
-                                message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est une première évolution 🥈 !");
+                                if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                    message.reply(" tu as gagné 1/2 point ! :partying_face:\r||"+nomSnap+"|| est une première évolution 🥈 !");
+                                }else{
+                                    message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| une première évolution 🥈 !");
+                                }
                             }else{
-                                message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est une seconde évolution 🥉 !");
+                                if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                    message.reply(" tu as gagné 1/2 point ! :partying_face:\r||"+nomSnap+"|| est une seconde évolution 🥉 !");
+                                }else{
+                                    message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| une seconde évolution 🥉 !");
+                                }
                             }
 
                             if(tournoiOn==true){
@@ -1054,7 +1081,11 @@ bot.on('message', async function (message, user) {
                 }else if((paramJeuSnap[1]==="gender"||randrollSnap==5)){
                     if(gender==="mâle"){
                         if(petitMessage=="mâle"||petitMessage=="male"){
-                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomGender+"|| est effectivement mâle ♂️ !");
+                            if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                message.reply(" tu as gagné 1/2 point ! :partying_face:\r||"+nomGender+"|| est effectivement mâle ♂️ !");
+                            }else{
+                                message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomGender+"|| est effectivement mâle ♂️ !");
+                            }
                             if(tournoiOn==true){
                                 const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                                 compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Gender (Mâle) !`);
@@ -1069,7 +1100,11 @@ bot.on('message', async function (message, user) {
                         }
                     }else if(gender==="femelle"){
                         if(petitMessage=="femelle"){
-                            message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomGender+"|| est effectivement femelle ♀️ !");
+                            if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                message.reply(" tu as gagné 1/2 point ! :partying_face:\r||"+nomGender+"|| est effectivement femelle ♀️ !");
+                            }else{
+                                message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomGender+"|| est effectivement femelle ♀️ !");
+                            }
                             if(tournoiOn==true){
                                 const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                                 compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Gender (Femelle) !`);
@@ -1097,7 +1132,11 @@ bot.on('message', async function (message, user) {
                         if(petitMessage == tabPokemon[k][0].toLowerCase())
                             {
                                 if (typePicked==""&&gen==0&&stade==0){
-                                    message.reply(" tu as gagné 1 point ! :partying_face:");
+                                    if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                        message.reply(" tu as gagné 1/2 point ! :partying_face:");
+                                    }else{
+                                        message.reply(" tu as gagné 1 point ! :partying_face:");
+                                    }
                                     if(tournoiOn==true){
                                         const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                                         compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres pures !`);
@@ -1108,7 +1147,11 @@ bot.on('message', async function (message, user) {
                                     return;
                                 }else if (gen==0&&stade==0){
                                     if(tabPokemon[k][4].includes(typePicked)){
-                                        message.reply(" tu as gagné 1 point ! :partying_face:");
+                                        if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                            message.reply(" tu as gagné 1/2 point ! :partying_face:");
+                                        }else{
+                                            message.reply(" tu as gagné 1 point ! :partying_face:");
+                                        }
                                         if(tournoiOn==true){
                                             const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                                             compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +type !`);
@@ -1123,7 +1166,11 @@ bot.on('message', async function (message, user) {
                                     }
                                 }else if (stade==0){
                                     if(gen == tabPokemon[k][2]){
-                                            message.reply(" tu as gagné 1 point ! :partying_face:");
+                                            if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                                message.reply(" tu as gagné 1/2 point ! :partying_face:");
+                                            }else{
+                                                message.reply(" tu as gagné 1 point ! :partying_face:");
+                                            }
                                             if(tournoiOn==true){
                                                 const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                                                 compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +gen !`);
@@ -1137,7 +1184,11 @@ bot.on('message', async function (message, user) {
                                         return;
                                     }
                                 }else if (stade== tabPokemon[k][3]){
-                                    message.reply(" tu as gagné 1 point ! :partying_face:");
+                                    if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                        message.reply(" tu as gagné 1/2 point ! :partying_face:");
+                                    }else{
+                                        message.reply(" tu as gagné 1 point ! :partying_face:");
+                                    }
                                     if(tournoiOn==true){
                                         const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                                         compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +stade !`);
