@@ -619,9 +619,9 @@ bot.on('message', async function (message, user) {
                                     const user = users[i];
 
                                     if(user==auth.server.malus.nolimite||user==auth.server.malus.eloan||user==auth.server.malus.urei){
-                                        message.reply(`${user} gagne 1/2 point !`);
+                                        message.channel.send(`${user} gagne 1/2 point !`);
                                     }else{
-                                        message.reply(`${user} gagne 1 point !`);
+                                        message.channel.send(`${user} gagne 1 point !`);
                                     }
                                     if(tournoiOn==true){
                                         const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
