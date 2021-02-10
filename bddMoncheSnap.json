@@ -1116,7 +1116,7 @@
     [["./pokeimage/Sprite_837_HOME.png","xxx",0.5],"Charbi",837,8,1,"Roche"],
     [["./pokeimage/Sprite_838_HOME.png","xxx",0.5],"Wagomine",838,8,2,"Roche Feu"],
     [["./pokeimage/Sprite_839_HOME.png","xxx",0.5],"Monthracite",839,8,3,"Roche Feu"],
-    [["./pokeimage/gigamax/Sprite_839_HOME.png","xxx",0.5],"Monthracite Forme Gigamax",839,8,3,"Roche"],
+    [["./pokeimage/gigamax/Sprite_839_HOME.png","xxx",0.5],"Monthracite Forme Gigamax",839,8,3,"Roche Feu"],
     [["./pokeimage/Sprite_840_HOME.png","xxx",0.5],"Verpom",840,8,1,"Plante Dragon"],
     [["./pokeimage/Sprite_841_HOME.png","xxx",0.5],"Pomdrapi",841,8,2,"Plante Dragon"],
     [["./pokeimage/gigamax/Sprite_841_HOME.png","xxx",0.5],"Pomdrapi Forme Gigamax",841,8,2,"Plante"],
