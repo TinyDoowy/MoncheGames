@@ -109,7 +109,7 @@ const tailleGender = tabPokeGender.length;
 
 const tabType = ["Acier","Combat","Dragon","Eau","Électrique",
 "Fée","Feu","Glace","Insecte","Normal","Plante","Poison",
-"Psy","Roche","Sol","Spectre","Ténèbres","Vol","Bird"];
+"Psy","Roche","Sol","Spectre","Ténèbres","Vol","Bird","Cristal"];
 
 
 
