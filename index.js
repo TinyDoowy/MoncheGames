@@ -65,6 +65,7 @@ var stadeSnap;
 var randrollSnap;
 var genderSnap;
 var paramTypeSnap;
+var numExplain;
 
 
 //Variable de suivi des roll anti-cheat anti double roll etc...
@@ -109,7 +110,7 @@ const tailleGender = tabPokeGender.length;
 
 const tabType = ["Acier","Combat","Dragon","Eau","Électrique",
 "Fée","Feu","Glace","Insecte","Normal","Plante","Poison",
-"Psy","Roche","Sol","Spectre","Ténèbres","Vol","Bird","Cristal"];
+"Psy","Roche","Sol","Spectre","Ténèbres","Vol","Cristal","Bird"];
 
 
 
@@ -304,6 +305,7 @@ bot.on('message', async function (message, user) {
             }else if(paramJeuSnap[1]==="type"||randrollSnap==2){
             //récupération des Lettres (dénominateur commun)
                 var quelEstCeSnap = Rand(tailleSnap)-1;
+                numExplain = quelEstCeSnap;
                 nomSnap = tabPokeSnap[quelEstCeSnap][1];
                 typeSnap = tabPokeSnap[quelEstCeSnap][5];
                 genSnap = tabPokeSnap[quelEstCeSnap][3];
@@ -787,18 +789,28 @@ bot.on('message', async function (message, user) {
                             }else{
                                 var phraseStade = "une seconde évolution 🥉 !";
                             }
-                            message.channel.send("La solution était : ||__**"+nomSnap+"**__|| est "+phraseStade+"\r*Better Luck Next Time !* :fingers_crossed:");return;
+                            message.channel.send("La solution était : ||__**"+nomSnap+"**__|| est "+phraseStade+"\r*Better Luck Next Time !* :fingers_crossed:");
+                            await ExplicationMonstre(message,numExplain);
+                            return;
                         }else if(paramJeuSnap[1]==="gen"||randrollSnap==3){
-                            message.channel.send("La solution était : ||__**"+nomSnap+"**__|| issu de la "+EmoteGen(genSnap)+" .\r*Better Luck Next Time !* :fingers_crossed:");return;
+                            message.channel.send("La solution était : ||__**"+nomSnap+"**__|| issu de la "+EmoteGen(genSnap)+" .\r*Better Luck Next Time !* :fingers_crossed:");
+                            await ExplicationMonstre(message,numExplain);
+                            return;
                         }else if(paramJeuSnap[1]==="type"||randrollSnap==2){
                             var splitType = typePickedSnap.split(' ');
                             if(!splitType[1]){
-                                message.channel.send("La solution était : ||__**"+nomSnap+"**__|| de type "+EmoteType(typePickedSnap.toLowerCase())+" pur.\r*Better Luck Next Time !* :fingers_crossed:");return;
+                                message.channel.send("La solution était : ||__**"+nomSnap+"**__|| de type "+EmoteType(typePickedSnap.toLowerCase())+" pur.\r*Better Luck Next Time !* :fingers_crossed:");
+                                await ExplicationMonstre(message,numExplain);
+                                return;
                             }else{
-                                message.channel.send("La solution était : ||__**"+nomSnap+"**__|| de type "+EmoteType(splitType[0].toLowerCase())+" et "+EmoteType(splitType[1].toLowerCase())+".\r*Better Luck Next Time !* :fingers_crossed:");return;
+                                message.channel.send("La solution était : ||__**"+nomSnap+"**__|| de type "+EmoteType(splitType[0].toLowerCase())+" et "+EmoteType(splitType[1].toLowerCase())+".\r*Better Luck Next Time !* :fingers_crossed:");
+                                await ExplicationMonstre(message,numExplain);
+                                return;
                             }
                         }else{
-                            message.channel.send("La solution était : __**"+nomSnap+"**__.\r*Better Luck Next Time !* :fingers_crossed:");return;
+                            message.channel.send("La solution était : __**"+nomSnap+"**__.\r*Better Luck Next Time !* :fingers_crossed:");
+                            await ExplicationMonstre(message,numExplain);
+                            return;
                         }
                     }else{
                         message.channel.send("Le dernier Pokémon a déjà été trouvé/dévoilé.");return;
@@ -832,6 +844,9 @@ bot.on('message', async function (message, user) {
                         }else{
                             message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| s'appelle bien "+nomSnap+" !");
                         }
+
+                        await ExplicationMonstre(message,numExplain);
+
                         if(tournoiOn==true){
                             const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                             compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap pur !`);
@@ -962,6 +977,9 @@ bot.on('message', async function (message, user) {
                                     }else{
                                         message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| cumule en effet les types "+EmoteType(tabTypePickedSnap[0].toLowerCase())+" et "+EmoteType(tabTypePickedSnap[1].toLowerCase())+" !");
                                     }
+
+                                    await ExplicationMonstre(message,numExplain);
+                            
                                     if(tournoiOn==true){
                                         const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                                         compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Double Type !`);
@@ -1005,6 +1023,10 @@ bot.on('message', async function (message, user) {
                                 }else{
                                     message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| est tout à fait de type "+EmoteType(typePickedSnap.toLowerCase())+" pur !");
                                 }
+
+                                console.log("numExplain : "+numExplain);
+                                await ExplicationMonstre(message,numExplain);
+                            
                                 if(tournoiOn==true){
                                     const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
                                     compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap +Type Unique !`);
@@ -1028,6 +1050,9 @@ bot.on('message', async function (message, user) {
                             }else{
                                 message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| appartient à la "+EmoteGen(genSnap)+" naturellement !");
                             }
+
+                            await ExplicationMonstre(message,numExplain);
+                            
 
                             if(tournoiOn==true){
                                 const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
@@ -1065,6 +1090,9 @@ bot.on('message', async function (message, user) {
                                     message.reply(" tu as gagné 1 point ! :partying_face:\r||"+nomSnap+"|| une seconde évolution 🥉 !");
                                 }
                             }
+
+                            await ExplicationMonstre(message,numExplain);
+                            
 
                             if(tournoiOn==true){
                                 const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
@@ -1265,6 +1293,8 @@ function EmoteType(type){
         case "spectre" : return '👻'; break;
         case "ténèbres" : return '🌚'; break;
         case "vol" : return '🌪️'; break;
+        case "bird" : return '🐦'; break;
+        case "cristal" : return '💎'; break;
         case "statut" : return '⁉️';break;
         default : return '⛔';break;
     };
@@ -1322,6 +1352,32 @@ function Rand(valeur){
     return Math.floor(Math.random() * valeur +1);
 }
 
+
+async function ExplicationMonstre(message,valeur){
+    console.log("valeur : "+valeur);
+    switch (valeur){
+        //MissingNo.
+        case 1262 : var leLink = "**MissingNo.** est le plus connu des Pokémon Bug : <https://www.pokepedia.fr/MissingNo.>\rSi vous voulez plus de détails, cliquez sur le lien !"; break;
+        //Crokiyas
+        case 1263 : var leLink = "**Crokiyas** est un des Pokémon perdu. Son nom est purement inventé ici.\rIl s'agit tout simplement du Kokiyas qui aurait raté sa morsure sur la queue d'un Ramoloss et qui aurait évolué malgré tout."; break;
+        //Onix de Cristal
+        case 1264 : var leLink = "**Onix de Cristal** est apparu dans l'épisode 82 de la série animée Pokémon.\rSa particularité est qu'il résiste aux attaques Eau :sweat_drops: et est faible aux attaques Feu :fire: .\r\"*Plus*\" de détail ici : <https://www.pokepedia.fr/Onix_de_Cristal>"; break;
+        //M. Mime tout nu
+        case 1265 : var leLink = "**M. Mime** *tout nu* est issu d'un meme trouvé sur internet x)\rQue serait un bon jeu Monche sans un trigger qui fait peur à <@"+auth.server.staff.papi+"> ?!"; break;
+        //Ronflex de Glace
+        case 1266 : var leLink = "**Ronflex de Glace** :ice_cube:  est apparu dans l'épisode spécial *Pokémon Chronicles 3* nommé : Ronflex le Bonhomme de Neige\rPlus de détails dans le lien suivant : <https://www.pokepedia.fr/Ronflex_le_bonhomme_de_neige>"; break;
+        //Mew morphing Métamorph
+        case 1267 : var leLink = "**Mew utilisant Morphing sur Métamorph** est issu de l'esprit dérangé de <@"+auth.server.staff.urei+">.\r L'idée est de reprendre le concept du Métamorph conservant ses yeux en utilisant Morphing.\rMais dans le cas où Mew l'utiliserait sur *el famoso* Métamorph.\r*Ce Pokémon a été créé par des professionels, ne reproduisez pas ça chez vous !*"; break;
+        //Pichu Troizépi
+        case 1268 : var leLink = "**Pichu Troizépi** est obtenable dans les Jeux HeartGold et SoulSilver.\rUne procédure suivant une autre distribution en 2009/2010.\rCe Pokémon n'a malheureusement pas eu la chance de pouvoir suivre la Banque et le Home\rPlus d'infos en suivant ce lien : <https://www.pokepedia.fr/Pichu_Troiz%C3%A9pi>"; break;
+        //Morphéo Tempête de Sable
+        case 1269 : var leLink = "**Morphéo forme Tempête de Sable** est le Pokémon oublié de la météo.\rSachant que Morphéo change de forme sous le soleil, la pluie ou la grêle, il aurait été normal de le voir apparaître sur sa forme *Tempête de Sable*.\rIl est donc bien évidemment de type Sol :earth_africa: ."; break;
+        //Régigigigigigigigigigigigigas
+        case 1270 : var leLink = "**Regigigigigigigigigigigigigas** est l'idée farfelue qu'avec l'apparition des nouveaux Régi (Dragon :dragon_face: et Électrique :zap: ), un nouveau Gigigas apparaîtrait.\rIl contient donc toutes les gemmes de chaque type et est par conséquent extrêmement long.\rPrions pour que de nouveaux types n'apparaissent pas de si tôt"; break;
+        default : return true; break;
+    };
+    await message.channel.send(leLink);
+}
 
 
 
