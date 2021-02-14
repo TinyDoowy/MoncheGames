@@ -282,7 +282,7 @@ bot.on('message', async function (message, user) {
                 numExplain = quelEstCeSnap;
                 nomSnap = tabPokeSnap[quelEstCeSnap][1];
 
-                while(nomSnap.toLowerCase().includes("forme")||nomSnap.toLowerCase().includes("méga")||nomSnap.toLowerCase().includes("primo")||nomSnap.toLowerCase().includes("ultra")||nomSnap.toLowerCase().includes("taille")||nomSnap.toLowerCase().includes("coupe")||nomSnap.toLowerCase().includes("fleur")||nomSnap.toLowerCase().includes("motif")){
+                while(nomSnap.toLowerCase().includes("forme")||nomSnap.toLowerCase().includes("casquette")||nomSnap.toLowerCase().includes("méga")||nomSnap.toLowerCase().includes("primo")||nomSnap.toLowerCase().includes("ultra")||nomSnap.toLowerCase().includes("taille")||nomSnap.toLowerCase().includes("coupe")||nomSnap.toLowerCase().includes("fleur")||nomSnap.toLowerCase().includes("motif")){
                     console.log("Boucle forme : "+nomSnap);
                     quelEstCeSnap = Rand(tailleSnap)-1;
                     nomSnap = tabPokeSnap[quelEstCeSnap][1];
@@ -1377,6 +1377,17 @@ async function ExplicationMonstre(message,valeur){
         case 1269 : var leLink = "**Morphéo forme Tempête de Sable** est le Pokémon oublié de la météo.\rSachant que Morphéo change de forme sous le soleil, la pluie ou la grêle, il aurait été normal de le voir apparaître sur sa forme *Tempête de Sable*.\rIl est donc bien évidemment de type Sol :earth_africa: ."; break;
         //Régigigigigigigigigigigigigas
         case 1270 : var leLink = "**Regigigigigigigigigigigigigas** est l'idée farfelue qu'avec l'apparition des nouveaux Régi (Dragon :dragon_face: et Électrique :zap: ), un nouveau Gigigas apparaîtrait.\rIl contient donc toutes les gemmes de chaque type et est par conséquent extrêmement long.\rPrions pour que de nouveaux types n'apparaissent pas de si tôt"; break;
+        //Forme casquette de pikachu
+        case 1271 : var leLink = "**Pikachu Casquette d'Alola** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région d'Alola (saison 20 à 22).\rC'est son trésor le plus précieux!"; break;
+        case 1272 : var leLink = "**Pikachu Casquette de Hoenn** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région d'Hoenn (saison 6 à 9).\rC'est son trésor le plus précieux!"; break;
+        case 1273 : var leLink = "**Pikachu Casquette de Kalos** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région de Kalos (saison 17 à 19).\rC'est son trésor le plus précieux!"; break;
+        case 1274 : var leLink = "**Pikachu Casquette Monde** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans l'ensemble des régions connues à ce jour, en partant de Galar (saison 23 et +).\rC'est son trésor le plus précieux!"; break;
+        case 1275 : var leLink = "**Pikachu Casquette Originale** (*akka de Kanto/Johto*) est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région de Kanto, les Îles Oranges et Johto (saison 1 à 5).\rC'est son trésor le plus précieux!"; break;
+        case 1276 : var leLink = "**Pikachu Casquette Partenaire** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage durant le 20ème film \"Je te choisis !\" sortie en 2017.\rC'est son trésor le plus précieux!"; break;
+        case 1277 : var leLink = "**Pikachu Casquette Sinnoh** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région de Sinnoh (saison 10 à 13).\rC'est son trésor le plus précieux!"; break;
+        case 1278 : var leLink = "**Pikachu Casquette d'Unys** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région d'Unys (saison 14 à 16).\rC'est son trésor le plus précieux!"; break;
+        case 1279 : var leLink = "**Pikachu Cosplayeuse \"Catcheur\"** a tellement apprécié les concours de robustesse d'Hoenn qu'elle s'est faite faire un costume de catcheur sur mesure. Sa forme est la même que tous les Pikachu femelle, à un détail près, qui est une tâche noire en forme de cœur au bout de la queue."; break;
+        //default  le film "Je te choisis !"
         default : return true; break;
     };
     await message.channel.send(leLink);
