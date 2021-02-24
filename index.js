@@ -246,7 +246,7 @@ bot.on('message', async function (message, user) {
         }
 
 
-        //commande "roll" dans monche? (l'original)
+        //commande "roll" dans monche snap
         if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monchesnap&&rollOnSnap==false&&reponseSnap==true){
 
             /*
@@ -332,6 +332,7 @@ bot.on('message', async function (message, user) {
                 while(tabPokeSnap[quelEstCeSnap][3]!=genMaking){
                     console.log("boucle gen");
                     quelEstCeSnap = Rand(tailleSnap)-1;
+                    numExplain = quelEstCeSnap;
                 }
 
                 nomSnap = tabPokeSnap[quelEstCeSnap][1];
@@ -359,6 +360,7 @@ bot.on('message', async function (message, user) {
                 while(tabPokeSnap[quelEstCeSnap][4]!=stadeMaking){
                     console.log("boucle stade");
                     quelEstCeSnap = Rand(tailleSnap)-1;
+                    numExplain = quelEstCeSnap;
                 }
 
 
