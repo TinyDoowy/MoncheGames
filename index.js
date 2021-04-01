@@ -1374,7 +1374,7 @@ bot.on('message', async function (message, user) {
                     //Il a tapé en dessous.
                 	}else if(petitMessage<numDex){
                 		    if (petitMessage>minDex){
-								minDex = petitMessage;
+								await minDex = petitMessage;
                 			}
                 			await message.reply(" tu as visé trop bas ! Le **n° de Dex** est :arrow_upper_right: **__PLUS GRAND__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+" (inclus).");
 
@@ -1382,7 +1382,7 @@ bot.on('message', async function (message, user) {
                 			return;
                 	}else {
                 			if (petitMessage<maxDex){
-	                			maxDex = petitMessage;
+	                			await maxDex = petitMessage;
 	                		}
                 			await message.reply(" tu as visé trop haut ! Le **n° de Dex** est :arrow_lower_right: **__PLUS PETIT__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+" (inclus).");
 
