@@ -1328,11 +1328,11 @@ bot.on('message', async function (message, user) {
 
             		}else if(botGuess<numDex){
             			minDex = botGuess;
-            			await message.channel.send("<@798884444580085780> a visé trop bas ! Le **n° de Dex** est :arrow_upper_right: **__PLUS GRAND__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+".");
+            			await message.channel.send("<@798884444580085780> a visé trop bas ! Le **n° de Dex** est :arrow_upper_right: **__PLUS GRAND__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+" (inclus).");
 
             		}else{
             			maxDex = botGuess;
-            			await message.channel.send("<@798884444580085780> a visé trop haut ! Le **n° de Dex** est :arrow_lower_right: **__PLUS PETIT__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+".");
+            			await message.channel.send("<@798884444580085780> a visé trop haut ! Le **n° de Dex** est :arrow_lower_right: **__PLUS PETIT__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+" (inclus).");
 
             		}
 
@@ -1376,7 +1376,7 @@ bot.on('message', async function (message, user) {
                 		    if (petitMessage>minDex){
 								minDex = petitMessage;
                 			}
-                			await message.reply(" tu as visé trop bas ! Le **n° de Dex** est :arrow_upper_right: **__PLUS GRAND__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+".");
+                			await message.reply(" tu as visé trop bas ! Le **n° de Dex** est :arrow_upper_right: **__PLUS GRAND__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+" (inclus).");
 
                 			enAttente=message.author.id;
                 			return;
@@ -1384,7 +1384,7 @@ bot.on('message', async function (message, user) {
                 			if (petitMessage<maxDex){
 	                			maxDex = petitMessage;
 	                		}
-                			await message.reply(" tu as visé trop haut ! Le **n° de Dex** est :arrow_lower_right: **__PLUS PETIT__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+".");
+                			await message.reply(" tu as visé trop haut ! Le **n° de Dex** est :arrow_lower_right: **__PLUS PETIT__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+" (inclus).");
 
                 			enAttente=message.author.id;
                 			return;
