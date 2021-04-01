@@ -33,14 +33,22 @@ const idBescherelle = "<@&794691502822653953>";
 
 //prefix utuliser pour les roll
 const prefixStart = "roll";
+const prefixBot = "bot";
 const prefixSoluce = "soluce";
 const prefixTournoiOn = "start";
 const prefixTournoiOff = "stop";
 const prefixJeJoue = "je joue";
+const maximumRoll = 1262; // variable max dans laquelle aller chercher les images (pour éviter les monstres et les métamorph)
+const maximumDex = 899;
 
 //variable roll original
 var nomPokemon = "";
 var paramJeu = "";
+var enAttente = "";
+//variable pour aider le bot à mieux guess le num de dex :)
+var minDex = 0;
+var maxDex = maximumDex;
+
 var lettre1;
 var lettre2;
 var gen;
@@ -110,7 +118,7 @@ const tailleGender = tabPokeGender.length;
 
 const tabType = ["Acier","Combat","Dragon","Eau","Électrique",
 "Fée","Feu","Glace","Insecte","Normal","Plante","Poison",
-"Psy","Roche","Sol","Spectre","Ténèbres","Vol","Cristal","Bird"];
+"Roche","Sol","Spectre","Ténèbres","Vol","Psy","Cristal","Bird"];
 
 
 
@@ -123,12 +131,12 @@ var test = '18 21 13 1 *';
 ///////////////////////
 
 //cron.schedule(test, async () => {
-cron.schedule('0 16 8 2 *', async () => {
+cron.schedule('0 18 1 4 *', async () => {
     const guild = bot.guilds.cache.get(auth.server.guild);
     const channel = bot.channels.cache.get(auth.server.salon.affichage);
 
-                      await channel.send("<@&"+auth.server.role.ping+">, le Monche Universe grandi toujours plus !\rL'annonce de \"New Pokemon Snap\" vous titille !\rRendez-vous dans la Catégorie Monche Universe\rce **__Lundi 8 Février à 21h__** pour fêtez l'arrivée de ***\"New-Monche-Snap\"*** :partying_face: !!\r*c'est exactement ce à quoi vous pensez*\r__Si vous ne souhaitez pas être spammé de notification, pensez à rendre la catégorie muette.__");
-                      await channel.send("https://tenor.com/view/oh-snap-parks-and-rec-parks-and-recreation-chris-pratt-gif-5468594");
+                      await channel.send("<@&"+auth.server.role.ping+">, des nouveaux joueurs entrent dans l'arène !\rC'est l'occasion rêvée de lancer un nouveau mini-jeu.\rRendez-vous dans la Catégorie Monche Universe\rCe **__Jeudi 1er Avril à 21h__** pour fêtez l'arrivée de ***\"Plus-ou-Monche\"*** :partying_face: !!\r\r__Si vous ne souhaitez pas être spammé de notification, pensez à rendre la catégorie muette.__");
+                      await channel.send("https://tenor.com/view/hikari-dawn-plusle-minun-pikari-gif-4663353");
 });
 
 
@@ -160,14 +168,16 @@ bot.on('message', async function (message, user) {
         var voiceChannel = auth.server.salon.soundeffect;
         voiceChannel.join().then(connection => {
 
-            const dispatcher = connection.play('./Cri-1G/001 - Bulbasaur.wav');
+            const dispatcher = connection.play('./pokesound/001 - Bulbasaur.mp3');
             dispatcher.on("end", end => {voiceChannel.leave();});
 
         }).catch(err => console.log(err));
-
-
     }
 */
+
+
+
+
     //commande Staff pour tournoi (salon staff monche)
     if(message.member.roles.cache.has(auth.server.role.staff)&&message.channel.id==auth.server.salon.staffmonche){
         if(petitMessage.startsWith(prefixTournoiOn)){
@@ -204,10 +214,11 @@ bot.on('message', async function (message, user) {
     //commande animateur ou staff (sauf role mute monche)
     if(!message.member.roles.cache.has(auth.server.role.mute)&&(message.member.roles.cache.has(auth.server.role.staff)||message.member.roles.cache.has(auth.server.role.animateur))){
 
-        //commande "roll" dans monche? (l'original)
+        //commande "roll" dans Plus-ou-Monche
         if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monchedex&&rollOnDex==false&&reponseDex==true){
-
-            var quelEstCeDex = Rand(tailleSnap)-1;
+			reponseDex = false;
+			rollOnDex = true;
+            var quelEstCeDex = Rand(maximumRoll);
             nomDex = tabPokeSnap[quelEstCeDex][1];
             numDex = tabPokeSnap[quelEstCeDex][2];
 
@@ -234,19 +245,17 @@ bot.on('message', async function (message, user) {
                                 .attachFiles(attachment)
                                 .setImage('attachment://'+lienImage)
                                 .setThumbnail(bot.user.displayAvatarURL())
-                                .setFooter("Plus ou Moinche : Dex Édition");
+                                .setFooter("Plus ou Monche : Dex Édition");
 
             await message.channel.send("Prêt·e·s ?");
                 await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
                 
                 setTimeout(async function(){await message.channel.send({embed : messagePokemonDex});rollOnDex = false;},4500);
                 
-                gameOnDex = true;
-                
+                gameOnDex = true;  
         }
 
-
-        //commande "roll" dans monche snap
+        //commande "roll" dans monche? (l'original)
         if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monchesnap&&rollOnSnap==false&&reponseSnap==true){
 
             /*
@@ -306,10 +315,18 @@ bot.on('message', async function (message, user) {
             }else if(paramJeuSnap[1]==="type"||randrollSnap==2){
             //récupération des Lettres (dénominateur commun)
                 var quelEstCeSnap = Rand(tailleSnap)-1;
+                //var quelEstCeSnap = Rand(2)+1278;
                 numExplain = quelEstCeSnap;
+
                 nomSnap = tabPokeSnap[quelEstCeSnap][1];
                 typeSnap = tabPokeSnap[quelEstCeSnap][5];
                 genSnap = tabPokeSnap[quelEstCeSnap][3];
+
+                //dans le cas d'un zarbi numéroté
+                if(numExplain>=1280&&numExplain<=1289){
+                    typeSnap = "Psy "+tabType[Rand(17)-1];
+                }
+
                 console.log("Nom : "+nomSnap);
                 console.log("Type : "+typeSnap);
                 console.log("Gen : "+genSnap);
@@ -332,7 +349,6 @@ bot.on('message', async function (message, user) {
                 while(tabPokeSnap[quelEstCeSnap][3]!=genMaking){
                     console.log("boucle gen");
                     quelEstCeSnap = Rand(tailleSnap)-1;
-                    numExplain = quelEstCeSnap;
                 }
 
                 nomSnap = tabPokeSnap[quelEstCeSnap][1];
@@ -360,7 +376,6 @@ bot.on('message', async function (message, user) {
                 while(tabPokeSnap[quelEstCeSnap][4]!=stadeMaking){
                     console.log("boucle stade");
                     quelEstCeSnap = Rand(tailleSnap)-1;
-                    numExplain = quelEstCeSnap;
                 }
 
 
@@ -418,6 +433,10 @@ bot.on('message', async function (message, user) {
                 await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
                 
                 typePickedSnap = tabPokeSnap[quelEstCeSnap][5].toLowerCase();
+
+                if(numExplain>=1280&&numExplain<=1289){
+                    typePickedSnap = typeSnap.toLowerCase();
+                }
                 genSnap = 0;
                 stadeSnap = 0;
                 genderSnap = "";
@@ -472,6 +491,7 @@ bot.on('message', async function (message, user) {
                 return;
             }
         }
+
         //commande "roll" dans médicamonche
         if(petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.medicamonche&&medicOn==false){
             message.delete();
@@ -824,6 +844,25 @@ bot.on('message', async function (message, user) {
             }else{return;}
         }
 
+        //commande "soluce" dans salon Plus-ou-Monche
+        if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.monchedex){
+            if(reponseDex==false){
+                if(rollOnDex==false){
+                    if(gameOnDex==true){
+	                    minDex = 0;
+						maxDex = maximumDex;
+                        gameOnDex = false;
+                        rollOnDex = false;
+                        reponseDex = true;
+	                    enAttente = "";
+                            message.channel.send("La solution était : __**n°"+numDex+"**__.\r*Better Luck Next Time !* :fingers_crossed:");
+                            return;
+                    }else{
+                        message.channel.send("Le dernier Numéro de Dex a déjà été trouvé/dévoilé.");return;
+                    }
+                }else{message.channel.send("Cher <@"+message.author.id+">, veuillez laisser au moins 10 secondes aux joueurs avant de dévoiler la solution. Cordialement, Bisouxx :kissing_heart:");return;}
+            }else{return;}
+        }
     }
 
     //commande "soluce" sans les rôles nécessaires :)
@@ -1264,6 +1303,96 @@ bot.on('message', async function (message, user) {
                 }
             }
         }
+        //récupération des réponses dans Plus-ou-Monche
+        if(message.channel.id==auth.server.salon.monchedex&&gameOnDex==true)
+        {
+            if(rollOnDex==false){
+
+            	if(petitMessage==prefixBot){
+
+            		var botGuess = Rand(parseInt(maxDex)-parseInt(minDex)-parseInt(1))+parseInt(minDex);
+            		console.log(parseInt(maxDex)-parseInt(minDex)-parseInt(1)+parseInt(minDex));
+            		await message.channel.send(botGuess);
+
+            		if(botGuess==numDex){
+            			await message.channel.send("<@798884444580085780> a gagné 1 point ! :partying_face:");
+	                    if(tournoiOn==true){
+	                        const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+	                        compteurScore.send(`**<@798884444580085780>** a gagné 1 point sur un roll ±Dex !`);
+	                    }
+	                    	minDex = 0;
+							maxDex = maximumDex;
+							rollOnDex = false;
+	                    	gameOnDex = false;
+	                    	reponseDex = true;
+
+            		}else if(botGuess<numDex){
+            			minDex = botGuess;
+            			await message.channel.send("<@798884444580085780> a visé trop bas ! Le **n° de Dex** est :arrow_upper_right: **__PLUS GRAND__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+".");
+
+            		}else{
+            			maxDex = botGuess;
+            			await message.channel.send("<@798884444580085780> a visé trop haut ! Le **n° de Dex** est :arrow_lower_right: **__PLUS PETIT__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+".");
+
+            		}
+
+            		enAttente = "";
+            		return;
+
+
+            	}
+
+                //console.log(lettre1+""+lettre2);
+                if(isNaN(petitMessage)){
+                    message.reply(" ce Nombre n'existe pas (ou est mal orthographié) ! :anger:");
+                }else if(message.author.id==enAttente){
+        			message.reply(" non petit Chacripan ! Tu ne peux pas proposer deux réponses à la suite.\rAttends qu'un autre joueur fasse une proposition.");
+        			return;
+                }else{
+
+                	if(petitMessage==numDex){
+                        if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                            message.reply(" tu as gagné 1/2 point ! :partying_face:");
+                        }else{
+                            message.reply(" tu as gagné 1 point ! :partying_face:");
+                        }
+
+	                    if(tournoiOn==true){
+	                        const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+	                        compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll ±Dex !`);
+	                    }
+
+	                    rollOnDex = false;
+	                    gameOnDex = false;
+	                    reponseDex = true;
+
+							minDex = 0;
+							maxDex = maximumDex;
+
+	                    enAttente = "";
+	                    return;
+                    //Il a tapé en dessous.
+                	}else if(petitMessage<numDex){
+                		    if (petitMessage>minDex){
+								minDex = petitMessage;
+                			}
+                			await message.reply(" tu as visé trop bas ! Le **n° de Dex** est :arrow_upper_right: **__PLUS GRAND__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+".");
+
+                			enAttente=message.author.id;
+                			return;
+                	}else {
+                			if (petitMessage<maxDex){
+	                			maxDex = petitMessage;
+	                		}
+                			await message.reply(" tu as visé trop haut ! Le **n° de Dex** est :arrow_lower_right: **__PLUS PETIT__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+".");
+
+                			enAttente=message.author.id;
+                			return;
+
+                	}
+                }
+            }
+        }
     }
 
 });
@@ -1413,9 +1542,10 @@ async function ExplicationMonstre(message,valeur){
         case 1295 : var leLink = "**Zygarde 1% (ou Cœur)** sont des petits êtres verts permettant de créer des Zygarde (10%, 50% ou Forme Parfaite) dans les Jeux Soleil et Lune.\rIls sont représentés dans l'aventure sous forme de petites paillettes vertes (Cellules) ou rouges (Cœur).\rIl y en a 100 au total."; break;
         //God Bidoof
         case 1296 : var leLink = "**Dieu Keunotor** est né d'un post reddit, ironisant sur le fait que Keunotor avec le talent Lunatique était banni des hauts Tiers Smogon.\rLa blague continua dans \"Pokemon Rusty Version\", une web série sur Youtube imaginant le monde de Rouge Feu sans \"moralité\".\rEn anglais et relativement sanglant, à voir à vos risques et profits !"; break;
-        //Cheniti et Cheniselle forme neige
+        //Cehniti et Cheniselle forme neige
         case 1297 : var leLink = "**Cheniti Cape de Neige** est un Pokémon oublié.\rLa cape de feuille pour les terrains herbus, cape de sable pour les terrains rocheux/terreux et cape de déchets pour les terrains bétonnés.\rQue se passe-t-il si le terrain est enneigé, aux Pôle ou moins loin en haut des montagnes ?\rUne cape de Neige... pour se tenir...~~chaud~~ froid !"; break;
         case 1298 : var leLink = "**Cheniselle Cape de Neige**  est l'évolution d'un Pokémon oublié.\rLa cape de feuille pour les terrains herbus, cape de sable pour les terrains rocheux/terreux et cape de déchets pour les terrains bétonnés.\rQue se passe-t-il si le terrain est enneigé, aux Pôle ou moins loin en haut des montagnes ?\rUne cape de Neige... pour se tenir...~~chaud~~ froid !"; break;
+        //default  le film "Je te choisis !"
         default : return true; break;
     };
     await message.channel.send(leLink);
