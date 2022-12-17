@@ -6537,6 +6537,69 @@
             8,
             1,
             "Psy Plante Glace Spectre"
+        ],
+        [
+            "Cerbyllin",
+            899,
+            8,
+            2,
+            "Normal Psy"
+        ],
+        [
+            "Hachécateur",
+            900,
+            8,
+            2,
+            "Insecte Roche"
+        ],
+        [
+            "Ursaking",
+            901,
+            8,
+            3,
+            "Sol Normal"
+        ],
+        [
+            "Paragruel",
+            902,
+            8,
+            2,
+            "Eau Spectre"
+        ],
+        [
+            "Farfuret de Hisui",
+            215,
+            8,
+            1,
+            "Combat Poison"
+        ],
+        [
+            "Farfurex",
+            903,
+            8,
+            2,
+            "Combat Poison"
+        ],
+        [
+            "Qwilfish de Hisui",
+            211,
+            8,
+            1,
+            "Ténèbres Poison"
+        ],
+        [
+            "Qwilpik",
+            904,
+            8,
+            2,
+            "Ténèbres Poison"
+        ],
+        [
+            "Amovénus",
+            905,
+            8,
+            1,
+            "Fée Vol"
         ]
     ]
 }
