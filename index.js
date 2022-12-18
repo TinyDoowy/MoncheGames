@@ -93,7 +93,7 @@ var reponseDex = true;
 const bddMoncheOfficiel = require('./bddMoncheOfficiel.json');
 const tabPokemon = bddMoncheOfficiel.pokemonAll;
 const taillePokedex = tabPokemon.length;
-const nombreGen = 8;
+const nombreGen = 9;
 
 // Connection à la BDD Médicamonche
 const bddMedicamonche = require('./bddMedicamonche.json');
