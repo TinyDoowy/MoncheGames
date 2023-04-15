@@ -16,7 +16,10 @@ logger.add(new logger.transports.Console, {
 logger.level = 'debug';
 
 // Initialize Discord Bot
-var bot = new Discord.Client({ partials: ['USER', 'MESSAGE', 'CHANNEL', 'REACTION'] });
+var bot = new Discord.Client({ partials: ['USER', 'MESSAGE', 'CHANNEL', 'REACTION'],
+                                intents: [
+                                    32768, // GatewayIntentBits.MessageContent
+                                ] });
 bot.login(auth.token);
 bot.on('ready', async function () {
     logger.info('Connected');
