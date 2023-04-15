@@ -375,11 +375,11 @@ bot.on('message', async function (message, user) {
                 var stadeMaking = Rand(3);
                 console.log("stade : "+stadeMaking);
                 var quelEstCeSnap = Rand(tailleSnap)-1;
-                numExplain = quelEstCeSnap;
                 while(tabPokeSnap[quelEstCeSnap][4]!=stadeMaking){
                     console.log("boucle stade");
                     quelEstCeSnap = Rand(tailleSnap)-1;
                 }
+                numExplain = quelEstCeSnap;
 
 
                 nomSnap = tabPokeSnap[quelEstCeSnap][1];
