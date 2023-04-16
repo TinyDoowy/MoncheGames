@@ -291,14 +291,15 @@ bot.on('message', async function (message, user) {
             if(!paramJeuSnap[1]||randrollSnap==1){
             //tirage de nom pur, donc boucle pour éviter de contenir forme
                 var quelEstCeSnap = Rand(tailleSnap)-1;
-                numExplain = quelEstCeSnap;
+                
                 nomSnap = tabPokeSnap[quelEstCeSnap][1];
 
-                while(nomSnap.toLowerCase().includes("forme")||nomSnap.toLowerCase().includes("casquette")||nomSnap.toLowerCase().includes("méga")||nomSnap.toLowerCase().includes("primo")||nomSnap.toLowerCase().includes("ultra")||nomSnap.toLowerCase().includes("taille")||nomSnap.toLowerCase().includes("coupe")||nomSnap.toLowerCase().includes("fleur")||nomSnap.toLowerCase().includes("motif")){
+                while(nomSnap.toLowerCase().includes("forme")||nomSnap.toLowerCase().includes("casquette")||nomSnap.toLowerCase().includes("plumage")||nomSnap.toLowerCase().includes("famille")||nomSnap.toLowerCase().includes("méga")||nomSnap.toLowerCase().includes("primo")||nomSnap.toLowerCase().includes("ultra")||nomSnap.toLowerCase().includes("taille")||nomSnap.toLowerCase().includes("coupe")||nomSnap.toLowerCase().includes("fleur")||nomSnap.toLowerCase().includes("motif")){
                     console.log("Boucle forme : "+nomSnap);
                     quelEstCeSnap = Rand(tailleSnap)-1;
                     nomSnap = tabPokeSnap[quelEstCeSnap][1];
                 }
+		numExplain = quelEstCeSnap;
 
                 typeSnap = tabPokeSnap[quelEstCeSnap][5];
                 genSnap = tabPokeSnap[quelEstCeSnap][3];
@@ -348,11 +349,12 @@ bot.on('message', async function (message, user) {
                 var genMaking = Rand(NbrGen);
                 console.log("gen : "+genMaking);
                 var quelEstCeSnap = Rand(tailleSnap)-1;
-                numExplain = quelEstCeSnap;
                 while(tabPokeSnap[quelEstCeSnap][3]!=genMaking){
                     console.log("boucle gen");
                     quelEstCeSnap = Rand(tailleSnap)-1;
                 }
+		numExplain = quelEstCeSnap;
+
 
                 nomSnap = tabPokeSnap[quelEstCeSnap][1];
                 typeSnap = tabPokeSnap[quelEstCeSnap][5];
