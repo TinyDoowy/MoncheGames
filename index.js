@@ -133,6 +133,7 @@ var test = '18 21 13 1 *';
 // Début de la Quête //
 ///////////////////////
 
+/*
 //cron.schedule(test, async () => {
 cron.schedule('0 18 1 4 *', async () => {
     const guild = bot.guilds.cache.get(auth.server.guild);
@@ -151,7 +152,7 @@ cron.schedule('0 21 8 1 *', async () => {
                       await channel.send("<@&"+auth.server.role.ping+">, joyeux anniversaire à <@204016690604933120> :partying_face: !!\rMerci de lire les règles et de poser vos questions en cas de doute :smile:\r*Oui ! il y aura un tour pour du beurre*\r(ce message est sponsorisé par les kouignoù-amann du Gers)");
                       await channel.send("https://tenor.com/view/reading-read-read-up-checking-taking-note-gif-15388141");
 });
-
+*/
 
 bot.on('message', async function (message, user) {
 
