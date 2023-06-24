@@ -27,6 +27,10 @@ bot.on('ready', async function () {
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
 
+//variable dans 1%
+var roll1p = 100;
+const prefix1p = "gamble";
+
 
 //variable tournoi staff
 var tournoiOn = false;
@@ -161,6 +165,36 @@ bot.on('message', async function (message, user) {
 
     // arrête la lecture du message si l'auteur est le bot.
     if (message.author.bot) return;
+
+////////////////////////////////////////////////////////
+//Tirage 1% Avant d'aller dans la catégorie Monche /////
+////////////////////////////////////////////////////////
+	
+    if (message.channel.id=auth.UnPourCent.Salon1p) {
+        if(petitMessage.startsWith(prefix1p)){
+            if(message.member.roles.cache.has(auth.UnPourCent.Role1p)){
+                message.reply("Désolé, tu as déjà tenté ta chance sur cette animation ! :stuck_out_tongue_closed_eyes:")
+            }else{
+
+                roll1p = Rand(100);
+                message.member.roles.add(auth.UnPourCent.Role1p);
+
+                if(roll1p<=10){
+                    message.reply("Tu as gagné les trois Pokémon 1% ! :partying_face:");
+                }else if (roll1p<=50){
+                    message.reply("Tu as gagné deux Pokémon 1% au choix ! :smile:");
+                }else {
+                    message.reply("Tu as gagné un seul Pokémon 1% au choix ! :blush:");
+                }
+            }
+        }
+    }
+	
+////////////////////////////////////////////////////////	
+////////////////////////////////////////////////////////
+
+
+	
     
     //limité à la catégorie de la forêt
     if (message.channel.parent!=auth.server.categorie.monche) {console.log("hors catégorie"); return;}
