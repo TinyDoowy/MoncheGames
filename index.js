@@ -170,7 +170,7 @@ bot.on('message', async function (message, user) {
 //Tirage 1% Avant d'aller dans la catégorie Monche /////
 ////////////////////////////////////////////////////////
 	
-    if (message.channel.id=auth.UnPourCent.Salon1p) {
+    if (message.channel.id==auth.UnPourCent.Salon1p) {
         if(petitMessage.startsWith(prefix1p)){
             if(message.member.roles.cache.has(auth.UnPourCent.Role1p)){
                 message.reply("Désolé, tu as déjà tenté ta chance sur cette animation ! :stuck_out_tongue_closed_eyes:")
@@ -218,8 +218,7 @@ bot.on('message', async function (message, user) {
 	console.log(auth.server.salon.staffmonche);
 
     //commande Staff pour tournoi (salon staff monche)
-    //if(message.member.roles.cache.has(auth.server.role.staff)&&message.channel.id==auth.server.salon.staffmonche){
-    if(message.channel.id==auth.server.salon.staffmonche){
+    if(message.member.roles.cache.has(auth.server.role.staff)&&message.channel.id==auth.server.salon.staffmonche){
 	    console.log("bon role bon channel");
         if(petitMessage.startsWith(prefixTournoiOn)){
             message.delete();
