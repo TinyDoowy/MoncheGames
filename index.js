@@ -214,7 +214,8 @@ bot.on('message', async function (message, user) {
 */
 
 	console.log("Coucou tout va bien jusqu'ici");
-
+	console.log(message.channel.id);
+	console.log(auth.server.salon.staffmonche);
 
     //commande Staff pour tournoi (salon staff monche)
     //if(message.member.roles.cache.has(auth.server.role.staff)&&message.channel.id==auth.server.salon.staffmonche){
