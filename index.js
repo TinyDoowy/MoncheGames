@@ -213,11 +213,12 @@ bot.on('message', async function (message, user) {
     }
 */
 
-
+	console.log("Coucou tout va bien jusqu'ici");
 
 
     //commande Staff pour tournoi (salon staff monche)
     if(message.member.roles.cache.has(auth.server.role.staff)&&message.channel.id==auth.server.salon.staffmonche){
+	    console.log("bon role bon channel");
         if(petitMessage.startsWith(prefixTournoiOn)){
             message.delete();
             tournoiOn = true;
