@@ -45,13 +45,16 @@ const prefixSoluce = "soluce";
 const prefixTournoiOn = "start";
 const prefixTournoiOff = "stop";
 const prefixJeJoue = "je joue";
-const maximumRoll = 1262; // variable max dans laquelle aller chercher les images (pour éviter les monstres et les métamorph)
-const maximumDex = 899;
+const maximumRoll = 1387; // variable max dans laquelle aller chercher les images (pour éviter les monstres et les métamorph)
+const maximumDex = 1010;
 
 //variable roll original
 var nomPokemon = "";
 var paramJeu = "";
 var enAttente = "";
+var nomPokemonEN = "";
+var paramJeuEN = "";
+var enAttenteEN = "";
 //variable pour aider le bot à mieux guess le num de dex :)
 var minDex = 0;
 var maxDex = maximumDex;
@@ -63,6 +66,14 @@ var stade;
 var typePicked;
 var allTypes;
 var randroll;
+
+var lettre1EN;
+var lettre2EN;
+var genEN;
+var stadeEN;
+var typePickedEN;
+var allTypesEN;
+var randrollEN;
 
 
 //variable ru roll médicamonche
@@ -88,6 +99,9 @@ var gameOn = false;
 var rollOn = false;
 var medicOn = false;
 var reponse = true;
+var gameOnEN = false;
+var rollOnEN = false;
+var reponseEN = true;
 var gameOnSnap = false;
 var rollOnSnap = false;
 var reponseSnap = true;
@@ -295,7 +309,7 @@ bot.on('message', async function (message, user) {
                 gameOnDex = true;  
         }
 
-        //commande "roll" dans monche? (l'original)
+        //commande "roll" dans monche Snap
         if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monchesnap&&rollOnSnap==false&&reponseSnap==true){
 
             /*
@@ -817,6 +831,116 @@ bot.on('message', async function (message, user) {
             }
         }
 
+        //commande "roll" dans monche? (l'anglais)
+        if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.moncheEN&&rollOnEN==false&&reponseEN==true){
+
+            reponseEN =false;
+            rollOnEN = true;
+            paramJeuEN = petitMessage.split(' ');
+            message.delete();
+            typePickedEN = "";
+            genEN = 0;
+            stadeEN = 0;
+            randrollEN = 0;
+
+
+            //récupération des Lettres (dénominateur commun)
+                var quelEstCePokemonEN = Rand(taillePokedex)-1;
+                nomPokemonEN = tabPokemon[quelEstCePokemonEN][5];
+                console.log("Nom : "+nomPokemonEN);
+                lettre1EN = nomPokemonEN.charAt(0).toUpperCase();
+                lettre2EN = nomPokemonEN.charAt(Rand(nomPokemonEN.length-1)).toUpperCase();
+                while(lettre2EN==lettre1EN||lettre2EN==" "||lettre2EN=="'"||lettre2EN=="-"||lettre2EN=="."||lettre2EN==":"||lettre2EN=="0"||lettre2EN=="1"||lettre2EN=="2"||lettre2EN=="3"||lettre2EN=="4"||lettre2EN=="5"||lettre2EN=="6"||lettre2EN=="7"||lettre2EN=="8"||lettre2EN=="9"){
+                    console.log("boucle sans fin"); 
+                    lettre2EN = nomPokemonEN.charAt(Rand(nomPokemonEN.length-1)).toUpperCase();  
+                }
+                console.log("lettre1EN : "+lettre1EN+" et lettre2EN : "+lettre2EN);
+
+
+            if(paramJeuEN[1]==="random"){randrollEN = Rand(4);}
+
+            if(!paramJeuEN[1]||randrollEN==1){
+                await message.channel.send("Prêt·e·s ? (lettres pures)");
+                await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
+                
+                typePickedEN = "";
+                genEN = 0;
+                stadeEN = 0;
+                setTimeout(async function(){await message.channel.send("Les lettres : "+EmoteLettre(lettre1EN)+" "+EmoteLettre(lettre2EN));rollOnEN = false;},4500);
+                gameOnEN = true;
+                return;
+
+            }else if(paramJeuEN[1] === "type"||randrollEN==2){
+                await message.channel.send("Prêt·e·s ? (+type)");
+                await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
+
+                allTypesEN = tabPokemon[quelEstCePokemonEN][4].split(' ');
+                if(allTypesEN[9]!=undefined){
+                    typePickedEN = allTypesEN[Rand(10)-1];
+                }else if(allTypesEN[8]!=undefined){
+                    typePickedEN = allTypesEN[Rand(9)-1];
+                }else if(allTypesEN[7]!=undefined){
+                    typePickedEN = allTypesEN[Rand(8)-1];
+                }else if(allTypesEN[6]!=undefined){
+                    typePickedEN = allTypesEN[Rand(7)-1];
+                }else if(allTypesEN[5]!=undefined){
+                    typePickedEN = allTypesEN[Rand(6)-1];
+                }else if(allTypesEN[4]!=undefined){
+                    typePickedEN = allTypesEN[Rand(5)-1];
+                }else if(allTypesEN[3]!=undefined){
+                    typePickedEN = allTypesEN[Rand(4)-1];
+                }else if(allTypesEN[2]!=undefined){
+                    typePickedEN = allTypesEN[Rand(3)-1];
+                }else if(allTypesEN[1]!=undefined){
+                    typePickedEN = allTypesEN[Rand(2)-1];
+                }else{
+                    typePickedEN = allTypesEN[0];
+                }
+
+                console.log("/"+paramJeuEN[1]+"/ : "+typePickedEN);
+
+                setTimeout(async function(){message.channel.send("Les lettres : "+EmoteLettre(lettre1EN)+" "+EmoteLettre(lettre2EN)+", et avec au moins un type : **__"+typePickedEN+"__** "+EmoteType(typePickedEN.toLowerCase()));rollOnEN = false;},4500);
+                gameOnEN = true;
+                return;
+
+            }else if(paramJeuEN[1] === "gen"||randrollEN==3){
+                await message.channel.send("Prêt·e·s ? (+génération)");
+                await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
+                
+
+                genEN = Number(tabPokemon[quelEstCePokemonEN][2]);
+                console.log("/"+paramJeuEN[1]+"/ : "+genEN);
+
+                setTimeout(async function(){message.channel.send("Les lettres : "+EmoteLettre(lettre1EN)+" "+EmoteLettre(lettre2EN)+", et issu de la "+EmoteGen(genEN)+".\r(*Première apparition dans la branche principale*)");rollOnEN = false;},4500);
+                gameOnEN = true;
+                return;
+
+            }else if(paramJeuEN[1] === "stade"||randrollEN==4){
+                await message.channel.send("Prêt·e·s ? (+stade d'évolution)");
+                await setTimeout(async function(){await message.channel.send("3...");await setTimeout(async function(){await message.channel.send("2...");await setTimeout(async function(){await message.channel.send("1...");},1000)},1000)},1000)
+                
+
+                stadeEN = Number(tabPokemon[quelEstCePokemonEN][3]);
+                console.log("/"+paramJeuEN[1]+"/ : "+stadeEN);
+
+                if(stadeEN==1){
+                    setTimeout(async function(){message.channel.send("Les lettres : "+EmoteLettre(lettre1EN)+" "+EmoteLettre(lettre2EN)+", et qui est un __***Pokémon de Base***__ 🥇\r(*Pokémon non évolué ou bébé*)");rollOnEN = false;},4500);
+                }else if (stadeEN==2){
+                    setTimeout(async function(){message.channel.send("Les lettres : "+EmoteLettre(lettre1EN)+" "+EmoteLettre(lettre2EN)+", et qui est une __***première évolution***__ 🥈\r(*Pokémon ayant évolué 1 fois, ou ayant un bébé*)");rollOnEN = false;},4500);
+                }else{
+                    setTimeout(async function(){message.channel.send("Les lettres : "+EmoteLettre(lettre1EN)+" "+EmoteLettre(lettre2EN)+", et qui est une __***deuxième évolution***__ 🥉\r(*Pokémon ayant évolué 2 fois*)");rollOnEN = false;},4500);
+                }
+                gameOnEN = true;
+                return;
+
+            }else{
+                message.reply(" ... si même le staff ne sait plus taper les commandes, on va ouvrir les recrutements auprès des gens qui savent copier/coller :stuck_out_tongue_closed_eyes:");
+                reponseEN = true;
+                rollOnEN = false;
+                return;
+            }
+        }
+
         //commande "soluce" dans salon Monche?
         if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.monche){
             if(reponse==false){
@@ -833,6 +957,21 @@ bot.on('message', async function (message, user) {
             }else{return;}
         }
 
+        //commande "soluce" dans salon Monche? anglais
+        if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.moncheEN){
+            if(reponseEN==false){
+                if(rollOnEN==false){
+                    if(gameOnEN==true){
+                        gameOnEN = false;
+                        rollOnEN = false;
+                        reponseEN = true;
+                        message.channel.send("Une des solutions possible était : __**"+nomPokemonEN+"**__.\r*Better Luck Next Time !* :fingers_crossed:");return;
+                    }else{
+                        message.channel.send("Le dernier Pokémon a déjà été trouvé/dévoilé.");return;
+                    }
+                }else{message.channel.send("Cher <@"+message.author.id+">, veuillez laisser au moins 10 secondes aux joueurs avant de dévoiler la solution. Cordialement, Bisouxx :kissing_heart:");return;}
+            }else{return;}
+        }
         //commande "soluce" dans salon Monche-Snap
         if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.monchesnap){
             if(reponseSnap==false){
@@ -917,7 +1056,7 @@ bot.on('message', async function (message, user) {
     //commande pour everyone
     if(message.member.roles.cache.has(auth.server.role.everyone)){
 
-        //récupération des réponses dans Monche?
+        //récupération des réponses dans Monche? Snap
         if(message.channel.id==auth.server.salon.monchesnap&&gameOnSnap==true)
         {
             //tant que le roll n'est pas fini
@@ -1235,6 +1374,8 @@ bot.on('message', async function (message, user) {
                 }
             }
         }
+
+
         //récupération des réponses dans Monche?
         if(message.channel.id==auth.server.salon.monche&&gameOn==true)
         {
@@ -1345,6 +1486,120 @@ bot.on('message', async function (message, user) {
                 }
             }
         }
+
+        
+        //récupération des réponses dans Monche? anglais
+        if(message.channel.id==auth.server.salon.moncheEN&&gameOnEN==true)
+        {
+            if(rollOnEN==false){
+                //console.log(lettre1+""+lettre2);
+                if(petitMessage.startsWith(lettre1EN.toLowerCase())&&petitMessage.includes(lettre2EN.toLowerCase()))
+                {
+                    for(k=0;k<taillePokedex;k++){
+                        if(petitMessage == tabPokemon[k][5].toLowerCase())
+                            {
+                                if (typePickedEN==""&&genEN==0&&stadeEN==0){
+                                    if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                        message.reply(" tu as gagné 1/2 point ! :partying_face:");
+                                    }else{
+                                        message.reply(" tu as gagné 1 point ! :partying_face:");
+                                    }
+                                    if(tournoiOn==true){
+                                        const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                        compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres pures !`);
+                                    }
+                                    rollOnEN = false;
+                                    gameOnEN = false;
+                                    reponseEN = true;
+                                    return;
+                                }else if (genEN==0&&stadeEN==0){
+                                    if(tabPokemon[k][4].includes(typePickedEN)){
+                                        if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                            message.reply(" tu as gagné 1/2 point ! :partying_face:");
+                                        }else{
+                                            message.reply(" tu as gagné 1 point ! :partying_face:");
+                                        }
+                                        if(tournoiOn==true){
+                                            const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                            compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +type !`);
+                                        }
+                                        rollOnEN = false;
+                                        gameOnEN = false;
+                                        reponseEN = true;
+                                        return;
+                                    }else{
+                                        message.reply(" bonnes lettres mais mauvais type !\rOn demande le type : "+typePickedEN+" "+EmoteType(typePickedEN.toLowerCase()));
+                                        return;
+                                    }
+                                }else if (stadeEN==0){
+                                    if(genEN == tabPokemon[k][2]){
+                                            if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                                message.reply(" tu as gagné 1/2 point ! :partying_face:");
+                                            }else{
+                                                message.reply(" tu as gagné 1 point ! :partying_face:");
+                                            }
+                                            if(tournoiOn==true){
+                                                const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                                compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +gen !`);
+                                            }
+                                            rollOnEN = false;
+                                            gameOnEN = false;
+                                            reponseEN = true;
+                                            return;
+                                    }else {
+                                        message.reply(" bonnes lettres mais mauvaise génération !\rOn demande la génération : "+EmoteGen(genEN));
+                                        return;
+                                    }
+                                }else if (stadeEN== tabPokemon[k][3]){
+                                    if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+                                        message.reply(" tu as gagné 1/2 point ! :partying_face:");
+                                    }else{
+                                        message.reply(" tu as gagné 1 point ! :partying_face:");
+                                    }
+                                    if(tournoiOn==true){
+                                        const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+                                        compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Lettres +stade !`);
+                                    }
+                                    rollOnEN = false;
+                                    gameOnEN = false;
+                                    reponseEN = true;
+                                    return;
+                                }else{
+                                    if(stadeEN==1){
+                                        message.reply(" bonnes lettres mais mauvais niveau d'évolution !\rOn demande un __***Pokémon de Base***__ 🥇");
+                                        return;
+                                    }else if (stadeEN==2){
+                                        message.reply(" bonnes lettres mais mauvais niveau d'évolution !\rOn demande une __***première évolution***__ 🥈");
+                                        return;
+                                    }else{
+                                        message.reply(" bonnes lettres mais mauvais niveau d'évolution !\rOn demande une __***deuxième évolution***__ 🥉");
+                                        return;
+                                    } 
+                                }
+                            }
+                    }
+
+                    if(message.author.id==idCathal){
+                        message.channel.send(idBescherelle+" ce Pokémon n'existe pas (ou est mal orthographié) ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                        return;
+                    }else{
+                        message.reply(" ce Pokémon n'existe pas (ou est mal orthographié) ! :anger:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                        return;
+                    }
+
+                }
+
+                if(message.author.id==idCathal){
+                    message.channel.send(idBescherelle+" y'a même pas les bonnes lettres ! Essaye au moins :rofl:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                    return;
+                }else{
+                    message.reply(" y'a même pas les bonnes lettres ! Essaye au moins :rofl:");//\rOn rappelle que "+EmoteLettre(lettre1)+" doit être la première lettre du nom du Pokémon.\rEt que "+EmoteLettre(lettr2)+" doit être contenu dans le nom du Pokémon.");
+                    return;
+                }
+            }
+        }
+
+
         //récupération des réponses dans Plus-ou-Monche
         if(message.channel.id==auth.server.salon.monchedex&&gameOnDex==true)
         {
@@ -1533,60 +1788,60 @@ async function ExplicationMonstre(message,valeur){
     console.log("valeur : "+valeur);
     switch (valeur){
         //MissingNo.
-        case 1262 : var leLink = "**MissingNo.** est le plus connu des Pokémon Bug : <https://www.pokepedia.fr/MissingNo.>\rSi vous voulez plus de détails, cliquez sur le lien !"; break;
+        case 1388 : var leLink = "**MissingNo.** est le plus connu des Pokémon Bug : <https://www.pokepedia.fr/MissingNo.>\rSi vous voulez plus de détails, cliquez sur le lien !"; break;
         //Crokiyas
-        case 1263 : var leLink = "**Crokiyas** est un des Pokémon perdu. Son nom est purement inventé ici.\rIl s'agit tout simplement du Kokiyas qui aurait raté sa morsure sur la queue d'un Ramoloss et qui aurait évolué malgré tout."; break;
+        case 1389 : var leLink = "**Crokiyas** est un des Pokémon perdu. Son nom est purement inventé ici.\rIl s'agit tout simplement du Kokiyas qui aurait raté sa morsure sur la queue d'un Ramoloss et qui aurait évolué malgré tout."; break;
         //Onix de Cristal
-        case 1264 : var leLink = "**Onix de Cristal** est apparu dans l'épisode 82 de la série animée Pokémon.\rSa particularité est qu'il résiste aux attaques Eau :sweat_drops: et est faible aux attaques Feu :fire: .\r\"*Plus*\" de détail ici : <https://www.pokepedia.fr/Onix_de_Cristal>"; break;
+        case 1390 : var leLink = "**Onix de Cristal** est apparu dans l'épisode 82 de la série animée Pokémon.\rSa particularité est qu'il résiste aux attaques Eau :sweat_drops: et est faible aux attaques Feu :fire: .\r\"*Plus*\" de détail ici : <https://www.pokepedia.fr/Onix_de_Cristal>"; break;
         //M. Mime tout nu
-        case 1265 : var leLink = "**M. Mime** *tout nu* est issu d'un meme trouvé sur internet x)\rQue serait un bon jeu Monche sans un trigger qui fait peur à <@"+auth.server.staff.papi+"> ?!"; break;
+        case 1391 : var leLink = "**M. Mime** *tout nu* est issu d'un meme trouvé sur internet x)\rQue serait un bon jeu Monche sans un trigger qui fait peur à <@"+auth.server.staff.papi+"> ?!"; break;
         //Ronflex de Glace
-        case 1266 : var leLink = "**Ronflex de Glace** :ice_cube:  est apparu dans l'épisode spécial *Pokémon Chronicles 3* nommé : Ronflex le Bonhomme de Neige\rPlus de détails dans le lien suivant : <https://www.pokepedia.fr/Ronflex_le_bonhomme_de_neige>"; break;
+        case 1392 : var leLink = "**Ronflex de Glace** :ice_cube:  est apparu dans l'épisode spécial *Pokémon Chronicles 3* nommé : Ronflex le Bonhomme de Neige\rPlus de détails dans le lien suivant : <https://www.pokepedia.fr/Ronflex_le_bonhomme_de_neige>"; break;
         //Mew morphing Métamorph
-        case 1267 : var leLink = "**Mew utilisant Morphing sur Métamorph** est issu de l'esprit dérangé de <@"+auth.server.staff.urei+">.\r L'idée est de reprendre le concept du Métamorph conservant ses yeux en utilisant Morphing.\rMais dans le cas où Mew l'utiliserait sur *el famoso* Métamorph.\r*Ce Pokémon a été créé par des professionels, ne reproduisez pas ça chez vous !*"; break;
+        case 1393 : var leLink = "**Mew utilisant Morphing sur Métamorph** est issu de l'esprit dérangé de <@"+auth.server.staff.urei+">.\r L'idée est de reprendre le concept du Métamorph conservant ses yeux en utilisant Morphing.\rMais dans le cas où Mew l'utiliserait sur *el famoso* Métamorph.\r*Ce Pokémon a été créé par des professionels, ne reproduisez pas ça chez vous !*"; break;
         //Pichu Troizépi
-        case 1268 : var leLink = "**Pichu Troizépi** est obtenable dans les Jeux HeartGold et SoulSilver.\rUne procédure suivant une autre distribution en 2009/2010.\rCe Pokémon n'a malheureusement pas eu la chance de pouvoir suivre la Banque et le Home\rPlus d'infos en suivant ce lien : <https://www.pokepedia.fr/Pichu_Troiz%C3%A9pi>"; break;
+        case 1394 : var leLink = "**Pichu Troizépi** est obtenable dans les Jeux HeartGold et SoulSilver.\rUne procédure suivant une autre distribution en 2009/2010.\rCe Pokémon n'a malheureusement pas eu la chance de pouvoir suivre la Banque et le Home\rPlus d'infos en suivant ce lien : <https://www.pokepedia.fr/Pichu_Troiz%C3%A9pi>"; break;
         //Morphéo Tempête de Sable
-        case 1269 : var leLink = "**Morphéo forme Tempête de Sable** est le Pokémon oublié de la météo.\rSachant que Morphéo change de forme sous le soleil, la pluie ou la grêle, il aurait été normal de le voir apparaître sur sa forme *Tempête de Sable*.\rIl est donc bien évidemment de type Sol :earth_africa: ."; break;
+        case 1395 : var leLink = "**Morphéo forme Tempête de Sable** est le Pokémon oublié de la météo.\rSachant que Morphéo change de forme sous le soleil, la pluie ou la grêle, il aurait été normal de le voir apparaître sur sa forme *Tempête de Sable*.\rIl est donc bien évidemment de type Sol :earth_africa: ."; break;
         //Régigigigigigigigigigigigigas
-        case 1270 : var leLink = "**Regigigigigigigigigigigigigas** est l'idée farfelue qu'avec l'apparition des nouveaux Régi (Dragon :dragon_face: et Électrique :zap: ), un nouveau Gigigas apparaîtrait.\rIl contient donc toutes les gemmes de chaque type et est par conséquent extrêmement long.\rPrions pour que de nouveaux types n'apparaissent pas de si tôt"; break;
+        case 1396 : var leLink = "**Regigigigigigigigigigigigigas** est l'idée farfelue qu'avec l'apparition des nouveaux Régi (Dragon :dragon_face: et Électrique :zap: ), un nouveau Gigigas apparaîtrait.\rIl contient donc toutes les gemmes de chaque type et est par conséquent extrêmement long.\rPrions pour que de nouveaux types n'apparaissent pas de si tôt"; break;
         //Forme casquette de pikachu
-        case 1271 : var leLink = "**Pikachu Casquette d'Alola** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région d'Alola (saison 20 à 22).\rC'est son trésor le plus précieux!"; break;
-        case 1272 : var leLink = "**Pikachu Casquette de Hoenn** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région d'Hoenn (saison 6 à 9).\rC'est son trésor le plus précieux!"; break;
-        case 1273 : var leLink = "**Pikachu Casquette de Kalos** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région de Kalos (saison 17 à 19).\rC'est son trésor le plus précieux!"; break;
-        case 1274 : var leLink = "**Pikachu Casquette Monde** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans l'ensemble des régions connues à ce jour, en partant de Galar (saison 23 et +).\rC'est son trésor le plus précieux!"; break;
-        case 1275 : var leLink = "**Pikachu Casquette Originale** (*akka de Kanto/Johto*) est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région de Kanto, les Îles Oranges et Johto (saison 1 à 5).\rC'est son trésor le plus précieux!"; break;
-        case 1276 : var leLink = "**Pikachu Casquette Partenaire** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage durant le 20ème film \"Je te choisis !\" sortie en 2017.\rC'est son trésor le plus précieux!"; break;
-        case 1277 : var leLink = "**Pikachu Casquette Sinnoh** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région de Sinnoh (saison 10 à 13).\rC'est son trésor le plus précieux!"; break;
-        case 1278 : var leLink = "**Pikachu Casquette d'Unys** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région d'Unys (saison 14 à 16).\rC'est son trésor le plus précieux!"; break;
-        case 1279 : var leLink = "**Pikachu Cosplayeuse \"Catcheur\"** a tellement apprécié les concours de robustesse d'Hoenn qu'elle s'est faite faire un costume de catcheur sur mesure. Sa forme est la même que tous les Pikachu femelle, à un détail près, qui est une tâche noire en forme de cœur au bout de la queue."; break;
+        case 1397 : var leLink = "**Pikachu Casquette d'Alola** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région d'Alola (saison 20 à 22).\rC'est son trésor le plus précieux!"; break;
+        case 1398 : var leLink = "**Pikachu Casquette de Hoenn** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région d'Hoenn (saison 6 à 9).\rC'est son trésor le plus précieux!"; break;
+        case 1399 : var leLink = "**Pikachu Casquette de Kalos** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région de Kalos (saison 17 à 19).\rC'est son trésor le plus précieux!"; break;
+        case 1400 : var leLink = "**Pikachu Casquette Monde** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans l'ensemble des régions connues à ce jour, en partant de Galar (saison 23 et +).\rC'est son trésor le plus précieux!"; break;
+        case 1401 : var leLink = "**Pikachu Casquette Originale** (*akka de Kanto/Johto*) est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région de Kanto, les Îles Oranges et Johto (saison 1 à 5).\rC'est son trésor le plus précieux!"; break;
+        case 1402 : var leLink = "**Pikachu Casquette Partenaire** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage durant le 20ème film \"Je te choisis !\" sortie en 2017.\rC'est son trésor le plus précieux!"; break;
+        case 1403 : var leLink = "**Pikachu Casquette Sinnoh** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région de Sinnoh (saison 10 à 13).\rC'est son trésor le plus précieux!"; break;
+        case 1404 : var leLink = "**Pikachu Casquette d'Unys** est l'une des trop nombreuses formes alternatives de pikachu\rIl porte la casquette de son Dresseur Sacha Ketchup pendant son voyage dans la région d'Unys (saison 14 à 16).\rC'est son trésor le plus précieux!"; break;
+        case 1405 : var leLink = "**Pikachu Cosplayeuse \"Catcheur\"** a tellement apprécié les concours de robustesse d'Hoenn qu'elle s'est faite faire un costume de catcheur sur mesure. Sa forme est la même que tous les Pikachu femelle, à un détail près, qui est une tâche noire en forme de cœur au bout de la queue."; break;
         //Zarbi
-        case 1280 : var leLink = "**Zarbi 0 (zéro)** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
-        case 1281 : var leLink = "**Zarbi 1** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
-        case 1282 : var leLink = "**Zarbi 2** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
-        case 1283 : var leLink = "**Zarbi 3** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
-        case 1284 : var leLink = "**Zarbi 4** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
-        case 1285 : var leLink = "**Zarbi 5** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
-        case 1286 : var leLink = "**Zarbi 6** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
-        case 1287 : var leLink = "**Zarbi 7** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
-        case 1288 : var leLink = "**Zarbi 8** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
-        case 1289 : var leLink = "**Zarbi 9** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
-        case 1290 : var leLink = "**Zarbi ∞** est l'utime chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1406 : var leLink = "**Zarbi 0 (zéro)** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1407 : var leLink = "**Zarbi 1** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1408 : var leLink = "**Zarbi 2** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1409 : var leLink = "**Zarbi 3** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1410 : var leLink = "**Zarbi 4** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1411 : var leLink = "**Zarbi 5** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1412 : var leLink = "**Zarbi 6** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1413 : var leLink = "**Zarbi 7** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1414 : var leLink = "**Zarbi 8** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1415 : var leLink = "**Zarbi 9** est un des chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
+        case 1416 : var leLink = "**Zarbi ∞** est l'utime chainons manquants au développement complet d'une société moderne\rToujours de type psy :brain:, la puissance cachée des 7 premières générations, s'est transformée en un second type aléatoire (lié à ses IVs)."; break;
         //Bébé Kangourex
-        case 1291 : var leLink = "**Bébé Kangourex** a plus ou moins toujours existé\rSon existence ayant été reconnue à partir de la Sixième Génération :six: :regional_indicator_g:, il a pourtant fait couler beaucoup d'encre.\rLa théorie voudrait que le Bébé Kangourex soit en réalité un Osselait avant de porter le crâne de sa défunte maman."; break;
+        case 1417 : var leLink = "**Bébé Kangourex** a plus ou moins toujours existé\rSon existence ayant été reconnue à partir de la Sixième Génération :six: :regional_indicator_g:, il a pourtant fait couler beaucoup d'encre.\rLa théorie voudrait que le Bébé Kangourex soit en réalité un Osselait avant de porter le crâne de sa défunte maman."; break;
         //Hendron (Hexa cardinal grec pour 6, Hen pour 1)
-        case 1292 : var leLink = "**Hendron** est un soldat d'un groupe de Hexadron perdu au milieu de la Pampa.\rSon nom vient des Cardinaux Grecs, Hexa utilisé pour 6, Hen utilisé pour 1.\rIl est incapable de se mettre en formation attaque ou défense, ses Stats de base sont divisées par 6 par rapport à un Hexadron."; break;
+        case 1418 : var leLink = "**Hendron** est un soldat d'un groupe de Hexadron perdu au milieu de la Pampa.\rSon nom vient des Cardinaux Grecs, Hexa utilisé pour 6, Hen utilisé pour 1.\rIl est incapable de se mettre en formation attaque ou défense, ses Stats de base sont divisées par 6 par rapport à un Hexadron."; break;
         //Lougaroc Forme Aurore
-        case 1293 : var leLink = "**Lougaroc Forme Aurore** est le jumeau diabolique du Lougaroc Forme Crépusculaire.\rGladio dans l'épisode caché (Lougaroc Lunaire) obtient un Rocabot (talent Pieds Confus) qui est l'antagoniste de celui de Sacha, son évolution doit en être de même.\rToute cette histoire est complètement fausse, mais regardez-moi ce fluff !"; break;
+        case 1419 : var leLink = "**Lougaroc Forme Aurore** est le jumeau diabolique du Lougaroc Forme Crépusculaire.\rGladio dans l'épisode caché (Lougaroc Lunaire) obtient un Rocabot (talent Pieds Confus) qui est l'antagoniste de celui de Sacha, son évolution doit en être de même.\rToute cette histoire est complètement fausse, mais regardez-moi ce fluff !"; break;
         //Lippoutou a la peau noir
-        case 1294 : var leLink = "**Lippoutou** a initialement été designé avec une peau noire.\rIl a ensuite été coloré en violet afin d'éviter toute interprétation raciste.\rLe dernier Lippoutou de couleur noire que l'on verra dans l'animé sera celui de Sirena lors de l'épisode 99."; break;
+        case 1420 : var leLink = "**Lippoutou** a initialement été designé avec une peau noire.\rIl a ensuite été coloré en violet afin d'éviter toute interprétation raciste.\rLe dernier Lippoutou de couleur noire que l'on verra dans l'animé sera celui de Sirena lors de l'épisode 99."; break;
         //Lippoutou a la peau noir
-        case 1295 : var leLink = "**Zygarde 1% (ou Cœur)** sont des petits êtres verts permettant de créer des Zygarde (10%, 50% ou Forme Parfaite) dans les Jeux Soleil et Lune.\rIls sont représentés dans l'aventure sous forme de petites paillettes vertes (Cellules) ou rouges (Cœur).\rIl y en a 100 au total."; break;
+        case 1421 : var leLink = "**Zygarde 1% (ou Cœur)** sont des petits êtres verts permettant de créer des Zygarde (10%, 50% ou Forme Parfaite) dans les Jeux Soleil et Lune.\rIls sont représentés dans l'aventure sous forme de petites paillettes vertes (Cellules) ou rouges (Cœur).\rIl y en a 100 au total."; break;
         //God Bidoof
-        case 1296 : var leLink = "**Dieu Keunotor** est né d'un post reddit, ironisant sur le fait que Keunotor avec le talent Lunatique était banni des hauts Tiers Smogon.\rLa blague continua dans \"Pokemon Rusty Version\", une web série sur Youtube imaginant le monde de Rouge Feu sans \"moralité\".\rEn anglais et relativement sanglant, à voir à vos risques et profits !"; break;
+        case 1422 : var leLink = "**Dieu Keunotor** est né d'un post reddit, ironisant sur le fait que Keunotor avec le talent Lunatique était banni des hauts Tiers Smogon.\rLa blague continua dans \"Pokemon Rusty Version\", une web série sur Youtube imaginant le monde de Rouge Feu sans \"moralité\".\rEn anglais et relativement sanglant, à voir à vos risques et profits !"; break;
         //Cehniti et Cheniselle forme neige
-        case 1297 : var leLink = "**Cheniti Cape de Neige** est un Pokémon oublié.\rLa cape de feuille pour les terrains herbus, cape de sable pour les terrains rocheux/terreux et cape de déchets pour les terrains bétonnés.\rQue se passe-t-il si le terrain est enneigé, aux Pôle ou moins loin en haut des montagnes ?\rUne cape de Neige... pour se tenir...~~chaud~~ froid !"; break;
-        case 1298 : var leLink = "**Cheniselle Cape de Neige**  est l'évolution d'un Pokémon oublié.\rLa cape de feuille pour les terrains herbus, cape de sable pour les terrains rocheux/terreux et cape de déchets pour les terrains bétonnés.\rQue se passe-t-il si le terrain est enneigé, aux Pôle ou moins loin en haut des montagnes ?\rUne cape de Neige... pour se tenir...~~chaud~~ froid !"; break;
+        case 1423 : var leLink = "**Cheniti Cape de Neige** est un Pokémon oublié.\rLa cape de feuille pour les terrains herbus, cape de sable pour les terrains rocheux/terreux et cape de déchets pour les terrains bétonnés.\rQue se passe-t-il si le terrain est enneigé, aux Pôle ou moins loin en haut des montagnes ?\rUne cape de Neige... pour se tenir...~~chaud~~ froid !"; break;
+        case 1424 : var leLink = "**Cheniselle Cape de Neige**  est l'évolution d'un Pokémon oublié.\rLa cape de feuille pour les terrains herbus, cape de sable pour les terrains rocheux/terreux et cape de déchets pour les terrains bétonnés.\rQue se passe-t-il si le terrain est enneigé, aux Pôle ou moins loin en haut des montagnes ?\rUne cape de Neige... pour se tenir...~~chaud~~ froid !"; break;
         //default  le film "Je te choisis !"
         default : return true; break;
     };
