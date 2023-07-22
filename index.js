@@ -1581,7 +1581,7 @@ bot.on('message', async function (message, user) {
                                     reponseEN = true;
                                     return;
                                 }else if (genEN==0&&stadeEN==0){
-                                    if(tabPokemon[k][4].includes(typePickedEN)){
+                                    if(tabPokemon[k][4].includes(typePickedTemp)){
                                         if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
                                             message.reply(" you earned 1/2 point ! :partying_face:");
                                         }else{
