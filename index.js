@@ -31,6 +31,9 @@ bot.on('ready', async function () {
 var roll1p = 100;
 const prefix1p = "gamble";
 
+//variable Blanco
+const prefixClean = "blanco";
+
 
 //variable tournoi staff
 var tournoiOn = false;
@@ -213,7 +216,6 @@ bot.on('message', async function (message, user) {
 ////////////////////////////////////////////////////////	
 ////////////////////////////////////////////////////////
 
-
 	
     
     //limité à la catégorie de la forêt
@@ -232,6 +234,21 @@ bot.on('message', async function (message, user) {
         }).catch(err => console.log(err));
     }
 */
+
+    if(petitMessage.startsWith(prefixClean)&&(message.member.roles.cache.has(auth.roleStaff)||message.member.roles.cache.has(auth.roleMonche))&&(!message.member.roles.cache.has(auth.roleMuteMonche))) {
+        message.delete();
+
+        const argsNumber = message.content.split(' ').slice(1); // All arguments behind the command name with the prefix
+        const quantite = argsNumber.join(' '); // Amount of messages which should be deleted
+
+        if (!quantite) return message.reply(" vous n'avez pas saisi de valeur à chercher.").then(msg => msg.delete({ timeout: 5000 }));
+        if (isNaN(quantite)) return message.reply(" le paramètre que vous avez saisi n'est pas un nombre.").then(msg => msg.delete({ timeout: 5000 }));
+        if (quantite>100) return message.reply(" le nombre de message à effacer est trop grand.").then(msg => msg.delete({ timeout: 5000 }));
+
+        const fetched = await message.channel.messages.fetch({ limit: quantite });
+        const notPinned = await fetched.filter(fetchedMsg => !fetchedMsg.pinned);
+        await message.channel.bulkDelete(notPinned);
+    }
 
 	console.log("Coucou tout va bien jusqu'ici");
 	console.log(message.channel.id);
