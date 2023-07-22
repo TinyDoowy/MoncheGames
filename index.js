@@ -904,14 +904,53 @@ bot.on('message', async function (message, user) {
                     typePickedTemp = allTypesTemp[0];
                 }
 
-		//while (typePickedEN == "")
-		//	{
-
-		//	}
+                    switch(typePickedTemp){
+                        case "Acier" : 
+                            typePickedEN = "Steel";break;
+                        case "Combat" : 
+                            typePickedEN = "Fighting";break;
+                        case "Dragon" : 
+                            typePickedEN = "Dragon";break;
+                        case "Eau" : 
+                            typePickedEN = "Water";break;
+                        case "Électrique" : 
+                            typePickedEN = "Electric";break;
+                        case "Fée" : 
+                            typePickedEN = "Fairy";break;
+                        case "Feu" : 
+                            typePickedEN = "Fire";break;
+                        case "Glace" : 
+                            typePickedEN = "Ice";break;
+                        case "Insecte" : 
+                            typePickedEN = "Bug";break;
+                        case "Normal" : 
+                            typePickedEN = "Normal";break;
+                        case "Plante" : 
+                            typePickedEN = "Grass";break;
+                        case "Poison" : 
+                            typePickedEN = "Poison";break;
+                        case "Roche" : 
+                            typePickedEN = "Rock";break;
+                        case "Sol" : 
+                            typePickedEN = "Ground";break;
+                        case "Spectre" : 
+                            typePickedEN = "Ghost";break;
+                        case "Ténèbres" : 
+                            typePickedEN = "Dark";break;
+                        case "Vol" : 
+                            typePickedEN = "Flying";break;
+                        case "Psy" : 
+                            typePickedEN = "Psychic";break;
+                        case "Cristal" : 
+                            typePickedEN = "Cristal";break;
+                        default :
+                            typePickedEN = "Bird";break;
+                    }
+		    
 
                 console.log("/"+paramJeuEN[1]+"/ : "+typePickedEN);
 
-                setTimeout(async function(){message.channel.send("The letters : "+EmoteLettre(lettre1EN)+" "+EmoteLettre(lettre2EN)+", with at leasdt one type : **__"+typePickedEN+"__** "+EmoteType(typePickedEN.toLowerCase()));rollOnEN = false;},4500);
+                setTimeout(async function(){message.channel.send("The letters : "+EmoteLettre(lettre1EN)+" "+EmoteLettre(lettre2EN)+", with at leasdt one type : **__"+typePickedEN+"__** "+EmoteType(typePickedTemp.toLowerCase()));rollOnEN = false;},4500);
                 gameOnEN = true;
                 return;
 
@@ -1540,7 +1579,7 @@ bot.on('message', async function (message, user) {
                                         reponseEN = true;
                                         return;
                                     }else{
-                                        message.reply(" right letters but wrong type !\rWe requested the type : "+typePickedEN+" "+EmoteType(typePickedEN.toLowerCase()));
+                                        message.reply(" right letters but wrong type !\rWe requested the type : "+typePickedEN+" "+EmoteType(typePickedTemp.toLowerCase()));
                                         return;
                                     }
                                 }else if (stadeEN==0){
