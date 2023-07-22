@@ -2,7139 +2,8189 @@
     "pokemonAll" : [
         [
             "Bulbizarre",
-            1,
-            1,
-            1,
-            "Plante Poison"
+1,
+1,
+1,
+            "Plante Poison",
+"Bulbasaur"
         ],
         [
             "Herbizarre",
-            2,
-            1,
-            2,
-            "Plante Poison"
+2,
+1,
+2,
+            "Plante Poison",
+"Ivysaur"
         ],
         [
             "Florizarre",
-            3,
-            1,
-            3,
-            "Plante Poison"
+3,
+1,
+3,
+            "Plante Poison",
+"Venusaur"
         ],
         [
             "Salamèche",
-            4,
-            1,
-            1,
-            "Feu"
+4,
+1,
+1,
+            "Feu",
+"Charmander"
         ],
         [
             "Reptincel",
-            5,
-            1,
-            2,
-            "Feu"
+5,
+1,
+2,
+            "Feu",
+"Charmeleon"
         ],
         [
             "Dracaufeu",
-            6,
-            1,
-            3,
-            "Feu Vol"
+6,
+1,
+3,
+            "Feu Vol",
+"Charizard"
         ],
         [
             "Carapuce",
-            7,
-            1,
-            1,
-            "Eau"
+7,
+1,
+1,
+            "Eau",
+"Squirtle"
         ],
         [
             "Carabaffe",
-            8,
-            1,
-            2,
-            "Eau"
+8,
+1,
+2,
+            "Eau",
+"Wartortle"
         ],
         [
             "Tortank",
-            9,
-            1,
-            3,
-            "Eau"
+9,
+1,
+3,
+            "Eau",
+"Blastoise"
         ],
         [
             "Chenipan",
-            10,
-            1,
-            1,
-            "Insecte"
+10,
+1,
+1,
+            "Insecte",
+"Caterpie"
         ],
         [
             "Chrysacier",
-            11,
-            1,
-            2,
-            "Insecte"
+11,
+1,
+2,
+            "Insecte",
+"Metapod"
         ],
         [
             "Papilusion",
-            12,
-            1,
-            3,
-            "Insecte Vol"
+12,
+1,
+3,
+            "Insecte Vol",
+"Butterfree"
         ],
         [
             "Aspicot",
-            13,
-            1,
-            1,
-            "Insecte Poison"
+13,
+1,
+1,
+            "Insecte Poison",
+"Weedle"
         ],
         [
             "Coconfort",
-            14,
-            1,
-            2,
-            "Insecte Poison"
+14,
+1,
+2,
+            "Insecte Poison",
+"Kakuna"
         ],
         [
             "Dardargnan",
-            15,
-            1,
-            3,
-            "Insecte Poison"
+15,
+1,
+3,
+            "Insecte Poison",
+"Beedrill"
         ],
         [
             "Roucool",
-            16,
-            1,
-            1,
-            "Normal Vol"
+16,
+1,
+1,
+            "Normal Vol",
+"Pidgey"
         ],
         [
             "Roucoups",
-            17,
-            1,
-            2,
-            "Normal Vol"
+17,
+1,
+2,
+            "Normal Vol",
+"Pidgeotto"
         ],
         [
             "Roucarnage",
-            18,
-            1,
-            3,
-            "Normal Vol"
+18,
+1,
+3,
+            "Normal Vol",
+"Pidgeot"
         ],
         [
             "Rattata",
-            19,
-            1,
-            1,
-            "Normal"
+19,
+1,
+1,
+            "Normal",
+"Rattata"
         ],
         [
             "Rattata d'Alola",
-            19,
-            7,
-            1,
-            "Ténèbres Normal"
+19,
+7,
+1,
+            "Ténèbres Normal",
+"Rattata"
         ],
         [
             "Rattatac",
-            20,
-            1,
-            2,
-            "Normal"
+20,
+1,
+2,
+            "Normal",
+"Raticate"
         ],
         [
             "Rattatac d'Alola",
-            20,
-            7,
-            2,
-            "Ténèbres Normal"
+20,
+7,
+2,
+            "Ténèbres Normal",
+"Raticate"
         ],
         [
             "Piafabec",
-            21,
-            1,
-            1,
-            "Normal Vol"
+21,
+1,
+1,
+            "Normal Vol",
+"Spearow"
         ],
         [
             "Rapasdepic",
-            22,
-            1,
-            2,
-            "Normal Vol"
+22,
+1,
+2,
+            "Normal Vol",
+"Fearow"
         ],
         [
             "Abo",
-            23,
-            1,
-            1,
-            "Poison"
+23,
+1,
+1,
+            "Poison",
+"Ekans"
         ],
         [
             "Arbok",
-            24,
-            1,
-            2,
-            "Poison"
+24,
+1,
+2,
+            "Poison",
+"Arbok"
         ],
         [
             "Pikachu",
-            25,
-            1,
-            2,
-            "Électrique"
+25,
+1,
+2,
+            "Électrique",
+"Pikachu"
         ],
         [
             "Raichu",
-            26,
-            1,
-            3,
-            "Électrique"
+26,
+1,
+3,
+            "Électrique",
+"Raichu"
         ],
         [
             "Raichu d'Alola",
-            26,
-            7,
-            3,
-            "Électrique Psy"
+26,
+7,
+3,
+            "Électrique Psy",
+"Raichu"
         ],
         [
             "Sabelette",
-            27,
-            1,
-            1,
-            "Sol"
+27,
+1,
+1,
+            "Sol",
+"Sandshrew"
         ],
         [
             "Sabelette d'Alola",
-            27,
-            7,
-            1,
-            "Glace Acier"
+27,
+7,
+1,
+            "Glace Acier",
+"Sandshrew"
         ],
         [
             "Sablaireau",
-            28,
-            1,
-            2,
-            "Sol"
+28,
+1,
+2,
+            "Sol",
+"Sandslash"
         ],
         [
             "Sablaireau d'Alola",
-            28,
-            7,
-            2,
-            "Glace Acier"
+28,
+7,
+2,
+            "Glace Acier",
+"Sandslash"
         ],
         [
             "Nidoran",
-            29,
-            1,
-            1,
-            "Poison"
+29,
+1,
+1,
+            "Poison",
+"Nidoran"
         ],
         [
             "Nidorina",
-            30,
-            1,
-            2,
-            "Poison"
+30,
+1,
+2,
+            "Poison",
+"Nidorina"
         ],
         [
             "Nidoqueen",
-            31,
-            1,
-            3,
-            "Poison Sol"
+31,
+1,
+3,
+            "Poison Sol",
+"Nidoqueen"
         ],
         [
             "Nidorino",
-            33,
-            1,
-            2,
-            "Poison"
+33,
+1,
+2,
+            "Poison",
+"Nidorino"
         ],
         [
             "Nidoking",
-            34,
-            1,
-            3,
-            "Poison Sol"
+34,
+1,
+3,
+            "Poison Sol",
+"Nidoking"
         ],
         [
             "Mélofée",
-            35,
-            1,
-            2,
-            "Fée"
+35,
+1,
+2,
+            "Fée",
+"Clefairy"
         ],
         [
             "Mélodelfe",
-            36,
-            1,
-            3,
-            "Fée"
+36,
+1,
+3,
+            "Fée",
+"Clefable"
         ],
         [
             "Goupix",
-            37,
-            1,
-            1,
-            "Feu"
+37,
+1,
+1,
+            "Feu",
+"Vulpix"
         ],
         [
             "Goupix d'Alola",
-            37,
-            7,
-            1,
-            "Glace"
+37,
+7,
+1,
+            "Glace",
+"Vulpix"
         ],
         [
             "Feunard",
-            38,
-            1,
-            2,
-            "Feu"
+38,
+1,
+2,
+            "Feu",
+"Ninetales"
         ],
         [
             "Feunard d'Alola",
-            38,
-            7,
-            2,
-            "Glace Fée"
+38,
+7,
+2,
+            "Glace Fée",
+"Ninetales"
         ],
         [
             "Rondoudou",
-            39,
-            1,
-            2,
-            "Normal Fée"
+39,
+1,
+2,
+            "Normal Fée",
+"Jigglypuff"
         ],
         [
             "Grodoudou",
-            40,
-            1,
-            3,
-            "Normal Fée"
+40,
+1,
+3,
+            "Normal Fée",
+"Wigglytuff"
         ],
         [
             "Nosferapti",
-            41,
-            1,
-            1,
-            "Poison Vol"
+41,
+1,
+1,
+            "Poison Vol",
+"Zubat"
         ],
         [
             "Nosferalto",
-            42,
-            1,
-            2,
-            "Poison Vol"
+42,
+1,
+2,
+            "Poison Vol",
+"Golbat"
         ],
         [
             "Mystherbe",
-            43,
-            1,
-            1,
-            "Plante Poison"
+43,
+1,
+1,
+            "Plante Poison",
+"Oddish"
         ],
         [
             "Ortide",
-            44,
-            1,
-            2,
-            "Plante Poison"
+44,
+1,
+2,
+            "Plante Poison",
+"Gloom"
         ],
         [
             "Rafflesia",
-            45,
-            1,
-            3,
-            "Plante Poison"
+45,
+1,
+3,
+            "Plante Poison",
+"Vileplume"
         ],
         [
             "Paras",
-            46,
-            1,
-            1,
-            "Insecte Plante"
+46,
+1,
+1,
+            "Insecte Plante",
+"Paras"
         ],
         [
             "Parasect",
-            47,
-            1,
-            2,
-            "Insecte Plante"
+47,
+1,
+2,
+            "Insecte Plante",
+"Parasect"
         ],
         [
             "Mimitoss",
-            48,
-            1,
-            1,
-            "Insecte Poison"
+48,
+1,
+1,
+            "Insecte Poison",
+"Venonat"
         ],
         [
             "Aéromite",
-            49,
-            1,
-            2,
-            "Insecte Poison"
+49,
+1,
+2,
+            "Insecte Poison",
+"Venomoth"
         ],
         [
             "Taupiqueur",
-            50,
-            1,
-            1,
-            "Sol"
+50,
+1,
+1,
+            "Sol",
+"Diglett"
         ],
         [
             "Taupiqueur d'Alola",
-            50,
-            7,
-            1,
-            "Sol Acier"
+50,
+7,
+1,
+            "Sol Acier",
+"Diglett"
         ],
         [
             "Triopikeur",
-            51,
-            1,
-            2,
-            "Sol"
+51,
+1,
+2,
+            "Sol",
+"Dugtrio"
         ],
         [
             "Triopikeur d'Alola",
-            51,
-            7,
-            2,
-            "Sol Acier"
+51,
+7,
+2,
+            "Sol Acier",
+"Dugtrio"
         ],
         [
             "Miaouss",
-            52,
-            1,
-            1,
-            "Normal"
+52,
+1,
+1,
+            "Normal",
+"Meowth"
         ],
         [
             "Miaouss d'Alola",
-            52,
-            7,
-            1,
-            "Ténèbres"
+52,
+7,
+1,
+            "Ténèbres",
+"Meowth"
         ],
         [
             "Miaouss de Galar",
-            52,
-            8,
-            1,
-            "Acier"
+52,
+8,
+1,
+            "Acier",
+"Meowth"
         ],
         [
             "Persian",
-            53,
-            1,
-            2,
-            "Normal"
+53,
+1,
+2,
+            "Normal",
+"Persian"
         ],
         [
             "Persian d'Alola",
-            53,
-            7,
-            2,
-            "Ténèbres"
+53,
+7,
+2,
+            "Ténèbres",
+"Persian"
         ],
         [
             "Psykokwak",
-            54,
-            1,
-            1,
-            "Eau"
+54,
+1,
+1,
+            "Eau",
+"Psyduck"
         ],
         [
             "Akwakwak",
-            55,
-            1,
-            1,
-            "Eau"
+55,
+1,
+1,
+            "Eau",
+"Golduck"
         ],
         [
             "Férosinge",
-            56,
-            1,
-            1,
-            "Combat"
+56,
+1,
+1,
+            "Combat",
+"Mankey"
         ],
         [
             "Colossinge",
-            57,
-            1,
-            2,
-            "Combat"
+57,
+1,
+2,
+            "Combat",
+"Primeape"
         ],
         [
             "Caninos",
-            58,
-            1,
-            1,
-            "Feu"
+58,
+1,
+1,
+            "Feu",
+"Growlithe"
         ],
         [
             "Arcanin",
-            59,
-            1,
-            2,
-            "Feu"
+59,
+1,
+2,
+            "Feu",
+"Arcanine"
         ],
         [
             "Ptitard",
-            60,
-            1,
-            1,
-            "Eau"
+60,
+1,
+1,
+            "Eau",
+"Poliwag"
         ],
         [
             "Têtarte",
-            61,
-            1,
-            2,
-            "Eau"
+61,
+1,
+2,
+            "Eau",
+"Poliwhirl"
         ],
         [
             "Tartard",
-            62,
-            1,
-            3,
-            "Eau Combat"
+62,
+1,
+3,
+            "Eau Combat",
+"Poliwrath"
         ],
         [
             "Abra",
-            63,
-            1,
-            1,
-            "Psy"
+63,
+1,
+1,
+            "Psy",
+"Abra"
         ],
         [
             "Kadabra",
-            64,
-            1,
-            2,
-            "Psy"
+64,
+1,
+2,
+            "Psy",
+"Kadabra"
         ],
         [
             "Alakazam",
-            65,
-            1,
-            3,
-            "Psy"
+65,
+1,
+3,
+            "Psy",
+"Alakazam"
         ],
         [
             "Machoc",
-            66,
-            1,
-            1,
-            "Combat"
+66,
+1,
+1,
+            "Combat",
+"Machop"
         ],
         [
             "Machopeur",
-            67,
-            1,
-            2,
-            "Combat"
+67,
+1,
+2,
+            "Combat",
+"Machoke"
         ],
         [
             "Mackogneur",
-            68,
-            1,
-            3,
-            "Combat"
+68,
+1,
+3,
+            "Combat",
+"Machamp"
         ],
         [
             "Chétiflor",
-            69,
-            1,
-            1,
-            "Plante Poison"
+69,
+1,
+1,
+            "Plante Poison",
+"Bellsprout"
         ],
         [
             "Boustiflor",
-            70,
-            1,
-            2,
-            "Plante Poison"
+70,
+1,
+2,
+            "Plante Poison",
+"Weepinbell"
         ],
         [
             "Empiflor",
-            71,
-            1,
-            3,
-            "Plante Poison"
+71,
+1,
+3,
+            "Plante Poison",
+"Victreebel"
         ],
         [
             "Tentacool",
-            72,
-            1,
-            1,
-            "Eau Poison"
+72,
+1,
+1,
+            "Eau Poison",
+"Tentacool"
         ],
         [
             "Tentacruel",
-            73,
-            1,
-            2,
-            "Eau Poison"
+73,
+1,
+2,
+            "Eau Poison",
+"Tentacruel"
         ],
         [
             "Racaillou",
-            74,
-            1,
-            1,
-            "Roche Sol"
+74,
+1,
+1,
+            "Roche Sol",
+"Geodude"
         ],
         [
             "Racaillou d'Alola",
-            74,
-            7,
-            1,
-            "Roche Électrique"
+74,
+7,
+1,
+            "Roche Électrique",
+"Geodude"
         ],
         [
             "Gravalanch",
-            75,
-            1,
-            2,
-            "Roche Sol"
+75,
+1,
+2,
+            "Roche Sol",
+"Graveler"
         ],
         [
             "Gravalanch d'Alola",
-            75,
-            7,
-            2,
-            "Roche Électrique"
+75,
+7,
+2,
+            "Roche Électrique",
+"Graveler"
         ],
         [
             "Grolem",
-            76,
-            1,
-            3,
-            "Roche Sol"
+76,
+1,
+3,
+            "Roche Sol",
+"Golem"
         ],
         [
             "Grolem d'Alola",
-            76,
-            7,
-            3,
-            "Roche Électrique"
+76,
+7,
+3,
+            "Roche Électrique",
+"Golem"
         ],
         [
             "Ponyta",
-            77,
-            1,
-            1,
-            "Feu"
+77,
+1,
+1,
+            "Feu",
+"Ponyta"
         ],
         [
             "Ponyta de Galar",
-            77,
-            8,
-            1,
-            "Psy"
+77,
+8,
+1,
+            "Psy",
+"Ponyta"
         ],
         [
             "Galopa",
-            78,
-            1,
-            2,
-            "Feu"
+78,
+1,
+2,
+            "Feu",
+"Rapidash"
         ],
         [
             "Galopa de Galar",
-            78,
-            8,
-            2,
-            "Psy Fée"
+78,
+8,
+2,
+            "Psy Fée",
+"Rapidash"
         ],
         [
             "Ramoloss",
-            79,
-            1,
-            1,
-            "Eau Psy"
+79,
+1,
+1,
+            "Eau Psy",
+"Slowpoke"
         ],
         [
             "Ramoloss de Galar",
-            79,
-            8,
-            1,
-            "Psy"
+79,
+8,
+1,
+            "Psy",
+"Slowpoke"
         ],
         [
             "Flagadoss",
-            80,
-            1,
-            2,
-            "Eau Psy"
+80,
+1,
+2,
+            "Eau Psy",
+"Slowbro"
         ],
         [
             "Flagadoss de Galar",
-            80,
-            8,
-            2,
-            "Poison Psy"
+80,
+8,
+2,
+            "Poison Psy",
+"Slowbro"
         ],
         [
             "Magnéti",
-            81,
-            1,
-            1,
-            "Électrique Acier"
+81,
+1,
+1,
+            "Électrique Acier",
+"Magnemite"
         ],
         [
             "Magnéton",
-            82,
-            1,
-            2,
-            "Électrique Acier"
+82,
+1,
+2,
+            "Électrique Acier",
+"Magneton"
         ],
         [
             "Canarticho",
-            83,
-            1,
-            1,
-            "Normal Vol"
+83,
+1,
+1,
+            "Normal Vol",
+"Farfetch'd"
         ],
         [
             "Canarticho de Galar",
-            83,
-            8,
-            1,
-            "Combat"
+83,
+8,
+1,
+            "Combat",
+"Farfetch'd"
         ],
         [
             "Doduo",
-            84,
-            1,
-            1,
-            "Normal Vol"
+84,
+1,
+1,
+            "Normal Vol",
+"Doduo"
         ],
         [
             "Dodrio",
-            85,
-            1,
-            2,
-            "Normal Vol"
+85,
+1,
+2,
+            "Normal Vol",
+"Dodrio"
         ],
         [
             "Otaria",
-            86,
-            1,
-            1,
-            "Eau"
+86,
+1,
+1,
+            "Eau",
+"Seel"
         ],
         [
             "Lamantine",
-            87,
-            1,
-            2,
-            "Eau Glace"
+87,
+1,
+2,
+            "Eau Glace",
+"Dewgong"
         ],
         [
             "Tadmorv",
-            88,
-            1,
-            1,
-            "Poison"
+88,
+1,
+1,
+            "Poison",
+"Grimer"
         ],
         [
             "Tadmorv d'Alola",
-            88,
-            7,
-            1,
-            "Poison Ténèbres"
+88,
+7,
+1,
+            "Poison Ténèbres",
+"Grimer"
         ],
         [
             "Grotadmorv",
-            89,
-            1,
-            2,
-            "Poison"
+89,
+1,
+2,
+            "Poison",
+"Muk"
         ],
         [
             "Grotadmorv d'Alola",
-            89,
-            7,
-            2,
-            "Poison Ténèbres"
+89,
+7,
+2,
+            "Poison Ténèbres",
+"Muk"
         ],
         [
             "Kokiyas",
-            90,
-            1,
-            1,
-            "Eau"
+90,
+1,
+1,
+            "Eau",
+"Shellder"
         ],
         [
             "Crustabri",
-            91,
-            1,
-            2,
-            "Eau Glace"
+91,
+1,
+2,
+            "Eau Glace",
+"Cloyster"
         ],
         [
             "Fantominus",
-            92,
-            1,
-            1,
-            "Spectre Poison"
+92,
+1,
+1,
+            "Spectre Poison",
+"Gastly"
         ],
         [
             "Spectrum",
-            93,
-            1,
-            2,
-            "Spectre Poison"
+93,
+1,
+2,
+            "Spectre Poison",
+"Haunter"
         ],
         [
             "Ectoplasma",
-            94,
-            1,
-            3,
-            "Spectre Poison"
+94,
+1,
+3,
+            "Spectre Poison",
+"Gengar"
         ],
         [
             "Onix",
-            95,
-            1,
-            1,
-            "Roche Sol"
+95,
+1,
+1,
+            "Roche Sol",
+"Onix"
         ],
         [
             "Soporifik",
-            96,
-            1,
-            1,
-            "Psy"
+96,
+1,
+1,
+            "Psy",
+"Drowzee"
         ],
         [
             "Hypnomade",
-            97,
-            1,
-            2,
-            "Psy"
+97,
+1,
+2,
+            "Psy",
+"Hypno"
         ],
         [
             "Krabby",
-            98,
-            1,
-            1,
-            "Eau"
+98,
+1,
+1,
+            "Eau",
+"Krabby"
         ],
         [
             "Krabboss",
-            99,
-            1,
-            2,
-            "Eau"
+99,
+1,
+2,
+            "Eau",
+"Kingler"
         ],
         [
             "Voltorbe",
-            100,
-            1,
-            1,
-            "Électrique"
+100,
+1,
+1,
+            "Électrique",
+"Voltorb"
         ],
         [
             "Électrode",
-            101,
-            1,
-            2,
-            "Électrique"
+101,
+1,
+2,
+            "Électrique",
+"Electrode"
         ],
         [
             "Noeunoeuf",
-            102,
-            1,
-            1,
-            "Plante Psy"
+102,
+1,
+1,
+            "Plante Psy",
+"Exeggcute"
         ],
         [
             "Noadkoko",
-            103,
-            1,
-            2,
-            "Plante Psy"
+103,
+1,
+2,
+            "Plante Psy",
+"Exeggutor"
         ],
         [
             "Noadkoko d'Alola",
-            103,
-            7,
-            2,
-            "Plante Dragon"
+103,
+7,
+2,
+            "Plante Dragon",
+"Exeggutor"
         ],
         [
             "Osselait",
-            104,
-            1,
-            1,
-            "Sol"
+104,
+1,
+1,
+            "Sol",
+"Cubone"
         ],
         [
             "Ossatueur",
-            105,
-            1,
-            2,
-            "Sol"
+105,
+1,
+2,
+            "Sol",
+"Marowak"
         ],
         [
             "Ossatueur d'Alola",
-            105,
-            7,
-            2,
-            "Feu Spectre"
+105,
+7,
+2,
+            "Feu Spectre",
+"Marowak"
         ],
         [
             "Kicklee",
-            106,
-            1,
-            2,
-            "Combat"
+106,
+1,
+2,
+            "Combat",
+"Hitmonlee"
         ],
         [
             "Tygnon",
-            107,
-            1,
-            2,
-            "Combat"
+107,
+1,
+2,
+            "Combat",
+"Hitmonchan"
         ],
         [
             "Excelangue",
-            108,
-            1,
-            1,
-            "Normal"
+108,
+1,
+1,
+            "Normal",
+"Lickitung"
         ],
         [
             "Smogo",
-            109,
-            1,
-            1,
-            "Poison"
+109,
+1,
+1,
+            "Poison",
+"Koffing"
         ],
         [
             "Smogogo",
-            110,
-            1,
-            2,
-            "Poison"
+110,
+1,
+2,
+            "Poison",
+"Weezing"
         ],
         [
             "Smogogo de Galar",
-            110,
-            8,
-            2,
-            "Poison Fée"
+110,
+8,
+2,
+            "Poison Fée",
+"Weezing"
         ],
         [
             "Rhinocorne",
-            111,
-            1,
-            1,
-            "Sol Roche"
+111,
+1,
+1,
+            "Sol Roche",
+"Rhyhorn"
         ],
         [
             "Rhinoféros",
-            112,
-            1,
-            2,
-            "Sol Roche"
+112,
+1,
+2,
+            "Sol Roche",
+"Rhydon"
         ],
         [
             "Leveinard",
-            113,
-            1,
-            2,
-            "Normal"
+113,
+1,
+2,
+            "Normal",
+"Chansey"
         ],
         [
             "Saquedeneu",
-            114,
-            1,
-            1,
-            "Plante"
+114,
+1,
+1,
+            "Plante",
+"Tangela"
         ],
         [
             "Kangourex",
-            115,
-            1,
-            1,
-            "Normal"
+115,
+1,
+1,
+            "Normal",
+"Kangaskhan"
         ],
         [
             "Hypotrempe",
-            116,
-            1,
-            1,
-            "Eau"
+116,
+1,
+1,
+            "Eau",
+"Horsea"
         ],
         [
             "Hypocéan",
-            117,
-            1,
-            2,
-            "Eau"
+117,
+1,
+2,
+            "Eau",
+"Seadra"
         ],
         [
             "Poissirène",
-            118,
-            1,
-            1,
-            "Eau"
+118,
+1,
+1,
+            "Eau",
+"Goldeen"
         ],
         [
             "Poissoroy",
-            119,
-            1,
-            2,
-            "Eau"
+119,
+1,
+2,
+            "Eau",
+"Seaking"
         ],
         [
             "Stari",
-            120,
-            1,
-            1,
-            "Eau"
+120,
+1,
+1,
+            "Eau",
+"Staryu"
         ],
         [
             "Staross",
-            121,
-            1,
-            2,
-            "Eau Psy"
+121,
+1,
+2,
+            "Eau Psy",
+"Starmie"
         ],
         [
             "M. Mime",
-            122,
-            1,
-            2,
-            "Psy Fée"
+122,
+1,
+2,
+            "Psy Fée",
+"Mr. Mime"
         ],
         [
             "M. Mime de Galar",
-            122,
-            8,
-            2,
-            "Glace Psy"
+122,
+8,
+2,
+            "Glace Psy",
+"Mr. Mime"
         ],
         [
             "Insécateur",
-            123,
-            1,
-            1,
-            "Insecte Vol"
+123,
+1,
+1,
+            "Insecte Vol",
+"Scyther"
         ],
         [
             "Lippoutou",
-            124,
-            1,
-            2,
-            "Glace Psy"
+124,
+1,
+2,
+            "Glace Psy",
+"Jynx"
         ],
         [
             "Élektek",
-            125,
-            1,
-            2,
-            "Électrique"
+125,
+1,
+2,
+            "Électrique",
+"Electabuzz"
         ],
         [
             "Magmar",
-            126,
-            1,
-            2,
-            "Feu"
+126,
+1,
+2,
+            "Feu",
+"Magmar"
         ],
         [
             "Scarabrute",
-            127,
-            1,
-            1,
-            "Insecte"
+127,
+1,
+1,
+            "Insecte",
+"Pinsir"
         ],
         [
             "Tauros",
-            128,
-            1,
-            1,
-            "Normal"
+128,
+1,
+1,
+            "Normal",
+"Tauros"
         ],
         [
             "Magicarpe",
-            129,
-            1,
-            1,
-            "Eau"
+129,
+1,
+1,
+            "Eau",
+"Magikarp"
         ],
         [
             "Léviator",
-            130,
-            1,
-            2,
-            "Eau Vol"
+130,
+1,
+2,
+            "Eau Vol",
+"Gyarados"
         ],
         [
             "Lokhlass",
-            131,
-            1,
-            1,
-            "Eau Glace"
+131,
+1,
+1,
+            "Eau Glace",
+"Lapras"
         ],
         [
             "Métamorph",
-            132,
-            1,
-            1,
-            "Normal"
+132,
+1,
+1,
+            "Normal",
+"Ditto"
         ],
         [
             "Évoli",
-            133,
-            1,
-            1,
-            "Normal"
+133,
+1,
+1,
+            "Normal",
+"Eevee"
         ],
         [
             "Aquali",
-            134,
-            1,
-            2,
-            "Eau"
+134,
+1,
+2,
+            "Eau",
+"Vaporeon"
         ],
         [
             "Voltali",
-            135,
-            1,
-            2,
-            "Électrique"
+135,
+1,
+2,
+            "Électrique",
+"Jolteon"
         ],
         [
             "Pyroli",
-            136,
-            1,
-            2,
-            "Feu"
+136,
+1,
+2,
+            "Feu",
+"Flareon"
         ],
         [
             "Porygon",
-            137,
-            1,
-            1,
-            "Normal"
+137,
+1,
+1,
+            "Normal",
+"Porygon"
         ],
         [
             "Amonita",
-            138,
-            1,
-            1,
-            "Roche Eau"
+138,
+1,
+1,
+            "Roche Eau",
+"Omanyte"
         ],
         [
             "Amonistar",
-            139,
-            1,
-            2,
-            "Roche Eau"
+139,
+1,
+2,
+            "Roche Eau",
+"Omastar"
         ],
         [
             "Kabuto",
-            140,
-            1,
-            1,
-            "Roche Eau"
+140,
+1,
+1,
+            "Roche Eau",
+"Kabuto"
         ],
         [
             "Kabutops",
-            141,
-            1,
-            2,
-            "Roche Eau"
+141,
+1,
+2,
+            "Roche Eau",
+"Kabutops"
         ],
         [
             "Ptéra",
-            142,
-            1,
-            1,
-            "Roche Vol"
+142,
+1,
+1,
+            "Roche Vol",
+"Aerodactyl"
         ],
         [
             "Ronflex",
-            143,
-            1,
-            2,
-            "Normal"
+143,
+1,
+2,
+            "Normal",
+"Snorlax"
         ],
         [
             "Artikodin",
-            144,
-            1,
-            1,
-            "Glace Vol"
+144,
+1,
+1,
+            "Glace Vol",
+"Articuno"
         ],
         [
             "Artikodin de Galar",
-            144,
-            8,
-            1,
-            "Psy Vol"
+144,
+8,
+1,
+            "Psy Vol",
+"Articuno"
         ],
         [
             "Électhor",
-            145,
-            1,
-            1,
-            "Électrique Vol"
+145,
+1,
+1,
+            "Électrique Vol",
+"Zapdos"
         ],
         [
             "Électhor de Galar",
-            145,
-            8,
-            1,
-            "Combat Vol"
+145,
+8,
+1,
+            "Combat Vol",
+"Zapdos"
         ],
         [
             "Sulfura",
-            146,
-            1,
-            1,
-            "Feu Vol"
+146,
+1,
+1,
+            "Feu Vol",
+"Moltres"
         ],
         [
             "Sulfura de Galar",
-            146,
-            8,
-            1,
-            "Ténèbres Vol"
+146,
+8,
+1,
+            "Ténèbres Vol",
+"Moltres"
         ],
         [
             "Minidraco",
-            147,
-            1,
-            1,
-            "Dragon"
+147,
+1,
+1,
+            "Dragon",
+"Dratini"
         ],
         [
             "Draco",
-            148,
-            1,
-            2,
-            "Dragon"
+148,
+1,
+2,
+            "Dragon",
+"Dragonair"
         ],
         [
             "Dracolosse",
-            149,
-            1,
-            3,
-            "Dragon Vol"
+149,
+1,
+3,
+            "Dragon Vol",
+"Dragonite"
         ],
         [
             "Mewtwo",
-            150,
-            1,
-            1,
-            "Psy"
+150,
+1,
+1,
+            "Psy",
+"Mewtwo"
         ],
         [
             "Mew",
-            151,
-            1,
-            1,
-            "Psy"
+151,
+1,
+1,
+            "Psy",
+"Mew"
         ],
         [
             "Germignon",
-            152,
-            2,
-            1,
-            "Plante"
+152,
+2,
+1,
+            "Plante",
+"Chikorita"
         ],
         [
             "Macronium",
-            153,
-            2,
-            2,
-            "Plante"
+153,
+2,
+2,
+            "Plante",
+"Bayleef"
         ],
         [
             "Méganium",
-            154,
-            2,
-            3,
-            "Plante"
+154,
+2,
+3,
+            "Plante",
+"Meganium"
         ],
         [
             "Héricendre",
-            155,
-            2,
-            1,
-            "Feu"
+155,
+2,
+1,
+            "Feu",
+"Cyndaquil"
         ],
         [
             "Feurisson",
-            156,
-            2,
-            2,
-            "Feu"
+156,
+2,
+2,
+            "Feu",
+"Quilava"
         ],
         [
             "Typhlosion",
-            157,
-            2,
-            3,
-            "Feu"
+157,
+2,
+3,
+            "Feu",
+"Typhlosion"
         ],
         [
             "Kaiminus",
-            158,
-            2,
-            1,
-            "Eau"
+158,
+2,
+1,
+            "Eau",
+"Totodile"
         ],
         [
             "Crocrodil",
-            159,
-            2,
-            2,
-            "Eau"
+159,
+2,
+2,
+            "Eau",
+"Croconaw"
         ],
         [
             "Aligatueur",
-            160,
-            2,
-            3,
-            "Eau"
+160,
+2,
+3,
+            "Eau",
+"Feraligatr"
         ],
         [
             "Fouinette",
-            161,
-            2,
-            1,
-            "Normal"
+161,
+2,
+1,
+            "Normal",
+"Sentret"
         ],
         [
             "Fouinar",
-            162,
-            2,
-            2,
-            "Normal"
+162,
+2,
+2,
+            "Normal",
+"Furret"
         ],
         [
             "Hoothoot",
-            163,
-            2,
-            1,
-            "Normal Vol"
+163,
+2,
+1,
+            "Normal Vol",
+"Hoothoot"
         ],
         [
             "Noarfang",
-            164,
-            2,
-            2,
-            "Normal Vol"
+164,
+2,
+2,
+            "Normal Vol",
+"Noctowl"
         ],
         [
             "Coxy",
-            165,
-            2,
-            1,
-            "Insecte Vol"
+165,
+2,
+1,
+            "Insecte Vol",
+"Ledyba"
         ],
         [
             "Coxyclaque",
-            166,
-            2,
-            2,
-            "Insecte Vol"
+166,
+2,
+2,
+            "Insecte Vol",
+"Ledian"
         ],
         [
             "Mimigal",
-            167,
-            2,
-            1,
-            "Insecte Poison"
+167,
+2,
+1,
+            "Insecte Poison",
+"Spinarak"
         ],
         [
             "Migalos",
-            168,
-            2,
-            2,
-            "Insecte Poison"
+168,
+2,
+2,
+            "Insecte Poison",
+"Ariados"
         ],
         [
             "Nostenfer",
-            169,
-            2,
-            3,
-            "Poison Vol"
+169,
+2,
+3,
+            "Poison Vol",
+"Crobat"
         ],
         [
             "Loupio",
-            170,
-            2,
-            1,
-            "Eau Électrique"
+170,
+2,
+1,
+            "Eau Électrique",
+"Chinchou"
         ],
         [
             "Lanturn",
-            171,
-            2,
-            2,
-            "Eau Électrique"
+171,
+2,
+2,
+            "Eau Électrique",
+"Lanturn"
         ],
         [
             "Pichu",
-            172,
-            2,
-            1,
-            "Électrique"
+172,
+2,
+1,
+            "Électrique",
+"Pichu"
         ],
         [
             "Mélo",
-            173,
-            2,
-            1,
-            "Fée"
+173,
+2,
+1,
+            "Fée",
+"Cleffa"
         ],
         [
             "Toudoudou",
-            174,
-            2,
-            1,
-            "Normal Fée"
+174,
+2,
+1,
+            "Normal Fée",
+"Igglybuff"
         ],
         [
             "Togepi",
-            175,
-            2,
-            1,
-            "Fée"
+175,
+2,
+1,
+            "Fée",
+"Togepi"
         ],
         [
             "Togetic",
-            176,
-            2,
-            2,
-            "Fée Vol"
+176,
+2,
+2,
+            "Fée Vol",
+"Togetic"
         ],
         [
             "Natu",
-            177,
-            2,
-            1,
-            "Psy Vol"
+177,
+2,
+1,
+            "Psy Vol",
+"Natu"
         ],
         [
             "Xatu",
-            178,
-            2,
-            2,
-            "Psy Vol"
+178,
+2,
+2,
+            "Psy Vol",
+"Xatu"
         ],
         [
             "Wattouat",
-            179,
-            2,
-            1,
-            "Électrique"
+179,
+2,
+1,
+            "Électrique",
+"Mareep"
         ],
         [
             "Lainergie",
-            180,
-            2,
-            2,
-            "Électrique"
+180,
+2,
+2,
+            "Électrique",
+"Flaaffy"
         ],
         [
             "Pharamp",
-            181,
-            2,
-            3,
-            "Électrique"
+181,
+2,
+3,
+            "Électrique",
+"Ampharos"
         ],
         [
             "Joliflor",
-            182,
-            2,
-            3,
-            "Plante"
+182,
+2,
+3,
+            "Plante",
+"Bellossom"
         ],
         [
             "Marill",
-            183,
-            2,
-            2,
-            "Eau Fée"
+183,
+2,
+2,
+            "Eau Fée",
+"Marill"
         ],
         [
             "Azumarill",
-            184,
-            2,
-            3,
-            "Eau Fée"
+184,
+2,
+3,
+            "Eau Fée",
+"Azumarill"
         ],
         [
             "Simularbre",
-            185,
-            2,
-            2,
-            "Roche"
+185,
+2,
+2,
+            "Roche",
+"Sudowoodo"
         ],
         [
             "Tarpaud",
-            186,
-            2,
-            3,
-            "Eau"
+186,
+2,
+3,
+            "Eau",
+"Politoed"
         ],
         [
             "Granivol",
-            187,
-            2,
-            1,
-            "Plante Vol"
+187,
+2,
+1,
+            "Plante Vol",
+"Hoppip"
         ],
         [
             "Floravol",
-            188,
-            2,
-            2,
-            "Plante Vol"
+188,
+2,
+2,
+            "Plante Vol",
+"Skiploom"
         ],
         [
             "Cotovol",
-            189,
-            2,
-            3,
-            "Plante Vol"
+189,
+2,
+3,
+            "Plante Vol",
+"Jumpluff"
         ],
         [
             "Capumain",
-            190,
-            2,
-            1,
-            "Normal"
+190,
+2,
+1,
+            "Normal",
+"Aipom"
         ],
         [
             "Tournegrin",
-            191,
-            2,
-            1,
-            "Plante"
+191,
+2,
+1,
+            "Plante",
+"Sunkern"
         ],
         [
             "Héliatronc",
-            192,
-            2,
-            2,
-            "Plante"
+192,
+2,
+2,
+            "Plante",
+"Sunflora"
         ],
         [
             "Yanma",
-            193,
-            2,
-            1,
-            "Insecte Vol"
+193,
+2,
+1,
+            "Insecte Vol",
+"Yanma"
         ],
         [
             "Axoloto",
-            194,
-            2,
-            1,
-            "Eau Sol"
+194,
+2,
+1,
+            "Eau Sol",
+"Wooper"
         ],
         [
             "Maraiste",
-            195,
-            2,
-            2,
-            "Eau Sol"
+195,
+2,
+2,
+            "Eau Sol",
+"Quagsire"
         ],
         [
             "Mentali",
-            196,
-            2,
-            2,
-            "Psy"
+196,
+2,
+2,
+            "Psy",
+"Espeon"
         ],
         [
             "Noctali",
-            197,
-            2,
-            2,
-            "Ténèbres"
+197,
+2,
+2,
+            "Ténèbres",
+"Umbreon"
         ],
         [
             "Cornèbre",
-            198,
-            2,
-            1,
-            "Ténèbres Vol"
+198,
+2,
+1,
+            "Ténèbres Vol",
+"Murkrow"
         ],
         [
             "Roigada",
-            199,
-            2,
-            2,
-            "Eau Psy"
+199,
+2,
+2,
+            "Eau Psy",
+"Slowking"
         ],
         [
             "Roigada de Galar",
-            199,
-            8,
-            2,
-            "Poison Psy"
+199,
+8,
+2,
+            "Poison Psy",
+"Slowking"
         ],
         [
             "Feuforêve",
-            200,
-            2,
-            1,
-            "Spectre"
+200,
+2,
+1,
+            "Spectre",
+"Misdreavus"
         ],
         [
             "Zarbi",
-            201,
-            2,
-            1,
-            "Psy"
+201,
+2,
+1,
+            "Psy",
+"Unown"
         ],
         [
             "Qulbutoké",
-            202,
-            2,
-            2,
-            "Psy"
+202,
+2,
+2,
+            "Psy",
+"Wobbuffet"
         ],
         [
             "Girafarig",
-            203,
-            2,
-            1,
-            "Normal Psy"
+203,
+2,
+1,
+            "Normal Psy",
+"Girafarig"
         ],
         [
             "Pomdepik",
-            204,
-            2,
-            1,
-            "Insecte"
+204,
+2,
+1,
+            "Insecte",
+"Pineco"
         ],
         [
             "Foretress",
-            205,
-            2,
-            2,
-            "Insecte Acier"
+205,
+2,
+2,
+            "Insecte Acier",
+"Forretress"
         ],
         [
             "Insolourdo",
-            206,
-            2,
-            1,
-            "Normal"
+206,
+2,
+1,
+            "Normal",
+"Dunsparce"
         ],
         [
             "Scorplane",
-            207,
-            2,
-            1,
-            "Sol Vol"
+207,
+2,
+1,
+            "Sol Vol",
+"Gligar"
         ],
         [
             "Steelix",
-            208,
-            2,
-            2,
-            "Acier Sol"
+208,
+2,
+2,
+            "Acier Sol",
+"Steelix"
         ],
         [
             "Snubbull",
-            209,
-            2,
-            1,
-            "Fée"
+209,
+2,
+1,
+            "Fée",
+"Snubbull"
         ],
         [
             "Granbull",
-            210,
-            2,
-            2,
-            "Fée"
+210,
+2,
+2,
+            "Fée",
+"Granbull"
         ],
         [
             "Qwilfish",
-            211,
-            2,
-            1,
-            "Eau Poison"
+211,
+2,
+1,
+            "Eau Poison",
+"Qwilfish"
         ],
         [
             "Cizayox",
-            212,
-            2,
-            2,
-            "Insecte Acier"
+212,
+2,
+2,
+            "Insecte Acier",
+"Scizor"
         ],
         [
             "Caratroc",
-            213,
-            2,
-            1,
-            "Insecte Roche"
+213,
+2,
+1,
+            "Insecte Roche",
+"Shuckle"
         ],
         [
             "Scarhino",
-            214,
-            2,
-            1,
-            "Insecte Combat"
+214,
+2,
+1,
+            "Insecte Combat",
+"Heracross"
         ],
         [
             "Farfuret",
-            215,
-            2,
-            1,
-            "Ténèbres Glace"
+215,
+2,
+1,
+            "Ténèbres Glace",
+"Sneasel"
         ],
         [
             "Teddiursa",
-            216,
-            2,
-            1,
-            "Normal"
+216,
+2,
+1,
+            "Normal",
+"Teddiursa"
         ],
         [
             "Ursaring",
-            217,
-            2,
-            2,
-            "Normal"
+217,
+2,
+2,
+            "Normal",
+"Ursaring"
         ],
         [
             "Limagma",
-            218,
-            2,
-            1,
-            "Feu"
+218,
+2,
+1,
+            "Feu",
+"Slugma"
         ],
         [
             "Volcaropod",
-            219,
-            2,
-            2,
-            "Feu Roche"
+219,
+2,
+2,
+            "Feu Roche",
+"Magcargo"
         ],
         [
             "Marcacrin",
-            220,
-            2,
-            1,
-            "Glace Sol"
+220,
+2,
+1,
+            "Glace Sol",
+"Swinub"
         ],
         [
             "Cochignon",
-            221,
-            2,
-            2,
-            "Glace Sol"
+221,
+2,
+2,
+            "Glace Sol",
+"Piloswine"
         ],
         [
             "Corayon",
-            222,
-            2,
-            1,
-            "Eau Roche"
+222,
+2,
+1,
+            "Eau Roche",
+"Corsola"
         ],
         [
             "Corayon de Galar",
-            222,
-            8,
-            1,
-            "Spectre"
+222,
+8,
+1,
+            "Spectre",
+"Corsola"
         ],
         [
             "Rémoraid",
-            223,
-            2,
-            1,
-            "Eau"
+223,
+2,
+1,
+            "Eau",
+"Remoraid"
         ],
         [
             "Octillery",
-            224,
-            2,
-            2,
-            "Eau"
+224,
+2,
+2,
+            "Eau",
+"Octillery"
         ],
         [
             "Cadoizo",
-            225,
-            2,
-            1,
-            "Glace Vol"
+225,
+2,
+1,
+            "Glace Vol",
+"Delibird"
         ],
         [
             "Démanta",
-            226,
-            2,
-            2,
-            "Eau Vol"
+226,
+2,
+2,
+            "Eau Vol",
+"Mantine"
         ],
         [
             "Airmure",
-            227,
-            2,
-            1,
-            "Acier Vol"
+227,
+2,
+1,
+            "Acier Vol",
+"Skarmory"
         ],
         [
             "Malosse",
-            228,
-            2,
-            1,
-            "Ténèbres Feu"
+228,
+2,
+1,
+            "Ténèbres Feu",
+"Houndour"
         ],
         [
             "Démolosse",
-            229,
-            2,
-            2,
-            "Ténèbres Feu"
+229,
+2,
+2,
+            "Ténèbres Feu",
+"Houndoom"
         ],
         [
             "Hyporoi",
-            230,
-            2,
-            3,
-            "Eau Dragon"
+230,
+2,
+3,
+            "Eau Dragon",
+"Kingdra"
         ],
         [
             "Phanpy",
-            231,
-            2,
-            1,
-            "Sol"
+231,
+2,
+1,
+            "Sol",
+"Phanpy"
         ],
         [
             "Donphan",
-            232,
-            2,
-            2,
-            "Sol"
+232,
+2,
+2,
+            "Sol",
+"Donphan"
         ],
         [
             "Porygon2",
-            233,
-            2,
-            2,
-            "Normal"
+233,
+2,
+2,
+            "Normal",
+"Porygon2"
         ],
         [
             "Cerfrousse",
-            234,
-            2,
-            1,
-            "Normal"
+234,
+2,
+1,
+            "Normal",
+"Stantler"
         ],
         [
             "Queulorior",
-            235,
-            2,
-            1,
-            "Normal"
+235,
+2,
+1,
+            "Normal",
+"Smeargle"
         ],
         [
             "Debugant",
-            236,
-            2,
-            1,
-            "Combat"
+236,
+2,
+1,
+            "Combat",
+"Tyrogue"
         ],
         [
             "Kapoera",
-            237,
-            2,
-            2,
-            "Combat"
+237,
+2,
+2,
+            "Combat",
+"Hitmontop"
         ],
         [
             "Lippouti",
-            238,
-            2,
-            1,
-            "Glace Psy"
+238,
+2,
+1,
+            "Glace Psy",
+"Smoochum"
         ],
         [
             "Élekid",
-            239,
-            2,
-            1,
-            "Électrique"
+239,
+2,
+1,
+            "Électrique",
+"Elekid"
         ],
         [
             "Magby",
-            240,
-            2,
-            1,
-            "Feu"
+240,
+2,
+1,
+            "Feu",
+"Magby"
         ],
         [
             "Écrémeuh",
-            241,
-            2,
-            1,
-            "Normal"
+241,
+2,
+1,
+            "Normal",
+"Miltank"
         ],
         [
             "Leuphorie",
-            242,
-            2,
-            3,
-            "Normal"
+242,
+2,
+3,
+            "Normal",
+"Blissey"
         ],
         [
             "Raikou",
-            243,
-            2,
-            1,
-            "Électrique"
+243,
+2,
+1,
+            "Électrique",
+"Raikou"
         ],
         [
             "Entei",
-            244,
-            2,
-            1,
-            "Feu"
+244,
+2,
+1,
+            "Feu",
+"Entei"
         ],
         [
             "Suicune",
-            245,
-            2,
-            1,
-            "Eau"
+245,
+2,
+1,
+            "Eau",
+"Suicune"
         ],
         [
             "Embrylex",
-            246,
-            2,
-            1,
-            "Roche Sol"
+246,
+2,
+1,
+            "Roche Sol",
+"Larvitar"
         ],
         [
             "Ymphect",
-            247,
-            2,
-            2,
-            "Roche Sol"
+247,
+2,
+2,
+            "Roche Sol",
+"Pupitar"
         ],
         [
             "Tyranocif",
-            248,
-            2,
-            3,
-            "Roche Ténèbres"
+248,
+2,
+3,
+            "Roche Ténèbres",
+"Tyranitar"
         ],
         [
             "Lugia",
-            249,
-            2,
-            1,
-            "Psy Vol"
+249,
+2,
+1,
+            "Psy Vol",
+"Lugia"
         ],
         [
             "Ho-Oh",
-            250,
-            2,
-            1,
-            "Feu Vol"
+250,
+2,
+1,
+            "Feu Vol",
+"Ho-Oh"
         ],
         [
             "Celebi",
-            251,
-            2,
-            1,
-            "Psy Plante"
+251,
+2,
+1,
+            "Psy Plante",
+"Celebi"
         ],
         [
             "Arcko",
-            252,
-            3,
-            1,
-            "Plante"
+252,
+3,
+1,
+            "Plante",
+"Treecko"
         ],
         [
             "Massko",
-            253,
-            3,
-            2,
-            "Plante"
+253,
+3,
+2,
+            "Plante",
+"Grovyle"
         ],
         [
             "Jungko",
-            254,
-            3,
-            3,
-            "Plante"
+254,
+3,
+3,
+            "Plante",
+"Sceptile"
         ],
         [
             "Poussifeu",
-            255,
-            3,
-            1,
-            "Feu"
+255,
+3,
+1,
+            "Feu",
+"Torchic"
         ],
         [
             "Galifeu",
-            256,
-            3,
-            2,
-            "Feu Combat"
+256,
+3,
+2,
+            "Feu Combat",
+"Combusken"
         ],
         [
             "Braségali",
-            257,
-            3,
-            3,
-            "Feu Combat"
+257,
+3,
+3,
+            "Feu Combat",
+"Blaziken"
         ],
         [
             "Gobou",
-            258,
-            3,
-            1,
-            "Eau"
+258,
+3,
+1,
+            "Eau",
+"Mudkip"
         ],
         [
             "Flobio",
-            259,
-            3,
-            2,
-            "Eau Sol"
+259,
+3,
+2,
+            "Eau Sol",
+"Marshtomp"
         ],
         [
             "Laggron",
-            260,
-            3,
-            3,
-            "Eau Sol"
+260,
+3,
+3,
+            "Eau Sol",
+"Swampert"
         ],
         [
             "Medhyèna",
-            261,
-            3,
-            1,
-            "Ténèbres"
+261,
+3,
+1,
+            "Ténèbres",
+"Poochyena"
         ],
         [
             "Grahyèna",
-            262,
-            3,
-            2,
-            "Ténèbres"
+262,
+3,
+2,
+            "Ténèbres",
+"Mightyena"
         ],
         [
             "Zigzaton",
-            263,
-            3,
-            1,
-            "Normal"
+263,
+3,
+1,
+            "Normal",
+"Zigzagoon"
         ],
         [
             "Zigzaton de Galar",
-            263,
-            8,
-            1,
-            "Ténèbres Normal"
+263,
+8,
+1,
+            "Ténèbres Normal",
+"Zigzagoon"
         ],
         [
             "Linéon",
-            264,
-            3,
-            2,
-            "Normal"
+264,
+3,
+2,
+            "Normal",
+"Linoone"
         ],
         [
             "Linéon de Galar",
-            264,
-            8,
-            2,
-            "Ténèbres Normal"
+264,
+8,
+2,
+            "Ténèbres Normal",
+"Linoone"
         ],
         [
             "Chenipotte",
-            265,
-            3,
-            1,
-            "Insecte"
+265,
+3,
+1,
+            "Insecte",
+"Wurmple"
         ],
         [
             "Armulys",
-            266,
-            3,
-            2,
-            "Insecte"
+266,
+3,
+2,
+            "Insecte",
+"Silcoon"
         ],
         [
             "Charmillon",
-            267,
-            3,
-            3,
-            "Insecte Vol"
+267,
+3,
+3,
+            "Insecte Vol",
+"Beautifly"
         ],
         [
             "Blindalys",
-            268,
-            3,
-            2,
-            "Insecte"
+268,
+3,
+2,
+            "Insecte",
+"Cascoon"
         ],
         [
             "Papinox",
-            269,
-            3,
-            3,
-            "Insecte Poison"
+269,
+3,
+3,
+            "Insecte Poison",
+"Dustox"
         ],
         [
             "Nénupiot",
-            270,
-            3,
-            1,
-            "Eau Plante"
+270,
+3,
+1,
+            "Eau Plante",
+"Lotad"
         ],
         [
             "Lombre",
-            271,
-            3,
-            2,
-            "Eau Plante"
+271,
+3,
+2,
+            "Eau Plante",
+"Lombre"
         ],
         [
             "Ludicolo",
-            272,
-            3,
-            3,
-            "Eau Plante"
+272,
+3,
+3,
+            "Eau Plante",
+"Ludicolo"
         ],
         [
             "Grainipiot",
-            273,
-            3,
-            1,
-            "Plante"
+273,
+3,
+1,
+            "Plante",
+"Seedot"
         ],
         [
             "Pifeuil",
-            274,
-            3,
-            2,
-            "Plante Ténèbres"
+274,
+3,
+2,
+            "Plante Ténèbres",
+"Nuzleaf"
         ],
         [
             "Tengalice",
-            275,
-            3,
-            3,
-            "Plante Ténèbres"
+275,
+3,
+3,
+            "Plante Ténèbres",
+"Shiftry"
         ],
         [
             "Nirondelle",
-            276,
-            3,
-            1,
-            "Normal Vol"
+276,
+3,
+1,
+            "Normal Vol",
+"Taillow"
         ],
         [
             "Hélédelle",
-            277,
-            3,
-            2,
-            "Normal Vol"
+277,
+3,
+2,
+            "Normal Vol",
+"Swellow"
         ],
         [
             "Goélise",
-            278,
-            3,
-            1,
-            "Eau Vol"
+278,
+3,
+1,
+            "Eau Vol",
+"Wingull"
         ],
         [
             "Bekipan",
-            279,
-            3,
-            2,
-            "Eau Vol"
+279,
+3,
+2,
+            "Eau Vol",
+"Pelipper"
         ],
         [
             "Tarsal",
-            280,
-            3,
-            1,
-            "Psy Fée"
+280,
+3,
+1,
+            "Psy Fée",
+"Ralts"
         ],
         [
             "Kirlia",
-            281,
-            3,
-            2,
-            "Psy Fée"
+281,
+3,
+2,
+            "Psy Fée",
+"Kirlia"
         ],
         [
             "Gardevoir",
-            282,
-            3,
-            3,
-            "Psy Fée"
+282,
+3,
+3,
+            "Psy Fée",
+"Gardevoir"
         ],
         [
             "Arakdo",
-            283,
-            3,
-            1,
-            "Insecte Eau"
+283,
+3,
+1,
+            "Insecte Eau",
+"Surskit"
         ],
         [
             "Maskadra",
-            284,
-            3,
-            2,
-            "Insecte Vol"
+284,
+3,
+2,
+            "Insecte Vol",
+"Masquerain"
         ],
         [
             "Balignon",
-            285,
-            3,
-            1,
-            "Plante"
+285,
+3,
+1,
+            "Plante",
+"Shroomish"
         ],
         [
             "Chapignon",
-            286,
-            3,
-            2,
-            "Plante Combat"
+286,
+3,
+2,
+            "Plante Combat",
+"Breloom"
         ],
         [
             "Parecool",
-            287,
-            3,
-            1,
-            "Normal"
+287,
+3,
+1,
+            "Normal",
+"Slakoth"
         ],
         [
             "Vigoroth",
-            288,
-            3,
-            2,
-            "Normal"
+288,
+3,
+2,
+            "Normal",
+"Vigoroth"
         ],
         [
             "Monaflèmit",
-            289,
-            3,
-            3,
-            "Normal"
+289,
+3,
+3,
+            "Normal",
+"Slaking"
         ],
         [
             "Ningale",
-            290,
-            3,
-            1,
-            "Insecte Sol"
+290,
+3,
+1,
+            "Insecte Sol",
+"Nincada"
         ],
         [
             "Ninjask",
-            291,
-            3,
-            2,
-            "Insecte Vol"
+291,
+3,
+2,
+            "Insecte Vol",
+"Ninjask"
         ],
         [
             "Munja",
-            292,
-            3,
-            2,
-            "Insecte Spectre"
+292,
+3,
+2,
+            "Insecte Spectre",
+"Shedinja"
         ],
         [
             "Chuchmur",
-            293,
-            3,
-            1,
-            "Normal"
+293,
+3,
+1,
+            "Normal",
+"Whismur"
         ],
         [
             "Ramboum",
-            294,
-            3,
-            2,
-            "Normal"
+294,
+3,
+2,
+            "Normal",
+"Loudred"
         ],
         [
             "Brouhabam",
-            295,
-            3,
-            3,
-            "Normal"
+295,
+3,
+3,
+            "Normal",
+"Exploud"
         ],
         [
             "Makuhita",
-            296,
-            3,
-            1,
-            "Combat"
+296,
+3,
+1,
+            "Combat",
+"Makuhita"
         ],
         [
             "Hariyama",
-            297,
-            3,
-            2,
-            "Combat"
+297,
+3,
+2,
+            "Combat",
+"Hariyama"
         ],
         [
             "Azurill",
-            298,
-            3,
-            1,
-            "Normal Fée"
+298,
+3,
+1,
+            "Normal Fée",
+"Azurill"
         ],
         [
             "Tarinor",
-            299,
-            3,
-            1,
-            "Roche"
+299,
+3,
+1,
+            "Roche",
+"Nosepass"
         ],
         [
             "Skitty",
-            300,
-            3,
-            1,
-            "Normal"
+300,
+3,
+1,
+            "Normal",
+"Skitty"
         ],
         [
             "Delcatty",
-            301,
-            3,
-            2,
-            "Normal"
+301,
+3,
+2,
+            "Normal",
+"Delcatty"
         ],
         [
             "Ténéfix",
-            302,
-            3,
-            1,
-            "Ténèbres Spectre"
+302,
+3,
+1,
+            "Ténèbres Spectre",
+"Sableye"
         ],
         [
             "Mysdibule",
-            303,
-            3,
-            1,
-            "Acier Fée"
+303,
+3,
+1,
+            "Acier Fée",
+"Mawile"
         ],
         [
             "Galekid",
-            304,
-            3,
-            1,
-            "Acier Roche"
+304,
+3,
+1,
+            "Acier Roche",
+"Aron"
         ],
         [
             "Galegon",
-            305,
-            3,
-            2,
-            "Acier Roche"
+305,
+3,
+2,
+            "Acier Roche",
+"Lairon"
         ],
         [
             "Galeking",
-            306,
-            3,
-            3,
-            "Acier Roche"
+306,
+3,
+3,
+            "Acier Roche",
+"Aggron"
         ],
         [
             "Méditikka",
-            307,
-            3,
-            1,
-            "Combat Psy"
+307,
+3,
+1,
+            "Combat Psy",
+"Meditite"
         ],
         [
             "Charmina",
-            308,
-            3,
-            2,
-            "Combat Psy"
+308,
+3,
+2,
+            "Combat Psy",
+"Medicham"
         ],
         [
             "Dynavolt",
-            309,
-            3,
-            1,
-            "Électrique"
+309,
+3,
+1,
+            "Électrique",
+"Electrike"
         ],
         [
             "Élecsprint",
-            310,
-            3,
-            2,
-            "Électrique"
+310,
+3,
+2,
+            "Électrique",
+"Manectric"
         ],
         [
             "Posipi",
-            311,
-            3,
-            1,
-            "Électrique"
+311,
+3,
+1,
+            "Électrique",
+"Plusle"
         ],
         [
             "Négapi",
-            312,
-            3,
-            1,
-            "Électrique"
+312,
+3,
+1,
+            "Électrique",
+"Minun"
         ],
         [
             "Muciole",
-            313,
-            3,
-            1,
-            "Insecte"
+313,
+3,
+1,
+            "Insecte",
+"Volbeat"
         ],
         [
             "Lumivole",
-            314,
-            3,
-            2,
-            "Insecte"
+314,
+3,
+2,
+            "Insecte",
+"Illumise"
         ],
         [
             "Rosélia",
-            315,
-            3,
-            2,
-            "Plante Poison"
+315,
+3,
+2,
+            "Plante Poison",
+"Roselia"
         ],
         [
             "Gloupti",
-            316,
-            3,
-            1,
-            "Poison"
+316,
+3,
+1,
+            "Poison",
+"Gulpin"
         ],
         [
             "Avaltout",
-            317,
-            3,
-            2,
-            "Poison"
+317,
+3,
+2,
+            "Poison",
+"Swalot"
         ],
         [
             "Carvanha",
-            318,
-            3,
-            1,
-            "Eau Ténèbres"
+318,
+3,
+1,
+            "Eau Ténèbres",
+"Carvanha"
         ],
         [
             "Sharpedo",
-            319,
-            3,
-            2,
-            "Eau Ténèbres"
+319,
+3,
+2,
+            "Eau Ténèbres",
+"Sharpedo"
         ],
         [
             "Wailmer",
-            320,
-            3,
-            1,
-            "Eau"
+320,
+3,
+1,
+            "Eau",
+"Wailmer"
         ],
         [
             "Wailord",
-            321,
-            3,
-            2,
-            "Eau"
+321,
+3,
+2,
+            "Eau",
+"Wailord"
         ],
         [
             "Chamallot",
-            322,
-            3,
-            1,
-            "Feu Sol"
+322,
+3,
+1,
+            "Feu Sol",
+"Numel"
         ],
         [
             "Camérupt",
-            323,
-            3,
-            2,
-            "Feu Sol"
+323,
+3,
+2,
+            "Feu Sol",
+"Camerupt"
         ],
         [
             "Chartor",
-            324,
-            3,
-            1,
-            "Feu"
+324,
+3,
+1,
+            "Feu",
+"Torkoal"
         ],
         [
             "Spoink",
-            325,
-            3,
-            1,
-            "Psy"
+325,
+3,
+1,
+            "Psy",
+"Spoink"
         ],
         [
             "Groret",
-            326,
-            3,
-            2,
-            "Psy"
+326,
+3,
+2,
+            "Psy",
+"Grumpig"
         ],
         [
             "Spinda",
-            327,
-            3,
-            1,
-            "Normal"
+327,
+3,
+1,
+            "Normal",
+"Spinda"
         ],
         [
             "Kraknoix",
-            328,
-            3,
-            1,
-            "Sol"
+328,
+3,
+1,
+            "Sol",
+"Trapinch"
         ],
         [
             "Vibraninf",
-            329,
-            3,
-            2,
-            "Sol Dragon"
+329,
+3,
+2,
+            "Sol Dragon",
+"Vibrava"
         ],
         [
             "Libégon",
-            330,
-            3,
-            3,
-            "Sol Dragon"
+330,
+3,
+3,
+            "Sol Dragon",
+"Flygon"
         ],
         [
             "Cacnea",
-            331,
-            3,
-            1,
-            "Plante"
+331,
+3,
+1,
+            "Plante",
+"Cacnea"
         ],
         [
             "Cacturne",
-            332,
-            3,
-            2,
-            "Plante Ténèbres"
+332,
+3,
+2,
+            "Plante Ténèbres",
+"Cacturne"
         ],
         [
             "Tylton",
-            333,
-            3,
-            1,
-            "Normal Vol"
+333,
+3,
+1,
+            "Normal Vol",
+"Swablu"
         ],
         [
             "Altaria",
-            334,
-            3,
-            2,
-            "Dragon Vol"
+334,
+3,
+2,
+            "Dragon Vol",
+"Altaria"
         ],
         [
             "Mangriff",
-            335,
-            3,
-            1,
-            "Normal"
+335,
+3,
+1,
+            "Normal",
+"Zangoose"
         ],
         [
             "Séviper",
-            336,
-            3,
-            1,
-            "Poison"
+336,
+3,
+1,
+            "Poison",
+"Seviper"
         ],
         [
             "Séléroc",
-            337,
-            3,
-            1,
-            "Roche Psy"
+337,
+3,
+1,
+            "Roche Psy",
+"Lunatone"
         ],
         [
             "Solaroc",
-            338,
-            3,
-            1,
-            "Roche Psy"
+338,
+3,
+1,
+            "Roche Psy",
+"Solrock"
         ],
         [
             "Barloche",
-            339,
-            3,
-            1,
-            "Eau Sol"
+339,
+3,
+1,
+            "Eau Sol",
+"Barboach"
         ],
         [
             "Barbicha",
-            340,
-            3,
-            2,
-            "Eau Sol"
+340,
+3,
+2,
+            "Eau Sol",
+"Whiscash"
         ],
         [
             "Écrapince",
-            341,
-            3,
-            1,
-            "Eau"
+341,
+3,
+1,
+            "Eau",
+"Corphish"
         ],
         [
             "Colhomard",
-            342,
-            3,
-            2,
-            "Eau Ténèbres"
+342,
+3,
+2,
+            "Eau Ténèbres",
+"Crawdaunt"
         ],
         [
             "Balbuto",
-            343,
-            3,
-            1,
-            "Sol Psy"
+343,
+3,
+1,
+            "Sol Psy",
+"Baltoy"
         ],
         [
             "Kaorine",
-            344,
-            3,
-            2,
-            "Sol Psy"
+344,
+3,
+2,
+            "Sol Psy",
+"Claydol"
         ],
         [
             "Lilia",
-            345,
-            3,
-            1,
-            "Roche Plante"
+345,
+3,
+1,
+            "Roche Plante",
+"Lileep"
         ],
         [
             "Vacilys",
-            346,
-            3,
-            2,
-            "Roche Plante"
+346,
+3,
+2,
+            "Roche Plante",
+"Cradily"
         ],
         [
             "Anorith",
-            347,
-            3,
-            1,
-            "Roche Insecte"
+347,
+3,
+1,
+            "Roche Insecte",
+"Anorith"
         ],
         [
             "Armaldo",
-            348,
-            3,
-            2,
-            "Roche Insecte"
+348,
+3,
+2,
+            "Roche Insecte",
+"Armaldo"
         ],
         [
             "Barpau",
-            349,
-            3,
-            1,
-            "Eau"
+349,
+3,
+1,
+            "Eau",
+"Feebas"
         ],
         [
             "Milobellus",
-            350,
-            3,
-            2,
-            "Eau"
+350,
+3,
+2,
+            "Eau",
+"Milotic"
         ],
         [
             "Morphéo",
-            351,
-            3,
-            1,
-            "Normal Feu Eau Glace"
+351,
+3,
+1,
+            "Normal Feu Eau Glace",
+"Castform"
         ],
         [
             "Kecleon",
-            352,
-            3,
-            1,
-            "Normal"
+352,
+3,
+1,
+            "Normal",
+"Kecleon"
         ],
         [
             "Polichombr",
-            353,
-            3,
-            1,
-            "Spectre"
+353,
+3,
+1,
+            "Spectre",
+"Shuppet"
         ],
         [
             "Branette",
-            354,
-            3,
-            2,
-            "Spectre"
+354,
+3,
+2,
+            "Spectre",
+"Banette"
         ],
         [
             "Skelénox",
-            355,
-            3,
-            1,
-            "Spectre"
+355,
+3,
+1,
+            "Spectre",
+"Duskull"
         ],
         [
             "Téraclope",
-            356,
-            3,
-            2,
-            "Spectre"
+356,
+3,
+2,
+            "Spectre",
+"Dusclops"
         ],
         [
             "Tropius",
-            357,
-            3,
-            1,
-            "Plante Vol"
+357,
+3,
+1,
+            "Plante Vol",
+"Tropius"
         ],
         [
             "Éoko",
-            358,
-            3,
-            1,
-            "Psy"
+358,
+3,
+1,
+            "Psy",
+"Chimecho"
         ],
         [
             "Absol",
-            359,
-            3,
-            1,
-            "Ténèbres"
+359,
+3,
+1,
+            "Ténèbres",
+"Absol"
         ],
         [
             "Okéoké",
-            360,
-            3,
-            1,
-            "Psy"
+360,
+3,
+1,
+            "Psy",
+"Wynaut"
         ],
         [
             "Stalgamin",
-            361,
-            3,
-            1,
-            "Glace"
+361,
+3,
+1,
+            "Glace",
+"Snorunt"
         ],
         [
             "Oniglali",
-            362,
-            3,
-            2,
-            "Glace"
+362,
+3,
+2,
+            "Glace",
+"Glalie"
         ],
         [
             "Obalie",
-            363,
-            3,
-            1,
-            "Glace Eau"
+363,
+3,
+1,
+            "Glace Eau",
+"Spheal"
         ],
         [
             "Phogleur",
-            364,
-            3,
-            2,
-            "Glace Eau"
+364,
+3,
+2,
+            "Glace Eau",
+"Sealeo"
         ],
         [
             "Kaimorse",
-            365,
-            3,
-            3,
-            "Glace Eau"
+365,
+3,
+3,
+            "Glace Eau",
+"Walrein"
         ],
         [
             "Coquiperl",
-            366,
-            3,
-            1,
-            "Eau"
+366,
+3,
+1,
+            "Eau",
+"Clamperl"
         ],
         [
             "Serpang",
-            367,
-            3,
-            2,
-            "Eau"
+367,
+3,
+2,
+            "Eau",
+"Huntail"
         ],
         [
             "Rosabyss",
-            368,
-            3,
-            2,
-            "Eau"
+368,
+3,
+2,
+            "Eau",
+"Gorebyss"
         ],
         [
             "Relicanth",
-            369,
-            3,
-            1,
-            "Eau Roche"
+369,
+3,
+1,
+            "Eau Roche",
+"Relicanth"
         ],
         [
             "Lovdisc",
-            370,
-            3,
-            1,
-            "Eau"
+370,
+3,
+1,
+            "Eau",
+"Luvdisc"
         ],
         [
             "Draby",
-            371,
-            3,
-            1,
-            "Dragon"
+371,
+3,
+1,
+            "Dragon",
+"Bagon"
         ],
         [
             "Drackhaus",
-            372,
-            3,
-            2,
-            "Dragon"
+372,
+3,
+2,
+            "Dragon",
+"Shelgon"
         ],
         [
             "Drattak",
-            373,
-            3,
-            3,
-            "Dragon Vol"
+373,
+3,
+3,
+            "Dragon Vol",
+"Salamence"
         ],
         [
             "Terhal",
-            374,
-            3,
-            1,
-            "Acier Psy"
+374,
+3,
+1,
+            "Acier Psy",
+"Beldum"
         ],
         [
             "Métang",
-            375,
-            3,
-            2,
-            "Acier Psy"
+375,
+3,
+2,
+            "Acier Psy",
+"Metang"
         ],
         [
             "Métalosse",
-            376,
-            3,
-            3,
-            "Acier Psy"
+376,
+3,
+3,
+            "Acier Psy",
+"Metagross"
         ],
         [
             "Regirock",
-            377,
-            3,
-            1,
-            "Roche"
+377,
+3,
+1,
+            "Roche",
+"Regirock"
         ],
         [
             "Regice",
-            378,
-            3,
-            1,
-            "Glace"
+378,
+3,
+1,
+            "Glace",
+"Regice"
         ],
         [
             "Registeel",
-            379,
-            3,
-            1,
-            "Acier"
+379,
+3,
+1,
+            "Acier",
+"Registeel"
         ],
         [
             "Latias",
-            380,
-            3,
-            1,
-            "Dragon Psy"
+380,
+3,
+1,
+            "Dragon Psy",
+"Latias"
         ],
         [
             "Latios",
-            381,
-            3,
-            1,
-            "Dragon Psy"
+381,
+3,
+1,
+            "Dragon Psy",
+"Latios"
         ],
         [
             "Kyogre",
-            382,
-            3,
-            1,
-            "Eau"
+382,
+3,
+1,
+            "Eau",
+"Kyogre"
         ],
         [
             "Groudon",
-            383,
-            3,
-            1,
-            "Sol"
+383,
+3,
+1,
+            "Sol",
+"Groudon"
         ],
         [
             "Rayquaza",
-            384,
-            3,
-            1,
-            "Dragon Vol"
+384,
+3,
+1,
+            "Dragon Vol",
+"Rayquaza"
         ],
         [
             "Jirachi",
-            385,
-            3,
-            1,
-            "Acier Psy"
+385,
+3,
+1,
+            "Acier Psy",
+"Jirachi"
         ],
         [
             "Deoxys",
-            386,
-            3,
-            1,
-            "Psy"
+386,
+3,
+1,
+            "Psy",
+"Deoxys"
         ],
         [
             "Tortipouss",
-            387,
-            4,
-            1,
-            "Plante"
+387,
+4,
+1,
+            "Plante",
+"Turtwig"
         ],
         [
             "Boskara",
-            388,
-            4,
-            2,
-            "Plante"
+388,
+4,
+2,
+            "Plante",
+"Grotle"
         ],
         [
             "Torterra",
-            389,
-            4,
-            3,
-            "Plante Sol"
+389,
+4,
+3,
+            "Plante Sol",
+"Torterra"
         ],
         [
             "Ouisticram",
-            390,
-            4,
-            1,
-            "Feu"
+390,
+4,
+1,
+            "Feu",
+"Chimchar"
         ],
         [
             "Chimpenfeu",
-            391,
-            4,
-            2,
-            "Feu Combat"
+391,
+4,
+2,
+            "Feu Combat",
+"Monferno"
         ],
         [
             "Simiabraz",
-            392,
-            4,
-            3,
-            "Feu Combat"
+392,
+4,
+3,
+            "Feu Combat",
+"Infernape"
         ],
         [
             "Tiplouf",
-            393,
-            4,
-            1,
-            "Eau"
+393,
+4,
+1,
+            "Eau",
+"Piplup"
         ],
         [
             "Prinplouf",
-            394,
-            4,
-            2,
-            "Eau"
+394,
+4,
+2,
+            "Eau",
+"Prinplup"
         ],
         [
             "Pingoléon",
-            395,
-            4,
-            3,
-            "Eau Acier"
+395,
+4,
+3,
+            "Eau Acier",
+"Empoleon"
         ],
         [
             "Étourmi",
-            396,
-            4,
-            1,
-            "Normal Vol"
+396,
+4,
+1,
+            "Normal Vol",
+"Starly"
         ],
         [
             "Étourvol",
-            397,
-            4,
-            2,
-            "Normal Vol"
+397,
+4,
+2,
+            "Normal Vol",
+"Staravia"
         ],
         [
             "Étouraptor",
-            398,
-            4,
-            3,
-            "Normal Vol"
+398,
+4,
+3,
+            "Normal Vol",
+"Staraptor"
         ],
         [
             "Keunotor",
-            399,
-            4,
-            1,
-            "Normal"
+399,
+4,
+1,
+            "Normal",
+"Bidoof"
         ],
         [
             "Castorno",
-            400,
-            4,
-            2,
-            "Normal Eau"
+400,
+4,
+2,
+            "Normal Eau",
+"Bibarel"
         ],
         [
             "Crikzik",
-            401,
-            4,
-            1,
-            "Insecte"
+401,
+4,
+1,
+            "Insecte",
+"Kricketot"
         ],
         [
             "Mélokrik",
-            402,
-            4,
-            2,
-            "Insecte"
+402,
+4,
+2,
+            "Insecte",
+"Kricketune"
         ],
         [
             "Lixy",
-            403,
-            4,
-            1,
-            "Électrique"
+403,
+4,
+1,
+            "Électrique",
+"Shinx"
         ],
         [
             "Luxio",
-            404,
-            4,
-            2,
-            "Électrique"
+404,
+4,
+2,
+            "Électrique",
+"Luxio"
         ],
         [
             "Luxray",
-            405,
-            4,
-            3,
-            "Électrique"
+405,
+4,
+3,
+            "Électrique",
+"Luxray"
         ],
         [
             "Rozbouton",
-            406,
-            4,
-            1,
-            "Plante Poison"
+406,
+4,
+1,
+            "Plante Poison",
+"Budew"
         ],
         [
             "Roserade",
-            407,
-            4,
-            3,
-            "Plante Poison"
+407,
+4,
+3,
+            "Plante Poison",
+"Roserade"
         ],
         [
             "Kranidos",
-            408,
-            4,
-            1,
-            "Roche"
+408,
+4,
+1,
+            "Roche",
+"Cranidos"
         ],
         [
             "Charkos",
-            409,
-            4,
-            2,
-            "Roche"
+409,
+4,
+2,
+            "Roche",
+"Rampardos"
         ],
         [
             "Dinoclier",
-            410,
-            4,
-            1,
-            "Roche Acier"
+410,
+4,
+1,
+            "Roche Acier",
+"Shieldon"
         ],
         [
             "Bastiodon",
-            411,
-            4,
-            2,
-            "Roche Acier"
+411,
+4,
+2,
+            "Roche Acier",
+"Bastiodon"
         ],
         [
             "Cheniti",
-            412,
-            4,
-            1,
-            "Insecte"
+412,
+4,
+1,
+            "Insecte",
+"Burmy"
         ],
         [
             "Cheniselle",
-            413,
-            4,
-            2,
-            "Insecte Plante"
+413,
+4,
+2,
+            "Insecte Plante",
+"Wormadam"
         ],
         [
             "Papilord",
-            414,
-            4,
-            3,
-            "Insecte Vol"
+414,
+4,
+3,
+            "Insecte Vol",
+"Mothim"
         ],
         [
             "Apitrini",
-            415,
-            4,
-            1,
-            "Insecte Vol"
+415,
+4,
+1,
+            "Insecte Vol",
+"Combee"
         ],
         [
             "Apireine",
-            416,
-            4,
-            2,
-            "Insecte Vol"
+416,
+4,
+2,
+            "Insecte Vol",
+"Vespiquen"
         ],
         [
             "Pachirisu",
-            417,
-            4,
-            1,
-            "Électrique"
+417,
+4,
+1,
+            "Électrique",
+"Pachirisu"
         ],
         [
             "Mustébouée",
-            418,
-            4,
-            1,
-            "Eau"
+418,
+4,
+1,
+            "Eau",
+"Buizel"
         ],
         [
             "Mustéflott",
-            419,
-            4,
-            2,
-            "Eau"
+419,
+4,
+2,
+            "Eau",
+"Floatzel"
         ],
         [
             "Ceribou",
-            420,
-            4,
-            1,
-            "Plante"
+420,
+4,
+1,
+            "Plante",
+"Cherubi"
         ],
         [
             "Ceriflor",
-            421,
-            4,
-            2,
-            "Plante"
+421,
+4,
+2,
+            "Plante",
+"Cherrim"
         ],
         [
             "Sancoki",
-            422,
-            4,
-            1,
-            "Eau"
+422,
+4,
+1,
+            "Eau",
+"Shellos"
         ],
         [
             "Tritosor",
-            423,
-            4,
-            2,
-            "Eau Sol"
+423,
+4,
+2,
+            "Eau Sol",
+"Gastrodon"
         ],
         [
             "Capidextre",
-            424,
-            4,
-            2,
-            "Normal"
+424,
+4,
+2,
+            "Normal",
+"Ambipom"
         ],
         [
             "Baudrive",
-            425,
-            4,
-            1,
-            "Spectre Vol"
+425,
+4,
+1,
+            "Spectre Vol",
+"Drifloon"
         ],
         [
             "Grodrive",
-            426,
-            4,
-            2,
-            "Spectre Vol"
+426,
+4,
+2,
+            "Spectre Vol",
+"Drifblim"
         ],
         [
             "Laporeille",
-            427,
-            4,
-            1,
-            "Normal"
+427,
+4,
+1,
+            "Normal",
+"Buneary"
         ],
         [
             "Lockpin",
-            428,
-            4,
-            2,
-            "Normal"
+428,
+4,
+2,
+            "Normal",
+"Lopunny"
         ],
         [
             "Magirêve",
-            429,
-            4,
-            2,
-            "Spectre"
+429,
+4,
+2,
+            "Spectre",
+"Mismagius"
         ],
         [
             "Corboss",
-            430,
-            4,
-            2,
-            "Ténèbres Vol"
+430,
+4,
+2,
+            "Ténèbres Vol",
+"Honchkrow"
         ],
         [
             "Chaglam",
-            431,
-            4,
-            1,
-            "Normal"
+431,
+4,
+1,
+            "Normal",
+"Glameow"
         ],
         [
             "Chaffreux",
-            432,
-            4,
-            2,
-            "Normal"
+432,
+4,
+2,
+            "Normal",
+"Purugly"
         ],
         [
             "Korillon",
-            433,
-            4,
-            1,
-            "Psy"
+433,
+4,
+1,
+            "Psy",
+"Chingling"
         ],
         [
             "Moufouette",
-            434,
-            4,
-            1,
-            "Poison Ténèbres"
+434,
+4,
+1,
+            "Poison Ténèbres",
+"Stunky"
         ],
         [
             "Moufflair",
-            435,
-            4,
-            2,
-            "Poison Ténèbres"
+435,
+4,
+2,
+            "Poison Ténèbres",
+"Skuntank"
         ],
         [
             "Archéomire",
-            436,
-            4,
-            1,
-            "Acier Psy"
+436,
+4,
+1,
+            "Acier Psy",
+"Bronzor"
         ],
         [
             "Archéodong",
-            437,
-            4,
-            2,
-            "Acier Psy"
+437,
+4,
+2,
+            "Acier Psy",
+"Bronzong"
         ],
         [
             "Manzaï",
-            438,
-            4,
-            1,
-            "Roche"
+438,
+4,
+1,
+            "Roche",
+"Bonsly"
         ],
         [
             "Mime Jr.",
-            439,
-            4,
-            1,
-            "Psy Fée"
+439,
+4,
+1,
+            "Psy Fée",
+"Mime Jr."
         ],
         [
             "Ptiravi",
-            440,
-            4,
-            1,
-            "Normal"
+440,
+4,
+1,
+            "Normal",
+"Happiny"
         ],
         [
             "Pijako",
-            441,
-            4,
-            1,
-            "Normal Vol"
+441,
+4,
+1,
+            "Normal Vol",
+"Chatot"
         ],
         [
             "Spiritomb",
-            442,
-            4,
-            1,
-            "Spectre Ténèbres"
+442,
+4,
+1,
+            "Spectre Ténèbres",
+"Spiritomb"
         ],
         [
             "Griknot",
-            443,
-            4,
-            1,
-            "Dragon Sol"
+443,
+4,
+1,
+            "Dragon Sol",
+"Gible"
         ],
         [
             "Carmache",
-            444,
-            4,
-            2,
-            "Dragon Sol"
+444,
+4,
+2,
+            "Dragon Sol",
+"Gabite"
         ],
         [
             "Carchacrok",
-            445,
-            4,
-            3,
-            "Dragon Sol"
+445,
+4,
+3,
+            "Dragon Sol",
+"Garchomp"
         ],
         [
             "Goinfrex",
-            446,
-            4,
-            1,
-            "Normal"
+446,
+4,
+1,
+            "Normal",
+"Munchlax"
         ],
         [
             "Riolu",
-            447,
-            4,
-            1,
-            "Combat"
+447,
+4,
+1,
+            "Combat",
+"Riolu"
         ],
         [
             "Lucario",
-            448,
-            4,
-            2,
-            "Combat Acier"
+448,
+4,
+2,
+            "Combat Acier",
+"Lucario"
         ],
         [
             "Hippopotas",
-            449,
-            4,
-            1,
-            "Sol"
+449,
+4,
+1,
+            "Sol",
+"Hippopotas"
         ],
         [
             "Hippodocus",
-            450,
-            4,
-            2,
-            "Sol"
+450,
+4,
+2,
+            "Sol",
+"Hippowdon"
         ],
         [
             "Rapion",
-            451,
-            4,
-            1,
-            "Poison Insecte"
+451,
+4,
+1,
+            "Poison Insecte",
+"Skorupi"
         ],
         [
             "Drascore",
-            452,
-            4,
-            2,
-            "Poison Ténèbres"
+452,
+4,
+2,
+            "Poison Ténèbres",
+"Drapion"
         ],
         [
             "Cradopaud",
-            453,
-            4,
-            1,
-            "Poison Combat"
+453,
+4,
+1,
+            "Poison Combat",
+"Croagunk"
         ],
         [
             "Coatox",
-            454,
-            4,
-            2,
-            "Poison Combat"
+454,
+4,
+2,
+            "Poison Combat",
+"Toxicroak"
         ],
         [
             "Vortente",
-            455,
-            4,
-            1,
-            "Plante"
+455,
+4,
+1,
+            "Plante",
+"Carnivine"
         ],
         [
             "Écayon",
-            456,
-            4,
-            1,
-            "Eau"
+456,
+4,
+1,
+            "Eau",
+"Finneon"
         ],
         [
             "Luminéon",
-            457,
-            4,
-            2,
-            "Eau"
+457,
+4,
+2,
+            "Eau",
+"Lumineon"
         ],
         [
             "Babimanta",
-            458,
-            4,
-            1,
-            "Eau Vol"
+458,
+4,
+1,
+            "Eau Vol",
+"Mantyke"
         ],
         [
             "Blizzi",
-            459,
-            4,
-            1,
-            "Plante Glace"
+459,
+4,
+1,
+            "Plante Glace",
+"Snover"
         ],
         [
             "Blizzaroi",
-            460,
-            4,
-            2,
-            "Plante Glace"
+460,
+4,
+2,
+            "Plante Glace",
+"Abomasnow"
         ],
         [
             "Dimoret",
-            461,
-            4,
-            2,
-            "Ténèbres Glace"
+461,
+4,
+2,
+            "Ténèbres Glace",
+"Weavile"
         ],
         [
             "Magnézone",
-            462,
-            4,
-            3,
-            "Électrique Acier"
+462,
+4,
+3,
+            "Électrique Acier",
+"Magnezone"
         ],
         [
             "Coudlangue",
-            463,
-            4,
-            2,
-            "Normal"
+463,
+4,
+2,
+            "Normal",
+"Lickilicky"
         ],
         [
             "Rhinastoc",
-            464,
-            4,
-            3,
-            "Sol Roche"
+464,
+4,
+3,
+            "Sol Roche",
+"Rhyperior"
         ],
         [
             "Bouldeneu",
-            465,
-            4,
-            2,
-            "Plante"
+465,
+4,
+2,
+            "Plante",
+"Tangrowth"
         ],
         [
             "Élekable",
-            466,
-            4,
-            3,
-            "Électrique"
+466,
+4,
+3,
+            "Électrique",
+"Electivire"
         ],
         [
             "Maganon",
-            467,
-            4,
-            3,
-            "Feu"
+467,
+4,
+3,
+            "Feu",
+"Magmortar"
         ],
         [
             "Togekiss",
-            468,
-            4,
-            3,
-            "Fée Vol"
+468,
+4,
+3,
+            "Fée Vol",
+"Togekiss"
         ],
         [
             "Yanmega",
-            469,
-            4,
-            2,
-            "Insecte Vol"
+469,
+4,
+2,
+            "Insecte Vol",
+"Yanmega"
         ],
         [
             "Phyllali",
-            470,
-            4,
-            2,
-            "Plante"
+470,
+4,
+2,
+            "Plante",
+"Leafeon"
         ],
         [
             "Givrali",
-            471,
-            4,
-            2,
-            "Glace"
+471,
+4,
+2,
+            "Glace",
+"Glaceon"
         ],
         [
             "Scorvol",
-            472,
-            4,
-            2,
-            "Sol Vol"
+472,
+4,
+2,
+            "Sol Vol",
+"Gliscor"
         ],
         [
             "Mammochon",
-            473,
-            4,
-            3,
-            "Glace Sol"
+473,
+4,
+3,
+            "Glace Sol",
+"Mamoswine"
         ],
         [
             "Porygon-Z",
-            474,
-            4,
-            2,
-            "Normal"
+474,
+4,
+2,
+            "Normal",
+"Porygon-Z"
         ],
         [
             "Gallame",
-            475,
-            4,
-            3,
-            "Psy Combat"
+475,
+4,
+3,
+            "Psy Combat",
+"Gallade"
         ],
         [
             "Tarinorme",
-            476,
-            4,
-            2,
-            "Roche Acier"
+476,
+4,
+2,
+            "Roche Acier",
+"Probopass"
         ],
         [
             "Noctunoir",
-            477,
-            4,
-            3,
-            "Spectre"
+477,
+4,
+3,
+            "Spectre",
+"Dusknoir"
         ],
         [
             "Momartik",
-            478,
-            4,
-            2,
-            "Glace Spectre"
+478,
+4,
+2,
+            "Glace Spectre",
+"Froslass"
         ],
         [
             "Motisma",
-            479,
-            4,
-            1,
-            "Électrique Spectre Feu Eau Glace Vol Plante"
+479,
+4,
+1,
+            "Électrique Spectre Feu Eau Glace Vol Plante",
+"Rotom"
         ],
         [
             "Créhelf",
-            480,
-            4,
-            1,
-            "Psy"
+480,
+4,
+1,
+            "Psy",
+"Uxie"
         ],
         [
             "Créfollet",
-            481,
-            4,
-            1,
-            "Psy"
+481,
+4,
+1,
+            "Psy",
+"Mesprit"
         ],
         [
             "Créfadet",
-            482,
-            4,
-            1,
-            "Psy"
+482,
+4,
+1,
+            "Psy",
+"Azelf"
         ],
         [
             "Dialga",
-            483,
-            4,
-            1,
-            "Acier Dragon"
+483,
+4,
+1,
+            "Acier Dragon",
+"Dialga"
         ],
         [
             "Palkia",
-            484,
-            4,
-            1,
-            "Eau Dragon"
+484,
+4,
+1,
+            "Eau Dragon",
+"Palkia"
         ],
         [
             "Heatran",
-            485,
-            4,
-            1,
-            "Feu Acier"
+485,
+4,
+1,
+            "Feu Acier",
+"Heatran"
         ],
         [
             "Regigigas",
-            486,
-            4,
-            1,
-            "Normal"
+486,
+4,
+1,
+            "Normal",
+"Regigigas"
         ],
         [
             "Giratina",
-            487,
-            4,
-            1,
-            "Spectre Dragon"
+487,
+4,
+1,
+            "Spectre Dragon",
+"Giratina"
         ],
         [
             "Cresselia",
-            488,
-            4,
-            1,
-            "Psy"
+488,
+4,
+1,
+            "Psy",
+"Cresselia"
         ],
         [
             "Phione",
-            489,
-            4,
-            1,
-            "Eau"
+489,
+4,
+1,
+            "Eau",
+"Phione"
         ],
         [
             "Manaphy",
-            490,
-            4,
-            1,
-            "Eau"
+490,
+4,
+1,
+            "Eau",
+"Manaphy"
         ],
         [
             "Darkrai",
-            491,
-            4,
-            1,
-            "Ténèbres"
+491,
+4,
+1,
+            "Ténèbres",
+"Darkrai"
         ],
         [
             "Shaymin",
-            492,
-            4,
-            1,
-            "Plante Vol"
+492,
+4,
+1,
+            "Plante Vol",
+"Shaymin"
         ],
         [
             "Arceus",
-            493,
-            4,
-            1,
-            "Normal"
+493,
+4,
+1,
+            "Normal",
+"Arceus"
         ],
         [
             "Victini",
-            494,
-            5,
-            1,
-            "Psy Feu"
+494,
+5,
+1,
+            "Psy Feu",
+"Victini"
         ],
         [
             "Vipélierre",
-            495,
-            5,
-            1,
-            "Plante"
+495,
+5,
+1,
+            "Plante",
+"Snivy"
         ],
         [
             "Lianaja",
-            496,
-            5,
-            2,
-            "Plante"
+496,
+5,
+2,
+            "Plante",
+"Servine"
         ],
         [
             "Majaspic",
-            497,
-            5,
-            3,
-            "Plante"
+497,
+5,
+3,
+            "Plante",
+"Serperior"
         ],
         [
             "Gruikui",
-            498,
-            5,
-            1,
-            "Feu"
+498,
+5,
+1,
+            "Feu",
+"Tepig"
         ],
         [
             "Grotichon",
-            499,
-            5,
-            2,
-            "Feu Combat"
+499,
+5,
+2,
+            "Feu Combat",
+"Pignite"
         ],
         [
             "Roitiflam",
-            500,
-            5,
-            3,
-            "Feu Combat"
+500,
+5,
+3,
+            "Feu Combat",
+"Emboar"
         ],
         [
             "Moustillon",
-            501,
-            5,
-            1,
-            "Eau"
+501,
+5,
+1,
+            "Eau",
+"Oshawott"
         ],
         [
             "Mateloutre",
-            502,
-            5,
-            2,
-            "Eau"
+502,
+5,
+2,
+            "Eau",
+"Dewott"
         ],
         [
             "Clamiral",
-            503,
-            5,
-            3,
-            "Eau"
+503,
+5,
+3,
+            "Eau",
+"Samurott"
         ],
         [
             "Ratentif",
-            504,
-            5,
-            1,
-            "Normal"
+504,
+5,
+1,
+            "Normal",
+"Patrat"
         ],
         [
             "Miradar",
-            505,
-            5,
-            2,
-            "Normal"
+505,
+5,
+2,
+            "Normal",
+"Watchog"
         ],
         [
             "Ponchiot",
-            506,
-            5,
-            1,
-            "Normal"
+506,
+5,
+1,
+            "Normal",
+"Lillipup"
         ],
         [
             "Ponchien",
-            507,
-            5,
-            2,
-            "Normal"
+507,
+5,
+2,
+            "Normal",
+"Herdier"
         ],
         [
             "Mastouffe",
-            508,
-            5,
-            3,
-            "Normal"
+508,
+5,
+3,
+            "Normal",
+"Stoutland"
         ],
         [
             "Chacripan",
-            509,
-            5,
-            1,
-            "Ténèbres"
+509,
+5,
+1,
+            "Ténèbres",
+"Purrloin"
         ],
         [
             "Léopardus",
-            510,
-            5,
-            2,
-            "Ténèbres"
+510,
+5,
+2,
+            "Ténèbres",
+"Liepard"
         ],
         [
             "Feuillajou",
-            511,
-            5,
-            1,
-            "Plante"
+511,
+5,
+1,
+            "Plante",
+"Pansage"
         ],
         [
             "Feuiloutan",
-            512,
-            5,
-            2,
-            "Plante"
+512,
+5,
+2,
+            "Plante",
+"Simisage"
         ],
         [
             "Flamajou",
-            513,
-            5,
-            1,
-            "Feu"
+513,
+5,
+1,
+            "Feu",
+"Pansear"
         ],
         [
             "Flamoutan",
-            514,
-            5,
-            2,
-            "Feu"
+514,
+5,
+2,
+            "Feu",
+"Simisear"
         ],
         [
             "Flotajou",
-            515,
-            5,
-            1,
-            "Eau"
+515,
+5,
+1,
+            "Eau",
+"Panpour"
         ],
         [
             "Flotoutan",
-            516,
-            5,
-            2,
-            "Eau"
+516,
+5,
+2,
+            "Eau",
+"Simipour"
         ],
         [
             "Munna",
-            517,
-            5,
-            1,
-            "Psy"
+517,
+5,
+1,
+            "Psy",
+"Munna"
         ],
         [
             "Mushana",
-            518,
-            5,
-            2,
-            "Psy"
+518,
+5,
+2,
+            "Psy",
+"Musharna"
         ],
         [
             "Poichigeon",
-            519,
-            5,
-            1,
-            "Normal Vol"
+519,
+5,
+1,
+            "Normal Vol",
+"Pidove"
         ],
         [
             "Colombeau",
-            520,
-            5,
-            2,
-            "Normal Vol"
+520,
+5,
+2,
+            "Normal Vol",
+"Tranquill"
         ],
         [
             "Déflaisan",
-            521,
-            5,
-            3,
-            "Normal Vol"
+521,
+5,
+3,
+            "Normal Vol",
+"Unfezant"
         ],
         [
             "Zébibron",
-            522,
-            5,
-            1,
-            "Électrique"
+522,
+5,
+1,
+            "Électrique",
+"Blitzle"
         ],
         [
             "Zéblitz",
-            523,
-            5,
-            2,
-            "Électrique"
+523,
+5,
+2,
+            "Électrique",
+"Zebstrika"
         ],
         [
             "Nodulithe",
-            524,
-            5,
-            1,
-            "Roche"
+524,
+5,
+1,
+            "Roche",
+"Roggenrola"
         ],
         [
             "Géolithe",
-            525,
-            5,
-            2,
-            "Roche"
+525,
+5,
+2,
+            "Roche",
+"Boldore"
         ],
         [
             "Gigalithe",
-            526,
-            5,
-            3,
-            "Roche"
+526,
+5,
+3,
+            "Roche",
+"Gigalith"
         ],
         [
             "Chovsourir",
-            527,
-            5,
-            1,
-            "Psy Vol"
+527,
+5,
+1,
+            "Psy Vol",
+"Woobat"
         ],
         [
             "Rhinolove",
-            528,
-            5,
-            2,
-            "Psy Vol"
+528,
+5,
+2,
+            "Psy Vol",
+"Swoobat"
         ],
         [
             "Rototaupe",
-            529,
-            5,
-            1,
-            "Sol"
+529,
+5,
+1,
+            "Sol",
+"Drilbur"
         ],
         [
             "Minotaupe",
-            530,
-            5,
-            2,
-            "Sol Acier"
+530,
+5,
+2,
+            "Sol Acier",
+"Excadrill"
         ],
         [
             "Nanméouïe",
-            531,
-            5,
-            1,
-            "Normal"
+531,
+5,
+1,
+            "Normal",
+"Audino"
         ],
         [
             "Charpenti",
-            532,
-            5,
-            1,
-            "Combat"
+532,
+5,
+1,
+            "Combat",
+"Timburr"
         ],
         [
             "Ouvrifier",
-            533,
-            5,
-            2,
-            "Combat"
+533,
+5,
+2,
+            "Combat",
+"Gurdurr"
         ],
         [
             "Bétochef",
-            534,
-            5,
-            3,
-            "Combat"
+534,
+5,
+3,
+            "Combat",
+"Conkeldurr"
         ],
         [
             "Tritonde",
-            535,
-            5,
-            1,
-            "Eau"
+535,
+5,
+1,
+            "Eau",
+"Tympole"
         ],
         [
             "Batracné",
-            536,
-            5,
-            2,
-            "Eau Sol"
+536,
+5,
+2,
+            "Eau Sol",
+"Palpitoad"
         ],
         [
             "Crapustule",
-            537,
-            5,
-            3,
-            "Eau Sol"
+537,
+5,
+3,
+            "Eau Sol",
+"Seismitoad"
         ],
         [
             "Judokrak",
-            538,
-            5,
-            1,
-            "Combat"
+538,
+5,
+1,
+            "Combat",
+"Throh"
         ],
         [
             "Karaclée",
-            539,
-            5,
-            1,
-            "Combat"
+539,
+5,
+1,
+            "Combat",
+"Sawk"
         ],
         [
             "Larveyette",
-            540,
-            5,
-            1,
-            "Insecte Plante"
+540,
+5,
+1,
+            "Insecte Plante",
+"Sewaddle"
         ],
         [
             "Couverdure",
-            541,
-            5,
-            2,
-            "Insecte Plante"
+541,
+5,
+2,
+            "Insecte Plante",
+"Swadloon"
         ],
         [
             "Manternel",
-            542,
-            5,
-            3,
-            "Insecte Plante"
+542,
+5,
+3,
+            "Insecte Plante",
+"Leavanny"
         ],
         [
             "Venipatte",
-            543,
-            5,
-            1,
-            "Insecte Poison"
+543,
+5,
+1,
+            "Insecte Poison",
+"Venipede"
         ],
         [
             "Scobolide",
-            544,
-            5,
-            2,
-            "Insecte Poison"
+544,
+5,
+2,
+            "Insecte Poison",
+"Whirlipede"
         ],
         [
             "Brutapode",
-            545,
-            5,
-            3,
-            "Insecte Poison"
+545,
+5,
+3,
+            "Insecte Poison",
+"Scolipede"
         ],
         [
             "Doudouvet",
-            546,
-            5,
-            1,
-            "Plante Fée"
+546,
+5,
+1,
+            "Plante Fée",
+"Cottonee"
         ],
         [
             "Farfaduvet",
-            547,
-            5,
-            2,
-            "Plante Fée"
+547,
+5,
+2,
+            "Plante Fée",
+"Whimsicott"
         ],
         [
             "Chlorobule",
-            548,
-            5,
-            1,
-            "Plante"
+548,
+5,
+1,
+            "Plante",
+"Petilil"
         ],
         [
             "Fragilady",
-            549,
-            5,
-            2,
-            "Plante"
+549,
+5,
+2,
+            "Plante",
+"Lilligant"
         ],
         [
             "Bargantua",
-            550,
-            5,
-            1,
-            "Eau"
+550,
+5,
+1,
+            "Eau",
+"Basculin"
         ],
         [
             "Mascaïman",
-            551,
-            5,
-            1,
-            "Sol Ténèbres"
+551,
+5,
+1,
+            "Sol Ténèbres",
+"Sandile"
         ],
         [
             "Escroco",
-            552,
-            5,
-            2,
-            "Sol Ténèbres"
+552,
+5,
+2,
+            "Sol Ténèbres",
+"Krokorok"
         ],
         [
             "Crocorible",
-            553,
-            5,
-            3,
-            "Sol Ténèbres"
+553,
+5,
+3,
+            "Sol Ténèbres",
+"Krookodile"
         ],
         [
             "Darumarond",
-            554,
-            5,
-            1,
-            "Feu"
+554,
+5,
+1,
+            "Feu",
+"Darumaka"
         ],
         [
             "Darumarond de Galar",
-            554,
-            8,
-            1,
-            "Glace"
+554,
+8,
+1,
+            "Glace",
+"Darumaka"
         ],
         [
             "Darumacho",
-            555,
-            5,
-            2,
-            "Feu Psy"
+555,
+5,
+2,
+            "Feu Psy",
+"Darmanitan"
         ],
         [
             "Darumacho de Galar",
-            555,
-            8,
-            2,
-            "Glace Feu"
+555,
+8,
+2,
+            "Glace Feu",
+"Darmanitan"
         ],
         [
             "Maracachi",
-            556,
-            5,
-            1,
-            "Plante"
+556,
+5,
+1,
+            "Plante",
+"Maractus"
         ],
         [
             "Crabicoque",
-            557,
-            5,
-            1,
-            "Insecte Roche"
+557,
+5,
+1,
+            "Insecte Roche",
+"Dwebble"
         ],
         [
             "Crabaraque",
-            558,
-            5,
-            2,
-            "Insecte Roche"
+558,
+5,
+2,
+            "Insecte Roche",
+"Crustle"
         ],
         [
             "Baggiguane",
-            559,
-            5,
-            1,
-            "Ténèbres Combat"
+559,
+5,
+1,
+            "Ténèbres Combat",
+"Scraggy"
         ],
         [
             "Baggaïd",
-            560,
-            5,
-            2,
-            "Ténèbres Combat"
+560,
+5,
+2,
+            "Ténèbres Combat",
+"Scrafty"
         ],
         [
             "Cryptéro",
-            561,
-            5,
-            1,
-            "Psy Vol"
+561,
+5,
+1,
+            "Psy Vol",
+"Sigilyph"
         ],
         [
             "Tutafeh",
-            562,
-            5,
-            1,
-            "Spectre"
+562,
+5,
+1,
+            "Spectre",
+"Yamask"
         ],
         [
             "Tutafeh de Galar",
-            562,
-            8,
-            1,
-            "Sol Spectre"
+562,
+8,
+1,
+            "Sol Spectre",
+"Yamask"
         ],
         [
             "Tutankafer",
-            563,
-            5,
-            2,
-            "Spectre"
+563,
+5,
+2,
+            "Spectre",
+"Cofagrigus"
         ],
         [
             "Carapagos",
-            564,
-            5,
-            1,
-            "Eau Roche"
+564,
+5,
+1,
+            "Eau Roche",
+"Tirtouga"
         ],
         [
             "Mégapagos",
-            565,
-            5,
-            2,
-            "Eau Roche"
+565,
+5,
+2,
+            "Eau Roche",
+"Carracosta"
         ],
         [
             "Arkéapti",
-            566,
-            5,
-            1,
-            "Roche Vol"
+566,
+5,
+1,
+            "Roche Vol",
+"Archen"
         ],
         [
             "Aéroptéryx",
-            567,
-            5,
-            2,
-            "Roche Vol"
+567,
+5,
+2,
+            "Roche Vol",
+"Archeops"
         ],
         [
             "Miamiasme",
-            568,
-            5,
-            1,
-            "Poison"
+568,
+5,
+1,
+            "Poison",
+"Trubbish"
         ],
         [
             "Miasmax",
-            569,
-            5,
-            2,
-            "Poison"
+569,
+5,
+2,
+            "Poison",
+"Garbodor"
         ],
         [
             "Zorua",
-            570,
-            5,
-            1,
-            "Ténèbres"
+570,
+5,
+1,
+            "Ténèbres",
+"Zorua"
         ],
         [
             "Zoroark",
-            571,
-            5,
-            2,
-            "Ténèbres"
+571,
+5,
+2,
+            "Ténèbres",
+"Zoroark"
         ],
         [
             "Chinchidou",
-            572,
-            5,
-            1,
-            "Normal"
+572,
+5,
+1,
+            "Normal",
+"Minccino"
         ],
         [
             "Pashmilla",
-            573,
-            5,
-            2,
-            "Normal"
+573,
+5,
+2,
+            "Normal",
+"Cinccino"
         ],
         [
             "Scrutella",
-            574,
-            5,
-            1,
-            "Psy"
+574,
+5,
+1,
+            "Psy",
+"Gothita"
         ],
         [
             "Mesmérella",
-            575,
-            5,
-            2,
-            "Psy"
+575,
+5,
+2,
+            "Psy",
+"Gothorita"
         ],
         [
             "Sidérella",
-            576,
-            5,
-            3,
-            "Psy"
+576,
+5,
+3,
+            "Psy",
+"Gothitelle"
         ],
         [
             "Nucléos",
-            577,
-            5,
-            1,
-            "Psy"
+577,
+5,
+1,
+            "Psy",
+"Solosis"
         ],
         [
             "Méios",
-            578,
-            5,
-            2,
-            "Psy"
+578,
+5,
+2,
+            "Psy",
+"Duosion"
         ],
         [
             "Symbios",
-            579,
-            5,
-            3,
-            "Psy"
+579,
+5,
+3,
+            "Psy",
+"Reuniclus"
         ],
         [
             "Couaneton",
-            580,
-            5,
-            1,
-            "Eau Vol"
+580,
+5,
+1,
+            "Eau Vol",
+"Ducklett"
         ],
         [
             "Lakmécygne",
-            581,
-            5,
-            2,
-            "Eau Vol"
+581,
+5,
+2,
+            "Eau Vol",
+"Swanna"
         ],
         [
             "Sorbébé",
-            582,
-            5,
-            1,
-            "Glace"
+582,
+5,
+1,
+            "Glace",
+"Vanillite"
         ],
         [
             "Sorboul",
-            583,
-            5,
-            2,
-            "Glace"
+583,
+5,
+2,
+            "Glace",
+"Vanillish"
         ],
         [
             "Sorbouboul",
-            584,
-            5,
-            3,
-            "Glace"
+584,
+5,
+3,
+            "Glace",
+"Vanilluxe"
         ],
         [
             "Vivaldaim",
-            585,
-            5,
-            1,
-            "Normal Plante"
+585,
+5,
+1,
+            "Normal Plante",
+"Deerling"
         ],
         [
             "Haydaim",
-            586,
-            5,
-            2,
-            "Normal Plante"
+586,
+5,
+2,
+            "Normal Plante",
+"Sawsbuck"
         ],
         [
             "Emolga",
-            587,
-            5,
-            1,
-            "Électrique Vol"
+587,
+5,
+1,
+            "Électrique Vol",
+"Emolga"
         ],
         [
             "Carabing",
-            588,
-            5,
-            1,
-            "Insecte"
+588,
+5,
+1,
+            "Insecte",
+"Karrablast"
         ],
         [
             "Lançargot",
-            589,
-            5,
-            2,
-            "Insecte Acier"
+589,
+5,
+2,
+            "Insecte Acier",
+"Escavalier"
         ],
         [
             "Trompignon",
-            590,
-            5,
-            1,
-            "Plante Poison"
+590,
+5,
+1,
+            "Plante Poison",
+"Foongus"
         ],
         [
             "Gaulet",
-            591,
-            5,
-            2,
-            "Plante Poison"
+591,
+5,
+2,
+            "Plante Poison",
+"Amoonguss"
         ],
         [
             "Viskuse",
-            592,
-            5,
-            1,
-            "Eau Spectre"
+592,
+5,
+1,
+            "Eau Spectre",
+"Frillish"
         ],
         [
             "Moyade",
-            593,
-            5,
-            2,
-            "Eau Spectre"
+593,
+5,
+2,
+            "Eau Spectre",
+"Jellicent"
         ],
         [
             "Mamanbo",
-            594,
-            5,
-            1,
-            "Eau"
+594,
+5,
+1,
+            "Eau",
+"Alomomola"
         ],
         [
             "Statitik",
-            595,
-            5,
-            1,
-            "Insecte Électrique"
+595,
+5,
+1,
+            "Insecte Électrique",
+"Joltik"
         ],
         [
             "Mygavolt",
-            596,
-            5,
-            2,
-            "Insecte Électrique"
+596,
+5,
+2,
+            "Insecte Électrique",
+"Galvantula"
         ],
         [
             "Grindur",
-            597,
-            5,
-            1,
-            "Plante Acier"
+597,
+5,
+1,
+            "Plante Acier",
+"Ferroseed"
         ],
         [
             "Noacier",
-            598,
-            5,
-            2,
-            "Plante Acier"
+598,
+5,
+2,
+            "Plante Acier",
+"Ferrothorn"
         ],
         [
             "Tic",
-            599,
-            5,
-            1,
-            "Acier"
+599,
+5,
+1,
+            "Acier",
+"Klink"
         ],
         [
             "Clic",
-            600,
-            5,
-            2,
-            "Acier"
+600,
+5,
+2,
+            "Acier",
+"Klang"
         ],
         [
             "Cliticlic",
-            601,
-            5,
-            3,
-            "Acier"
+601,
+5,
+3,
+            "Acier",
+"Klinklang"
         ],
         [
             "Anchwatt",
-            602,
-            5,
-            1,
-            "Électrique"
+602,
+5,
+1,
+            "Électrique",
+"Tynamo"
         ],
         [
             "Lampéroie",
-            603,
-            5,
-            2,
-            "Électrique"
+603,
+5,
+2,
+            "Électrique",
+"Eelektrik"
         ],
         [
             "Ohmassacre",
-            604,
-            5,
-            3,
-            "Électrique"
+604,
+5,
+3,
+            "Électrique",
+"Eelektross"
         ],
         [
             "Lewsor",
-            605,
-            5,
-            1,
-            "Psy"
+605,
+5,
+1,
+            "Psy",
+"Elgyem"
         ],
         [
             "Neitram",
-            606,
-            5,
-            2,
-            "Psy"
+606,
+5,
+2,
+            "Psy",
+"Beheeyem"
         ],
         [
             "Funécire",
-            607,
-            5,
-            1,
-            "Spectre Feu"
+607,
+5,
+1,
+            "Spectre Feu",
+"Litwick"
         ],
         [
             "Mélancolux",
-            608,
-            5,
-            2,
-            "Spectre Feu"
+608,
+5,
+2,
+            "Spectre Feu",
+"Lampent"
         ],
         [
             "Lugulabre",
-            609,
-            5,
-            3,
-            "Spectre Feu"
+609,
+5,
+3,
+            "Spectre Feu",
+"Chandelure"
         ],
         [
             "Coupenotte",
-            610,
-            5,
-            1,
-            "Dragon"
+610,
+5,
+1,
+            "Dragon",
+"Axew"
         ],
         [
             "Incisache",
-            611,
-            5,
-            2,
-            "Dragon"
+611,
+5,
+2,
+            "Dragon",
+"Fraxure"
         ],
         [
             "Tranchodon",
-            612,
-            5,
-            3,
-            "Dragon"
+612,
+5,
+3,
+            "Dragon",
+"Haxorus"
         ],
         [
             "Polarhume",
-            613,
-            5,
-            1,
-            "Glace"
+613,
+5,
+1,
+            "Glace",
+"Cubchoo"
         ],
         [
             "Polagriffe",
-            614,
-            5,
-            2,
-            "Glace"
+614,
+5,
+2,
+            "Glace",
+"Beartic"
         ],
         [
             "Hexagel",
-            615,
-            5,
-            1,
-            "Glace"
+615,
+5,
+1,
+            "Glace",
+"Cryogonal"
         ],
         [
             "Escargaume",
-            616,
-            5,
-            1,
-            "Insecte"
+616,
+5,
+1,
+            "Insecte",
+"Shelmet"
         ],
         [
             "Limaspeed",
-            617,
-            5,
-            2,
-            "Insecte"
+617,
+5,
+2,
+            "Insecte",
+"Accelgor"
         ],
         [
             "Limonde",
-            618,
-            5,
-            1,
-            "Sol Électrique"
+618,
+5,
+1,
+            "Sol Électrique",
+"Stunfisk"
         ],
         [
             "Limonde de Galar",
-            618,
-            8,
-            1,
-            "Sol Acier"
+618,
+8,
+1,
+            "Sol Acier",
+"Stunfisk"
         ],
         [
             "Kungfouine",
-            619,
-            5,
-            1,
-            "Combat"
+619,
+5,
+1,
+            "Combat",
+"Mienfoo"
         ],
         [
             "Shaofouine",
-            620,
-            5,
-            2,
-            "Combat"
+620,
+5,
+2,
+            "Combat",
+"Mienshao"
         ],
         [
             "Drakkarmin",
-            621,
-            5,
-            1,
-            "Dragon"
+621,
+5,
+1,
+            "Dragon",
+"Druddigon"
         ],
         [
             "Gringolem",
-            622,
-            5,
-            1,
-            "Sol Spectre"
+622,
+5,
+1,
+            "Sol Spectre",
+"Golett"
         ],
         [
             "Golemastoc",
-            623,
-            5,
-            2,
-            "Sol Spectre"
+623,
+5,
+2,
+            "Sol Spectre",
+"Golurk"
         ],
         [
             "Scalpion",
-            624,
-            5,
-            1,
-            "Ténèbres Acier"
+624,
+5,
+1,
+            "Ténèbres Acier",
+"Pawniard"
         ],
         [
             "Scalproie",
-            625,
-            5,
-            2,
-            "Ténèbres Acier"
+625,
+5,
+2,
+            "Ténèbres Acier",
+"Bisharp"
         ],
         [
             "Frison",
-            626,
-            5,
-            1,
-            "Normal"
+626,
+5,
+1,
+            "Normal",
+"Bouffalant"
         ],
         [
             "Furaiglon",
-            627,
-            5,
-            1,
-            "Normal Vol"
+627,
+5,
+1,
+            "Normal Vol",
+"Rufflet"
         ],
         [
             "Gueriaigle",
-            628,
-            5,
-            2,
-            "Normal Vol"
+628,
+5,
+2,
+            "Normal Vol",
+"Braviary"
         ],
         [
             "Vostourno",
-            629,
-            5,
-            1,
-            "Ténèbres Vol"
+629,
+5,
+1,
+            "Ténèbres Vol",
+"Vullaby"
         ],
         [
             "Vaututrice",
-            630,
-            5,
-            2,
-            "Ténèbres Vol"
+630,
+5,
+2,
+            "Ténèbres Vol",
+"Mandibuzz"
         ],
         [
             "Aflamanoir",
-            631,
-            5,
-            1,
-            "Feu"
+631,
+5,
+1,
+            "Feu",
+"Heatmor"
         ],
         [
             "Fermite",
-            632,
-            5,
-            1,
-            "Insecte Acier"
+632,
+5,
+1,
+            "Insecte Acier",
+"Durant"
         ],
         [
             "Solochi",
-            633,
-            5,
-            1,
-            "Ténèbres Dragon"
+633,
+5,
+1,
+            "Ténèbres Dragon",
+"Deino"
         ],
         [
             "Diamat",
-            634,
-            5,
-            2,
-            "Ténèbres Dragon"
+634,
+5,
+2,
+            "Ténèbres Dragon",
+"Zweilous"
         ],
         [
             "Trioxhydre",
-            635,
-            5,
-            3,
-            "Ténèbres Dragon"
+635,
+5,
+3,
+            "Ténèbres Dragon",
+"Hydreigon"
         ],
         [
             "Pyronille",
-            636,
-            5,
-            1,
-            "Insecte Feu"
+636,
+5,
+1,
+            "Insecte Feu",
+"Larvesta"
         ],
         [
             "Pyrax",
-            637,
-            5,
-            2,
-            "Insecte Feu"
+637,
+5,
+2,
+            "Insecte Feu",
+"Volcarona"
         ],
         [
             "Cobaltium",
-            638,
-            5,
-            1,
-            "Acier Combat"
+638,
+5,
+1,
+            "Acier Combat",
+"Cobalion"
         ],
         [
             "Terrakium",
-            639,
-            5,
-            1,
-            "Roche Combat"
+639,
+5,
+1,
+            "Roche Combat",
+"Terrakion"
         ],
         [
             "Viridium",
-            640,
-            5,
-            1,
-            "Plante Combat"
+640,
+5,
+1,
+            "Plante Combat",
+"Virizion"
         ],
         [
             "Boréas",
-            641,
-            5,
-            1,
-            "Vol"
+641,
+5,
+1,
+            "Vol",
+"Tornadus"
         ],
         [
             "Fulguris",
-            642,
-            5,
-            1,
-            "Électrique Vol"
+642,
+5,
+1,
+            "Électrique Vol",
+"Thundurus"
         ],
         [
             "Reshiram",
-            643,
-            5,
-            1,
-            "Dragon Feu"
+643,
+5,
+1,
+            "Dragon Feu",
+"Reshiram"
         ],
         [
             "Zekrom",
-            644,
-            5,
-            1,
-            "Dragon Électrique"
+644,
+5,
+1,
+            "Dragon Électrique",
+"Zekrom"
         ],
         [
             "Démétéros",
-            645,
-            5,
-            1,
-            "Sol Vol"
+645,
+5,
+1,
+            "Sol Vol",
+"Landorus"
         ],
         [
             "Kyurem",
-            646,
-            5,
-            1,
-            "Dragon Glace"
+646,
+5,
+1,
+            "Dragon Glace",
+"Kyurem"
         ],
         [
             "Keldeo",
-            647,
-            5,
-            1,
-            "Eau Combat"
+647,
+5,
+1,
+            "Eau Combat",
+"Keldeo"
         ],
         [
             "Meloetta",
-            648,
-            5,
-            1,
-            "Normal Psy"
+648,
+5,
+1,
+            "Normal Psy",
+"Meloetta"
         ],
         [
             "Genesect",
-            649,
-            5,
-            1,
-            "Insecte Acier"
+649,
+5,
+1,
+            "Insecte Acier",
+"Genesect"
         ],
         [
             "Marisson",
-            650,
-            6,
-            1,
-            "Plante"
+650,
+6,
+1,
+            "Plante",
+"Chespin"
         ],
         [
             "Boguérisse",
-            651,
-            6,
-            2,
-            "Plante"
+651,
+6,
+2,
+            "Plante",
+"Quilladin"
         ],
         [
             "Blindépique",
-            652,
-            6,
-            3,
-            "Plante Combat"
+652,
+6,
+3,
+            "Plante Combat",
+"Chesnaught"
         ],
         [
             "Feunnec",
-            653,
-            6,
-            1,
-            "Feu"
+653,
+6,
+1,
+            "Feu",
+"Fennekin"
         ],
         [
             "Roussil",
-            654,
-            6,
-            2,
-            "Feu"
+654,
+6,
+2,
+            "Feu",
+"Braixen"
         ],
         [
             "Goupelin",
-            655,
-            6,
-            3,
-            "Feu Psy"
+655,
+6,
+3,
+            "Feu Psy",
+"Delphox"
         ],
         [
             "Grenousse",
-            656,
-            6,
-            1,
-            "Eau"
+656,
+6,
+1,
+            "Eau",
+"Froakie"
         ],
         [
             "Croâporal",
-            657,
-            6,
-            2,
-            "Eau"
+657,
+6,
+2,
+            "Eau",
+"Frogadier"
         ],
         [
             "Amphinobi",
-            658,
-            6,
-            3,
-            "Eau Ténèbres"
+658,
+6,
+3,
+            "Eau Ténèbres",
+"Greninja"
         ],
         [
             "Sapereau",
-            659,
-            6,
-            1,
-            "Normal"
+659,
+6,
+1,
+            "Normal",
+"Bunnelby"
         ],
         [
             "Excavarenne",
-            660,
-            6,
-            2,
-            "Normal Sol"
+660,
+6,
+2,
+            "Normal Sol",
+"Diggersby"
         ],
         [
             "Passerouge",
-            661,
-            6,
-            1,
-            "Normal Vol"
+661,
+6,
+1,
+            "Normal Vol",
+"Fletchling"
         ],
         [
             "Braisillon",
-            662,
-            6,
-            2,
-            "Feu Vol"
+662,
+6,
+2,
+            "Feu Vol",
+"Fletchinder"
         ],
         [
             "Flambusard",
-            663,
-            6,
-            3,
-            "Feu Vol"
+663,
+6,
+3,
+            "Feu Vol",
+"Talonflame"
         ],
         [
             "Lépidonille",
-            664,
-            6,
-            1,
-            "Insecte"
+664,
+6,
+1,
+            "Insecte",
+"Scatterbug"
         ],
         [
             "Pérégrain",
-            665,
-            6,
-            2,
-            "Insecte"
+665,
+6,
+2,
+            "Insecte",
+"Spewpa"
         ],
         [
             "Prismillon",
-            666,
-            6,
-            3,
-            "Insecte Vol"
+666,
+6,
+3,
+            "Insecte Vol",
+"Vivillon"
         ],
         [
             "Hélionceau",
-            667,
-            6,
-            1,
-            "Feu Normal"
+667,
+6,
+1,
+            "Feu Normal",
+"Litleo"
         ],
         [
             "Némélios",
-            668,
-            6,
-            2,
-            "Feu Normal"
+668,
+6,
+2,
+            "Feu Normal",
+"Pyroar"
         ],
         [
             "Flabébé",
-            669,
-            6,
-            1,
-            "Fée"
+669,
+6,
+1,
+            "Fée",
+"Flabébé"
         ],
         [
             "Floette",
-            670,
-            6,
-            2,
-            "Fée"
+670,
+6,
+2,
+            "Fée",
+"Floette"
         ],
         [
             "Florges",
-            671,
-            6,
-            3,
-            "Fée"
+671,
+6,
+3,
+            "Fée",
+"Florges"
         ],
         [
             "Cabriolaine",
-            672,
-            6,
-            1,
-            "Plante"
+672,
+6,
+1,
+            "Plante",
+"Skiddo"
         ],
         [
             "Chevroum",
-            673,
-            6,
-            2,
-            "Plante"
+673,
+6,
+2,
+            "Plante",
+"Gogoat"
         ],
         [
             "Pandespiègle",
-            674,
-            6,
-            1,
-            "Combat"
+674,
+6,
+1,
+            "Combat",
+"Pancham"
         ],
         [
             "Pandarbare",
-            675,
-            6,
-            2,
-            "Combat Ténèbres"
+675,
+6,
+2,
+            "Combat Ténèbres",
+"Pangoro"
         ],
         [
             "Couafarel",
-            676,
-            6,
-            1,
-            "Normal"
+676,
+6,
+1,
+            "Normal",
+"Furfrou"
         ],
         [
             "Psystigri",
-            677,
-            6,
-            1,
-            "Psy"
+677,
+6,
+1,
+            "Psy",
+"Espurr"
         ],
         [
             "Mistigrix",
-            678,
-            6,
-            2,
-            "Psy"
+678,
+6,
+2,
+            "Psy",
+"Meowstic"
         ],
         [
             "Monorpale",
-            679,
-            6,
-            1,
-            "Acier Spectre"
+679,
+6,
+1,
+            "Acier Spectre",
+"Honedge"
         ],
         [
             "Dimoclès",
-            680,
-            6,
-            2,
-            "Acier Spectre"
+680,
+6,
+2,
+            "Acier Spectre",
+"Doublade"
         ],
         [
             "Exagide",
-            681,
-            6,
-            3,
-            "Acier Spectre"
+681,
+6,
+3,
+            "Acier Spectre",
+"Aegislash"
         ],
         [
             "Fluvetin",
-            682,
-            6,
-            1,
-            "Fée"
+682,
+6,
+1,
+            "Fée",
+"Spritzee"
         ],
         [
             "Cocotine",
-            683,
-            6,
-            2,
-            "Fée"
+683,
+6,
+2,
+            "Fée",
+"Aromatisse"
         ],
         [
             "Sucroquin",
-            684,
-            6,
-            1,
-            "Fée"
+684,
+6,
+1,
+            "Fée",
+"Swirlix"
         ],
         [
             "Cupcanaille",
-            685,
-            6,
-            2,
-            "Fée"
+685,
+6,
+2,
+            "Fée",
+"Slurpuff"
         ],
         [
             "Sepiatop",
-            686,
-            6,
-            1,
-            "Ténèbres Psy"
+686,
+6,
+1,
+            "Ténèbres Psy",
+"Inkay"
         ],
         [
             "Sepiatroce",
-            687,
-            6,
-            2,
-            "Ténèbres Psy"
+687,
+6,
+2,
+            "Ténèbres Psy",
+"Malamar"
         ],
         [
             "Opermine",
-            688,
-            6,
-            1,
-            "Roche Eau"
+688,
+6,
+1,
+            "Roche Eau",
+"Binacle"
         ],
         [
             "Golgopathe",
-            689,
-            6,
-            2,
-            "Roche Eau"
+689,
+6,
+2,
+            "Roche Eau",
+"Barbaracle"
         ],
         [
             "Venalgue",
-            690,
-            6,
-            1,
-            "Poison Eau"
+690,
+6,
+1,
+            "Poison Eau",
+"Skrelp"
         ],
         [
             "Kravarech",
-            691,
-            6,
-            2,
-            "Poison Dragon"
+691,
+6,
+2,
+            "Poison Dragon",
+"Dragalge"
         ],
         [
             "Flingouste",
-            692,
-            6,
-            1,
-            "Eau"
+692,
+6,
+1,
+            "Eau",
+"Clauncher"
         ],
         [
             "Gamblast",
-            693,
-            6,
-            2,
-            "Eau"
+693,
+6,
+2,
+            "Eau",
+"Clawitzer"
         ],
         [
             "Galvaran",
-            694,
-            6,
-            1,
-            "Électrique Normal"
+694,
+6,
+1,
+            "Électrique Normal",
+"Helioptile"
         ],
         [
             "Iguolta",
-            695,
-            6,
-            2,
-            "Électrique Normal"
+695,
+6,
+2,
+            "Électrique Normal",
+"Heliolisk"
         ],
         [
             "Ptyranidur",
-            696,
-            6,
-            1,
-            "Roche Dragon"
+696,
+6,
+1,
+            "Roche Dragon",
+"Tyrunt"
         ],
         [
             "Rexillius",
-            697,
-            6,
-            2,
-            "Roche Dragon"
+697,
+6,
+2,
+            "Roche Dragon",
+"Tyrantrum"
         ],
         [
             "Amagara",
-            698,
-            6,
-            1,
-            "Roche Glace"
+698,
+6,
+1,
+            "Roche Glace",
+"Amaura"
         ],
         [
             "Dragmara",
-            699,
-            6,
-            2,
-            "Roche Glace"
+699,
+6,
+2,
+            "Roche Glace",
+"Aurorus"
         ],
         [
             "Nymphali",
-            700,
-            6,
-            2,
-            "Fée"
+700,
+6,
+2,
+            "Fée",
+"Sylveon"
         ],
         [
             "Brutalibré",
-            701,
-            6,
-            1,
-            "Combat Vol"
+701,
+6,
+1,
+            "Combat Vol",
+"Hawlucha"
         ],
         [
             "Dedenne",
-            702,
-            6,
-            1,
-            "Électrique Fée"
+702,
+6,
+1,
+            "Électrique Fée",
+"Dedenne"
         ],
         [
             "Strassie",
-            703,
-            6,
-            1,
-            "Roche Fée"
+703,
+6,
+1,
+            "Roche Fée",
+"Carbink"
         ],
         [
             "Mucuscule",
-            704,
-            6,
-            1,
-            "Dragon"
+704,
+6,
+1,
+            "Dragon",
+"Goomy"
         ],
         [
             "Colimucus",
-            705,
-            6,
-            2,
-            "Dragon"
+705,
+6,
+2,
+            "Dragon",
+"Sliggoo"
         ],
         [
             "Muplodocus",
-            706,
-            6,
-            3,
-            "Dragon"
+706,
+6,
+3,
+            "Dragon",
+"Goodra"
         ],
         [
             "Trousselin",
-            707,
-            6,
-            1,
-            "Acier Fée"
+707,
+6,
+1,
+            "Acier Fée",
+"Klefki"
         ],
         [
             "Brocélôme",
-            708,
-            6,
-            1,
-            "Spectre Plante"
+708,
+6,
+1,
+            "Spectre Plante",
+"Phantump"
         ],
         [
             "Desséliande",
-            709,
-            6,
-            2,
-            "Spectre Plante"
+709,
+6,
+2,
+            "Spectre Plante",
+"Trevenant"
         ],
         [
             "Pitrouille",
-            710,
-            6,
-            1,
-            "Spectre Plante"
+710,
+6,
+1,
+            "Spectre Plante",
+"Pumpkaboo"
         ],
         [
             "Banshitrouye",
-            711,
-            6,
-            2,
-            "Spectre Plante"
+711,
+6,
+2,
+            "Spectre Plante",
+"Gourgeist"
         ],
         [
             "Grelaçon",
-            712,
-            6,
-            1,
-            "Glace"
+712,
+6,
+1,
+            "Glace",
+"Bergmite"
         ],
         [
             "Séracrawl",
-            713,
-            6,
-            2,
-            "Glace"
+713,
+6,
+2,
+            "Glace",
+"Avalugg"
         ],
         [
             "Sonistrelle",
-            714,
-            6,
-            1,
-            "Vol Dragon"
+714,
+6,
+1,
+            "Vol Dragon",
+"Noibat"
         ],
         [
             "Bruyverne",
-            715,
-            6,
-            2,
-            "Vol Dragon"
+715,
+6,
+2,
+            "Vol Dragon",
+"Noivern"
         ],
         [
             "Xerneas",
-            716,
-            6,
-            1,
-            "Fée"
+716,
+6,
+1,
+            "Fée",
+"Xerneas"
         ],
         [
             "Yveltal",
-            717,
-            6,
-            1,
-            "Ténèbres Vol"
+717,
+6,
+1,
+            "Ténèbres Vol",
+"Yveltal"
         ],
         [
             "Zygarde",
-            718,
-            6,
-            1,
-            "Dragon Sol"
+718,
+6,
+1,
+            "Dragon Sol",
+"Zygarde"
         ],
         [
             "Diancie",
-            719,
-            6,
-            1,
-            "Roche Fée"
+719,
+6,
+1,
+            "Roche Fée",
+"Diancie"
         ],
         [
             "Hoopa",
-            720,
-            6,
-            1,
-            "Psy Spectre Ténèbres"
+720,
+6,
+1,
+            "Psy Spectre Ténèbres",
+"Hoopa"
         ],
         [
             "Volcanion",
-            721,
-            6,
-            1,
-            "Feu Eau"
+721,
+6,
+1,
+            "Feu Eau",
+"Volcanion"
         ],
         [
             "Brindibou",
-            722,
-            7,
-            1,
-            "Plante Vol"
+722,
+7,
+1,
+            "Plante Vol",
+"Rowlet"
         ],
         [
             "Efflèche",
-            723,
-            7,
-            2,
-            "Plante Vol"
+723,
+7,
+2,
+            "Plante Vol",
+"Dartrix"
         ],
         [
             "Archéduc",
-            724,
-            7,
-            3,
-            "Plante Spectre"
+724,
+7,
+3,
+            "Plante Spectre",
+"Decidueye"
         ],
         [
             "Flamiaou",
-            725,
-            7,
-            1,
-            "Feu"
+725,
+7,
+1,
+            "Feu",
+"Litten"
         ],
         [
             "Matoufeu",
-            726,
-            7,
-            2,
-            "Feu"
+726,
+7,
+2,
+            "Feu",
+"Torracat"
         ],
         [
             "Félinferno",
-            727,
-            7,
-            3,
-            "Feu Ténèbres"
+727,
+7,
+3,
+            "Feu Ténèbres",
+"Incineroar"
         ],
         [
             "Otaquin",
-            728,
-            7,
-            1,
-            "Eau"
+728,
+7,
+1,
+            "Eau",
+"Popplio"
         ],
         [
             "Otarlette",
-            729,
-            7,
-            2,
-            "Eau"
+729,
+7,
+2,
+            "Eau",
+"Brionne"
         ],
         [
             "Oratoria",
-            730,
-            7,
-            3,
-            "Eau Fée"
+730,
+7,
+3,
+            "Eau Fée",
+"Primarina"
         ],
         [
             "Picassaut",
-            731,
-            7,
-            1,
-            "Normal Vol"
+731,
+7,
+1,
+            "Normal Vol",
+"Pikipek"
         ],
         [
             "Piclairon",
-            732,
-            7,
-            2,
-            "Normal Vol"
+732,
+7,
+2,
+            "Normal Vol",
+"Trumbeak"
         ],
         [
             "Bazoucan",
-            733,
-            7,
-            3,
-            "Normal Vol"
+733,
+7,
+3,
+            "Normal Vol",
+"Toucannon"
         ],
         [
             "Manglouton",
-            734,
-            7,
-            1,
-            "Normal"
+734,
+7,
+1,
+            "Normal",
+"Yungoos"
         ],
         [
             "Argouste",
-            735,
-            7,
-            2,
-            "Normal"
+735,
+7,
+2,
+            "Normal",
+"Gumshoos"
         ],
         [
             "Larvibule",
-            736,
-            7,
-            1,
-            "Insecte"
+736,
+7,
+1,
+            "Insecte",
+"Grubbin"
         ],
         [
             "Chrysapile",
-            737,
-            7,
-            2,
-            "Insecte Électrique"
+737,
+7,
+2,
+            "Insecte Électrique",
+"Charjabug"
         ],
         [
             "Lucanon",
-            738,
-            7,
-            3,
-            "Insecte Électrique"
+738,
+7,
+3,
+            "Insecte Électrique",
+"Vikavolt"
         ],
         [
             "Crabagarre",
-            739,
-            7,
-            1,
-            "Combat"
+739,
+7,
+1,
+            "Combat",
+"Crabrawler"
         ],
         [
             "Crabominable",
-            740,
-            7,
-            2,
-            "Combat Glace"
+740,
+7,
+2,
+            "Combat Glace",
+"Crabominable"
         ],
         [
             "Plumeline",
-            741,
-            7,
-            1,
-            "Feu Vol Électrique Psy Spectre"
+741,
+7,
+1,
+            "Feu Vol Électrique Psy Spectre",
+"Oricorio"
         ],
         [
             "Bombydou",
-            742,
-            7,
-            1,
-            "Insecte Fée"
+742,
+7,
+1,
+            "Insecte Fée",
+"Cutiefly"
         ],
         [
             "Rubombelle",
-            743,
-            7,
-            2,
-            "Insecte Fée"
+743,
+7,
+2,
+            "Insecte Fée",
+"Ribombee"
         ],
         [
             "Rocabot",
-            744,
-            7,
-            1,
-            "Roche"
+744,
+7,
+1,
+            "Roche",
+"Rockruff"
         ],
         [
             "Lougaroc",
-            745,
-            7,
-            2,
-            "Roche"
+745,
+7,
+2,
+            "Roche",
+"Lycanroc"
         ],
         [
             "Froussardine",
-            746,
-            7,
-            1,
-            "Eau"
+746,
+7,
+1,
+            "Eau",
+"Wishiwashi"
         ],
         [
             "Vorastérie",
-            747,
-            7,
-            1,
-            "Poison Eau"
+747,
+7,
+1,
+            "Poison Eau",
+"Mareanie"
         ],
         [
             "Prédastérie",
-            748,
-            7,
-            2,
-            "Poison Eau"
+748,
+7,
+2,
+            "Poison Eau",
+"Toxapex"
         ],
         [
             "Tiboudet",
-            749,
-            7,
-            1,
-            "Sol"
+749,
+7,
+1,
+            "Sol",
+"Mudbray"
         ],
         [
             "Bourrinos",
-            750,
-            7,
-            2,
-            "Sol"
+750,
+7,
+2,
+            "Sol",
+"Mudsdale"
         ],
         [
             "Araqua",
-            751,
-            7,
-            1,
-            "Eau Insecte"
+751,
+7,
+1,
+            "Eau Insecte",
+"Dewpider"
         ],
         [
             "Tarenbulle",
-            752,
-            7,
-            2,
-            "Eau Insecte"
+752,
+7,
+2,
+            "Eau Insecte",
+"Araquanid"
         ],
         [
             "Mimantis",
-            753,
-            7,
-            1,
-            "Plante"
+753,
+7,
+1,
+            "Plante",
+"Fomantis"
         ],
         [
             "Floramantis",
-            754,
-            7,
-            2,
-            "Plante"
+754,
+7,
+2,
+            "Plante",
+"Lurantis"
         ],
         [
             "Spododo",
-            755,
-            7,
-            1,
-            "Plante Fée"
+755,
+7,
+1,
+            "Plante Fée",
+"Morelull"
         ],
         [
             "Lampignon",
-            756,
-            7,
-            2,
-            "Plante Fée"
+756,
+7,
+2,
+            "Plante Fée",
+"Shiinotic"
         ],
         [
             "Tritox",
-            757,
-            7,
-            1,
-            "Poison Feu"
+757,
+7,
+1,
+            "Poison Feu",
+"Salandit"
         ],
         [
             "Malamandre",
-            758,
-            7,
-            2,
-            "Poison Feu"
+758,
+7,
+2,
+            "Poison Feu",
+"Salazzle"
         ],
         [
             "Nounourson",
-            759,
-            7,
-            1,
-            "Normal Combat"
+759,
+7,
+1,
+            "Normal Combat",
+"Stufful"
         ],
         [
             "Chelours",
-            760,
-            7,
-            2,
-            "Normal Combat"
+760,
+7,
+2,
+            "Normal Combat",
+"Bewear"
         ],
         [
             "Croquine",
-            761,
-            7,
-            1,
-            "Plante"
+761,
+7,
+1,
+            "Plante",
+"Bounsweet"
         ],
         [
             "Candine",
-            762,
-            7,
-            2,
-            "Plante"
+762,
+7,
+2,
+            "Plante",
+"Steenee"
         ],
         [
             "Sucreine",
-            763,
-            7,
-            3,
-            "Plante"
+763,
+7,
+3,
+            "Plante",
+"Tsareena"
         ],
         [
             "Guérilande",
-            764,
-            7,
-            1,
-            "Fée"
+764,
+7,
+1,
+            "Fée",
+"Comfey"
         ],
         [
             "Gouroutan",
-            765,
-            7,
-            1,
-            "Normal Psy"
+765,
+7,
+1,
+            "Normal Psy",
+"Oranguru"
         ],
         [
             "Quartermac",
-            766,
-            7,
-            1,
-            "Combat"
+766,
+7,
+1,
+            "Combat",
+"Passimian"
         ],
         [
             "Sovkipou",
-            767,
-            7,
-            1,
-            "Insecte Eau"
+767,
+7,
+1,
+            "Insecte Eau",
+"Wimpod"
         ],
         [
             "Sarmuraï",
-            768,
-            7,
-            2,
-            "Insecte Eau"
+768,
+7,
+2,
+            "Insecte Eau",
+"Golisopod"
         ],
         [
             "Bacabouh",
-            769,
-            7,
-            1,
-            "Spectre Sol"
+769,
+7,
+1,
+            "Spectre Sol",
+"Sandygast"
         ],
         [
             "Trépassable",
-            770,
-            7,
-            2,
-            "Spectre Sol"
+770,
+7,
+2,
+            "Spectre Sol",
+"Palossand"
         ],
         [
             "Concombaffe",
-            771,
-            7,
-            1,
-            "Eau"
+771,
+7,
+1,
+            "Eau",
+"Pyukumuku"
         ],
         [
             "Type:0",
-            772,
-            7,
-            1,
-            "Normal"
+772,
+7,
+1,
+            "Normal",
+"Type: Null"
         ],
         [
             "Silvallié",
-            773,
-            7,
-            2,
-            "Normal"
+773,
+7,
+2,
+            "Normal",
+"Silvally"
         ],
         [
             "Météno",
-            774,
-            7,
-            1,
-            "Roche Vol"
+774,
+7,
+1,
+            "Roche Vol",
+"Minior"
         ],
         [
             "Dodoala",
-            775,
-            7,
-            1,
-            "Normal"
+775,
+7,
+1,
+            "Normal",
+"Komala"
         ],
         [
             "Boumata",
-            776,
-            7,
-            1,
-            "Feu Dragon"
+776,
+7,
+1,
+            "Feu Dragon",
+"Turtonator"
         ],
         [
             "Togedemaru",
-            777,
-            7,
-            1,
-            "Électrique Acier"
+777,
+7,
+1,
+            "Électrique Acier",
+"Togedemaru"
         ],
         [
             "Mimiqui",
-            778,
-            7,
-            1,
-            "Spectre Fée"
+778,
+7,
+1,
+            "Spectre Fée",
+"Mimikyu"
         ],
         [
             "Denticrisse",
-            779,
-            7,
-            1,
-            "Eau Psy"
+779,
+7,
+1,
+            "Eau Psy",
+"Bruxish"
         ],
         [
             "Draïeul",
-            780,
-            7,
-            1,
-            "Normal Dragon"
+780,
+7,
+1,
+            "Normal Dragon",
+"Drampa"
         ],
         [
             "Sinistrail",
-            781,
-            7,
-            1,
-            "Spectre Plante"
+781,
+7,
+1,
+            "Spectre Plante",
+"Dhelmise"
         ],
         [
             "Bébécaille",
-            782,
-            7,
-            1,
-            "Dragon"
+782,
+7,
+1,
+            "Dragon",
+"Jangmo-o"
         ],
         [
             "Écaïd",
-            783,
-            7,
-            2,
-            "Dragon Combat"
+783,
+7,
+2,
+            "Dragon Combat",
+"Hakamo-o"
         ],
         [
             "Ékaïser",
-            784,
-            7,
-            3,
-            "Dragon Combat"
+784,
+7,
+3,
+            "Dragon Combat",
+"Kommo-o"
         ],
         [
             "Tokorico",
-            785,
-            7,
-            1,
-            "Électrique Fée"
+785,
+7,
+1,
+            "Électrique Fée",
+"Tapu Koko"
         ],
         [
             "Tokopiyon",
-            786,
-            7,
-            1,
-            "Psy Fée"
+786,
+7,
+1,
+            "Psy Fée",
+"Tapu Lele"
         ],
         [
             "Tokotoro",
-            787,
-            7,
-            1,
-            "Plante Fée"
+787,
+7,
+1,
+            "Plante Fée",
+"Tapu Bulu"
         ],
         [
             "Tokopisco",
-            788,
-            7,
-            1,
-            "Eau Fée"
+788,
+7,
+1,
+            "Eau Fée",
+"Tapu Fini"
         ],
         [
             "Cosmog",
-            789,
-            7,
-            1,
-            "Psy"
+789,
+7,
+1,
+            "Psy",
+"Cosmog"
         ],
         [
             "Cosmovum",
-            790,
-            7,
-            2,
-            "Psy"
+790,
+7,
+2,
+            "Psy",
+"Cosmoem"
         ],
         [
             "Solgaleo",
-            791,
-            7,
-            3,
-            "Psy Acier"
+791,
+7,
+3,
+            "Psy Acier",
+"Solgaleo"
         ],
         [
             "Lunala",
-            792,
-            7,
-            3,
-            "Psy Spectre"
+792,
+7,
+3,
+            "Psy Spectre",
+"Lunala"
         ],
         [
             "Zéroïd",
-            793,
-            7,
-            1,
-            "Roche Poison"
+793,
+7,
+1,
+            "Roche Poison",
+"Nihilego"
         ],
         [
             "Mouscoto",
-            794,
-            7,
-            1,
-            "Insecte Combat"
+794,
+7,
+1,
+            "Insecte Combat",
+"Buzzwole"
         ],
         [
             "Cancrelove",
-            795,
-            7,
-            1,
-            "Insecte Combat"
+795,
+7,
+1,
+            "Insecte Combat",
+"Pheromosa"
         ],
         [
             "Câblifère",
-            796,
-            7,
-            1,
-            "Électrique"
+796,
+7,
+1,
+            "Électrique",
+"Xurkitree"
         ],
         [
             "Bamboiselle",
-            797,
-            7,
-            1,
-            "Acier Vol"
+797,
+7,
+1,
+            "Acier Vol",
+"Celesteela"
         ],
         [
             "Katagami",
-            798,
-            7,
-            1,
-            "Plante Acier"
+798,
+7,
+1,
+            "Plante Acier",
+"Kartana"
         ],
         [
             "Engloutyran",
-            799,
-            7,
-            1,
-            "Ténèbres Dragon"
+799,
+7,
+1,
+            "Ténèbres Dragon",
+"Guzzlord"
         ],
         [
             "Necrozma",
-            800,
-            7,
-            1,
-            "Psy"
+800,
+7,
+1,
+            "Psy",
+"Necrozma"
         ],
         [
             "Magearna",
-            801,
-            7,
-            1,
-            "Acier Fée"
+801,
+7,
+1,
+            "Acier Fée",
+"Magearna"
         ],
         [
             "Marshadow",
-            802,
-            7,
-            1,
-            "Combat Spectre"
+802,
+7,
+1,
+            "Combat Spectre",
+"Marshadow"
         ],
         [
             "Vémini",
-            803,
-            7,
-            1,
-            "Poison"
+803,
+7,
+1,
+            "Poison",
+"Poipole"
         ],
         [
             "Mandrillon",
-            804,
-            7,
-            2,
-            "Poison Dragon"
+804,
+7,
+2,
+            "Poison Dragon",
+"Naganadel"
         ],
         [
             "Ama-Ama",
-            805,
-            7,
-            1,
-            "Roche Acier"
+805,
+7,
+1,
+            "Roche Acier",
+"Stakataka"
         ],
         [
             "Pierroteknik",
-            806,
-            7,
-            1,
-            "Feu Spectre"
+806,
+7,
+1,
+            "Feu Spectre",
+"Blacephalon"
         ],
         [
             "Zeraora",
-            807,
-            7,
-            1,
-            "Électrique"
+807,
+7,
+1,
+            "Électrique",
+"Zeraora"
         ],
         [
             "Meltan",
-            808,
-            8,
-            1,
-            "Acier"
+808,
+8,
+1,
+            "Acier",
+"Meltan"
         ],
         [
             "Melmetal",
-            809,
-            8,
-            2,
-            "Acier"
+809,
+8,
+2,
+            "Acier",
+"Melmetal"
         ],
         [
             "Ouistempo",
-            810,
-            8,
-            1,
-            "Plante"
+810,
+8,
+1,
+            "Plante",
+"Grookey"
         ],
         [
             "Badabouin",
-            811,
-            8,
-            2,
-            "Plante"
+811,
+8,
+2,
+            "Plante",
+"Thwackey"
         ],
         [
             "Gorythmic",
-            812,
-            8,
-            3,
-            "Plante"
+812,
+8,
+3,
+            "Plante",
+"Rillaboom"
         ],
         [
             "Flambino",
-            813,
-            8,
-            1,
-            "Feu"
+813,
+8,
+1,
+            "Feu",
+"Scorbunny"
         ],
         [
             "Lapyro",
-            814,
-            8,
-            2,
-            "Feu"
+814,
+8,
+2,
+            "Feu",
+"Raboot"
         ],
         [
             "Pyrobut",
-            815,
-            8,
-            3,
-            "Feu"
+815,
+8,
+3,
+            "Feu",
+"Cinderace"
         ],
         [
             "Larméléon",
-            816,
-            8,
-            1,
-            "Eau"
+816,
+8,
+1,
+            "Eau",
+"Sobble"
         ],
         [
             "Arrozard",
-            817,
-            8,
-            2,
-            "Eau"
+817,
+8,
+2,
+            "Eau",
+"Drizzile"
         ],
         [
             "Lézargus",
-            818,
-            8,
-            3,
-            "Eau"
+818,
+8,
+3,
+            "Eau",
+"Inteleon"
         ],
         [
             "Rongourmand",
-            819,
-            8,
-            1,
-            "Normal"
+819,
+8,
+1,
+            "Normal",
+"Skwovet"
         ],
         [
             "Rongrigou",
-            820,
-            8,
-            2,
-            "Normal"
+820,
+8,
+2,
+            "Normal",
+"Greedent"
         ],
         [
             "Minisange",
-            821,
-            8,
-            1,
-            "Vol"
+821,
+8,
+1,
+            "Vol",
+"Rookidee"
         ],
         [
             "Bleuseille",
-            822,
-            8,
-            2,
-            "Vol"
+822,
+8,
+2,
+            "Vol",
+"Corvisquire"
         ],
         [
             "Corvaillus",
-            823,
-            8,
-            3,
-            "Vol Acier"
+823,
+8,
+3,
+            "Vol Acier",
+"Corviknight"
         ],
         [
             "Larvadar",
-            824,
-            8,
-            1,
-            "Insecte"
+824,
+8,
+1,
+            "Insecte",
+"Blipbug"
         ],
         [
             "Coléodôme",
-            825,
-            8,
-            2,
-            "Insecte Psy"
+825,
+8,
+2,
+            "Insecte Psy",
+"Dottler"
         ],
         [
             "Astronelle",
-            826,
-            8,
-            3,
-            "Insecte Psy"
+826,
+8,
+3,
+            "Insecte Psy",
+"Orbeetle"
         ],
         [
             "Goupilou",
-            827,
-            8,
-            1,
-            "Ténèbres"
+827,
+8,
+1,
+            "Ténèbres",
+"Nickit"
         ],
         [
             "Roublenard",
-            828,
-            8,
-            2,
-            "Ténèbres"
+828,
+8,
+2,
+            "Ténèbres",
+"Thievul"
         ],
         [
             "Tournicoton",
-            829,
-            8,
-            1,
-            "Plante"
+829,
+8,
+1,
+            "Plante",
+"Gossifleur"
         ],
         [
             "Blancoton",
-            830,
-            8,
-            2,
-            "Plante"
+830,
+8,
+2,
+            "Plante",
+"Eldegoss"
         ],
         [
             "Moumouton",
-            831,
-            8,
-            1,
-            "Normal"
+831,
+8,
+1,
+            "Normal",
+"Wooloo"
         ],
         [
             "Moumouflon",
-            832,
-            8,
-            2,
-            "Normal"
+832,
+8,
+2,
+            "Normal",
+"Dubwool"
         ],
         [
             "Khélocrok",
-            833,
-            8,
-            1,
-            "Eau"
+833,
+8,
+1,
+            "Eau",
+"Chewtle"
         ],
         [
             "Torgamord",
-            834,
-            8,
-            2,
-            "Eau Roche"
+834,
+8,
+2,
+            "Eau Roche",
+"Drednaw"
         ],
         [
             "Voltoutou",
-            835,
-            8,
-            1,
-            "Électrique"
+835,
+8,
+1,
+            "Électrique",
+"Yamper"
         ],
         [
             "Fulgudog",
-            836,
-            8,
-            2,
-            "Électrique"
+836,
+8,
+2,
+            "Électrique",
+"Boltund"
         ],
         [
             "Charbi",
-            837,
-            8,
-            1,
-            "Roche"
+837,
+8,
+1,
+            "Roche",
+"Rolycoly"
         ],
         [
             "Wagomine",
-            838,
-            8,
-            2,
-            "Roche Feu"
+838,
+8,
+2,
+            "Roche Feu",
+"Carkol"
         ],
         [
             "Monthracite",
-            839,
-            8,
-            3,
-            "Roche Feu"
+839,
+8,
+3,
+            "Roche Feu",
+"Coalossal"
         ],
         [
             "Verpom",
-            840,
-            8,
-            1,
-            "Plante Dragon"
+840,
+8,
+1,
+            "Plante Dragon",
+"Applin"
         ],
         [
             "Pomdrapi",
-            841,
-            8,
-            2,
-            "Plante Dragon"
+841,
+8,
+2,
+            "Plante Dragon",
+"Flapple"
         ],
         [
             "Dratatin",
-            842,
-            8,
-            2,
-            "Plante Dragon"
+842,
+8,
+2,
+            "Plante Dragon",
+"Appletun"
         ],
         [
             "Dunaja",
-            843,
-            8,
-            1,
-            "Sol"
+843,
+8,
+1,
+            "Sol",
+"Silicobra"
         ],
         [
             "Dunaconda",
-            844,
-            8,
-            2,
-            "Sol"
+844,
+8,
+2,
+            "Sol",
+"Sandaconda"
         ],
         [
             "Nigosier",
-            845,
-            8,
-            1,
-            "Vol Eau"
+845,
+8,
+1,
+            "Vol Eau",
+"Cramorant"
         ],
         [
             "Embrochet",
-            846,
-            8,
-            1,
-            "Eau"
+846,
+8,
+1,
+            "Eau",
+"Arrokuda"
         ],
         [
             "Hastacuda",
-            847,
-            8,
-            2,
-            "Eau"
+847,
+8,
+2,
+            "Eau",
+"Barraskewda"
         ],
         [
             "Toxizap",
-            848,
-            8,
-            1,
-            "Électrique Poison"
+848,
+8,
+1,
+            "Électrique Poison",
+"Toxel"
         ],
         [
             "Salarsen",
-            849,
-            8,
-            2,
-            "Électrique Poison"
+849,
+8,
+2,
+            "Électrique Poison",
+"Toxtricity"
         ],
         [
             "Grillepattes",
-            850,
-            8,
-            1,
-            "Feu Insecte"
+850,
+8,
+1,
+            "Feu Insecte",
+"Sizzlipede"
         ],
         [
             "Scolocendre",
-            851,
-            8,
-            2,
-            "Feu Insecte"
+851,
+8,
+2,
+            "Feu Insecte",
+"Centiskorch"
         ],
         [
             "Poulpaf",
-            852,
-            8,
-            1,
-            "Combat"
+852,
+8,
+1,
+            "Combat",
+"Clobbopus"
         ],
         [
             "Krakos",
-            853,
-            8,
-            2,
-            "Combat"
+853,
+8,
+2,
+            "Combat",
+"Grapploct"
         ],
         [
             "Théffroi",
-            854,
-            8,
-            1,
-            "Spectre"
+854,
+8,
+1,
+            "Spectre",
+"Sinistea"
         ],
         [
             "Polthégeist",
-            855,
-            8,
-            2,
-            "Spectre"
+855,
+8,
+2,
+            "Spectre",
+"Polteageist"
         ],
         [
             "Bibichut",
-            856,
-            8,
-            1,
-            "Psy"
+856,
+8,
+1,
+            "Psy",
+"Hatenna"
         ],
         [
             "Chapotus",
-            857,
-            8,
-            2,
-            "Psy"
+857,
+8,
+2,
+            "Psy",
+"Hattrem"
         ],
         [
             "Sorcilence",
-            858,
-            8,
-            3,
-            "Psy Fée"
+858,
+8,
+3,
+            "Psy Fée",
+"Hatterene"
         ],
         [
             "Grimalin",
-            859,
-            8,
-            1,
-            "Ténèbres Fée"
+859,
+8,
+1,
+            "Ténèbres Fée",
+"Impidimp"
         ],
         [
             "Fourbelin",
-            860,
-            8,
-            2,
-            "Ténèbres Fée"
+860,
+8,
+2,
+            "Ténèbres Fée",
+"Morgrem"
         ],
         [
             "Angoliath",
-            861,
-            8,
-            3,
-            "Ténèbres Fée"
+861,
+8,
+3,
+            "Ténèbres Fée",
+"Grimmsnarl"
         ],
         [
             "Ixon",
-            862,
-            8,
-            3,
-            "Ténèbres Normal"
+862,
+8,
+3,
+            "Ténèbres Normal",
+"Obstagoon"
         ],
         [
             "Berserkatt",
-            863,
-            8,
-            2,
-            "Acier"
+863,
+8,
+2,
+            "Acier",
+"Perrserker"
         ],
         [
             "Corayôme",
-            864,
-            8,
-            2,
-            "Spectre"
+864,
+8,
+2,
+            "Spectre",
+"Cursola"
         ],
         [
             "Palarticho",
-            865,
-            8,
-            2,
-            "Combat"
+865,
+8,
+2,
+            "Combat",
+"Sirfetch'd"
         ],
         [
             "M. Glaquette",
-            866,
-            8,
-            3,
-            "Glace Psy"
+866,
+8,
+3,
+            "Glace Psy",
+"Mr. Rime"
         ],
         [
             "Tutétékri",
-            867,
-            8,
-            2,
-            "Sol Spectre"
+867,
+8,
+2,
+            "Sol Spectre",
+"Runerigus"
         ],
         [
             "Crèmy",
-            868,
-            8,
-            1,
-            "Fée"
+868,
+8,
+1,
+            "Fée",
+"Milcery"
         ],
         [
             "Charmilly",
-            869,
-            8,
-            2,
-            "Fée"
+869,
+8,
+2,
+            "Fée",
+"Alcremie"
         ],
         [
             "Hexadron",
-            870,
-            8,
-            1,
-            "Combat"
+870,
+8,
+1,
+            "Combat",
+"Falinks"
         ],
         [
             "Wattapik",
-            871,
-            8,
-            1,
-            "Électrique"
+871,
+8,
+1,
+            "Électrique",
+"Pincurchin"
         ],
         [
             "Frissonille",
-            872,
-            8,
-            1,
-            "Glace Insecte"
+872,
+8,
+1,
+            "Glace Insecte",
+"Snom"
         ],
         [
             "Beldeneige",
-            873,
-            8,
-            2,
-            "Glace Insecte"
+873,
+8,
+2,
+            "Glace Insecte",
+"Frosmoth"
         ],
         [
             "Dolman",
-            874,
-            8,
-            1,
-            "Roche"
+874,
+8,
+1,
+            "Roche",
+"Stonjourner"
         ],
         [
             "Bekaglaçon",
-            875,
-            8,
-            1,
-            "Glace"
+875,
+8,
+1,
+            "Glace",
+"Eiscue"
         ],
         [
             "Wimessir",
-            876,
-            8,
-            1,
-            "Psy Normal"
+876,
+8,
+1,
+            "Psy Normal",
+"Indeedee"
         ],
         [
             "Morpeko",
-            877,
-            8,
-            1,
-            "Électrique Ténèbres"
+877,
+8,
+1,
+            "Électrique Ténèbres",
+"Morpeko"
         ],
         [
             "Charibari",
-            878,
-            8,
-            1,
-            "Acier"
+878,
+8,
+1,
+            "Acier",
+"Cufant"
         ],
         [
             "Pachyradjah",
-            879,
-            8,
-            2,
-            "Acier"
+879,
+8,
+2,
+            "Acier",
+"Copperajah"
         ],
         [
             "Galvagon",
-            880,
-            8,
-            1,
-            "Électrique Dragon"
+880,
+8,
+1,
+            "Électrique Dragon",
+"Dracozolt"
         ],
         [
             "Galvagla",
-            881,
-            8,
-            1,
-            "Électrique Glace"
+881,
+8,
+1,
+            "Électrique Glace",
+"Arctozolt"
         ],
         [
             "Hydragon",
-            882,
-            8,
-            1,
-            "Eau Dragon"
+882,
+8,
+1,
+            "Eau Dragon",
+"Dracovish"
         ],
         [
             "Hydragla",
-            883,
-            8,
-            1,
-            "Eau Glace"
+883,
+8,
+1,
+            "Eau Glace",
+"Arctovish"
         ],
         [
             "Duralugon",
-            884,
-            8,
-            1,
-            "Acier Dragon"
+884,
+8,
+1,
+            "Acier Dragon",
+"Duraludon"
         ],
         [
             "Fantyrm",
-            885,
-            8,
-            1,
-            "Dragon Spectre"
+885,
+8,
+1,
+            "Dragon Spectre",
+"Dreepy"
         ],
         [
             "Dispareptil",
-            886,
-            8,
-            2,
-            "Dragon Spectre"
+886,
+8,
+2,
+            "Dragon Spectre",
+"Drakloak"
         ],
         [
             "Lanssorien",
-            887,
-            8,
-            3,
-            "Dragon Spectre"
+887,
+8,
+3,
+            "Dragon Spectre",
+"Dragapult"
         ],
         [
             "Zacian",
-            888,
-            8,
-            1,
-            "Fée Acier"
+888,
+8,
+1,
+            "Fée Acier",
+"Zacian"
         ],
         [
             "Zamazenta",
-            889,
-            8,
-            1,
-            "Combat Acier"
+889,
+8,
+1,
+            "Combat Acier",
+"Zamazenta"
         ],
         [
             "Éthernatos",
-            890,
-            8,
-            1,
-            "Poison Dragon"
+890,
+8,
+1,
+            "Poison Dragon",
+"Eternatus"
         ],
         [
             "Wushours",
-            891,
-            8,
-            1,
-            "Combat"
+891,
+8,
+1,
+            "Combat",
+"Kubfu"
         ],
         [
             "Shifours",
-            892,
-            8,
-            2,
-            "Combat Ténèbres Eau"
+892,
+8,
+2,
+            "Combat Ténèbres Eau",
+"Urshifu"
         ],
         [
             "Zarude",
-            893,
-            8,
-            1,
-            "Ténèbres Plante"
+893,
+8,
+1,
+            "Ténèbres Plante",
+"Zarude"
         ],
         [
             "Regieleki",
-            894,
-            8,
-            1,
-            "Électrique"
+894,
+8,
+1,
+            "Électrique",
+"Regieleki"
         ],
         [
             "Regidrago",
-            895,
-            8,
-            1,
-            "Dragon"
+895,
+8,
+1,
+            "Dragon",
+"Regidrago"
         ],
         [
             "Blizzeval",
-            896,
-            8,
-            1,
-            "Glace"
+896,
+8,
+1,
+            "Glace",
+"Glastrier"
         ],
         [
             "Spectreval",
-            897,
-            8,
-            1,
-            "Spectre"
+897,
+8,
+1,
+            "Spectre",
+"Spectrier"
         ],
         [
             "Sylveroy",
-            898,
-            8,
-            1,
-            "Psy Plante Glace Spectre"
+898,
+8,
+1,
+            "Psy Plante Glace Spectre",
+"Calyrex"
         ],
         [
             "Cerbyllin",
-            899,
-            8,
-            2,
-            "Normal Psy"
+899,
+8,
+2,
+            "Normal Psy",
+"Wyrdeer"
         ],
         [
             "Hachécateur",
-            900,
-            8,
-            2,
-            "Insecte Roche"
+900,
+8,
+2,
+            "Insecte Roche",
+"Kleavor"
         ],
         [
             "Ursaking",
-            901,
-            8,
-            3,
-            "Sol Normal"
+901,
+8,
+3,
+            "Sol Normal",
+"Ursaluna"
         ],
         [
             "Paragruel",
-            902,
-            8,
-            2,
-            "Eau Spectre"
+902,
+8,
+2,
+            "Eau Spectre",
+"Basculegion"
         ],
         [
             "Farfuret de Hisui",
-            215,
-            8,
-            1,
-            "Combat Poison"
+215,
+8,
+1,
+            "Combat Poison",
+"Hisuian Sneasel"
         ],
         [
             "Farfurex",
-            903,
-            8,
-            2,
-            "Combat Poison"
+903,
+8,
+2,
+            "Combat Poison",
+"Sneasler"
         ],
         [
             "Qwilfish de Hisui",
-            211,
-            8,
-            1,
-            "Ténèbres Poison"
+211,
+8,
+1,
+            "Ténèbres Poison",
+"Hisuian Qwilfish"
         ],
         [
             "Qwilpik",
-            904,
-            8,
-            2,
-            "Ténèbres Poison"
+904,
+8,
+2,
+            "Ténèbres Poison",
+"Overqwil"
         ],
         [
             "Amovénus",
-            905,
-            8,
-            1,
-            "Fée Vol"
+905,
+8,
+1,
+            "Fée Vol",
+"Enamorus"
         ],
         ["Poussacha",
-        906,
-        9,
-        1,
-        "Plante"],
-        ["Matourgeon",
-        907,
-        9,
-        2,
-        "Plante"],
-        ["Miascarade",
-        908,
-        9,
-        3,
-        "Plante Ténèbres"],
-        ["Chochodile",
-        909,
-        9,
-        1,
-        "Feu"],
-        ["Crocogril",
-        910,
-        9,
-        2,
-        "Feu"],
-        ["Flâmigator",
-        911,
-        9,
-        3,
-        "Feu Spectre"],
-        ["Coiffeton",
-        912,
-        9,
-        1,
-        "Eau"],
-        ["Canarbello",
-        913,
-        9,
-        2,
-        "Eau"],
-        ["Palmaval",
-        914,
-        9,
-        3,
-        "Eau Combat"],
-        ["Gourmelet",
-        915,
-        9,
-        1,
-        "Normal"],
-        ["Fragroin",
-        916,
-        9,
-        2,
-        "Normal"],
-        ["Tissenboule",
-        917,
-        9,
-        1,
-        "Insecte"],
-        ["Filentrappe",
-        918,
-        9,
-        2,
-        "Insecte"],
-        ["Lilliterelle",
-        919,
-        9,
-        1,
-        "Insecte"],
-        ["Gambex",
-        920,
-        9,
-        2,
-        "Insecte Ténèbres"],
-        ["Pohm",
-        921,
-        9,
-        1,
-        "Électrique"],
-        ["Pohmotte",
-        922,
-        9,
-        2,
-        "Électrique Combat"],
-        ["Pohmarmotte",
-        923,
-        9,
-        3,
-        "Électrique Combat"],
-        ["Compagnol",
-        924,
-        9,
-        1,
-        "Normal"],
-        ["Famignol",
-        925,
-        9,
-        2,
-        "Normal"],
-        ["Pâtachiot",
-        926,
-        9,
-        1,
-        "Fée"],
-        ["Briochien",
-        927,
-        9,
-        2,
-        "Fée"],
-        ["Olivini",
-        928,
-        9,
-        1,
-        "Plante Normal"],
-        ["Olivado",
-        929,
-        9,
-        2,
-        "Plante Normal"],
-        ["Arboliva",
-        930,
-        9,
-        3,
-        "Plante Normal"],
-        ["Tapatoès",
-        931,
-        9,
-        1,
-        "Normal Vol"],
-        ["Selutin",
-        932,
-        9,
-        1,
-        "Roche"],
-        ["Amassel",
-        933,
-        9,
-        2,
-        "Roche"],
-        ["Gigansel",
-        934,
-        9,
-        3,
-        "Roche"],
-        ["Charbambin",
-        935,
-        9,
-        1,
-        "Feu"],
-        ["Carmadura",
-        936,
-        9,
-        2,
-        "Feu Psy"],
-        ["Malvalame",
-        937,
-        9,
-        2,
-        "Feu Spectre"],
-        ["Têtampoule",
-        938,
-        9,
-        1,
-        "Électrique"],
-        ["Ampibidou",
-        939,
-        9,
-        2,
-        "Électrique"],
-        ["Zapétrel",
-        940,
-        9,
-        1,
-        "Électrique Vol"],
-        ["Fulgulairo",
-        941,
-        9,
-        2,
-        "Électrique Vol"],
-        ["Grondogue",
-        942,
-        9,
-        1,
-        "Ténèbres"],
-        ["Dogrino",
-        943,
-        9,
-        2,
-        "Ténèbres"],
-        ["Gribouraigne",
-        944,
-        9,
-        1,
-        "Poison Normal"],
-        ["Tag-Tag",
-        945,
-        9,
-        2,
-        "Poison Normal"],
-        ["Virovent",
-        946,
-        9,
-        1,
-        "Plante Spectre"],
-        ["Virevorreur",
-        947,
-        9,
-        2,
-        "Plante Spectre"],
-        ["Terracool",
-        948,
-        9,
-        1,
-        "Sol Plante"],
-        ["Terracruel",
-        949,
-        9,
-        2,
-        "Sol Plante"],
-        ["Craparoi",
-        950,
-        9,
-        1,
-        "Roche"],
-        ["Pimito",
-        951,
-        9,
-        1,
-        "Plante"],
-        ["Scovilain",
-        952,
-        9,
-        2,
-        "Plante Feu"],
-        ["Léboulérou",
-        953,
-        9,
-        1,
-        "Insecte"],
-        ["Bérasca",
-        954,
-        9,
-        2,
-        "Insecte Psy"],
-        ["Flotillon",
-        955,
-        9,
-        1,
-        "Psy"],
-        ["Cléopsytra",
-        956,
-        9,
-        2,
-        "Psy"],
-        ["Forgerette",
-        957,
-        9,
-        1,
-        "Fée Acier"],
-        ["Forgella",
-        958,
-        9,
-        2,
-        "Fée Acier"],
-        ["Forgelina",
-        959,
-        9,
-        3,
-        "Fée Acier"],
-        ["Taupikeau",
-        960,
-        9,
-        1,
-        "Eau"],
-        ["Triopikeau",
-        961,
-        9,
-        2,
-        "Eau"],
-        ["Lestombaile",
-        962,
-        9,
-        1,
-        "Vol Ténèbres"],
-        ["Dofin",
-        963,
-        9,
-        1,
-        "Eau"],
-        ["Superdofin",
-        964,
-        9,
-        2,
-        "Eau"],
-        ["Vrombi",
-        965,
-        9,
-        1,
-        "Acier Poison"],
-        ["Vrombotor",
-        966,
-        9,
-        2,
-        "Acier Poison"],
-        ["Motorizard",
-        967,
-        9,
-        1,
-        "Dragon Normal"],
-        ["Ferdeter",
-        968,
-        9,
-        1,
-        "Acier"],
-        ["Germéclat",
-        969,
-        9,
-        1,
-        "Roche Poison"],
-        ["Floréclat",
-        970,
-        9,
-        2,
-        "Roche Poison"],
-        ["Toutombe",
-        971,
-        9,
-        1,
-        "Spectre"],
-        ["Tomberro",
-        972,
-        9,
-        2,
-        "Spectre"],
-        ["Flamenroule",
-        973,
-        9,
-        1,
-        "Vol Combat"],
-        ["Piétacé",
-        974,
-        9,
-        1,
-        "Glace"],
-        ["Balvalèze",
-        975,
-        9,
-        2,
-        "Glace"],
-        ["Délestin",
-        976,
-        9,
-        1,
-        "Eau Psy"],
-        ["Oyacata",
-        977,
-        9,
-        1,
-        "Eau"],
-        ["Nigirigon",
-        978,
-        9,
-        1,
-        "Dragon Eau"],
-        ["Courrousinge",
-        979,
-        9,
-        3,
-        "Combat Spectre"],
-        ["Terraiste",
-        980,
-        9,
-        2,
-        "Poison Sol"],
-        ["Farigiraf",
-        981,
-        9,
-        2,
-        "Normal Psy"],
-        ["Deusolourdo",
-        982,
-        9,
-        2,
-        "Normal"],
-        ["Scalpereur",
-        983,
-        9,
-        3,
-        "Ténèbres Acier"],
-        ["Fort-Ivoire",
-        984,
-        9,
-        1,
-        "Sol Combat"],
-        ["Hurle-Queue",
-        985,
-        9,
-        1,
-        "Fée Psy"],
-        ["Fongus-Furie",
-        986,
-        9,
-        1,
-        "Plante Ténèbres"],
-        ["Flotte-Mèche",
-        987,
-        9,
-        1,
-        "Spectre Fée"],
-        ["Rampe-Ailes",
-        988,
-        9,
-        1,
-        "Insecte Combat"],
-        ["Pelage-Sablé",
-        989,
-        9,
-        1,
-        "Électrique Sol"],
-        ["Roue-de-Fer",
-        990,
-        9,
-        1,
-        "Sol Acier"],
-        ["Hotte-de-Fer",
-        991,
-        9,
-        1,
-        "Glace Eau"],
-        ["Paume-de-Fer",
-        992,
-        9,
-        1,
-        "Combat Électrique"],
-        ["Têtes-de-Fer",
-        993,
-        9,
-        1,
-        "Ténèbres Vol"],
-        ["Mite-de-Fer",
-        994,
-        9,
-        1,
-        "Feu Poison"],
-        ["Épine-de-Fer",
-        995,
-        9,
-        1,
-        "Roche Électrique"],
-        ["Frigado",
-        996,
-        9,
-        1,
-        "Dragon Glace"],
-        ["Cryodo",
-        997,
-        9,
-        2,
-        "Dragon Glace"],
-        ["Glaivodo",
-        998,
-        9,
-        3,
-        "Dragon Glace"],
-        ["Mordudor",
-        999,
-        9,
-        1,
-        "Spectre"],
-        ["Gromago",
-        1000,
-        9,
-        2,
-        "Acier Spectre"],
-        ["Chongjian",
-        1001,
-        9,
-        1,
-        "Ténèbres Plante"],
-        ["Baojian",
-        1002,
-        9,
-        1,
-        "Ténèbres Glace"],
-        ["Dinglu",
-        1003,
-        9,
-        1,
-        "Ténèbres Sol"],
-        ["Yuyu",
-        1004,
-        9,
-        1,
-        "Ténèbres Feu"],
-        ["Rugit-Lune",
-        1005,
-        9,
-        1,
-        "Dragon Ténèbres"],
-        ["Garde-de-Fer",
-        1006,
-        9,
-        1,
-        "Fée Combat"],
-        ["Koraidon",
-        1007,
-        9,
-        1,
-        "Combat Dragon"],
-        ["Miraidon",
-        1008,
-        9,
-        1,
-        "Électrique Dragon"],
-        ["Serpente-Eau",
-        1009,
-        9,
-        1,
-        "Eau Dragon"],
-        ["Vert-de-Fer",
-        1010,
-        9,
-        1,
-        "Plante Psy"],
-        ["Axoloto de Paldea",
-        194,
-        9,
-        1,
-        "Poison Sol"],
-        ["Tauros de Paldea",
-        128,
-        9,
-        1,
-        "Combat Eau Feu"]
-    ]
-}
+            906,
+            9,
+            1,
+            "Plante",
+            "Sprigatito"],
+                    ["Matourgeon",
+            907,
+            9,
+            2,
+            "Plante",
+            "Floragato"],
+                    ["Miascarade",
+            908,
+            9,
+            3,
+            "Plante Ténèbres",
+            "Meowscarada"],
+                    ["Chochodile",
+            909,
+            9,
+            1,
+            "Feu",
+            "Fuecoco"],
+                    ["Crocogril",
+            910,
+            9,
+            2,
+            "Feu",
+            "Crocalor"],
+                    ["Flâmigator",
+            911,
+            9,
+            3,
+            "Feu Spectre",
+            "Skeledirge"],
+                    ["Coiffeton",
+            912,
+            9,
+            1,
+            "Eau",
+            "Quaxly"],
+                    ["Canarbello",
+            913,
+            9,
+            2,
+            "Eau",
+            "Quaxwell"],
+                    ["Palmaval",
+            914,
+            9,
+            3,
+            "Eau Combat",
+            "Quaquaval"],
+                    ["Gourmelet",
+            915,
+            9,
+            1,
+            "Normal",
+            "Lechonk"],
+                    ["Fragroin",
+            916,
+            9,
+            2,
+            "Normal",
+            "Oinkologne"],
+                    ["Tissenboule",
+            917,
+            9,
+            1,
+            "Insecte",
+            "Tarountula"],
+                    ["Filentrappe",
+            918,
+            9,
+            2,
+            "Insecte",
+            "Spidops"],
+                    ["Lilliterelle",
+            919,
+            9,
+            1,
+            "Insecte",
+            "Nymble"],
+                    ["Gambex",
+            920,
+            9,
+            2,
+            "Insecte Ténèbres",
+            "Lokix"],
+                    ["Pohm",
+            921,
+            9,
+            1,
+            "Électrique",
+            "Pawmi"],
+                    ["Pohmotte",
+            922,
+            9,
+            2,
+            "Électrique Combat",
+            "Pawmo"],
+                    ["Pohmarmotte",
+            923,
+            9,
+            3,
+            "Électrique Combat",
+            "Pawmot"],
+                    ["Compagnol",
+            924,
+            9,
+            1,
+            "Normal",
+            "Tandemaus"],
+                    ["Famignol",
+            925,
+            9,
+            2,
+            "Normal",
+            "Maushold"],
+                    ["Pâtachiot",
+            926,
+            9,
+            1,
+            "Fée",
+            "Fidough"],
+                    ["Briochien",
+            927,
+            9,
+            2,
+            "Fée",
+            "Dachsbun"],
+                    ["Olivini",
+            928,
+            9,
+            1,
+            "Plante Normal",
+            "Smoliv"],
+                    ["Olivado",
+            929,
+            9,
+            2,
+            "Plante Normal",
+            "Dolliv"],
+                    ["Arboliva",
+            930,
+            9,
+            3,
+            "Plante Normal",
+            "Arboliva"],
+                    ["Tapatoès",
+            931,
+            9,
+            1,
+            "Normal Vol",
+            "Squawkabilly"],
+                    ["Selutin",
+            932,
+            9,
+            1,
+            "Roche",
+            "Nacli"],
+                    ["Amassel",
+            933,
+            9,
+            2,
+            "Roche",
+            "Naclstack"],
+                    ["Gigansel",
+            934,
+            9,
+            3,
+            "Roche",
+            "Garganacl"],
+                    ["Charbambin",
+            935,
+            9,
+            1,
+            "Feu",
+            "Charcadet"],
+                    ["Carmadura",
+            936,
+            9,
+            2,
+            "Feu Psy",
+            "Armarouge"],
+                    ["Malvalame",
+            937,
+            9,
+            2,
+            "Feu Spectre",
+            "Ceruledge"],
+                    ["Têtampoule",
+            938,
+            9,
+            1,
+            "Électrique",
+            "Tadbulb"],
+                    ["Ampibidou",
+            939,
+            9,
+            2,
+            "Électrique",
+            "Bellibolt"],
+                    ["Zapétrel",
+            940,
+            9,
+            1,
+            "Électrique Vol",
+            "Wattrel"],
+                    ["Fulgulairo",
+            941,
+            9,
+            2,
+            "Électrique Vol",
+            "Kilowattrel"],
+                    ["Grondogue",
+            942,
+            9,
+            1,
+            "Ténèbres",
+            "Maschiff"],
+                    ["Dogrino",
+            943,
+            9,
+            2,
+            "Ténèbres",
+            "Mabosstiff"],
+                    ["Gribouraigne",
+            944,
+            9,
+            1,
+            "Poison Normal",
+            "Shroodle"],
+                    ["Tag-Tag",
+            945,
+            9,
+            2,
+            "Poison Normal",
+            "Grafaiai"],
+                    ["Virovent",
+            946,
+            9,
+            1,
+            "Plante Spectre",
+            "Bramblin"],
+                    ["Virevorreur",
+            947,
+            9,
+            2,
+            "Plante Spectre",
+            "Brambleghast"],
+                    ["Terracool",
+            948,
+            9,
+            1,
+            "Sol Plante",
+            "Toedscool"],
+                    ["Terracruel",
+            949,
+            9,
+            2,
+            "Sol Plante",
+            "Toedscruel"],
+                    ["Craparoi",
+            950,
+            9,
+            1,
+            "Roche",
+            "Klawf"],
+                    ["Pimito",
+            951,
+            9,
+            1,
+            "Plante",
+            "Capsakid"],
+                    ["Scovilain",
+            952,
+            9,
+            2,
+            "Plante Feu",
+            "Scovillain"],
+                    ["Léboulérou",
+            953,
+            9,
+            1,
+            "Insecte",
+            "Rellor"],
+                    ["Bérasca",
+            954,
+            9,
+            2,
+            "Insecte Psy",
+            "Rabsca"],
+                    ["Flotillon",
+            955,
+            9,
+            1,
+            "Psy",
+            "Flittle"],
+                    ["Cléopsytra",
+            956,
+            9,
+            2,
+            "Psy",
+            "Espathra"],
+                    ["Forgerette",
+            957,
+            9,
+            1,
+            "Fée Acier",
+            "Tinkatink"],
+                    ["Forgella",
+            958,
+            9,
+            2,
+            "Fée Acier",
+            "Tinkatuff"],
+                    ["Forgelina",
+            959,
+            9,
+            3,
+            "Fée Acier",
+            "Tinkaton"],
+                    ["Taupikeau",
+            960,
+            9,
+            1,
+            "Eau",
+            "Wiglett"],
+                    ["Triopikeau",
+            961,
+            9,
+            2,
+            "Eau",
+            "Wugtrio"],
+                    ["Lestombaile",
+            962,
+            9,
+            1,
+            "Vol Ténèbres",
+            "Bombirdier"],
+                    ["Dofin",
+            963,
+            9,
+            1,
+            "Eau",
+            "Finizen"],
+                    ["Superdofin",
+            964,
+            9,
+            2,
+            "Eau",
+            "Palafin"],
+                    ["Vrombi",
+            965,
+            9,
+            1,
+            "Acier Poison",
+            "Varoom"],
+                    ["Vrombotor",
+            966,
+            9,
+            2,
+            "Acier Poison",
+            "Revavroom"],
+                    ["Motorizard",
+            967,
+            9,
+            1,
+            "Dragon Normal",
+            "Cyclizar"],
+                    ["Ferdeter",
+            968,
+            9,
+            1,
+            "Acier",
+            "Orthworm"],
+                    ["Germéclat",
+            969,
+            9,
+            1,
+            "Roche Poison",
+            "Glimmet"],
+                    ["Floréclat",
+            970,
+            9,
+            2,
+            "Roche Poison",
+            "Glimmora"],
+                    ["Toutombe",
+            971,
+            9,
+            1,
+            "Spectre",
+            "Greavard"],
+                    ["Tomberro",
+            972,
+            9,
+            2,
+            "Spectre",
+            "Houndstone"],
+                    ["Flamenroule",
+            973,
+            9,
+            1,
+            "Vol Combat",
+            "Flamigo"],
+                    ["Piétacé",
+            974,
+            9,
+            1,
+            "Glace",
+            "Cetoddle"],
+                    ["Balbalèze",
+            975,
+            9,
+            2,
+            "Glace",
+            "Cetitan"],
+                    ["Délestin",
+            976,
+            9,
+            1,
+            "Eau Psy",
+            "Veluza"],
+                    ["Oyacata",
+            977,
+            9,
+            1,
+            "Eau",
+            "Dondozo"],
+                    ["Nigirigon",
+            978,
+            9,
+            1,
+            "Dragon Eau",
+            "Tatsugiri"],
+                    ["Courrousinge",
+            979,
+            9,
+            3,
+            "Combat Spectre",
+            "Annihilape"],
+                    ["Terraiste",
+            980,
+            9,
+            2,
+            "Poison Sol",
+            "Clodsire"],
+                    ["Farigiraf",
+            981,
+            9,
+            2,
+            "Normal Psy",
+            "Farigiraf"],
+                    ["Deusolourdo",
+            982,
+            9,
+            2,
+            "Normal",
+            "Dudunsparce"],
+                    ["Scalpereur",
+            983,
+            9,
+            3,
+            "Ténèbres Acier",
+            "Kingambit"],
+                    ["Fort-Ivoire",
+            984,
+            9,
+            1,
+            "Sol Combat",
+            "Great Tusk"],
+                    ["Hurle-Queue",
+            985,
+            9,
+            1,
+            "Fée Psy",
+            "Scream Tail"],
+                    ["Fongus-Furie",
+            986,
+            9,
+            1,
+            "Plante Ténèbres",
+            "Brute Bonnet"],
+                    ["Flotte-Mèche",
+            987,
+            9,
+            1,
+            "Spectre Fée",
+            "Flutter Mane"],
+                    ["Rampe-Ailes",
+            988,
+            9,
+            1,
+            "Insecte Combat",
+            "Slither Wing"],
+                    ["Pelage-Sablé",
+            989,
+            9,
+            1,
+            "Électrique Sol",
+            "Sandy Shocks"],
+                    ["Roue-de-Fer",
+            990,
+            9,
+            1,
+            "Sol Acier",
+            "Iron Treads"],
+                    ["Hotte-de-Fer",
+            991,
+            9,
+            1,
+            "Glace Eau",
+            "Iron Bundle"],
+                    ["Paume-de-Fer",
+            992,
+            9,
+            1,
+            "Combat Électrique",
+            "Iron Hands"],
+                    ["Têtes-de-Fer",
+            993,
+            9,
+            1,
+            "Ténèbres Vol",
+            "Iron Jugulis"],
+                    ["Mite-de-Fer",
+            994,
+            9,
+            1,
+            "Feu Poison",
+            "Iron Moth"],
+                    ["Épine-de-Fer",
+            995,
+            9,
+            1,
+            "Roche Électrique",
+            "Iron Thorns"],
+                    ["Frigodo",
+            996,
+            9,
+            1,
+            "Dragon Glace",
+            "Frigibax"],
+                    ["Cryodo",
+            997,
+            9,
+            2,
+            "Dragon Glace",
+            "Arctibax"],
+                    ["Glaivodo",
+            998,
+            9,
+            3,
+            "Dragon Glace",
+            "Baxcalibur"],
+                    ["Mordudor",
+            999,
+            9,
+            1,
+            "Spectre",
+            "Gimmighoul"],
+                    ["Gromago",
+            1000,
+            9,
+            2,
+            "Acier Spectre",
+            "Gholdengo"],
+                    ["Chongjian",
+            1001,
+            9,
+            1,
+            "Ténèbres Plante",
+            "Wo-Chien"],
+                    ["Baojian",
+            1002,
+            9,
+            1,
+            "Ténèbres Glace",
+            "Chien-Pao"],
+                    ["Dinglu",
+            1003,
+            9,
+            1,
+            "Ténèbres Sol",
+            "Ting-Lu"],
+                    ["Yuyu",
+            1004,
+            9,
+            1,
+            "Ténèbres Feu",
+            "Chi-Yu"],
+                    ["Rugit-Lune",
+            1005,
+            9,
+            1,
+            "Dragon Ténèbres",
+            "Roaring Moon"],
+                    ["Garde-de-Fer",
+            1006,
+            9,
+            1,
+            "Fée Combat",
+            "Iron Valiant"],
+                    ["Koraidon",
+            1007,
+            9,
+            1,
+            "Combat Dragon",
+            "Koraidon"],
+                    ["Miraidon",
+            1008,
+            9,
+            1,
+            "Électrique Dragon",
+            "Miraidon"],
+                    ["Serpente-Eau",
+            1009,
+            9,
+            1,
+            "Eau Dragon",
+            "Walking Wake"],
+                    ["Vert-de-Fer",
+            1010,
+            9,
+            1,
+            "Plante Psy",
+            "Iron Leaves"],
+                    ["Axoloto de Paldea",
+            194,
+            9,
+            1,
+            "Poison Sol",
+            "Paldean Wooper"],
+                    ["Tauros de Paldea",
+            128,
+            9,
+            1,
+            "Combat Eau Feu",
+            "Paldean Tauros"]
+                ]
+            }            
