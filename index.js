@@ -1010,7 +1010,7 @@ bot.on('message', async function (message, user) {
         }
 
         //commande "soluce" dans salon Monche?
-        if (petitMessage.startsWith(prefixSoluceEN)&&message.channel.id==auth.server.salon.monche){
+        if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.monche){
             if(reponse==false){
                 if(rollOn==false){
                     if(gameOn==true){
@@ -1026,7 +1026,7 @@ bot.on('message', async function (message, user) {
         }
 
         //commande "soluce" dans salon Monche? anglais
-        if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.moncheEN){
+        if (petitMessage.startsWith(prefixSoluceEN)&&message.channel.id==auth.server.salon.moncheEN){
             if(reponseEN==false){
                 if(rollOnEN==false){
                     if(gameOnEN==true){
