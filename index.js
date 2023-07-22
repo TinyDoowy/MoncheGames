@@ -128,7 +128,7 @@ const tabPokeLangue = bddMedicamonche.pokemonsAllLang;
 const tabMedicamonche = bddMedicamonche.medicaments;
     //Mandarin, Cantonais, Japonais, Allemand, Russe, Thaï, Coréen, Anglais, Français
 var nbrLangue = 8;
-var NbrGen = 8;
+var NbrGen = 9;
 const taillePokedexLangue = tabPokeLangue.length;
 const tailleMedicamonche = tabMedicamonche.length;
 
