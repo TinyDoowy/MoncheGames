@@ -967,7 +967,7 @@ bot.on('message', async function (message, user) {
 
                 console.log("/"+paramJeuEN[1]+"/ : "+typePickedEN);
 
-                setTimeout(async function(){message.channel.send("The letters : "+EmoteLettre(lettre1EN)+" "+EmoteLettre(lettre2EN)+", with at leasdt one type : **__"+typePickedEN+"__** "+EmoteType(typePickedTemp.toLowerCase()));rollOnEN = false;},4500);
+                setTimeout(async function(){message.channel.send("The letters : "+EmoteLettre(lettre1EN)+" "+EmoteLettre(lettre2EN)+", with at least one type : **__"+typePickedEN+"__** "+EmoteType(typePickedTemp.toLowerCase()));rollOnEN = false;},4500);
                 gameOnEN = true;
                 return;
 
