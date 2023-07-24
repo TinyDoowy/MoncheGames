@@ -1442,7 +1442,7 @@ bot.on('message', async function (message, user) {
 				.setTitle(titrePendu)
 				.setDescription(descriPendu)
 				.setImage(lienImagePendu)
-				.setFooter({ text: 'Armagé-monche'});
+				.setFooter('Armagé-monche');
 	
 		    
 			await message.channel.send(messageErreurPendu);
