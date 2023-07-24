@@ -1437,8 +1437,7 @@ bot.on('message', async function (message, user) {
 			}
 	
 	
-	
-			const messageErreurPendu = new EmbedBuilder()
+			const messageErreurPendu = new Discord.MessageEmbed()
 				.setColor(colorPendu)
 				.setTitle(titrePendu)
 				.setDescription(descriPendu)
@@ -1446,7 +1445,7 @@ bot.on('message', async function (message, user) {
 				.setFooter({ text: 'Armagé-monche'});
 	
 		    
-			await message.channel.send({embeds: [messageErreurPendu]});
+			await message.channel.send(messageErreurPendu);
 	
 			lesFausseLettres = lesFausseLettres +" "+ lettre;
 			console.log(lesFausseLettres);
