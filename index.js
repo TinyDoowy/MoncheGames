@@ -3,6 +3,8 @@ var logger = require('winston');
 var auth = require('./auth.json');
 var cron = require('node-cron');
 
+const {AttachmentBuilder, EmbedBuilder } = require('discord.js');
+
 const mongoose = require("mongoose");
 mongoose.connect('mongodb://localhost/Theffroi',{ useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useFindAndModify', false);
@@ -150,6 +152,20 @@ const tabTypeEN = ["Steel","Fighting","Dragon","Water","Electric",
 "Fairy","Fire","Ice","Bug","Normal","Grass","Poison",
 "Rock","Ground","Ghost","Dark","Flying","Psychic","Cristal","Bird"];
 
+// Variable Armage-monche 
+var nomPokemonPendu;
+var nomPokemonTrad;
+var nomPokemonTab;
+var guessPokemonTab;
+var long = 0;
+var guessPokemon = "";
+var lettre;
+var lesFausseLettres = "Les propositions erronées sont :";
+var NbrErreur = 0;
+var rollPenduOn = false;
+var gamePenduOn = false;
+var reponsePendu = true;
+var penduEN = false;
 
 
 
@@ -218,7 +234,7 @@ bot.on('message', async function (message, user) {
 
 	
     
-    //limité à la catégorie de la forêt
+    //limité à la catégorie de la catégorie Monche Universe
     if (message.channel.parent!=auth.server.categorie.monche) {console.log("hors catégorie"); return;}
 
 //test de lecture de fichier audio (monche-cri)
@@ -291,6 +307,83 @@ bot.on('message', async function (message, user) {
     //commande animateur ou staff (sauf role mute monche)
     if(!message.member.roles.cache.has(auth.server.role.mute)&&(message.member.roles.cache.has(auth.server.role.staff)||message.member.roles.cache.has(auth.server.role.animateur))){
 
+
+	//commande "roll" dans Armagé-Monche
+	if(petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.pendu&&gamePenduOn==false&&reponsePendu==true)
+        {
+
+            gamePenduOn = true;
+            reponsePendu = false;
+            rollPenduOn = true;
+            paramJeuPendu = petitMessage.split(' ');
+
+                
+
+            var quelEstCePokemon = Rand(taillePokedex)-1;
+
+            if(paramJeuPendu[1]==="en"){
+                await message.channel.send("Prêt·e·s ? :flag_gb:");
+
+                nomPokemonPendu = tabPokemon[quelEstCePokemon][5];
+                nomPokemonTrad = tabPokemon[quelEstCePokemon][0];
+                penduEN = true;
+            }else{
+                await message.channel.send("Prêt·e·s ? :flag_fr:");
+
+                nomPokemonPendu = tabPokemon[quelEstCePokemon][0];
+                penduEN = false;
+            }
+            
+            
+            //nomPokemonPendu = "Rattata d'alola";
+            while(nomPokemonPendu.includes(":")||nomPokemonPendu.includes(".")||nomPokemonPendu.match(/[0-9]/g))
+            {
+                quelEstCePokemon = Rand(taillePokedex)-1;
+                nomPokemonPendu = tabPokemon[quelEstCePokemon][0];
+            }
+
+            console.log("Nom : "+nomPokemonPendu);
+            nomPokemonTab = nomPokemonPendu.toUpperCase().split('');
+            guessPokemonTab = nomPokemonPendu.split('');
+            var ksize = 0;
+            long = nomPokemonPendu.length;
+            guessPokemon = "";
+            while(nomPokemonTab[ksize]!=undefined)
+            {   guessPokemonTab[ksize] = "_";
+                
+                
+                if(nomPokemonTab[ksize]=="'"||nomPokemonTab[ksize]=="-"||nomPokemonTab[ksize]==" ")
+                {
+                    if(ksize+1==long)
+                    {
+                        guessPokemon = guessPokemon + nomPokemonTab[ksize];
+                    }else{
+                        guessPokemon = guessPokemon + nomPokemonTab[ksize] + " ";
+                    }
+                }else
+                {
+                    if(ksize+1==long)
+                    {
+                        guessPokemon = guessPokemon + guessPokemonTab[ksize];
+                    }else{
+                        guessPokemon = guessPokemon + guessPokemonTab[ksize] + " ";
+                    }
+                }
+                        //console.log(nomPokemonTab[ksize].toUpperCase());
+                
+            ksize++;}
+            console.log("Nom : "+nomPokemonPendu);
+
+            if(paramJeuPendu[1]==="en"){
+                await message.channel.send("Le nom de Pokémon **en anglais** à deviner est :");
+            }else{
+                await message.channel.send("Le nom de Pokémon **en français** à deviner est :");
+
+            }
+            setTimeout(async function(){await message.channel.send("`"+guessPokemon+"`");rollPenduOn = false;},500);
+        }
+
+	    
         //commande "roll" dans Plus-ou-Monche
         if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monchedex&&rollOnDex==false&&reponseDex==true){
 			reponseDex = false;
@@ -1009,6 +1102,30 @@ bot.on('message', async function (message, user) {
             }
         }
 
+        //commande "soluce" dans salon Amrmagé-monche?
+        if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.pendu){
+            if(reponsePendu==false){
+                if(rollPenduOn==false){
+                    if(gamePenduOn==true){
+                        rollPenduOn = false;
+                        gamePenduOn = false;
+                        reponsePendu = true;
+                        if(penduEN==false){
+                            message.channel.send("Le Pokémon qu'il fallait trouvé était : __**"+nomPokemonPendu.toUpperCase()+"**__.\r*Better Luck Next Time !* :fingers_crossed:");
+                        }else{
+                            message.channel.send("Le Pokémon qu'il fallait trouvé était : __**"+nomPokemonPendu.toUpperCase()+"**__, qui est la version anglaise de "+nomPokemonTrad.toUpperCase()+" !\r*Better Luck Next Time !* :fingers_crossed:");
+                        }
+                            lesFausseLettres = "Les propositions erronées sont :";
+                        NbrErreur = 0;            
+                        return;
+                    }else{
+                        message.channel.send("Le dernier Pokémon a déjà été trouvé/dévoilé.");return;
+                    }
+                }else{message.channel.send("Cher <@"+message.author.id+">, veuillez laisser au moins 10 secondes aux joueurs avant de dévoiler la solution. Cordialement, Bisouxx :kissing_heart:");return;}
+            }else{return;}
+        }
+	    
+
         //commande "soluce" dans salon Monche?
         if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.monche){
             if(reponse==false){
@@ -1124,6 +1241,280 @@ bot.on('message', async function (message, user) {
     //commande pour everyone
     if(message.member.roles.cache.has(auth.server.role.everyone)){
 
+	//récupération des deux types de réponses dans Armagé-monche
+
+	if(message.channel.id==auth.server.salon.pendu)
+	{
+		if(petitMessage==nomPokemonPendu.toLowerCase()&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false)
+        	{
+	            if(penduEN==false){
+	                if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+	                    message.reply(" tu as gagné 1/2 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__ !");
+	                }else{
+	                    message.reply(" tu as gagné 1 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__ !");
+	                }
+	            }else{
+	                if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+	                    message.reply(" tu as gagné 1/2 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__, qui est la version anglaise de __**"+nomPokemonTrad.toUpperCase()+"**__ !");
+	                }else{
+	                    message.reply(" tu as gagné 1 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__, qui est la version anglaise de __**"+nomPokemonTrad.toUpperCase()+"**__ !");
+	                }
+	            }
+
+		    lesFausseLettres = "Les propositions erronées sont :";
+		    NbrErreur = 0;
+		    reponsePendu = true;
+		    gamePenduOn = false;
+		    rollPenduOn = false;
+		    /*
+		    if(tournoiOn==true){
+			const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+			compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap pur !`);
+		    }
+		    */
+		    return;
+		}
+
+		if(petitMessage.length===1 && petitMessage.match(/[a-z]/i)&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false)
+		{
+	
+		    var goTab = 0;
+		    lettre = petitMessage.toUpperCase();
+		    console.log("ma proposition est : "+lettre);
+		    guessPokemon = "";
+		    var correct = false;
+		    var gsize = 5;
+	
+		    wrongGuess = lesFausseLettres.split(' ');
+		    while(wrongGuess[gsize]!=undefined)
+		    {
+			if(lettre==wrongGuess[gsize])
+			{
+			    await message.reply("La lettre __**"+lettre.toUpperCase()+"**__ a déjà été proposée ! :nerd:");
+			    return;
+			}
+			gsize++;
+		    }
+	
+		    while(goTab<long)
+		    {
+			switch(lettre){
+			    case "A" : 
+				if("À"==nomPokemonTab[goTab] || "Ä"==nomPokemonTab[goTab] || "Â"==nomPokemonTab[goTab])
+				{
+				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+				    correct = true;
+				}
+				break;
+			    case "C" : 
+				if("Ç"==nomPokemonTab[goTab])
+				{
+				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+				    correct = true;
+				}
+				break;
+			    case "E" : 
+				if("É"==nomPokemonTab[goTab] || "È"==nomPokemonTab[goTab] || "Ë"==nomPokemonTab[goTab] || "Ê"==nomPokemonTab[goTab])
+				{
+				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+				    correct = true;
+				}
+				break;
+			    case "I" : 
+				if("Ï"==nomPokemonTab[goTab] || "Î"==nomPokemonTab[goTab])
+				{
+				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+				    correct = true;
+				}
+				break;
+			    case "O" : 
+				if("Ö"==nomPokemonTab[goTab] || "Ô"==nomPokemonTab[goTab])
+				{
+				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+				    correct = true;
+				}
+				break;
+			    case "U" : 
+				if("Ü"==nomPokemonTab[goTab] || "Û"==nomPokemonTab[goTab] || "Ù"==nomPokemonTab[goTab])
+				{
+				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+				    correct = true;
+				}
+				break;
+			    default : 
+			    break;
+			}
+	
+	
+			if(lettre==nomPokemonTab[goTab]||nomPokemonTab[goTab]=="'"||nomPokemonTab[goTab]=="-"||nomPokemonTab[goTab]==" ")
+			{
+			    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+			    correct = true;
+			}
+	
+			if(goTab+1==long)
+			{
+			    guessPokemon = guessPokemon + guessPokemonTab[goTab];
+			}else{
+			    guessPokemon = guessPokemon + guessPokemonTab[goTab] + " ";
+			}
+	
+	
+			goTab++;
+		    }
+		    console.log("Le nom à deviner est " +guessPokemon);
+	
+		    if(correct == false)
+		    {
+			NbrErreur++;
+			var colorPendu = "";
+			var titrePendu = "";
+			var descriPendu = "";
+			var lienImagePendu = 'attachment://arma/0.png';
+	
+			switch (NbrErreur)
+			{
+			    case 1 :
+				colorPendu = "#57F287";
+				titrePendu = "**__Première Erreur__**";
+				descriPendu = "C'est pas très grave !";
+				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716172215853218/1.png';
+				break;
+			    case 2 :
+				colorPendu = "#1F8B4C";
+				titrePendu = "**__Deuxième Erreur__**";
+				descriPendu = "C'est pas grave !";
+				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716184375144448/2.png';
+				break;
+			    case 3 :
+				colorPendu = "#F1C40F";
+				titrePendu = "**__Troisième Erreur__**";
+				descriPendu = "Faîtes attention quand même !";
+				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716194110124096/3.png';
+				break;    
+			    case 4 :
+				colorPendu = "#C27C0E";
+				titrePendu = "**__Quatrième Erreur__**";
+				descriPendu = "Mouais mouais !";
+				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716210765705307/4.png';
+				break;
+			    case 5 :
+				colorPendu = "#E67E22";
+				titrePendu = "**__Cinquième Erreur__**";
+				descriPendu = "Bon alors vous trouvez ?!";
+				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716226607595520/5.png';
+				break;
+			    case 6 :
+				colorPendu = "#A84300";
+				titrePendu = "**__Sixième Erreur__**";
+				descriPendu = "Oulàlà, ça va plus !";
+				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716242294280222/6.png';
+				break;
+			    case 7 :
+				colorPendu = "#ED4245";
+				titrePendu = "**__Septième Erreur__**";
+				descriPendu = "Rien ne va plus !";
+				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716260732436480/7.png';
+				break;    
+			    case 8 :
+				colorPendu = "#992D22";
+				titrePendu = "**__Huitième Erreur__**";
+				descriPendu = "La prochaine et c'est perdu !";
+				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716280688951296/8.png';
+				break;  
+			    case 9 :
+				colorPendu = "#2C3E50";
+				titrePendu = "**__PERDU__**";
+				descriPendu = "J'avais prévenu !";
+				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716302457372754/9.png';
+				break;
+			    default : 
+				colorPendu = "#000000";
+				titrePendu = "**__RIEN__**";
+				descriPendu = "Rien !";
+				lienImagePendu = 'https://www.pokepedia.fr/images/thumb/7/74/Qulbutok%C3%A9-HGSS.png/250px-Qulbutok%C3%A9-HGSS.png';
+				break;
+			}
+	
+	
+	
+			const messageErreurPendu = new EmbedBuilder()
+				.setColor(colorPendu)
+				.setTitle(titrePendu)
+				.setDescription(descriPendu)
+				.setImage(lienImagePendu)
+				.setFooter({ text: 'Armagé-monche'});
+	
+		    
+			await message.channel.send({embeds: [messageErreurPendu]});
+	
+			lesFausseLettres = lesFausseLettres +" "+ lettre;
+			console.log(lesFausseLettres);
+		    }else{correct = false;}
+	
+		    if (NbrErreur==9)
+		    {
+	
+			if(penduEN==false){
+			    await message.channel.send("La bonne réponse était __**"+nomPokemonPendu.toUpperCase()+ "**__ !");
+			}else{
+			    await message.channel.send("La bonne réponse était __**"+nomPokemonPendu.toUpperCase()+"**__ qui est la version anglaise de __**"+nomPokemonTrad.toUpperCase()+"**__ !");
+			}
+			lesFausseLettres = "Les propositions erronées sont :";
+			NbrErreur = 0;  
+			fini = 0;
+			reponsePendu = true;
+			gamePenduOn = false;
+			reponsePendu = true;
+		    }else{
+	
+			var fini = 0;
+			for (let pp = 0;pp<long;pp++)
+			{
+			    if(guessPokemonTab[pp]=="_")
+			    {fini++;}
+			}
+			if (fini >0)
+			{
+			    await message.channel.send("`"+guessPokemon+"`");
+			    if(NbrErreur!=0){
+				await message.channel.send(lesFausseLettres);
+			    }
+			}else{
+			    if(penduEN==false){
+				if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+				    message.reply(" tu as gagné 1/2 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__ !");
+				}else{
+				    message.reply(" tu as gagné 1 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__ !");
+				}
+			    }else{
+				if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+				    message.reply(" tu as gagné 1/2 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__, qui est la version anglaise de __**"+nomPokemonTrad.toUpperCase()+"**__ !");
+				}else{
+				    message.reply(" tu as gagné 1 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__, qui est la version anglaise de __**"+nomPokemonTrad.toUpperCase()+"**__ !");
+				}
+			    }
+	
+				/*
+				if(tournoiOn==true){
+				    const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
+				    compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap pur !`);
+				}
+				*/
+				lesFausseLettres = "Les propositions erronées sont :";
+			    
+			    NbrErreur = 0;
+			    fini = 0;
+			    reponsePendu = true;
+			    gamePenduOn = false;
+			    reponsePendu = true;
+			}
+		    }
+		    return;
+	
+		}
+		}
+	    
         //récupération des réponses dans Monche? Snap
         if(message.channel.id==auth.server.salon.monchesnap&&gameOnSnap==true)
         {
