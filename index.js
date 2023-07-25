@@ -1380,61 +1380,61 @@ bot.on('message', async function (message, user) {
 				colorPendu = "#57F287";
 				titrePendu = "**__Première Erreur__**";
 				descriPendu = "C'est pas très grave !";
-				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716172215853218/1.png';
+				lienImagePendu = 'https://shinytsv.fr/imagesURL/1.png';
 				break;
 			    case 2 :
 				colorPendu = "#1F8B4C";
 				titrePendu = "**__Deuxième Erreur__**";
 				descriPendu = "C'est pas grave !";
-				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716184375144448/2.png';
+				lienImagePendu = 'https://shinytsv.fr/imagesURL/2.png';
 				break;
 			    case 3 :
 				colorPendu = "#F1C40F";
 				titrePendu = "**__Troisième Erreur__**";
 				descriPendu = "Faîtes attention quand même !";
-				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716194110124096/3.png';
+				lienImagePendu = 'https://shinytsv.fr/imagesURL/3.png';
 				break;    
 			    case 4 :
 				colorPendu = "#C27C0E";
 				titrePendu = "**__Quatrième Erreur__**";
 				descriPendu = "Mouais mouais !";
-				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716210765705307/4.png';
+				lienImagePendu = 'https://shinytsv.fr/imagesURL/4.png';
 				break;
 			    case 5 :
 				colorPendu = "#E67E22";
 				titrePendu = "**__Cinquième Erreur__**";
 				descriPendu = "Bon alors vous trouvez ?!";
-				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716226607595520/5.png';
+				lienImagePendu = 'https://shinytsv.fr/imagesURL/5.png';
 				break;
 			    case 6 :
 				colorPendu = "#A84300";
 				titrePendu = "**__Sixième Erreur__**";
 				descriPendu = "Oulàlà, ça va plus !";
-				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716242294280222/6.png';
+				lienImagePendu = 'https://shinytsv.fr/imagesURL/6.png';
 				break;
 			    case 7 :
 				colorPendu = "#ED4245";
 				titrePendu = "**__Septième Erreur__**";
 				descriPendu = "Rien ne va plus !";
-				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716260732436480/7.png';
+				lienImagePendu = 'https://shinytsv.fr/imagesURL/7.png';
 				break;    
 			    case 8 :
 				colorPendu = "#992D22";
 				titrePendu = "**__Huitième Erreur__**";
 				descriPendu = "La prochaine et c'est perdu !";
-				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716280688951296/8.png';
+				lienImagePendu = 'https://shinytsv.fr/imagesURL/8.png';
 				break;  
 			    case 9 :
 				colorPendu = "#2C3E50";
 				titrePendu = "**__PERDU__**";
 				descriPendu = "J'avais prévenu !";
-				lienImagePendu = 'https://cdn.discordapp.com/attachments/273902015900549122/1132716302457372754/9.png';
+				lienImagePendu = 'https://shinytsv.fr/imagesURL/9.png';
 				break;
 			    default : 
 				colorPendu = "#000000";
 				titrePendu = "**__RIEN__**";
 				descriPendu = "Rien !";
-				lienImagePendu = 'https://www.pokepedia.fr/images/thumb/7/74/Qulbutok%C3%A9-HGSS.png/250px-Qulbutok%C3%A9-HGSS.png';
+				lienImagePendu = 'https://shinytsv.fr/imagesURL/0.png';
 				break;
 			}
 	
