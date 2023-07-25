@@ -170,7 +170,7 @@ var penduEN = false;
 
 
 
-
+//'minute heure jour mois (jour de la semaine)'//
 var test = '18 21 13 1 *';
 
 ///////////////////////
