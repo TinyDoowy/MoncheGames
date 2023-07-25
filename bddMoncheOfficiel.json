@@ -158,7 +158,7 @@
 7,
 1,
             "Ténèbres Normal",
-"Rattata"
+"Alolan Rattata"
         ],
         [
             "Rattatac",
@@ -174,7 +174,7 @@
 7,
 2,
             "Ténèbres Normal",
-"Raticate"
+"Alolan Raticate"
         ],
         [
             "Piafabec",
@@ -230,7 +230,7 @@
 7,
 3,
             "Électrique Psy",
-"Raichu"
+"Alolan Raichu"
         ],
         [
             "Sabelette",
@@ -246,7 +246,7 @@
 7,
 1,
             "Glace Acier",
-"Sandshrew"
+"Alolan Sandshrew"
         ],
         [
             "Sablaireau",
@@ -262,7 +262,7 @@
 7,
 2,
             "Glace Acier",
-"Sandslash"
+"Alolan Sandslash"
         ],
         [
             "Nidoran",
@@ -350,7 +350,7 @@
 7,
 2,
             "Glace Fée",
-"Ninetales"
+"Alolan Ninetales"
         ],
         [
             "Rondoudou",
@@ -454,7 +454,7 @@
 7,
 1,
             "Sol Acier",
-"Diglett"
+"Alolan Diglett"
         ],
         [
             "Triopikeur",
@@ -470,7 +470,7 @@
 7,
 2,
             "Sol Acier",
-"Dugtrio"
+"Alolan Dugtrio"
         ],
         [
             "Miaouss",
@@ -486,7 +486,7 @@
 7,
 1,
             "Ténèbres",
-"Meowth"
+"Alolan Meowth"
         ],
         [
             "Miaouss de Galar",
@@ -494,7 +494,7 @@
 8,
 1,
             "Acier",
-"Meowth"
+"Galarian Meowth"
         ],
         [
             "Persian",
@@ -510,7 +510,7 @@
 7,
 2,
             "Ténèbres",
-"Persian"
+"Alolan Persian"
         ],
         [
             "Psykokwak",
@@ -686,7 +686,7 @@
 7,
 1,
             "Roche Électrique",
-"Geodude"
+"Alolan Geodude"
         ],
         [
             "Gravalanch",
@@ -702,7 +702,7 @@
 7,
 2,
             "Roche Électrique",
-"Graveler"
+"Alolan Graveler"
         ],
         [
             "Grolem",
@@ -718,7 +718,7 @@
 7,
 3,
             "Roche Électrique",
-"Golem"
+"Alolan Golem"
         ],
         [
             "Ponyta",
@@ -734,7 +734,7 @@
 8,
 1,
             "Psy",
-"Ponyta"
+"Galarian Ponyta"
         ],
         [
             "Galopa",
@@ -750,7 +750,7 @@
 8,
 2,
             "Psy Fée",
-"Rapidash"
+"Galarian Rapidash"
         ],
         [
             "Ramoloss",
@@ -766,7 +766,7 @@
 8,
 1,
             "Psy",
-"Slowpoke"
+"Galarian Slowpoke"
         ],
         [
             "Flagadoss",
@@ -782,7 +782,7 @@
 8,
 2,
             "Poison Psy",
-"Slowbro"
+"Galarian Slowbro"
         ],
         [
             "Magnéti",
@@ -814,7 +814,7 @@
 8,
 1,
             "Combat",
-"Farfetch'd"
+"Galarian Farfetch'd"
         ],
         [
             "Doduo",
@@ -862,7 +862,7 @@
 7,
 1,
             "Poison Ténèbres",
-"Grimer"
+"Alolan Grimer"
         ],
         [
             "Grotadmorv",
@@ -878,7 +878,7 @@
 7,
 2,
             "Poison Ténèbres",
-"Muk"
+"Alolan Muk"
         ],
         [
             "Kokiyas",
@@ -998,7 +998,7 @@
 7,
 2,
             "Plante Dragon",
-"Exeggutor"
+"Alolan Exeggutor"
         ],
         [
             "Osselait",
@@ -1022,7 +1022,7 @@
 7,
 2,
             "Feu Spectre",
-"Marowak"
+"Alolan Marowak"
         ],
         [
             "Kicklee",
@@ -1070,7 +1070,7 @@
 8,
 2,
             "Poison Fée",
-"Weezing"
+"Galarian Weezing"
         ],
         [
             "Rhinocorne",
@@ -1174,7 +1174,7 @@
 8,
 2,
             "Glace Psy",
-"Mr. Mime"
+"Galarian Mr. Mime"
         ],
         [
             "Insécateur",
@@ -1358,7 +1358,7 @@
 8,
 1,
             "Psy Vol",
-"Articuno"
+"Galarian Articuno"
         ],
         [
             "Électhor",
@@ -1374,7 +1374,7 @@
 8,
 1,
             "Combat Vol",
-"Zapdos"
+"Galarian Zapdos"
         ],
         [
             "Sulfura",
@@ -1390,7 +1390,7 @@
 8,
 1,
             "Ténèbres Vol",
-"Moltres"
+"Galarian Moltres"
         ],
         [
             "Minidraco",
@@ -1822,7 +1822,7 @@
 8,
 2,
             "Poison Psy",
-"Slowking"
+"Galarian Slowking"
         ],
         [
             "Feuforêve",
@@ -2014,7 +2014,7 @@
 8,
 1,
             "Spectre",
-"Corsola"
+"Galarian Corsola"
         ],
         [
             "Rémoraid",
@@ -2350,7 +2350,7 @@
 8,
 1,
             "Ténèbres Normal",
-"Zigzagoon"
+"Galarian Zigzagoon"
         ],
         [
             "Linéon",
@@ -2366,7 +2366,7 @@
 8,
 2,
             "Ténèbres Normal",
-"Linoone"
+"Galarian Linoone"
         ],
         [
             "Chenipotte",
@@ -4694,7 +4694,7 @@
 8,
 1,
             "Glace",
-"Darumaka"
+"Galarian Darumaka"
         ],
         [
             "Darumacho",
@@ -4710,7 +4710,7 @@
 8,
 2,
             "Glace Feu",
-"Darmanitan"
+"Galarian Darmanitan"
         ],
         [
             "Maracachi",
@@ -4774,7 +4774,7 @@
 8,
 1,
             "Sol Spectre",
-"Yamask"
+"Galarian Yamask"
         ],
         [
             "Tutankafer",
@@ -5230,7 +5230,7 @@
 8,
 1,
             "Sol Acier",
-"Stunfisk"
+"Galarian Stunfisk"
         ],
         [
             "Kungfouine",
