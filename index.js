@@ -59,6 +59,7 @@ var nomPokemon = "";
 var paramJeu = "";
 var enAttente = "";
 var nomPokemonEN = "";
+var nomPokemonENTrad = "";
 var paramJeuEN = "";
 var enAttenteEN = "";
 //variable pour aider le bot à mieux guess le num de dex :)
@@ -963,6 +964,7 @@ bot.on('message', async function (message, user) {
             //récupération des Lettres (dénominateur commun)
                 var quelEstCePokemonEN = Rand(taillePokedex)-1;
                 nomPokemonEN = tabPokemon[quelEstCePokemonEN][5];
+                nomPokemonENTrad = tabPokemon[quelEstCePokemonEN][0];
                 console.log("Nom : "+nomPokemonEN);
                 lettre1EN = nomPokemonEN.charAt(0).toUpperCase();
                 lettre2EN = nomPokemonEN.charAt(Rand(nomPokemonEN.length-1)).toUpperCase();
@@ -1150,7 +1152,7 @@ bot.on('message', async function (message, user) {
                         gameOnEN = false;
                         rollOnEN = false;
                         reponseEN = true;
-                        message.channel.send("One of the possible answer was : __**"+nomPokemonEN+"**__.\r*Better Luck Next Time !* :fingers_crossed:");return;
+                        message.channel.send("One of the possible answer was : __**"+nomPokemonEN+"**__ (:flag_fr: "+nomPokemonENTrad+" ).\r*Better Luck Next Time !* :fingers_crossed:");return;
                     }else{
                         message.channel.send("The last roll has already been discovered or answered.");return;
                     }
@@ -1956,11 +1958,13 @@ bot.on('message', async function (message, user) {
                     for(k=0;k<taillePokedex;k++){
                         if(petitMessage == tabPokemon[k][5].toLowerCase())
                             {
+				nomPokemonENTrad = tabPokemon[k][0];
+				nomPokemonEN = tabPokemon[k][5];
                                 if (typePickedEN==""&&genEN==0&&stadeEN==0){
                                     if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
-                                        message.reply(" you earned 1/2 point ! :partying_face:");
+                                        message.reply(" you earned 1/2 point ! :partying_face:\r:flag_gb: "+nomPokemonEN+" = "+nomPokemonENTrad+" :flag_fr:");
                                     }else{
-                                        message.reply(" you earned 1 point ! :partying_face:");
+                                        message.reply(" you earned 1 point ! :partying_face:\r:flag_gb: "+nomPokemonEN+" = "+nomPokemonENTrad+" :flag_fr:");
                                     }
                                     if(tournoiOn==true){
                                         const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
@@ -1973,9 +1977,9 @@ bot.on('message', async function (message, user) {
                                 }else if (genEN==0&&stadeEN==0){
                                     if(tabPokemon[k][4].includes(typePickedTemp)){
                                         if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
-                                            message.reply(" you earned 1/2 point ! :partying_face:");
+                                            message.reply(" you earned 1/2 point ! :partying_face:\r:flag_gb: "+nomPokemonEN+" = "+nomPokemonENTrad+" :flag_fr:");
                                         }else{
-                                            message.reply(" you earned 1 point ! :partying_face:");
+                                            message.reply(" you earned 1 point ! :partying_face:\r:flag_gb: "+nomPokemonEN+" = "+nomPokemonENTrad+" :flag_fr:");
                                         }
                                         if(tournoiOn==true){
                                             const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
@@ -1992,9 +1996,9 @@ bot.on('message', async function (message, user) {
                                 }else if (stadeEN==0){
                                     if(genEN == tabPokemon[k][2]){
                                             if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
-                                                message.reply(" you earned 1/2 point ! :partying_face:");
+                                                message.reply(" you earned 1/2 point ! :partying_face:\r:flag_gb: "+nomPokemonEN+" = "+nomPokemonENTrad+" :flag_fr:");
                                             }else{
-                                                message.reply(" you earned 1 point ! :partying_face:");
+                                                message.reply(" you earned 1 point ! :partying_face:\r:flag_gb: "+nomPokemonEN+" = "+nomPokemonENTrad+" :flag_fr:");
                                             }
                                             if(tournoiOn==true){
                                                 const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
@@ -2010,9 +2014,9 @@ bot.on('message', async function (message, user) {
                                     }
                                 }else if (stadeEN== tabPokemon[k][3]){
                                     if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
-                                        message.reply(" you earned 1/2 point ! :partying_face:");
+                                        message.reply(" you earned 1/2 point ! :partying_face:\r:flag_gb: "+nomPokemonEN+" = "+nomPokemonENTrad+" :flag_fr:");
                                     }else{
-                                        message.reply(" you earned 1 point ! :partying_face:");
+                                        message.reply(" you earned 1 point ! :partying_face:\r:flag_gb: "+nomPokemonEN+" = "+nomPokemonENTrad+" :flag_fr:");
                                     }
                                     if(tournoiOn==true){
                                         const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
