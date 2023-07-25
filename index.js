@@ -1475,13 +1475,14 @@ bot.on('message', async function (message, user) {
 			    if(guessPokemonTab[pp]=="_")
 			    {fini++;}
 			}
-			if (fini >0)
-			{
+			//if (fini >0)
+			//{
 			    await message.channel.send("`"+guessPokemon+"`");
 			    if(NbrErreur!=0){
 				await message.channel.send(lesFausseLettres);
 			    }
-			}else{
+			//}else{
+			if(fini==0){
 			    if(penduEN==false){
 				if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
 				    message.reply(" tu as gagné 1/2 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__ !");
