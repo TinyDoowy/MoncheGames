@@ -1268,12 +1268,12 @@ bot.on('message', async function (message, user) {
 		    reponsePendu = true;
 		    gamePenduOn = false;
 		    rollPenduOn = false;
-		    /*
+		    
 		    if(tournoiOn==true){
 			const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
-			compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap pur !`);
+			compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Armagé-monche !`);
 		    }
-		    */
+		    
 		    return;
 		}
 
@@ -1497,12 +1497,12 @@ bot.on('message', async function (message, user) {
 				}
 			    }
 	
-				/*
+				
 				if(tournoiOn==true){
 				    const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
-				    compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Snap pur !`);
+				    compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Armagé-monche !`);
 				}
-				*/
+				
 				lesFausseLettres = "Les propositions erronées sont :";
 			    
 			    NbrErreur = 0;
