@@ -1115,7 +1115,7 @@ bot.on('message', async function (message, user) {
                         if(penduEN==false){
                             message.channel.send("Le Pokémon qu'il fallait trouvé était : __**"+nomPokemonPendu.toUpperCase()+"**__.\r*Better Luck Next Time !* :fingers_crossed:");
                         }else{
-                            message.channel.send("Le Pokémon qu'il fallait trouvé était : __**"+nomPokemonPendu.toUpperCase()+"**__, qui est la version anglaise de "+nomPokemonTrad.toUpperCase()+" !\r*Better Luck Next Time !* :fingers_crossed:");
+                            message.channel.send("Le Pokémon qu'il fallait trouvé était : __**"+nomPokemonPendu.toUpperCase()+"**__, qui est la version anglaise de __**"+nomPokemonTrad.toUpperCase()+"**__ !\r*Better Luck Next Time !* :fingers_crossed:");
                         }
                             lesFausseLettres = "Les propositions erronées sont :";
                         NbrErreur = 0;            
