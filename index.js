@@ -1387,7 +1387,9 @@ bot.on('message', async function (message, user) {
 			    console.log(lettre+" est juste");
 
 			    guessPokemonTab[goTab]=nomPokemonTab[goTab];
-			    correct = true;
+			    if(lettre==nomPokemonTab[goTab]){
+				correct = true;
+			    }
 			}
 	
 			if(goTab+1==long)
