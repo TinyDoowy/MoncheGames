@@ -167,6 +167,7 @@ var rollPenduOn = false;
 var gamePenduOn = false;
 var reponsePendu = true;
 var penduEN = false;
+var guessOn = false;
 
 
 
@@ -1247,8 +1248,9 @@ bot.on('message', async function (message, user) {
 
 	if(message.channel.id==auth.server.salon.pendu)
 	{
-		if(petitMessage==nomPokemonPendu.toLowerCase()&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false)
+		if(petitMessage==nomPokemonPendu.toLowerCase()&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false&&guessOn==false)
         	{
+		    guessOn = true;
 	            if(penduEN==false){
 	                if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
 	                    message.reply(" tu as gagné 1/2 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__ !");
@@ -1273,13 +1275,13 @@ bot.on('message', async function (message, user) {
 			const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
 			compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Armagé-monche !`);
 		    }
-		    
+		    guessOn = false;
 		    return;
 		}
 
-		if(petitMessage.length===1 && petitMessage.match(/[a-z]/i)&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false)
+		if(petitMessage.length===1 && petitMessage.match(/[a-z]/i)&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false&&guessOn==false)
 		{
-	
+			guessOn = true;
 		    var goTab = 0;
 		    lettre = petitMessage.toUpperCase();
 		    console.log("ma proposition est : "+lettre);
@@ -1512,6 +1514,7 @@ bot.on('message', async function (message, user) {
 			    reponsePendu = true;
 			}
 		    }
+		    guessOn = false;
 		    return;
 	
 		}
