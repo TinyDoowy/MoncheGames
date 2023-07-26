@@ -1326,6 +1326,7 @@ bot.on('message', async function (message, user) {
 			if(lettre==wrongGuess[gsize])
 			{
 			    await message.reply("La lettre __**"+lettre.toUpperCase()+"**__ a déjà été proposée ! :nerd:");
+			    guessPenduOn = false;
 			    return;
 			}
 			gsize++;
