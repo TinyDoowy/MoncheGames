@@ -85,11 +85,13 @@ var allTypesEN;
 var randrollEN;
 
 
-//variable ru roll médicamonche
+//variable du roll médicamonche
 var display;
 var LangueMessage;
 var idToCheck;
 
+//variable du roll Plus ou Monche
+var guessPoMOn = false;
 
 //Variable des roll snap
 var tabTypePickedSnap;
@@ -167,7 +169,7 @@ var rollPenduOn = false;
 var gamePenduOn = false;
 var reponsePendu = true;
 var penduEN = false;
-var guessOn = false;
+var guessPenduOn = false;
 
 
 
@@ -1248,9 +1250,9 @@ bot.on('message', async function (message, user) {
 
 	if(message.channel.id==auth.server.salon.pendu)
 	{
-		if(petitMessage==nomPokemonPendu.toLowerCase()&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false&&guessOn==false)
+		if(petitMessage==nomPokemonPendu.toLowerCase()&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false&&guessPenduOn==false)
         	{
-		    guessOn = true;
+		    guessPenduOn = true;
 	            if(penduEN==false){
 	                if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
 	                    message.reply(" tu as gagné 1/2 point ! :partying_face:\rIl fallait bien trouver __**"+nomPokemonPendu.toUpperCase()+"**__ !");
@@ -1275,13 +1277,13 @@ bot.on('message', async function (message, user) {
 			const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
 			compteurScore.send(`**<@${message.author.id}>** a gagné 1 point sur un roll Armagé-monche !`);
 		    }
-		    guessOn = false;
+		    guessPenduOn = false;
 		    return;
 		}
 
-		if(petitMessage.length===1 && petitMessage.match(/[a-z]/i)&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false&&guessOn==false)
+		if(petitMessage.length===1 && petitMessage.match(/[a-z]/i)&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false&&guessPenduOn==false)
 		{
-			guessOn = true;
+			guessPenduOn = true;
 		    var goTab = 0;
 		    lettre = petitMessage.toUpperCase();
 		    console.log("ma proposition est : "+lettre);
@@ -1514,7 +1516,7 @@ bot.on('message', async function (message, user) {
 			    reponsePendu = true;
 			}
 		    }
-		    guessOn = false;
+		    guessPenduOn = false;
 		    return;
 	
 		}
@@ -2071,8 +2073,8 @@ bot.on('message', async function (message, user) {
         {
             if(rollOnDex==false){
 
-            	if(petitMessage==prefixBot){
-
+            	if(petitMessage==prefixBot&&guessPoMOn==false){
+			guessPoMOn = true;
             		var botGuess = Rand(parseInt(maxDex)-parseInt(minDex)-parseInt(1))+parseInt(minDex);
             		console.log(parseInt(maxDex)-parseInt(minDex)-parseInt(1)+parseInt(minDex));
             		await message.channel.send(botGuess);
@@ -2100,6 +2102,7 @@ bot.on('message', async function (message, user) {
             		}
 
             		enAttente = "";
+			guessPoMOn = false;
             		return;
 
 
@@ -2112,13 +2115,14 @@ bot.on('message', async function (message, user) {
         			message.reply(" non petit Chacripan ! Tu ne peux pas proposer deux réponses à la suite.\rAttends qu'un autre joueur fasse une proposition.");
         			return;
                 }else{
-
+		    if(guessPoMOn==false){
+			guessPoMOn = true;
                 	if(petitMessage==numDex){
-                        if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
-                            message.reply(" tu as gagné 1/2 point ! :partying_face:");
-                        }else{
-                            message.reply(" tu as gagné 1 point ! :partying_face:");
-                        }
+	                        if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
+	                            message.reply(" tu as gagné 1/2 point ! :partying_face:");
+	                        }else{
+	                            message.reply(" tu as gagné 1 point ! :partying_face:");
+	                        }
 
 	                    if(tournoiOn==true){
 	                        const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
@@ -2133,6 +2137,7 @@ bot.on('message', async function (message, user) {
 							maxDex = maximumDex;
 
 	                    enAttente = "";
+			    guessPoMOn = false;
 	                    return;
                     //Il a tapé en dessous.
                 	}else if(petitMessage<numDex){
@@ -2142,6 +2147,7 @@ bot.on('message', async function (message, user) {
                 			await message.reply(" tu as visé trop bas ! Le **n° de Dex** est :arrow_upper_right: **__PLUS GRAND__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+" (inclus).");
 
                 			enAttente=message.author.id;
+					guessPoMOn = false;
                 			return;
                 	}else {
                 			if (petitMessage<maxDex){
@@ -2150,9 +2156,11 @@ bot.on('message', async function (message, user) {
                 			await message.reply(" tu as visé trop haut ! Le **n° de Dex** est :arrow_lower_right: **__PLUS PETIT__** !\rEntre "+(parseInt(minDex)+parseInt(1))+" et "+(parseInt(maxDex)-parseInt(1))+" (inclus).");
 
                 			enAttente=message.author.id;
+					guessPoMOn = false;
                 			return;
 
                 	}
+		    }
                 }
             }
         }
