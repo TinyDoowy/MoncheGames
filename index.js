@@ -270,13 +270,13 @@ bot.on('message', async function (message, user) {
         await message.channel.bulkDelete(notPinned);
     }
 
-	console.log("Coucou tout va bien jusqu'ici");
+	console.log("Je suis dans Monche");
 	console.log(message.channel.id);
-	console.log(auth.server.salon.staffmonche);
+	//console.log(auth.server.salon.staffmonche);
 
     //commande Staff pour tournoi (salon staff monche)
     if(message.member.roles.cache.has(auth.server.role.staff)&&message.channel.id==auth.server.salon.staffmonche){
-	    console.log("bon role bon channel");
+	    console.log("Tournoi ON/OFF");
         if(petitMessage.startsWith(prefixTournoiOn)){
             message.delete();
             tournoiOn = true;
@@ -290,6 +290,7 @@ bot.on('message', async function (message, user) {
             //message.reply(" le mode tournoi est activé, vous recevrez uniquement les points gagnés ici !");
         }
         if(petitMessage.startsWith(prefixTournoiOff)) {
+		
             message.delete();
             tournoiOn = false;
             const messageCheck = new Discord.MessageEmbed()
@@ -306,15 +307,19 @@ bot.on('message', async function (message, user) {
     //commande je joue useless expérons
     if(petitMessage.startsWith(prefixJeJoue)&&message.channel.parent.id==auth.server.categorie.monche) {
         message.reply(" c'est noté !");
+	    	    console.log("C'est noté");
+
     }
 
     //commande animateur ou staff (sauf role mute monche)
     if(!message.member.roles.cache.has(auth.server.role.mute)&&(message.member.roles.cache.has(auth.server.role.staff)||message.member.roles.cache.has(auth.server.role.animateur))){
 
+	    console.log("Verif role animateur");
 
 	//commande "roll" dans Armagé-Monche
 	if(petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.pendu&&gamePenduOn==false&&reponsePendu==true)
         {
+	    console.log("roll Armagé-monche");
 
             gamePenduOn = true;
             reponsePendu = false;
@@ -390,6 +395,8 @@ bot.on('message', async function (message, user) {
 	    
         //commande "roll" dans Plus-ou-Monche
         if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monchedex&&rollOnDex==false&&reponseDex==true){
+			    console.log("roll Plus ou Monche");
+
 			reponseDex = false;
 			rollOnDex = true;
             var quelEstCeDex = Rand(maximumRoll);
@@ -431,6 +438,7 @@ bot.on('message', async function (message, user) {
 
         //commande "roll" dans monche Snap
         if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monchesnap&&rollOnSnap==false&&reponseSnap==true){
+		console.log("roll monche snap");
 
             /*
             // Connection à la BDD MoncheSnap
@@ -670,7 +678,9 @@ bot.on('message', async function (message, user) {
 
         //commande "roll" dans médicamonche
         if(petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.medicamonche&&medicOn==false){
-            message.delete();
+	    console.log("Roll Médicamonche");
+
+		message.delete();
             medicOn = true;
 
                 if(Rand(4)>1){
@@ -843,6 +853,7 @@ bot.on('message', async function (message, user) {
 
         //commande "roll" dans monche? (l'original)
         if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.monche&&rollOn==false&&reponse==true){
+	    console.log("Roll monche original");
 
             reponse =false;
             rollOn = true;
@@ -953,6 +964,7 @@ bot.on('message', async function (message, user) {
 
         //commande "roll" dans monche? (l'anglais)
         if (petitMessage.startsWith(prefixStart)&&message.channel.id==auth.server.salon.moncheEN&&rollOnEN==false&&reponseEN==true){
+	    console.log("Roll monche anglais");
 
             reponseEN =false;
             rollOnEN = true;
@@ -1109,6 +1121,8 @@ bot.on('message', async function (message, user) {
 
         //commande "soluce" dans salon Amrmagé-monche?
         if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.pendu){
+		console.log("soluce armagémonche");
+
             if(reponsePendu==false){
                 if(rollPenduOn==false){
                     if(gamePenduOn==true){
@@ -1133,6 +1147,8 @@ bot.on('message', async function (message, user) {
 
         //commande "soluce" dans salon Monche?
         if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.monche){
+	    console.log("soluce Monche original");
+
             if(reponse==false){
                 if(rollOn==false){
                     if(gameOn==true){
@@ -1149,6 +1165,8 @@ bot.on('message', async function (message, user) {
 
         //commande "soluce" dans salon Monche? anglais
         if (petitMessage.startsWith(prefixSoluceEN)&&message.channel.id==auth.server.salon.moncheEN){
+	    console.log("Soluce monche anglais");
+
             if(reponseEN==false){
                 if(rollOnEN==false){
                     if(gameOnEN==true){
@@ -1164,6 +1182,8 @@ bot.on('message', async function (message, user) {
         }
         //commande "soluce" dans salon Monche-Snap
         if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.monchesnap){
+	    console.log("Soluce monche snap");
+
             if(reponseSnap==false){
                 if(rollOnSnap==false){
                     if(gameOnSnap==true){
@@ -1217,6 +1237,8 @@ bot.on('message', async function (message, user) {
 
         //commande "soluce" dans salon Plus-ou-Monche
         if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.monchedex){
+	    console.log("soluce plus ou monche");
+
             if(reponseDex==false){
                 if(rollOnDex==false){
                     if(gameOnDex==true){
@@ -1238,13 +1260,16 @@ bot.on('message', async function (message, user) {
 
     //commande "soluce" sans les rôles nécessaires :)
     if (petitMessage.startsWith(prefixSoluce)&&message.channel.id==auth.server.salon.monche&&!message.member.roles.cache.has(auth.server.role.staff)&&!message.member.roles.cache.has(auth.server.role.animateur)){
-            await message.channel.send("https://tenor.com/view/cependant-jdg-albus-humblebundledor-harry-potter-gif-17560359");
+	    console.log("soluce sans role adéquat");
+
+	    await message.channel.send("https://tenor.com/view/cependant-jdg-albus-humblebundledor-harry-potter-gif-17560359");
             await message.reply(" ... Pour avoir tenter de gratter une réponse dans le dos des animateurs, je te retire 1.000.000 de points !!! :scream:");
             return;
     }
 
     //commande pour everyone
     if(message.member.roles.cache.has(auth.server.role.everyone)){
+	    console.log("commande pour everyone");
 
 	//récupération des deux types de réponses dans Armagé-monche
 
@@ -1252,6 +1277,8 @@ bot.on('message', async function (message, user) {
 	{
 		if(petitMessage==nomPokemonPendu.toLowerCase()&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false&&guessPenduOn==false)
         	{
+	    		console.log("réponse directe pendu");
+
 		    guessPenduOn = true;
 	            if(penduEN==false){
 	                if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
@@ -1283,6 +1310,8 @@ bot.on('message', async function (message, user) {
 
 		if(petitMessage.length===1 && petitMessage.match(/[a-z]/i)&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false&&guessPenduOn==false)
 		{
+		    console.log("Réponse avec une lettre");
+
 			guessPenduOn = true;
 		    var goTab = 0;
 		    lettre = petitMessage.toUpperCase();
@@ -1354,6 +1383,8 @@ bot.on('message', async function (message, user) {
 	
 			if(lettre==nomPokemonTab[goTab]||nomPokemonTab[goTab]=="'"||nomPokemonTab[goTab]=="-"||nomPokemonTab[goTab]==" ")
 			{
+			    console.log(lettre+" est juste");
+
 			    guessPokemonTab[goTab]=nomPokemonTab[goTab];
 			    correct = true;
 			}
@@ -1372,6 +1403,8 @@ bot.on('message', async function (message, user) {
 	
 		    if(correct == false)
 		    {
+			    console.log(lettre+" est fausse");
+
 			NbrErreur++;
 			var colorPendu = "";
 			var titrePendu = "";
@@ -1525,6 +1558,8 @@ bot.on('message', async function (message, user) {
         //récupération des réponses dans Monche? Snap
         if(message.channel.id==auth.server.salon.monchesnap&&gameOnSnap==true)
         {
+	    console.log("réponse dans snap");
+
             //tant que le roll n'est pas fini
             if(rollOnSnap==false){
 
@@ -1845,6 +1880,8 @@ bot.on('message', async function (message, user) {
         //récupération des réponses dans Monche?
         if(message.channel.id==auth.server.salon.monche&&gameOn==true)
         {
+	    console.log("réponse dans monche original");
+
             if(rollOn==false){
                 //console.log(lettre1+""+lettre2);
                 if(petitMessage.startsWith(lettre1.toLowerCase())&&petitMessage.includes(lettre2.toLowerCase()))
@@ -1957,6 +1994,8 @@ bot.on('message', async function (message, user) {
         //récupération des réponses dans Monche? anglais
         if(message.channel.id==auth.server.salon.moncheEN&&gameOnEN==true)
         {
+	    console.log("réponse dans monche anglais");
+
             if(rollOnEN==false){
                 //console.log(lettre1+""+lettre2);
                 if(petitMessage.startsWith(lettre1EN.toLowerCase())&&petitMessage.includes(lettre2EN.toLowerCase()))
@@ -2071,6 +2110,8 @@ bot.on('message', async function (message, user) {
         //récupération des réponses dans Plus-ou-Monche
         if(message.channel.id==auth.server.salon.monchedex&&gameOnDex==true)
         {
+	    console.log("réponse dans plus-ou-monche");
+
             if(rollOnDex==false){
 
             	if(petitMessage==prefixBot&&guessPoMOn==false){
