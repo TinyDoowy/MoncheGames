@@ -1339,6 +1339,7 @@ bot.on('message', async function (message, user) {
 				if("À"==nomPokemonTab[goTab] || "Ä"==nomPokemonTab[goTab] || "Â"==nomPokemonTab[goTab])
 				{
 				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+			    	    console.log(lettre+" est juste avec accent");
 				    correct = true;
 				}
 				break;
@@ -1346,6 +1347,7 @@ bot.on('message', async function (message, user) {
 				if("Ç"==nomPokemonTab[goTab])
 				{
 				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+			    	    console.log(lettre+" est juste avec accent");
 				    correct = true;
 				}
 				break;
@@ -1353,6 +1355,7 @@ bot.on('message', async function (message, user) {
 				if("É"==nomPokemonTab[goTab] || "È"==nomPokemonTab[goTab] || "Ë"==nomPokemonTab[goTab] || "Ê"==nomPokemonTab[goTab])
 				{
 				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+			    	    console.log(lettre+" est juste avec accent");
 				    correct = true;
 				}
 				break;
@@ -1360,6 +1363,7 @@ bot.on('message', async function (message, user) {
 				if("Ï"==nomPokemonTab[goTab] || "Î"==nomPokemonTab[goTab])
 				{
 				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+			    	    console.log(lettre+" est juste avec accent");
 				    correct = true;
 				}
 				break;
@@ -1367,6 +1371,7 @@ bot.on('message', async function (message, user) {
 				if("Ö"==nomPokemonTab[goTab] || "Ô"==nomPokemonTab[goTab])
 				{
 				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+			    	    console.log(lettre+" est juste avec accent");
 				    correct = true;
 				}
 				break;
@@ -1374,6 +1379,7 @@ bot.on('message', async function (message, user) {
 				if("Ü"==nomPokemonTab[goTab] || "Û"==nomPokemonTab[goTab] || "Ù"==nomPokemonTab[goTab])
 				{
 				    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+			    	    console.log(lettre+" est juste avec accent");
 				    correct = true;
 				}
 				break;
@@ -1384,10 +1390,11 @@ bot.on('message', async function (message, user) {
 	
 			if(lettre==nomPokemonTab[goTab]||nomPokemonTab[goTab]=="'"||nomPokemonTab[goTab]=="-"||nomPokemonTab[goTab]==" ")
 			{
-			    console.log(lettre+" est juste");
 
 			    guessPokemonTab[goTab]=nomPokemonTab[goTab];
+				
 			    if(lettre==nomPokemonTab[goTab]){
+			    	console.log(lettre+" est juste");
 				correct = true;
 			    }
 			}
