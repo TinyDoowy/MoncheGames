@@ -385,11 +385,13 @@ bot.on('message', async function (message, user) {
 
             if(paramJeuPendu[1]==="en"){
                 await message.channel.send("Le nom de Pokémon **en anglais** à deviner est :");
+        	    setTimeout(async function(){await message.channel.send("`"+guessPokemon+"` :flag_gb:");rollPenduOn = false;},500);
+
             }else{
                 await message.channel.send("Le nom de Pokémon **en français** à deviner est :");
+	            setTimeout(async function(){await message.channel.send("`"+guessPokemon+"` :flag_fr:");rollPenduOn = false;},500);
 
             }
-            setTimeout(async function(){await message.channel.send("`"+guessPokemon+"`");rollPenduOn = false;},500);
         }
 
 	    
@@ -1524,10 +1526,15 @@ bot.on('message', async function (message, user) {
 			}
 			//if (fini >0)
 			//{
-			    await message.channel.send("`"+guessPokemon+"`");
-			    if(NbrErreur!=0){
+			if (penduEN==true){
+				await message.channel.send("`"+guessPokemon+"` :flag_gb:");
+			}else{
+				await message.channel.send("`"+guessPokemon+"` :flag_fr:");
+			}
+			    
+			if(NbrErreur!=0){
 				await message.channel.send(lesFausseLettres);
-			    }
+			}
 			//}else{
 			if(fini==0){
 			    if(penduEN==false){
