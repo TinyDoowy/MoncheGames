@@ -342,7 +342,7 @@ bot.on('message', async function (message, user) {
                 nomPokemonPendu = tabPokemon[quelEstCePokemon][0];
                 penduEN = false;
             }
-            
+            	console.log(nomPokemonPendu + " est le premier tirage");
             
             //nomPokemonPendu = "Rattata d'alola";
             while(nomPokemonPendu.includes(":")||nomPokemonPendu.includes(".")||nomPokemonPendu.match(/[0-9]/g))
@@ -355,6 +355,8 @@ bot.on('message', async function (message, user) {
 	                quelEstCePokemon = Rand(taillePokedex)-1;
 	                nomPokemonPendu = tabPokemon[quelEstCePokemon][0];
 		    }
+		  console.log(nomPokemonPendu + " est le re tirage");
+
             }
 
             console.log("Nom : "+nomPokemonPendu);
