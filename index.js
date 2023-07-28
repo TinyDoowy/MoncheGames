@@ -347,8 +347,14 @@ bot.on('message', async function (message, user) {
             //nomPokemonPendu = "Rattata d'alola";
             while(nomPokemonPendu.includes(":")||nomPokemonPendu.includes(".")||nomPokemonPendu.match(/[0-9]/g))
             {
-                quelEstCePokemon = Rand(taillePokedex)-1;
-                nomPokemonPendu = tabPokemon[quelEstCePokemon][0];
+	            if(paramJeuPendu[1]==="en"){
+	                quelEstCePokemon = Rand(taillePokedex)-1;
+	                nomPokemonPendu = tabPokemon[quelEstCePokemon][5];
+	                nomPokemonTrad = tabPokemon[quelEstCePokemon][0];
+		    }else{
+	                quelEstCePokemon = Rand(taillePokedex)-1;
+	                nomPokemonPendu = tabPokemon[quelEstCePokemon][0];
+		    }
             }
 
             console.log("Nom : "+nomPokemonPendu);
