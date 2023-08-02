@@ -1288,6 +1288,7 @@ bot.on('message', async function (message, user) {
 		if(petitMessage==nomPokemonPendu.toLowerCase()&&gamePenduOn==true&&reponsePendu==false&&rollPenduOn==false)
         	{
 	    		console.log("réponse directe pendu");
+			guessPenduOn = true;
 
 	            if(penduEN==false){
 	                if(message.author.id==auth.server.malus.nolimite||message.author.id==auth.server.malus.eloan||message.author.id==auth.server.malus.urei){
@@ -1308,6 +1309,8 @@ bot.on('message', async function (message, user) {
 		    reponsePendu = true;
 		    gamePenduOn = false;
 		    rollPenduOn = false;
+			guessPenduOn = false;
+
 		    
 		    if(tournoiOn==true){
 			const compteurScore = bot.channels.cache.get(auth.server.salon.staffmonche);
