@@ -33,8 +33,9 @@ bot.on('ready', async function () {
 var roll1p = 100;
 const prefix1p = "gamble";
 
-//variable Blanco
+//variable Blanco et code pour raids
 const prefixClean = "blanco";
+const prefixTera = "code";
 
 
 //variable tournoi staff
@@ -233,9 +234,150 @@ bot.on('message', async function (message, user) {
         }
     }
 	
-////////////////////////////////////////////////////////	
-////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////
+//Tirage 1% Avant d'aller dans la catégorie Monche /////
+////////////////////////////////////////////////////////
+	if (message.channel.id==auth.Raid.salonRaidTera||message.channel.id==auth.Raid.salonRaidTeraMute){
+	    if(petitMessage.startsWith(prefixTera)&&message.member.roles.cache.has(auth.Raid.roleLoulou) ){
+	        await setTimeout(function() {message.delete()}, 10);
+	
+	        //var splitMessage = petitMessage.substring(petitMessage.content.indexOf(" ") + 1, petitMessage.content.length);
+	        //console.log(splitMessage);/*
+	        var splitMessage = petitMessage.split(" ");
+	        console.log(splitMessage[1]);
+	            if(splitMessage[1].length === 6) {
+	                message.channel.send('Le code de <@'+message.author+'> est : ' + splitMessage[1].toUpperCase());
+	                var codeEmote = "";
+	                var codeErreur = false;
+	                for (var i = 0; i < splitMessage[1].length; i++) {
+	                    switch(splitMessage[1].charAt(i)) {
+	                        case "a":
+	                            codeEmote = codeEmote+":regional_indicator_a: "
+	                        break;
+	                        case "b":
+	                            codeEmote = codeEmote+":regional_indicator_b: "
+	                        break;
+	                        case "c":
+	                            codeEmote = codeEmote+":regional_indicator_c: "
+	                        break;
+	                        case "d":
+	                            codeEmote = codeEmote+":regional_indicator_d: "
+	                        break;
+	                        case "e":
+	                            codeEmote = codeEmote+":regional_indicator_e: "
+	                        break;
+	                        case "f":
+	                            codeEmote = codeEmote+":regional_indicator_f: "
+	                        break;
+	                        case "g":
+	                            codeEmote = codeEmote+":regional_indicator_g: "
+	                        break;
+	                        case "h":
+	                            codeEmote = codeEmote+":regional_indicator_h: "
+	                        break;
+	                        case "i":
+	                            codeEmote = codeEmote+":one: "
+	                        break;
+	                        case "j":
+	                            codeEmote = codeEmote+":regional_indicator_j: "
+	                        break;
+	                        case "k":
+	                            codeEmote = codeEmote+":regional_indicator_k: "
+	                        break;
+	                        case "l":
+	                            codeEmote = codeEmote+":regional_indicator_l: "
+	                        break;
+	                        case "m":
+	                            codeEmote = codeEmote+":regional_indicator_m: "
+	                        break;
+	                        case "n":
+	                            codeEmote = codeEmote+":regional_indicator_n: "
+	                        break;
+	                        case "o":
+	                            codeEmote = codeEmote+":zero: "
+	                        break;
+	                        case "p":
+	                            codeEmote = codeEmote+":regional_indicator_p: "
+	                        break;
+	                        case "q":
+	                            codeEmote = codeEmote+":regional_indicator_q: "
+	                        break;
+	                        case "r":
+	                            codeEmote = codeEmote+":regional_indicator_r: "
+	                        break;
+	                        case "s":
+	                            codeEmote = codeEmote+":regional_indicator_s: "
+	                        break;
+	                        case "t":
+	                            codeEmote = codeEmote+":regional_indicator_t: "
+	                        break;
+	                        case "u":
+	                            codeEmote = codeEmote+":regional_indicator_u: "
+	                        break;
+	                        case "v":
+	                            codeEmote = codeEmote+":regional_indicator_v: "
+	                        break;
+	                        case "w":
+	                            codeEmote = codeEmote+":regional_indicator_w: "
+	                        break;
+	                        case "x":
+	                            codeEmote = codeEmote+":regional_indicator_x: "
+	                        break;
+	                        case "y":
+	                            codeEmote = codeEmote+":regional_indicator_y: "
+	                        break;
+	                        case "z":
+	                            codeEmote = codeEmote+":two: "
+	                        break;
+	                        case "0":
+	                            codeEmote = codeEmote+":zero: "
+	                        break;
+	                        case "1":
+	                            codeEmote = codeEmote+":one: "
+	                        break;
+	                        case "2":
+	                            codeEmote = codeEmote+":two: "
+	                        break;
+	                        case "3":
+	                            codeEmote = codeEmote+":three: "
+	                        break;
+	                        case "4":
+	                            codeEmote = codeEmote+":four: "
+	                        break;
+	                        case "5":
+	                            codeEmote = codeEmote+":five: "
+	                        break;
+	                        case "6":
+	                            codeEmote = codeEmote+":six: "
+	                        break;
+	                        case "7":
+	                            codeEmote = codeEmote+":seven: "
+	                        break;
+	                        case "8":
+	                            codeEmote = codeEmote+":eight: "
+	                        break;
+	                        case "9":
+	                            codeEmote = codeEmote+":nine: "
+	                        break;
+	                        default:
+	                            codeErreur = true;
+	                            break;
+	                    }
+	                }
+	                if(codeErreur==true){
+	                    message.channel.send("le code contient un caractère impossible");
+	                }else{
+	                    message.channel.send(codeEmote);
+	                }
+	
+	            }else{message.channel.send("Le code n'est pas de la bonne longueur !");}
+	        //*/
+	    }
+	}
+
+////////////////////////////////////////////////////////	
+////////////////////////////////////////////////////////	
 	
     
     //limité à la catégorie de la catégorie Monche Universe
