@@ -177,6 +177,17 @@ var guessPenduOn = false;
 //'minute heure jour mois (jour de la semaine)'//
 var test = '18 21 13 1 *';
 
+
+//Mettre les emotes sur le quizz Matcha
+async function setReaction(){
+
+    const fetchedQ1 = await bot.guilds.cache.get(auth.server.guild).channels.cache.get(auth.server.salon.matcha.quizz).messages.fetch(auth.server.salon.matcha.question1).then(async sentClue => {
+            await sentClue.react('1️⃣');
+            await sentClue.react('2️⃣');
+            await sentClue.react('3️⃣');
+            await sentClue.react('4️⃣');})
+}
+
 ///////////////////////
 // Début de la Quête //
 ///////////////////////
