@@ -1409,7 +1409,7 @@
 [["./pokeimage/paradoxe/Sprite_1023_HOME.png","xxx",0],"Chef-de-Fer",1023,9,1,"Acier Psy"],
 [["./pokeimage/terapagos/Sprite_1024_Normale_HOME.png","xxx",0.5],"Terapagos Forme Normale",1024,9,1,"Normal"],
 [["./pokeimage/terapagos/Sprite_1024_Téracristal_HOME.png","xxx",0.5],"Terapagos Forme Téracristal",1024,9,1,"Normal"],
-[["./pokeimage/terapagos/Sprite_1024_Stellaire_HOME.png","xxx",0.5],"Terapagos Forme Stellaire",1024,9,1,"Normal"],
+[["./pokeimage/terapagos/Sprite_1024_Stellaire_HOME.png","xxx",0.5],"Terapagos Forme Stellaire",1024,9,1,"Normal Stellaire"],
 [["./pokeimage/Sprite_1025_HOME.png","xxx",0],"Pêchaminus",1025,9,1,"Poison Spectre"],
     [["./pokeimage/monstre/Sprite_000_HOME.png","xxx",0],"MissingNo.",0,1,1,"Normal Bird"],
     [["./pokeimage/monstre/Sprite_080_HOME.png","xxx",0],"Crokiyas Forme Croquage Raté",80,1,2,"Eau Poison"],
