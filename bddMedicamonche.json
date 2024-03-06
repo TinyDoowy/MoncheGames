@@ -9995,7 +9995,18 @@
         ["Gòuzàngǒu","Gaujaangáu","Iineinu","Boninu","xxx","xxx","xxx","Okidogi","Félicanis"],
         ["Yuànzēngyuán","Yuhnjāngyùhn","Mashimashira","Benesaru","xxx","xxx","xxx","Munkidori","Fortusimia"],
         ["Jízhìjī","Gātjihgāi","Kichikigisu","Beatori","xxx","xxx","xxx","Fezandipiti","Favianos"],
-        ["Tàilèbāgēsī","Taailohkbāgwōsī","Terapagosu","xxx","xxx","xxx","xxx","xxx","Terapagos"]
+        ["Tàilèbāgēsī","Taailohkbāgwōsī","Terapagosu","xxx","xxx","xxx","xxx","xxx","Terapagos"],
+["Guǒmìchóng","Gwómahtchùhng","Kamicchu ","Sirapfel","xxx","xxx","Gwamireu","Dipplin","Pomdramour"],
+["Sīmóchá","Sīmōchàh","Chadeath","Mortcha","xxx","xxx","Chadeseu","xxx","Poltchageist"],
+["Láibēicūchá","Lòihbēichōuchàh","Yabasocha","Fatalitcha","xxx","xxx","Geuurincha","Sinistcha","Théffroyable"],
+["Lǚgāngqiáolóng","Léuihgongkìuhlùhng","Briduras","Briduradon","xxx","xxx","Beuriduraseu","Archaludon","Pondralugon"],
+["Mìjídàshé","Mahtjaahpdaaihsèh","Kamitsuorochi","Hydrapfel","xxx","xxx","Gwamideura","Hydrapple","Pomdorochi"],
+["Pòkōngyàn","Pohūngyihm","Ugatsuhomura","Keilflamme","xxx","xxx","Kkwettulleunhwayeom","Gouging Fire","Feu-Perçant"],
+["Měngléigǔ","Máahnglèuihgú","Takeruraiko","Furienblitz","xxx","xxx","Nalttwineun-ure","Raging Bolt","Ire-Foudre"],
+["Tiěpányán","Titpùhnngàahm","Tetsunoiwao","Eisenfels","xxx","xxx","Musoeamseok","Iron Boulder","Roc-de-Fer"],
+["Tiětóuké","Tittàuhhok","Tetsunokashira","Eisenhaupt","xxx","xxx","Musoegamtu","Iron Crown","Chef-de-Fer"],
+["Táodǎiláng","Tòuhdáailòhng","Momowarou","Infamomo","xxx","xxx","Boksung-akdong","Pecharunt","Pêchaminus"]
+
     ],
     "medicaments": [
         "Abacavir",
