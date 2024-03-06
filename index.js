@@ -52,8 +52,8 @@ const prefixSoluceEN = "answer";
 const prefixTournoiOn = "start";
 const prefixTournoiOff = "stop";
 const prefixJeJoue = "je joue";
-const maximumRoll = 1387; // variable max dans laquelle aller chercher les images (pour éviter les monstres et les métamorph)
-const maximumDex = 1010;
+const maximumRoll = 1410; // variable max dans laquelle aller chercher les images (pour éviter les monstres et les métamorph) ligne-3
+const maximumDex = 1025;
 
 //variable roll original
 var nomPokemon = "";
@@ -151,10 +151,10 @@ const tailleGender = tabPokeGender.length;
 
 const tabType = ["Acier","Combat","Dragon","Eau","Électrique",
 "Fée","Feu","Glace","Insecte","Normal","Plante","Poison",
-"Roche","Sol","Spectre","Ténèbres","Vol","Psy","Cristal","Bird"];
+"Roche","Sol","Spectre","Ténèbres","Vol","Psy","Cristal","Bird","Stellaire"];
 const tabTypeEN = ["Steel","Fighting","Dragon","Water","Electric",
 "Fairy","Fire","Ice","Bug","Normal","Grass","Poison",
-"Rock","Ground","Ghost","Dark","Flying","Psychic","Cristal","Bird"];
+"Rock","Ground","Ghost","Dark","Flying","Psychic","Cristal","Bird","Stellar"];
 
 // Variable Armage-monche 
 var nomPokemonPendu;
@@ -636,7 +636,7 @@ bot.on('message', async function (message, user) {
                 
                 nomSnap = tabPokeSnap[quelEstCeSnap][1];
 
-                while(nomSnap.toLowerCase().includes("forme")||nomSnap.toLowerCase().includes("casquette")||nomSnap.toLowerCase().includes("plumage")||nomSnap.toLowerCase().includes("famille")||nomSnap.toLowerCase().includes("méga")||nomSnap.toLowerCase().includes("primo")||nomSnap.toLowerCase().includes("ultra")||nomSnap.toLowerCase().includes("taille")||nomSnap.toLowerCase().includes("coupe")||nomSnap.toLowerCase().includes("fleur")||nomSnap.toLowerCase().includes("motif")){
+                while(nomSnap.toLowerCase().includes("forme")||nomSnap.toLowerCase().includes("masque")||nomSnap.toLowerCase().includes("casquette")||nomSnap.toLowerCase().includes("plumage")||nomSnap.toLowerCase().includes("famille")||nomSnap.toLowerCase().includes("méga")||nomSnap.toLowerCase().includes("primo")||nomSnap.toLowerCase().includes("ultra")||nomSnap.toLowerCase().includes("taille")||nomSnap.toLowerCase().includes("coupe")||nomSnap.toLowerCase().includes("fleur")||nomSnap.toLowerCase().includes("motif")){
                     console.log("Boucle forme : "+nomSnap);
                     quelEstCeSnap = Rand(tailleSnap)-1;
                     nomSnap = tabPokeSnap[quelEstCeSnap][1];
