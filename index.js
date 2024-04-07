@@ -52,7 +52,7 @@ const prefixSoluceEN = "answer";
 const prefixTournoiOn = "start";
 const prefixTournoiOff = "stop";
 const prefixJeJoue = "je joue";
-const maximumRoll = 1410; // variable max dans laquelle aller chercher les images (pour éviter les monstres et les métamorph) ligne-3
+const maximumRoll = 1425; // variable max dans laquelle aller chercher les images (pour éviter les monstres et les métamorph) ligne-3
 const maximumDex = 1025;
 
 //variable roll original
